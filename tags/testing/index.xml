@@ -22,5 +22,14 @@
 To test emails effectively we end up using real email addresses, which leads to cluttering mailbox with unwanted emails. For testing different scenarios we need multiple email address, and testing becomes more difficult when it requires checking mailbox of other users.</description>
     </item>
     
+    <item>
+      <title>Guidelines for Structuring Automated Tests</title>
+      <link>https://sunitparekh.github.io/posts/21-automated-tests/</link>
+      <pubDate>Tue, 22 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/21-automated-tests/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests</description>
+    </item>
+    
   </channel>
 </rss>

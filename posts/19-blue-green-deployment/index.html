@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html><head>
+<title>Zero downtime using blue-green deployment strategy</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="Zero downtime during application deployment is one of the key requirements for continuos delivery. And no business would like their site to be down and showing maintenance page every few days/weeks during deployment.">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+
+
+<link rel="stylesheet" href="https://sunitparekh.github.io/scss/journal.min.84af105c3da886a344e941fa0c28aebca35d8d2c6a1436c912ab6abfd0b38b24.css" integrity="sha256-hK8QXD2ohqNE6UH6DCiuvKNdjSxqFDbJEqtqv9CziyQ=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://sunitparekh.github.io/scss/dark-mode.min.44ffbe8c99d1feb1ffc20f55f3c06e3ab0c186618d58d9d207055e129f096bea.css" integrity="sha256-RP&#43;&#43;jJnR/rH/wg9V88BuOrDBhmGNWNnSBwVeEp8Ja&#43;o=" media="screen">
+
+
+<script src="https://sunitparekh.github.io//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Rubik|Open+Sans:wght@300;400|Roboto:wght@300|Montserrat|Fira+Mono|Material+Icons");
+</script>
+
+<script src="https://sunitparekh.github.io//js/table.js"></script>
+
+
+
+
+<script src="https://sunitparekh.github.io//js/toc.js"></script>
+
+
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://sunitparekh.github.io/">
+    
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="nav-title">
+            sUnit Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            insights on software development
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Posts
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS Feed
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Posts
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS Feed
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://sunitparekh.github.io/">
+            sUnit Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://sunitparekh.github.io/">
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="single-column-header-title">sUnit Blog</div>
+        
+        <div class="single-column-header-subtitle">insights on software development</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('/images/background.png'); ">
+                <div class="post-title">
+                    Zero downtime using blue-green deployment strategy
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            Oct 23, 2013
+                        </time>
+                        
+                    </br>
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/devops">devops</a>
+                                &nbsp;
+                            
+                                <a href="/tags/software-design">software-design</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>Zero downtime during application deployment is one of the key requirements for continuos delivery. And no business would like their site to be down and showing maintenance page every few days/weeks during deployment.</p>
+<p>To achieve this we decide to go for <a href="http://martinfowler.com/bliki/BlueGreenDeployment.html">blue-green deployment</a>. However, we were challenged with how to do this in legacy style data center infrastructure where we are,</p>
+<ol>
+<li>Not able to spin new machines and throw away old machines automatically using scripts</li>
+<li>Don&rsquo;t have ability to add/remove instances using scripts from load-balancer</li>
+<li>Network level configurations are done manually like firewall setting</li>
+</ol>
+<p>Also keeping full in-active stack didn&rsquo;t sound good idea. Now we had to made some modifications to achieve zero downtime using blue-green deployment.</p>
+<p><strong>Decision 1:</strong> We took out database from the application deployment stack. Since we were using NoSQL MongoDB database, it didn&rsquo;t require any schema migration etc. However, we required to follow design principle, always write code which is backward compatible with the data models. And if there is any data migration required it should be run after deployment.</p>
+<p><strong>Decision 2:</strong> Use RPM to package apps and run like a service to start and stop. This enabled us to deploy application easily with the standard chef recipes. All application components are packaged as RPMs and published to repository from CI pipeline. Standardise deployment process across all components/application. We used FPM gem to build RPMs.</p>
+<p><strong>Decision 3:</strong> All application/component should provide 2 state heartbeat, live or standby, with ability to change the current state of the heartbeat at runtime using api call. Configure one load-balance to listen to live heartbeat and another to standby. Allows to add/remove instances from load-balancer by changing heartbeat state.</p>
+<p>And with above changes the deployment steps are,</p>
+<p><img src="/images/19/1-state-before-deployment.svg" alt="Pre deployment state"></p>
+<p><strong>Step 1:</strong> Change heartbeat of the green stack to state &lsquo;standby&rsquo;. This will remove green stack from LIVE load-balancer pool and no new request send to green stack.</p>
+<p><img src="/images/19/2-green-standby.svg" alt="Change heartbeat of the green stack"></p>
+<p><strong>Step 2:</strong> Deploy latest version of the application to green stack. Wait sometime to complete the inflight request on green stack before deployment.</p>
+<p><img src="/images/19/3-green-v2.svg" alt="Deploy latest version to green stack" title="Deploy latest version to green stack"></p>
+<p><strong>Step 3:</strong> Sanity test green stack using standby load-balancer. Ideally automated, this will make sure deployment is good.</p>
+<p><strong>Step 4:</strong> Revert heartbeat of the green stack to state &lsquo;live&rsquo;. This will put the green stack back to LIVE load-balancer pool.</p>
+<p><img src="/images/19/4-green-v2-live.svg" alt="Revert heartbeat of the green stack to state &lsquo;live&rsquo;" title="Revert heartbeat of the green stack to state 'live'"></p>
+<p>If you notice the blue stack running on v1 and green stack running on v2. And both the stacks are connected to same database. Which means v2 codebase should work with old data models. And if there is any database migration should be carried only after all stack upgraded to latest version.</p>
+<p><strong>Step 5:</strong> Repeat above steps for blue stack,</p>
+<p><img src="/images/19/5-blue-standby.svg" alt="Change heartbeat of the blue stack" title="Change heartbeat of the blue stack"></p>
+<p><img src="/images/19/6-blue-v2.svg" alt="Deploy latest version to blue stack" title="Deploy latest version to blue stack"></p>
+<p>And finally v2 deployed fully,</p>
+<p><img src="/images/19/7-blue-v2-live.svg" alt="latest version deployed on all stacks" title="latest version deployed on all stacks"></p>
+<p><strong>Step 6:</strong> Optional, run database migration (independent of the deployment)</p>
+<p>What we achieved is, at any give point of time either blue or green stack is actively servicing the requests without downtime.</p>
+<p>However, the one point to note here is that during deployment only half capacity available, which means deployment should be avoided at peak load time.</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2013-10-23</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://sunitparekh.github.io/posts/20-tdd-influence-design/">
+                    Next<br>Using TDD to Influence Design
+                </a>
+                
+                
+                
+                <a class="older-posts">
+                    Previous<br>No older posts.
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	</div>
+    	</div>
+    <script src="https://sunitparekh.github.io//js/journal.js"></script>
+    </body>
+</html>

@@ -123,6 +123,31 @@
   </url>
   
   <url>
+    <loc>https://sunitparekh.github.io/posts/21-automated-tests/</loc>
+    <lastmod>2014-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sunitparekh.github.io/tags/tdd/</loc>
+    <lastmod>2014-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sunitparekh.github.io/posts/20-tdd-influence-design/</loc>
+    <lastmod>2014-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sunitparekh.github.io/tags/devops/</loc>
+    <lastmod>2013-10-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sunitparekh.github.io/posts/19-blue-green-deployment/</loc>
+    <lastmod>2013-10-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sunitparekh.github.io/categories/</loc>
   </url>
   

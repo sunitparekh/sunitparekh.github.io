@@ -1,0 +1,68 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sUnit Blog</title>
+    <link>https://sunitparekh.github.io/</link>
+    <description>Recent content on sUnit Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2020 sunitparekh.in</copyright>
+    <lastBuildDate>Sun, 21 Aug 2016 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://sunitparekh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Using TDD to Influence Design</title>
+        <link>https://sunitparekh.github.io/posts/20-tdd-influence-design/</link>
+        <pubDate>Fri, 06 Jun 2014 00:00:00 +0000</pubDate>
+        
+        <guid>https://sunitparekh.github.io/posts/20-tdd-influence-design/</guid>
+        <description>sUnit Blog https://sunitparekh.github.io/posts/20-tdd-influence-design/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpwwwthoughtworkscominsightsblogusing-tdd-influence-design&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;http://www.thoughtworks.com/insights/blog/using-tdd-influence-design&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.thoughtworks.com/insights/blog/using-tdd-influence-design&#34;&gt;http://www.thoughtworks.com/insights/blog/using-tdd-influence-design&lt;/a&gt;&lt;/p&gt;
+- https://sunitparekh.github.io/posts/20-tdd-influence-design/ - 2020 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Zero downtime using blue-green deployment strategy</title>
+        <link>https://sunitparekh.github.io/posts/19-blue-green-deployment/</link>
+        <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
+        
+        <guid>https://sunitparekh.github.io/posts/19-blue-green-deployment/</guid>
+        <description>sUnit Blog https://sunitparekh.github.io/posts/19-blue-green-deployment/ -&lt;p&gt;Zero downtime during application deployment is one of the key requirements for continuos delivery. And no business would like their site to be down and showing maintenance page every few days/weeks during deployment.&lt;/p&gt;
+&lt;p&gt;To achieve this we decide to go for &lt;a href=&#34;http://martinfowler.com/bliki/BlueGreenDeployment.html&#34;&gt;blue-green deployment&lt;/a&gt;. However, we were challenged with how to do this in legacy style data center infrastructure where we are,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Not able to spin new machines and throw away old machines automatically using scripts&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t have ability to add/remove instances using scripts from load-balancer&lt;/li&gt;
+&lt;li&gt;Network level configurations are done manually like firewall setting&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Also keeping full in-active stack didn&amp;rsquo;t sound good idea. Now we had to made some modifications to achieve zero downtime using blue-green deployment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Decision 1:&lt;/strong&gt; We took out database from the application deployment stack. Since we were using NoSQL MongoDB database, it didn&amp;rsquo;t require any schema migration etc. However, we required to follow design principle, always write code which is backward compatible with the data models. And if there is any data migration required it should be run after deployment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Decision 2:&lt;/strong&gt; Use RPM to package apps and run like a service to start and stop. This enabled us to deploy application easily with the standard chef recipes. All application components are packaged as RPMs and published to repository from CI pipeline. Standardise deployment process across all components/application. We used FPM gem to build RPMs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Decision 3:&lt;/strong&gt; All application/component should provide 2 state heartbeat, live or standby, with ability to change the current state of the heartbeat at runtime using api call. Configure one load-balance to listen to live heartbeat and another to standby. Allows to add/remove instances from load-balancer by changing heartbeat state.&lt;/p&gt;
+&lt;p&gt;And with above changes the deployment steps are,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/19/1-state-before-deployment.svg&#34; alt=&#34;Pre deployment state&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 1:&lt;/strong&gt; Change heartbeat of the green stack to state &amp;lsquo;standby&amp;rsquo;. This will remove green stack from LIVE load-balancer pool and no new request send to green stack.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/19/2-green-standby.svg&#34; alt=&#34;Change heartbeat of the green stack&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 2:&lt;/strong&gt; Deploy latest version of the application to green stack. Wait sometime to complete the inflight request on green stack before deployment.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/19/3-green-v2.svg&#34; alt=&#34;Deploy latest version to green stack&#34; title=&#34;Deploy latest version to green stack&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 3:&lt;/strong&gt; Sanity test green stack using standby load-balancer. Ideally automated, this will make sure deployment is good.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 4:&lt;/strong&gt; Revert heartbeat of the green stack to state &amp;lsquo;live&amp;rsquo;. This will put the green stack back to LIVE load-balancer pool.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/19/4-green-v2-live.svg&#34; alt=&#34;Revert heartbeat of the green stack to state &amp;lsquo;live&amp;rsquo;&#34; title=&#34;Revert heartbeat of the green stack to state &#39;live&#39;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If you notice the blue stack running on v1 and green stack running on v2. And both the stacks are connected to same database. Which means v2 codebase should work with old data models. And if there is any database migration should be carried only after all stack upgraded to latest version.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 5:&lt;/strong&gt; Repeat above steps for blue stack,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/19/5-blue-standby.svg&#34; alt=&#34;Change heartbeat of the blue stack&#34; title=&#34;Change heartbeat of the blue stack&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/19/6-blue-v2.svg&#34; alt=&#34;Deploy latest version to blue stack&#34; title=&#34;Deploy latest version to blue stack&#34;&gt;&lt;/p&gt;
+&lt;p&gt;And finally v2 deployed fully,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/19/7-blue-v2-live.svg&#34; alt=&#34;latest version deployed on all stacks&#34; title=&#34;latest version deployed on all stacks&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 6:&lt;/strong&gt; Optional, run database migration (independent of the deployment)&lt;/p&gt;
+&lt;p&gt;What we achieved is, at any give point of time either blue or green stack is actively servicing the requests without downtime.&lt;/p&gt;
+&lt;p&gt;However, the one point to note here is that during deployment only half capacity available, which means deployment should be avoided at peak load time.&lt;/p&gt;
+- https://sunitparekh.github.io/posts/19-blue-green-deployment/ - 2020 sunitparekh.in</description>
+        </item>
+    
+    
+  </channel>
+</rss> 

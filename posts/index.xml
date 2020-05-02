@@ -97,5 +97,34 @@ Most of the time legacy projects are facing typical issues like fragile codebase
 Lets first look at what we need to follow while logging to achieve structured logging.</description>
     </item>
     
+    <item>
+      <title>Guidelines for Structuring Automated Tests</title>
+      <link>https://sunitparekh.github.io/posts/21-automated-tests/</link>
+      <pubDate>Tue, 22 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/21-automated-tests/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests</description>
+    </item>
+    
+    <item>
+      <title>Using TDD to Influence Design</title>
+      <link>https://sunitparekh.github.io/posts/20-tdd-influence-design/</link>
+      <pubDate>Fri, 06 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/20-tdd-influence-design/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. http://www.thoughtworks.com/insights/blog/using-tdd-influence-design</description>
+    </item>
+    
+    <item>
+      <title>Zero downtime using blue-green deployment strategy</title>
+      <link>https://sunitparekh.github.io/posts/19-blue-green-deployment/</link>
+      <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/19-blue-green-deployment/</guid>
+      <description>Zero downtime during application deployment is one of the key requirements for continuos delivery. And no business would like their site to be down and showing maintenance page every few days/weeks during deployment.
+To achieve this we decide to go for blue-green deployment. However, we were challenged with how to do this in legacy style data center infrastructure where we are,
+ Not able to spin new machines and throw away old machines automatically using scripts Don&amp;rsquo;t have ability to add/remove instances using scripts from load-balancer Network level configurations are done manually like firewall setting  Also keeping full in-active stack didn&amp;rsquo;t sound good idea.</description>
+    </item>
+    
   </channel>
 </rss>
