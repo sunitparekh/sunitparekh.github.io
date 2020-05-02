@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>testing on sUnit Blog</title>
-    <link>http://sunitparekh.in/tags/testing/</link>
+    <link>https://sunitparekh.github.io/tags/testing/</link>
     <description>Recent content in testing on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Sat, 17 Oct 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sunitparekh.in/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sunitparekh.github.io/tags/testing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Testing emails with Fake SMTP service</title>
-      <link>http://sunitparekh.in/posts/27-testing-emails/</link>
+      <link>https://sunitparekh.github.io/posts/27-testing-emails/</link>
       <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/posts/27-testing-emails/</guid>
+      <guid>https://sunitparekh.github.io/posts/27-testing-emails/</guid>
       <description>Testing is key activity of every software development projects. However testing certain features is not easy and need special support functions. One of such functionality is email testing. In this article I introduce few tools that I used in my projects for achieving email testing easily without any side effects.
 To test emails effectively we end up using real email addresses, which leads to cluttering mailbox with unwanted emails. For testing different scenarios we need multiple email address, and testing becomes more difficult when it requires checking mailbox of other users.</description>
     </item>

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>software-development on sUnit Blog</title>
-    <link>http://sunitparekh.in/tags/software-development/</link>
+    <link>https://sunitparekh.github.io/tags/software-development/</link>
     <description>Recent content in software-development on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Wed, 13 Apr 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sunitparekh.in/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sunitparekh.github.io/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ownership model for distributed team</title>
-      <link>http://sunitparekh.in/posts/28-ownership-model/</link>
+      <link>https://sunitparekh.github.io/posts/28-ownership-model/</link>
       <pubDate>Wed, 13 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/posts/28-ownership-model/</guid>
+      <guid>https://sunitparekh.github.io/posts/28-ownership-model/</guid>
       <description>Setting up distributed team is very common in new world of software development. However, it is equally important that each team operates in complete autonomy and there is a need for teams to be independent, taking ownership and deliver. However, everyone has different views and understanding of ownership. I would like to take this opportunity to explain my view on different aspects of ownership which can help stakeholders and team in having common understanding of expectations and help deliver with ownership and accountability.</description>
     </item>
     

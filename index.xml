@@ -1,24 +1,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sUnit Blog</title>
-    <link>http://sunitparekh.in/</link>
+    <link>https://sunitparekh.github.io/</link>
     <description>Recent content on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Sun, 21 Aug 2016 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://sunitparekh.in/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://sunitparekh.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>Release based 3 branch model for agile software development</title>
-        <link>http://sunitparekh.in/posts/30-three-branching-model/</link>
+        <link>https://sunitparekh.github.io/posts/30-three-branching-model/</link>
         <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
         
-        <guid>http://sunitparekh.in/posts/30-three-branching-model/</guid>
-        <description>sUnit Blog http://sunitparekh.in/posts/30-three-branching-model/ -&lt;p&gt;On large teams it is very important that everyone understands and follow the same branching model/workflow. One of very popular branching workflow is &lt;a href=&#34;http://nvie.com/posts/a-successful-git-branching-model/&#34;&gt;GitFlow&lt;/a&gt;, however with distributed and novice team following GitFlow is difficult. So over a period of time I have been following simple 3 branch model for development which works fine for agile and continuous delivery software development method.&lt;/p&gt;
+        <guid>https://sunitparekh.github.io/posts/30-three-branching-model/</guid>
+        <description>sUnit Blog https://sunitparekh.github.io/posts/30-three-branching-model/ -&lt;p&gt;On large teams it is very important that everyone understands and follow the same branching model/workflow. One of very popular branching workflow is &lt;a href=&#34;http://nvie.com/posts/a-successful-git-branching-model/&#34;&gt;GitFlow&lt;/a&gt;, however with distributed and novice team following GitFlow is difficult. So over a period of time I have been following simple 3 branch model for development which works fine for agile and continuous delivery software development method.&lt;/p&gt;
 &lt;h2 id=&#34;3-branch-workflow-model&#34;&gt;3 Branch workflow model&lt;/h2&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
@@ -37,19 +37,19 @@
 &lt;blockquote&gt;
 &lt;p&gt;Slides are available &lt;a href=&#34;https://docs.google.com/presentation/d/117bnmIVoBOLtDqgHSPta2guzlCEBNNyaFA-Oz7dyGaI/edit?usp=sharing&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-- http://sunitparekh.in/posts/30-three-branching-model/ - 2020 sunitparekh.in</description>
+- https://sunitparekh.github.io/posts/30-three-branching-model/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Distributed Agile - What should be the Sprint duration?</title>
-        <link>http://sunitparekh.in/posts/29-sprint-duration/</link>
+        <link>https://sunitparekh.github.io/posts/29-sprint-duration/</link>
         <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
         
-        <guid>http://sunitparekh.in/posts/29-sprint-duration/</guid>
-        <description>sUnit Blog http://sunitparekh.in/posts/29-sprint-duration/ -&lt;p&gt;&lt;strong&gt;What should be the  Sprint duration?&lt;/strong&gt; this question comes up quite commonly on agile projects and opinions vary from as short as a week to as long as 6 weeks. Decision on an appropriate Sprint length depend on many factors. Few of the factors that I consider while deciding on the Sprint length are as follows, however, each factor adds different dimensions when the team is distributed across time zones.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://sunitparekh.in/images/29/featured.png&#34; alt=&#34;sprint duration factors&#34;&gt;&lt;/p&gt;
+        <guid>https://sunitparekh.github.io/posts/29-sprint-duration/</guid>
+        <description>sUnit Blog https://sunitparekh.github.io/posts/29-sprint-duration/ -&lt;p&gt;&lt;strong&gt;What should be the  Sprint duration?&lt;/strong&gt; this question comes up quite commonly on agile projects and opinions vary from as short as a week to as long as 6 weeks. Decision on an appropriate Sprint length depend on many factors. Few of the factors that I consider while deciding on the Sprint length are as follows, however, each factor adds different dimensions when the team is distributed across time zones.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/29/featured.png&#34; alt=&#34;sprint duration factors&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;decision-making&#34;&gt;Decision Making:&lt;/h2&gt;
 &lt;p&gt;In most agile team all decision makers from business to technical people are co-located or available within a working day. Sometimes business and product owners are sitting in different locations and it takes a minimum of two working days to make decisions. And if one of them is on leave, decisions gets further delayed. Faster decision-making drives towards shorter sprint cycles and longer decision making drives towards longer cycles.&lt;/p&gt;
 &lt;h2 id=&#34;team-distribution&#34;&gt;Team Distribution:&lt;/h2&gt;
@@ -72,21 +72,21 @@
 &lt;p&gt;In my view, for co-located teams or distributed teams with healthy overlap time and at intermediate level of agile engineering practices I would suggest 2 week sprint duration. And for highly distributed team which is mostly new to Agile (and CD) practices, I recommend 4 weeks of initial Sprint duration.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Philosophy of &amp;ldquo;shorter sprints are better&amp;rdquo; is not always right. Sometimes with shorter sprints and significant non-development effort, team&amp;rsquo;s stress level increases while stakeholder sees less deliverable, watch-out for such cases.&lt;/p&gt;
-- http://sunitparekh.in/posts/29-sprint-duration/ - 2020 sunitparekh.in</description>
+- https://sunitparekh.github.io/posts/29-sprint-duration/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Ownership model for distributed team</title>
-        <link>http://sunitparekh.in/posts/28-ownership-model/</link>
+        <link>https://sunitparekh.github.io/posts/28-ownership-model/</link>
         <pubDate>Wed, 13 Apr 2016 00:00:00 +0000</pubDate>
         
-        <guid>http://sunitparekh.in/posts/28-ownership-model/</guid>
-        <description>sUnit Blog http://sunitparekh.in/posts/28-ownership-model/ -&lt;p&gt;Setting up distributed team is very common in new world of software development. However, it is equally important that each team operates in complete autonomy and there is a need for teams to be independent, taking ownership and deliver. However, everyone has different views and understanding of ownership. I would like to take this opportunity to explain my view on different aspects of ownership which can help stakeholders and team in having common understanding of expectations and help deliver with ownership and accountability.&lt;/p&gt;
+        <guid>https://sunitparekh.github.io/posts/28-ownership-model/</guid>
+        <description>sUnit Blog https://sunitparekh.github.io/posts/28-ownership-model/ -&lt;p&gt;Setting up distributed team is very common in new world of software development. However, it is equally important that each team operates in complete autonomy and there is a need for teams to be independent, taking ownership and deliver. However, everyone has different views and understanding of ownership. I would like to take this opportunity to explain my view on different aspects of ownership which can help stakeholders and team in having common understanding of expectations and help deliver with ownership and accountability.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s start with first understanding different aspects of ownership. Software development ownership can be viewed as three types &lt;strong&gt;technical&lt;/strong&gt;, &lt;strong&gt;solution&lt;/strong&gt; and &lt;strong&gt;business&lt;/strong&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;3-types-of-ownership&#34;&gt;3 Types of ownership&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;http://sunitparekh.in/images/28/3-pillers.png&#34; alt=&#34;3 Types of Ownership for Distributed Teams&#34; title=&#34;3 Types of Ownership for Distributed Teams&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/28/3-pillers.png&#34; alt=&#34;3 Types of Ownership for Distributed Teams&#34; title=&#34;3 Types of Ownership for Distributed Teams&#34;&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Technical ownership&lt;/strong&gt; means delivering quality product (code) by following engineering practices such as unit testing, refactoring, continuous integration, automated build and deployment etc. with full autonomy. Technical ownership also includes owning technical decisions at low level including following design patterns, cleaner API development for software development.&lt;/li&gt;
 &lt;/ol&gt;
@@ -109,7 +109,7 @@
 &lt;p&gt;Lets take example of retail business and see two classical distributed team models,&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Vertical (Feature) based full ownership team model&lt;/strong&gt;: setup teams with all roles to take up full ownership of feature. E.g. Product Catalog team, Order management team, Shipping management team. Each team has full autonomy to operate from business decision to technology choices made in respective area.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Horizontal (Competency) based ownership team model&lt;/strong&gt;: Front end web team, Mobile team, API team, Operations team&amp;hellip; each team has specific role to play and take ownership of each area specifically technical and solution ownership.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://sunitparekh.in/images/28/featured.png&#34; alt=&#34;Horizontal/Competency based Distributed Team Model&#34; title=&#34;Horizontal/Competency based Distributed Team Model&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/28/featured.png&#34; alt=&#34;Horizontal/Competency based Distributed Team Model&#34; title=&#34;Horizontal/Competency based Distributed Team Model&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Feature based full ownership team is what I think better for ownership and accountability. However, I have see more horizontal/competency based ownership model in practice. In my view having clarify with all members about the team model is more important and choose whatever works for you.&lt;/p&gt;
 &lt;h3 id=&#34;type-of-ownership-and-roles&#34;&gt;Type of ownership and roles&lt;/h3&gt;
 &lt;p&gt;It is important to understand, what is expected from the team and capability &amp;amp; strength of each team? Above becomes less relevant when team is co-located since everyone is within walk and talk reach. And it becomes more relevant in distributed team, each team requires specific roles to achieve each type of ownership.&lt;/p&gt;
@@ -118,18 +118,18 @@
 &lt;li&gt;We need tech leadership to provide architecture solution along with supporting roles like project management for execution and planning.&lt;/li&gt;
 &lt;li&gt;Similarly we need Product Owners and Senior BAs to achieve Business ownership.&lt;/li&gt;
 &lt;/ol&gt;
-- http://sunitparekh.in/posts/28-ownership-model/ - 2020 sunitparekh.in</description>
+- https://sunitparekh.github.io/posts/28-ownership-model/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Testing emails with Fake SMTP service</title>
-        <link>http://sunitparekh.in/posts/27-testing-emails/</link>
+        <link>https://sunitparekh.github.io/posts/27-testing-emails/</link>
         <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
         
-        <guid>http://sunitparekh.in/posts/27-testing-emails/</guid>
-        <description>sUnit Blog http://sunitparekh.in/posts/27-testing-emails/ -&lt;p&gt;Testing is key activity of every software development projects. However testing certain features is not easy and need special support functions. One of such functionality is email testing. In this article I introduce few tools that I used in my projects for achieving email testing easily without any side effects.&lt;/p&gt;
+        <guid>https://sunitparekh.github.io/posts/27-testing-emails/</guid>
+        <description>sUnit Blog https://sunitparekh.github.io/posts/27-testing-emails/ -&lt;p&gt;Testing is key activity of every software development projects. However testing certain features is not easy and need special support functions. One of such functionality is email testing. In this article I introduce few tools that I used in my projects for achieving email testing easily without any side effects.&lt;/p&gt;
 &lt;p&gt;To test emails effectively we end up using real email addresses, which leads to cluttering mailbox with unwanted emails. For testing different scenarios we need multiple email address, and testing becomes more difficult when it requires checking mailbox of other users. Also we never want to send emails to real users, otherwise they gets confused with test emails and real emails. Also we do not want to make any code modification for testing emails, this leads to code maintenance issues.&lt;/p&gt;
 &lt;p&gt;To overcome above problems, what we need is, &lt;strong&gt;Fake SMTP server (Email Service) which acts as outgoing server, however, it never delivers email message to users and provides a user interface to check and verify all outgoing emails.&lt;/strong&gt; In short application sends email to users however it never goes out of SMTP server.&lt;/p&gt;
 &lt;p&gt;We need Fake SMTP server for following different scenarios,&lt;/p&gt;
@@ -167,11 +167,11 @@
 &lt;li&gt;&lt;a href=&#34;http://mailcatcher.me/&#34;&gt;&lt;strong&gt;Mailcatcher&lt;/strong&gt;&lt;/a&gt; It has a web view which allows viewing messages from anywhere, ruby application that can runs independently.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://mailtrap.io&#34;&gt;&lt;strong&gt;Mailtrap.io&lt;/strong&gt;&lt;/a&gt; Cloud based SaaS solution, very sophisticated but paid.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;http://sunitparekh.in/images/27/featured.png&#34; alt=&#34;mailcatcher.me&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/27/featured.png&#34; alt=&#34;mailcatcher.me&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Using tools and techniques which are applicable for different stages of testing, we can effectively test all email scenarios without delivering emails to real users. Above solutions doesn&amp;rsquo;t require any change in production code for testing, just needs different configuration of SMTP server.&lt;/p&gt;
 &lt;p&gt;Happy Testing !!!&lt;/p&gt;
-- http://sunitparekh.in/posts/27-testing-emails/ - 2020 sunitparekh.in</description>
+- https://sunitparekh.github.io/posts/27-testing-emails/ - 2020 sunitparekh.in</description>
         </item>
     
     
