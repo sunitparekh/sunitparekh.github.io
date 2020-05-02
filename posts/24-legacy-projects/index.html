@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html><head>
+<title>How to begin with Agile and Continuous Delivery on Legacy Projects?</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="Post is to provide guideline on how to get started with Continuous Delivery on Legacy Projects. &#34;Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don&#39;t to where to start or we can&#39;t do agile&#34;.">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+
+
+<link rel="stylesheet" href="https://sunitparekh.github.io/scss/journal.min.84af105c3da886a344e941fa0c28aebca35d8d2c6a1436c912ab6abfd0b38b24.css" integrity="sha256-hK8QXD2ohqNE6UH6DCiuvKNdjSxqFDbJEqtqv9CziyQ=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://sunitparekh.github.io/scss/dark-mode.min.44ffbe8c99d1feb1ffc20f55f3c06e3ab0c186618d58d9d207055e129f096bea.css" integrity="sha256-RP&#43;&#43;jJnR/rH/wg9V88BuOrDBhmGNWNnSBwVeEp8Ja&#43;o=" media="screen">
+
+
+<script src="https://sunitparekh.github.io//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Rubik|Open+Sans:wght@300;400|Roboto:wght@300|Montserrat|Fira+Mono|Material+Icons");
+</script>
+
+<script src="https://sunitparekh.github.io//js/table.js"></script>
+
+
+
+
+<script src="https://sunitparekh.github.io//js/toc.js"></script>
+
+
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://sunitparekh.github.io/">
+    
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="nav-title">
+            sUnit Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            insights on software development
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Posts
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS Feed
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#step-1-automated-build-and-deployment" v-on:click="closeDrawer" id="step-1-automated-build-and-deployment-nav">
+										 Step 1: Automated build and deployment
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#step-2-automated-sanity-test-suite" v-on:click="closeDrawer" id="step-2-automated-sanity-test-suite-nav">
+										 Step 2: Automated sanity test suite
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#step-3-development-with-automated-unit-tests-and-refactoring" v-on:click="closeDrawer" id="step-3-development-with-automated-unit-tests-and-refactoring-nav">
+										 Step 3: Development with automated unit tests and refactoring
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#test-last-to-test-first-journey" v-on:click="closeDrawer" id="test-last-to-test-first-journey-nav">
+										 Test last to test first journey
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#three-levels-of-refactoring" v-on:click="closeDrawer" id="three-levels-of-refactoring-nav">
+										 Three levels of refactoring
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#code-level-refactoring" v-on:click="closeDrawer" id="code-level-refactoring-nav">
+										 Code level refactoring
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#design-level-refactoring" v-on:click="closeDrawer" id="design-level-refactoring-nav">
+										 Design level refactoring
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#architecture-level-refactoring" v-on:click="closeDrawer" id="architecture-level-refactoring-nav">
+										 Architecture level refactoring
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#support-needed-during-cd-journey" v-on:click="closeDrawer" id="support-needed-during-cd-journey-nav">
+										 Support needed during CD journey
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Posts
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS Feed
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#step-1-automated-build-and-deployment" v-on:click="closeDrawer" id="step-1-automated-build-and-deployment-nav">
+										 Step 1: Automated build and deployment
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#step-2-automated-sanity-test-suite" v-on:click="closeDrawer" id="step-2-automated-sanity-test-suite-nav">
+										 Step 2: Automated sanity test suite
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#step-3-development-with-automated-unit-tests-and-refactoring" v-on:click="closeDrawer" id="step-3-development-with-automated-unit-tests-and-refactoring-nav">
+										 Step 3: Development with automated unit tests and refactoring
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#test-last-to-test-first-journey" v-on:click="closeDrawer" id="test-last-to-test-first-journey-nav">
+										 Test last to test first journey
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#three-levels-of-refactoring" v-on:click="closeDrawer" id="three-levels-of-refactoring-nav">
+										 Three levels of refactoring
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#code-level-refactoring" v-on:click="closeDrawer" id="code-level-refactoring-nav">
+										 Code level refactoring
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#design-level-refactoring" v-on:click="closeDrawer" id="design-level-refactoring-nav">
+										 Design level refactoring
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#architecture-level-refactoring" v-on:click="closeDrawer" id="architecture-level-refactoring-nav">
+										 Architecture level refactoring
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#support-needed-during-cd-journey" v-on:click="closeDrawer" id="support-needed-during-cd-journey-nav">
+										 Support needed during CD journey
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://sunitparekh.github.io/">
+            sUnit Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://sunitparekh.github.io/">
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="single-column-header-title">sUnit Blog</div>
+        
+        <div class="single-column-header-subtitle">insights on software development</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('/images/background.png'); ">
+                <div class="post-title">
+                    How to begin with Agile and Continuous Delivery on Legacy Projects?
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            Oct 31, 2014
+                        </time>
+                        
+                    </br>
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/agile">agile</a>
+                                &nbsp;
+                            
+                                <a href="/tags/software-development">software-development</a>
+                                &nbsp;
+                            
+                                <a href="/tags/continuous-delivery">continuous-delivery</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>In my interactions with people, I hear &ldquo;Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don&rsquo;t know where to start or we can&rsquo;t do agile and continuous delivery on our project&rdquo;.</p>
+<p>Most of the time legacy projects are facing typical issues like fragile codebase, too much technical debt, old libraries &amp; frameworks. Which resulting into long development and testing cycles. To solve these problems, team decides to follow Agile practices. Following agile practices requires specialized skills like Continuous Integration, Test Driven Development, Refactoring and Evolutionary Design&hellip; and difficulty is where to start, there are so many agile engineering practices. Should we start Big Bang, stop all development until we have CI, Automated Tests, &hellip; everything in place? My answer is No Big Bang.</p>
+<p>Here is step by step approach that worked for me to move towards CD with agile practices. Remember this is a journey and can take upto months or years to get results, based on size of the project, so have patience.</p>
+<h2 id="step-1-automated-build-and-deployment">Step 1: Automated build and deployment</h2>
+<p>On most of the legacy projects I have seen, taking build and performing deployment is quite long process. One of the main reason for long cycle is, build and deployment steps are manual, resulting into long downtime for systems (environments) during deployment. If we notice all the steps we do for building artifacts and performing deployment are repetitive and can be automated using scripts. In case of product we can have automated upgrades for client with proper distribution channel.</p>
+<p><strong>Tools and techniques for automated build</strong></p>
+<ul>
+<li>Packaging application in native format using tools like <a href="https://github.com/jordansissel/fpm">FPM</a> to build RPM, DEB packages to deploy application in native way. For products this approach is ideal and we can leverage system default package manager for automated upgrade. And this is quite common in applications distributions like Apache HTTP Server, JDK etc.</li>
+<li>Use Continuous Integration servers like <a href="http://www.go.cd/">Go</a> to build artifacts and trigger deployment.</li>
+<li>Use <a href="http://www.getchef.com/chef/">Chef</a> to provision servers and deploy applications triggered via downstream pipelines in CI server.</li>
+<li>Use <a href="http://flywaydb.org/">Flyway</a> or <a href="http://www.liquibase.org/">Liquibase</a> for running database migrations in incremental way.</li>
+</ul>
+<p><img src="/images/24/simple-pipeline.svg" alt="simple deployment pipeline"></p>
+<p>Next question comes in mind is, what should be the branching strategy? I recommend following 3 active branch strategy.</p>
+<ol>
+<li><strong>Master development branch</strong>, used continuously for active development</li>
+<li><strong>Release Candidate branch</strong>, is very short lived branch, created as release candidate for production and cut from master. Once deployed to production this becomes the <em>Production branch</em> This is also known as <strong>beta</strong> branch.</li>
+<li><strong>Production branch</strong>, used for defect and emergency fixes (hotfix)</li>
+</ol>
+<p><img src="/images/24/3-branch-pipeline.svg" alt="3 branch deployment pipeline"></p>
+<p>Doing automated deployment enables us to deploy any build at will even for small bug fix. This enables QA to get latest code for testing anytime as soon as it is checked in by developers. At this step we are still doing manual testing.
+{: .clear}</p>
+<h2 id="step-2-automated-sanity-test-suite">Step 2: Automated sanity test suite</h2>
+<p>Building full automation suite to get good coverage for CD is long way to go. My suggestion here is to start small, identify blockers or critical end user scenarios and write automated tests just for those. Blocker means if something fails then end user is unable to use application and critical for business to continue. e.g. in retail website, credit card payment not working in purchase workflow. Lets call this test suite as sanity. Remember to keep this as small as possible, I would say this test suite should run in 10 min max.</p>
+<p><img src="/images/24/automated-sanity-test.svg" alt="automated sanity test"></p>
+<p>Once the &lsquo;Sanity automated tests&rsquo; are ready, lets put them to run on every check-in using CI setup done before. This provides safety net against critical paths for every check-in done by developer.</p>
+<p><strong>Tools and techniques for automated build</strong></p>
+<ol>
+<li>Perform headless website testing using <a href="http://phantomjs.org/headless-testing.html">PhantomJS</a> in combination with <a href="http://jasmine.github.io/">Jasmine</a> and <a href="https://github.com/airportyh/testem">Testem</a>. Other alternatives are <a href="http://docs.seleniumhq.org/">Selenium</a> and <a href="http://sahi.co.in/sahi-open-source/">Sahi</a>.</li>
+</ol>
+<blockquote>
+<p>Same Sanity test suite can be run against all environments with different configurations and parameters. This helps in verifying and building confidence in our builds and deployments in each environment.</p>
+</blockquote>
+<p>Evolve automated sanity test suite to achieve acceptance test suite with more End-2-End type of tests. However, please make sure you follow <a href="http://martinfowler.com/bliki/TestPyramid.html">Test Pyramid</a></p>
+<h2 id="step-3-development-with-automated-unit-tests-and-refactoring">Step 3: Development with automated unit tests and refactoring</h2>
+<p>Now the tough one. Big bang unit testing and refactoring is <em>big NO</em>. You need to be most careful in this part of CD adoption. First step is to define single <a href="">Automated Tests Strategy</a>. Make sure everyone understands <a href="http://martinfowler.com/bliki/TestPyramid.html">Test Pyramid</a> and follows principle of write more unit tests and less acceptance tests. Avoid repeating same tests in different test suites. There is one and only one test stratergy across team, do not fall into trap of different strategy for development team and testing team, remember ONE team.</p>
+<p>I recommend baby steps again here, do refactoring and write unit tests only for features which are under development and touched for enhancement. Do not try to cover non-touched code. In case of Registration feature not changing, do not write unit tests or refactor code related to registration feature.</p>
+<p><img src="/images/24/automated-unit-test.svg" alt="automated unit test"></p>
+<blockquote>
+<p>Do progressive refactoring and test coverage for code under heavy development, do just enough for others. In short invest more in changing codebase and less in dead code.</p>
+</blockquote>
+<p><em>Steps for development,</em></p>
+<ol>
+<li>Write unit test for existing functionality, provide safety net before you make the enhancements. Sometime code is not in a shape of writing unit tests and without refactoring you won&rsquo;t be able to write unit tests. In such cases just do enough refactoring which enables you to write unit tests</li>
+<li>Once you have safety net of automated tests, do heavy refactoring if needed</li>
+<li>Now make enhancements either by following test first or test last approach.</li>
+<li>If needed, do refactoring of the code you just wrote before you call it done.</li>
+</ol>
+<p>Watch Martin Flower&rsquo;s <a href="https://www.youtube.com/watch?v=vqEg37e4Mkw">Workflow of Refactoring</a> to learn more.</p>
+<h3 id="test-last-to-test-first-journey">Test last to test first journey</h3>
+<p>Lots of time I realise that team is not familiar with the xUnit frameworks and not written any unit tests in past. Have patience, give them space to learn how to write effective unit test, learn good practices and patterns in unit testing. Let them start with test last and slowly move them towards test first journey. Since we are looking at legacy project here we are doing test last anyways. Even if you are following test last, do one change to code and write test, do not wait for everything to finish and then write all tests.</p>
+<h3 id="three-levels-of-refactoring">Three levels of refactoring</h3>
+<h4 id="code-level-refactoring">Code level refactoring</h4>
+<p>This is first level of refactoring that each and every team member should do ruthlessly. Such as better naming, smaller methods, &hellip; etc</p>
+<h4 id="design-level-refactoring">Design level refactoring</h4>
+<p>Team should change design within codebase to apply design patterns wherever necessary to represent code in better way which allows to make future enhancements easily. like removing large if/else and switch/case chain to appropriate design pattern. Make sure we share such refactoring with all developers to have knowledge spread across and learning by examples.</p>
+<h4 id="architecture-level-refactoring">Architecture level refactoring</h4>
+<p>Most of the time team ask me, Code and Design level refactoring we are able to do but we find it difficult to go for architecture level refactoring. And this is the most important refactoring to break the ice of legacy code. Most of the time legacy codebase is monolithic in nature and would like to move towards service oriented architecture. How to do it? You can&rsquo;t go back to business and say we are stopping all other development and no release for next 3 months since we are doing architecture refactoring. Here is my way for approaching such refactoring,</p>
+<ol>
+<li>Build services as method calls using design level refactoring</li>
+<li>Move method calls to services, however, this services coded and deployed in same monolithic way, make localhost calls</li>
+<li>Move services to separate codebase, but deploy in same monolithic way, make localhost calls</li>
+<li>Move service as separate independent deployment, but deploy on same box, make localhost calls</li>
+<li>Make service totally independent as you would liked it to be, make remote calls</li>
+</ol>
+<p>Above steps can take weeks or months based on the complexity and size. My guideline is to divide into steps that you could complete within one iteration, so that you keep it green and always running.</p>
+<blockquote>
+<p>Above steps can be done simultaneously without any restrictions. This is just a guideline and feel free to try different approaches that works for you and your team.</p>
+</blockquote>
+<h2 id="support-needed-during-cd-journey">Support needed during CD journey</h2>
+<p>During the agile adoption journey it is important that team gets required support in terms of,</p>
+<ul>
+<li>Team needs necessary initial training and coaching on Agile practices like Continuous Integration, Test Driven Development, Refactoring and Evolutionary Design&hellip;</li>
+<li>Have a coach, internal or external, who mentors team on Agile adoption journey. It is important that someone constantly looking at how are team is progressing on CD journey? Is team getting benefits? Is team getting enough support to adopt new way of development?</li>
+<li>All stakeholder needs to understand that during this journey initially when team is learning, refactoring &amp; building automated test suites, it might take little longer to deliver. However after sometime trend should shift and start showing benefits with quicker &amp; quality deliveries.</li>
+</ul>
+<blockquote>
+<p>Run regular retrospective on Agile adoption and CD progress as health check.</p>
+</blockquote>
+<p>Please share your experience with Agile adoption on legacy project and challenges faced using comments.</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2014-10-31</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://sunitparekh.github.io/posts/25-story-mapping/">
+                    Next<br>Story Mapping, Visual Way of Building Product Backlog
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://sunitparekh.github.io/posts/23-two-stack-cms/">
+                    Previous<br>Building a Two-Stack CMS for a global product catalog
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	</div>
+    	</div>
+    <script src="https://sunitparekh.github.io//js/journal.js"></script>
+    </body>
+</html>

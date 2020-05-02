@@ -50,5 +50,52 @@
 To test emails effectively we end up using real email addresses, which leads to cluttering mailbox with unwanted emails. For testing different scenarios we need multiple email address, and testing becomes more difficult when it requires checking mailbox of other users.</description>
     </item>
     
+    <item>
+      <title>Collaboration Techniques for Large Distributed Agile Projects</title>
+      <link>https://sunitparekh.github.io/posts/26-collaboration-techniques/</link>
+      <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/26-collaboration-techniques/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects</description>
+    </item>
+    
+    <item>
+      <title>Story Mapping, Visual Way of Building Product Backlog</title>
+      <link>https://sunitparekh.github.io/posts/25-story-mapping/</link>
+      <pubDate>Tue, 13 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/25-story-mapping/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog</description>
+    </item>
+    
+    <item>
+      <title>How to begin with Agile and Continuous Delivery on Legacy Projects?</title>
+      <link>https://sunitparekh.github.io/posts/24-legacy-projects/</link>
+      <pubDate>Fri, 31 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/24-legacy-projects/</guid>
+      <description>In my interactions with people, I hear &amp;ldquo;Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don&amp;rsquo;t know where to start or we can&amp;rsquo;t do agile and continuous delivery on our project&amp;rdquo;.
+Most of the time legacy projects are facing typical issues like fragile codebase, too much technical debt, old libraries &amp;amp; frameworks. Which resulting into long development and testing cycles. To solve these problems, team decides to follow Agile practices.</description>
+    </item>
+    
+    <item>
+      <title>Building a Two-Stack CMS for a global product catalog</title>
+      <link>https://sunitparekh.github.io/posts/23-two-stack-cms/</link>
+      <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/23-two-stack-cms/</guid>
+      <description>Article is published on MartinFowler.com as InfoDeck here.. http://martinfowler.com/articles/two-stack-cms/</description>
+    </item>
+    
+    <item>
+      <title>Use structured logging for log search and analytics</title>
+      <link>https://sunitparekh.github.io/posts/22-structured-logging/</link>
+      <pubDate>Sat, 06 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/22-structured-logging/</guid>
+      <description>Logging is followed in almost every project. However, most of the time we end up using logs only for debugging and auditing purpose. Since past few projects we have been exploring more opportunities for leveraging logs for purposes like application metrics collection, reporting, monitoring and alerting. And during this, I learnt about structured logging and how it enables us to achieve lot more using logs.
+Lets first look at what we need to follow while logging to achieve structured logging.</description>
+    </item>
+    
   </channel>
 </rss>

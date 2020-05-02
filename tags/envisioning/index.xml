@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>envisioning on sUnit Blog</title>
+    <link>https://sunitparekh.github.io/tags/envisioning/</link>
+    <description>Recent content in envisioning on sUnit Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2020 sunitparekh.in</copyright>
+    <lastBuildDate>Tue, 13 Jan 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sunitparekh.github.io/tags/envisioning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Story Mapping, Visual Way of Building Product Backlog</title>
+      <link>https://sunitparekh.github.io/posts/25-story-mapping/</link>
+      <pubDate>Tue, 13 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/25-story-mapping/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -175,5 +175,267 @@
         </item>
     
     
+    
+        <item>
+        <title>Collaboration Techniques for Large Distributed Agile Projects</title>
+        <link>https://sunitparekh.github.io/posts/26-collaboration-techniques/</link>
+        <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
+        
+        <guid>https://sunitparekh.github.io/posts/26-collaboration-techniques/</guid>
+        <description>sUnit Blog https://sunitparekh.github.io/posts/26-collaboration-techniques/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpswwwthoughtworkscominsightsblogcollaboration-techniques-large-distributed-agile-projects&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects&#34;&gt;https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects&lt;/a&gt;&lt;/p&gt;
+- https://sunitparekh.github.io/posts/26-collaboration-techniques/ - 2020 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Story Mapping, Visual Way of Building Product Backlog</title>
+        <link>https://sunitparekh.github.io/posts/25-story-mapping/</link>
+        <pubDate>Tue, 13 Jan 2015 00:00:00 +0000</pubDate>
+        
+        <guid>https://sunitparekh.github.io/posts/25-story-mapping/</guid>
+        <description>sUnit Blog https://sunitparekh.github.io/posts/25-story-mapping/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpwwwthoughtworkscominsightsblogstory-mapping-visual-way-building-product-backlog&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog&#34;&gt;http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/25/featured.jpg&#34; alt=&#34;Story Map&#34;&gt;&lt;/p&gt;
+- https://sunitparekh.github.io/posts/25-story-mapping/ - 2020 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>How to begin with Agile and Continuous Delivery on Legacy Projects?</title>
+        <link>https://sunitparekh.github.io/posts/24-legacy-projects/</link>
+        <pubDate>Fri, 31 Oct 2014 00:00:00 +0000</pubDate>
+        
+        <guid>https://sunitparekh.github.io/posts/24-legacy-projects/</guid>
+        <description>sUnit Blog https://sunitparekh.github.io/posts/24-legacy-projects/ -&lt;p&gt;In my interactions with people, I hear &amp;ldquo;Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don&amp;rsquo;t know where to start or we can&amp;rsquo;t do agile and continuous delivery on our project&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Most of the time legacy projects are facing typical issues like fragile codebase, too much technical debt, old libraries &amp;amp; frameworks. Which resulting into long development and testing cycles. To solve these problems, team decides to follow Agile practices. Following agile practices requires specialized skills like Continuous Integration, Test Driven Development, Refactoring and Evolutionary Design&amp;hellip; and difficulty is where to start, there are so many agile engineering practices. Should we start Big Bang, stop all development until we have CI, Automated Tests, &amp;hellip; everything in place? My answer is No Big Bang.&lt;/p&gt;
+&lt;p&gt;Here is step by step approach that worked for me to move towards CD with agile practices. Remember this is a journey and can take upto months or years to get results, based on size of the project, so have patience.&lt;/p&gt;
+&lt;h2 id=&#34;step-1-automated-build-and-deployment&#34;&gt;Step 1: Automated build and deployment&lt;/h2&gt;
+&lt;p&gt;On most of the legacy projects I have seen, taking build and performing deployment is quite long process. One of the main reason for long cycle is, build and deployment steps are manual, resulting into long downtime for systems (environments) during deployment. If we notice all the steps we do for building artifacts and performing deployment are repetitive and can be automated using scripts. In case of product we can have automated upgrades for client with proper distribution channel.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools and techniques for automated build&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Packaging application in native format using tools like &lt;a href=&#34;https://github.com/jordansissel/fpm&#34;&gt;FPM&lt;/a&gt; to build RPM, DEB packages to deploy application in native way. For products this approach is ideal and we can leverage system default package manager for automated upgrade. And this is quite common in applications distributions like Apache HTTP Server, JDK etc.&lt;/li&gt;
+&lt;li&gt;Use Continuous Integration servers like &lt;a href=&#34;http://www.go.cd/&#34;&gt;Go&lt;/a&gt; to build artifacts and trigger deployment.&lt;/li&gt;
+&lt;li&gt;Use &lt;a href=&#34;http://www.getchef.com/chef/&#34;&gt;Chef&lt;/a&gt; to provision servers and deploy applications triggered via downstream pipelines in CI server.&lt;/li&gt;
+&lt;li&gt;Use &lt;a href=&#34;http://flywaydb.org/&#34;&gt;Flyway&lt;/a&gt; or &lt;a href=&#34;http://www.liquibase.org/&#34;&gt;Liquibase&lt;/a&gt; for running database migrations in incremental way.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/24/simple-pipeline.svg&#34; alt=&#34;simple deployment pipeline&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Next question comes in mind is, what should be the branching strategy? I recommend following 3 active branch strategy.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Master development branch&lt;/strong&gt;, used continuously for active development&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Release Candidate branch&lt;/strong&gt;, is very short lived branch, created as release candidate for production and cut from master. Once deployed to production this becomes the &lt;em&gt;Production branch&lt;/em&gt; This is also known as &lt;strong&gt;beta&lt;/strong&gt; branch.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Production branch&lt;/strong&gt;, used for defect and emergency fixes (hotfix)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/24/3-branch-pipeline.svg&#34; alt=&#34;3 branch deployment pipeline&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Doing automated deployment enables us to deploy any build at will even for small bug fix. This enables QA to get latest code for testing anytime as soon as it is checked in by developers. At this step we are still doing manual testing.
+{: .clear}&lt;/p&gt;
+&lt;h2 id=&#34;step-2-automated-sanity-test-suite&#34;&gt;Step 2: Automated sanity test suite&lt;/h2&gt;
+&lt;p&gt;Building full automation suite to get good coverage for CD is long way to go. My suggestion here is to start small, identify blockers or critical end user scenarios and write automated tests just for those. Blocker means if something fails then end user is unable to use application and critical for business to continue. e.g. in retail website, credit card payment not working in purchase workflow. Lets call this test suite as sanity. Remember to keep this as small as possible, I would say this test suite should run in 10 min max.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/24/automated-sanity-test.svg&#34; alt=&#34;automated sanity test&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Once the &amp;lsquo;Sanity automated tests&amp;rsquo; are ready, lets put them to run on every check-in using CI setup done before. This provides safety net against critical paths for every check-in done by developer.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools and techniques for automated build&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Perform headless website testing using &lt;a href=&#34;http://phantomjs.org/headless-testing.html&#34;&gt;PhantomJS&lt;/a&gt; in combination with &lt;a href=&#34;http://jasmine.github.io/&#34;&gt;Jasmine&lt;/a&gt; and &lt;a href=&#34;https://github.com/airportyh/testem&#34;&gt;Testem&lt;/a&gt;. Other alternatives are &lt;a href=&#34;http://docs.seleniumhq.org/&#34;&gt;Selenium&lt;/a&gt; and &lt;a href=&#34;http://sahi.co.in/sahi-open-source/&#34;&gt;Sahi&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Same Sanity test suite can be run against all environments with different configurations and parameters. This helps in verifying and building confidence in our builds and deployments in each environment.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Evolve automated sanity test suite to achieve acceptance test suite with more End-2-End type of tests. However, please make sure you follow &lt;a href=&#34;http://martinfowler.com/bliki/TestPyramid.html&#34;&gt;Test Pyramid&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;step-3-development-with-automated-unit-tests-and-refactoring&#34;&gt;Step 3: Development with automated unit tests and refactoring&lt;/h2&gt;
+&lt;p&gt;Now the tough one. Big bang unit testing and refactoring is &lt;em&gt;big NO&lt;/em&gt;. You need to be most careful in this part of CD adoption. First step is to define single &lt;a href=&#34;&#34;&gt;Automated Tests Strategy&lt;/a&gt;. Make sure everyone understands &lt;a href=&#34;http://martinfowler.com/bliki/TestPyramid.html&#34;&gt;Test Pyramid&lt;/a&gt; and follows principle of write more unit tests and less acceptance tests. Avoid repeating same tests in different test suites. There is one and only one test stratergy across team, do not fall into trap of different strategy for development team and testing team, remember ONE team.&lt;/p&gt;
+&lt;p&gt;I recommend baby steps again here, do refactoring and write unit tests only for features which are under development and touched for enhancement. Do not try to cover non-touched code. In case of Registration feature not changing, do not write unit tests or refactor code related to registration feature.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/24/automated-unit-test.svg&#34; alt=&#34;automated unit test&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Do progressive refactoring and test coverage for code under heavy development, do just enough for others. In short invest more in changing codebase and less in dead code.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;Steps for development,&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Write unit test for existing functionality, provide safety net before you make the enhancements. Sometime code is not in a shape of writing unit tests and without refactoring you won&amp;rsquo;t be able to write unit tests. In such cases just do enough refactoring which enables you to write unit tests&lt;/li&gt;
+&lt;li&gt;Once you have safety net of automated tests, do heavy refactoring if needed&lt;/li&gt;
+&lt;li&gt;Now make enhancements either by following test first or test last approach.&lt;/li&gt;
+&lt;li&gt;If needed, do refactoring of the code you just wrote before you call it done.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Watch Martin Flower&amp;rsquo;s &lt;a href=&#34;https://www.youtube.com/watch?v=vqEg37e4Mkw&#34;&gt;Workflow of Refactoring&lt;/a&gt; to learn more.&lt;/p&gt;
+&lt;h3 id=&#34;test-last-to-test-first-journey&#34;&gt;Test last to test first journey&lt;/h3&gt;
+&lt;p&gt;Lots of time I realise that team is not familiar with the xUnit frameworks and not written any unit tests in past. Have patience, give them space to learn how to write effective unit test, learn good practices and patterns in unit testing. Let them start with test last and slowly move them towards test first journey. Since we are looking at legacy project here we are doing test last anyways. Even if you are following test last, do one change to code and write test, do not wait for everything to finish and then write all tests.&lt;/p&gt;
+&lt;h3 id=&#34;three-levels-of-refactoring&#34;&gt;Three levels of refactoring&lt;/h3&gt;
+&lt;h4 id=&#34;code-level-refactoring&#34;&gt;Code level refactoring&lt;/h4&gt;
+&lt;p&gt;This is first level of refactoring that each and every team member should do ruthlessly. Such as better naming, smaller methods, &amp;hellip; etc&lt;/p&gt;
+&lt;h4 id=&#34;design-level-refactoring&#34;&gt;Design level refactoring&lt;/h4&gt;
+&lt;p&gt;Team should change design within codebase to apply design patterns wherever necessary to represent code in better way which allows to make future enhancements easily. like removing large if/else and switch/case chain to appropriate design pattern. Make sure we share such refactoring with all developers to have knowledge spread across and learning by examples.&lt;/p&gt;
+&lt;h4 id=&#34;architecture-level-refactoring&#34;&gt;Architecture level refactoring&lt;/h4&gt;
+&lt;p&gt;Most of the time team ask me, Code and Design level refactoring we are able to do but we find it difficult to go for architecture level refactoring. And this is the most important refactoring to break the ice of legacy code. Most of the time legacy codebase is monolithic in nature and would like to move towards service oriented architecture. How to do it? You can&amp;rsquo;t go back to business and say we are stopping all other development and no release for next 3 months since we are doing architecture refactoring. Here is my way for approaching such refactoring,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Build services as method calls using design level refactoring&lt;/li&gt;
+&lt;li&gt;Move method calls to services, however, this services coded and deployed in same monolithic way, make localhost calls&lt;/li&gt;
+&lt;li&gt;Move services to separate codebase, but deploy in same monolithic way, make localhost calls&lt;/li&gt;
+&lt;li&gt;Move service as separate independent deployment, but deploy on same box, make localhost calls&lt;/li&gt;
+&lt;li&gt;Make service totally independent as you would liked it to be, make remote calls&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Above steps can take weeks or months based on the complexity and size. My guideline is to divide into steps that you could complete within one iteration, so that you keep it green and always running.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Above steps can be done simultaneously without any restrictions. This is just a guideline and feel free to try different approaches that works for you and your team.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;support-needed-during-cd-journey&#34;&gt;Support needed during CD journey&lt;/h2&gt;
+&lt;p&gt;During the agile adoption journey it is important that team gets required support in terms of,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Team needs necessary initial training and coaching on Agile practices like Continuous Integration, Test Driven Development, Refactoring and Evolutionary Design&amp;hellip;&lt;/li&gt;
+&lt;li&gt;Have a coach, internal or external, who mentors team on Agile adoption journey. It is important that someone constantly looking at how are team is progressing on CD journey? Is team getting benefits? Is team getting enough support to adopt new way of development?&lt;/li&gt;
+&lt;li&gt;All stakeholder needs to understand that during this journey initially when team is learning, refactoring &amp;amp; building automated test suites, it might take little longer to deliver. However after sometime trend should shift and start showing benefits with quicker &amp;amp; quality deliveries.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Run regular retrospective on Agile adoption and CD progress as health check.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Please share your experience with Agile adoption on legacy project and challenges faced using comments.&lt;/p&gt;
+- https://sunitparekh.github.io/posts/24-legacy-projects/ - 2020 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Building a Two-Stack CMS for a global product catalog</title>
+        <link>https://sunitparekh.github.io/posts/23-two-stack-cms/</link>
+        <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
+        
+        <guid>https://sunitparekh.github.io/posts/23-two-stack-cms/</guid>
+        <description>sUnit Blog https://sunitparekh.github.io/posts/23-two-stack-cms/ -&lt;h2 id=&#34;article-is-published-on-martinfowlercom-as-infodeck-herehttpmartinfowlercomarticlestwo-stack-cms&#34;&gt;Article is published on MartinFowler.com as InfoDeck &lt;a href=&#34;http://martinfowler.com/articles/two-stack-cms/&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://martinfowler.com/articles/two-stack-cms/&#34;&gt;http://martinfowler.com/articles/two-stack-cms/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/23/two-stack-cms.svg&#34; alt=&#34;Two Stack CMS&#34;&gt;&lt;/p&gt;
+- https://sunitparekh.github.io/posts/23-two-stack-cms/ - 2020 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Use structured logging for log search and analytics</title>
+        <link>https://sunitparekh.github.io/posts/22-structured-logging/</link>
+        <pubDate>Sat, 06 Sep 2014 00:00:00 +0000</pubDate>
+        
+        <guid>https://sunitparekh.github.io/posts/22-structured-logging/</guid>
+        <description>sUnit Blog https://sunitparekh.github.io/posts/22-structured-logging/ -&lt;p&gt;Logging is followed in almost every project. However, most of the time we end up using logs only for debugging and auditing purpose. Since past few projects we have been exploring more opportunities for leveraging logs for purposes like application metrics collection, reporting, monitoring and alerting. And during this, I learnt about structured logging and how it enables us to achieve lot more using logs.&lt;/p&gt;
+&lt;p&gt;Lets first look at what we need to follow while logging to achieve structured logging.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-structured-logging&#34;&gt;What is structured logging?&lt;/h2&gt;
+&lt;p&gt;Not only log level is important, but what we log &amp;amp; how we log also matters. Lets look at the default log message format,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;127.0.0.1 [2014-07-22T18:12:27.200+0530] &amp;quot;GET /api/modules/doc_id/navigation HTTP/1.1&amp;quot; 200 476
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Above message is interpreted well by humans since we know, &lt;code&gt;120.0.0.1&lt;/code&gt; is IP, &lt;code&gt;2014-07-22T18:12:27.200+0530&lt;/code&gt; is timestamp, &lt;code&gt;GET&lt;/code&gt; is request methods, &lt;code&gt;200&lt;/code&gt; is response status and &lt;code&gt;476&lt;/code&gt; is server response time. And such interpretation is required for each message logging.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s provide structure to the above log message,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;ip=&amp;quot;127.0.0.1&amp;quot; timestamp=&amp;quot;2014-07-22T18:12:27.200+0530&amp;quot; method=GET
+url=&amp;quot;/api/modules/doc_id/navigation&amp;quot; protocol=HTTP/1.1 status=200 responseTime=476
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Above structured message is self explanatory and easy to parse and index by system. This technique of &lt;code&gt;key=value&lt;/code&gt; style logging is also known as logging with context. Using above log message keys we can find all slow pages, by querying logs with &lt;code&gt;status = 200&lt;/code&gt; and &lt;code&gt;responseTime &amp;gt; 2000&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now lets take some examples of structured logs to understand it usage better.&lt;/p&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
+&lt;h4 id=&#34;background-job-logs&#34;&gt;Background job logs&lt;/h4&gt;
+&lt;p&gt;Most of the application now days have have background jobs running at regular interval. With following structured logging for each jobs,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;timestamp=&amp;quot;2014-07-22T18:12:27.200+0530&amp;quot; host=server20  tag=jobserver jobName=image_upload
+jobStartTime=&amp;quot;2014-07-22T18:10:00.100+0530&amp;quot; jobEndTime=&amp;quot;2014-07-22T18:12:27.100+0530&amp;quot;
+jobExecutionTime=9840 jobStatus=success noOfImageUploaded=125
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;following can be achieved,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Get alert message when jobStatus is failure, we do&lt;/li&gt;
+&lt;li&gt;Monitor average job execution time and we have setup for each job if it reaches more than average sends alert.&lt;/li&gt;
+&lt;li&gt;Monitoring average response time also helps in tuning the frequency of the job runs.&lt;/li&gt;
+&lt;li&gt;To analyze random failure or slowness in jobs, information in log is really useful to find if it is failing on specific hosts or at specific time or when run in parallel with any other jobs or no of items are too many to process etc.&lt;/li&gt;
+&lt;li&gt;Using more meta info like noOfImageUpload and jobExecutionTime we can calculate average time for each image upload.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;distributed-correlated-logs&#34;&gt;Distributed correlated logs&lt;/h4&gt;
+&lt;p&gt;With distributed and microservice architecture, it is quite natural to have logs spread across systems. With structure logs and using common transaction id shared across systems, we can correlate logs and turn logs into information used for debugging, auditing, reporting and monitoring.&lt;/p&gt;
+&lt;p&gt;Lets take the example of order request after successful payment.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;timestamp=&amp;quot;2014-07-22T18:12:27.100+0530&amp;quot; host=server01 tag=webServer
+transactionId=458748939 cientIP=83.84.85.86 sessionId=123456789
+message=&amp;quot;Order confirmation request received&amp;quot;
+
+timestamp=&amp;quot;2014-07-22T18:12:27.200+0530&amp;quot; host=server03 tag=orderService
+transactionId=458748939 message=&amp;quot;Order created&amp;quot;
+orderAmount=550
+
+timestamp=&amp;quot;2014-07-22T18:12:27.250+0530&amp;quot; host=server03 tag=inventoryService
+transactionId=458748939 message=&amp;quot;Online inventory updated&amp;quot;
+
+timestamp=&amp;quot;2014-07-22T18:12:27.300+0530&amp;quot; host=server07 tag=paymentService
+transactionId=458748939 message=&amp;quot;Payment details stored against order.&amp;quot;
+paymentMode=CreditCard
+
+timestamp=&amp;quot;2014-07-22T18:12:27.350+0530&amp;quot; host=server05  tag=couponService
+transactionId=458748939 message=&amp;quot;Redeem coupon ABCDE marked for user.&amp;quot;
+couponType=REWARD couponCode=ABCDE
+
+timestamp=&amp;quot;2014-07-22T18:12:27.400+0530&amp;quot; host=server01 tag=webServer
+transactionId=458748939 message=&amp;quot;Request completed&amp;quot;
+
+timestamp=&amp;quot;2014-07-22T18:12:28.500+0530&amp;quot; host=server06  tag=emailService
+transactionId=458748939 message=&amp;quot;Order email sent&amp;quot;
+
+timestamp=&amp;quot;2014-07-22T18:12:27.450+0530&amp;quot; host=server05  tag=rewardService
+transactionId=458748939 message=&amp;quot;Reward points updated.&amp;quot;
+
+timestamp=&amp;quot;2014-07-22T18:15:00.100+0530&amp;quot; host=server25  tag=shippingService
+transactionId=458748939 message=&amp;quot;Order received by shipment system.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;with above messages we can,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We are better equipped with debugging issues across systems including async steps of the transaction. Using transactionId we can connect logs and findout client/user specific details and track incident.  e.g. track couponCode used by user with connecting logs from couponService to webServer&lt;/li&gt;
+&lt;li&gt;Using paymentMode, we can learn more about what kind of payment modes are preferred by customers.&lt;/li&gt;
+&lt;li&gt;Calculate average response time in processing order request.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Leverage apache &lt;code&gt;mod_unique_id&lt;/code&gt; module to generate transaction id at web server and later share it with other services by passing it in request headers.&lt;/p&gt;
+&lt;h2 id=&#34;tools&#34;&gt;Tools&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.splunk.com/&#34;&gt;Splunk&lt;/a&gt;, is best in class, commercial product. We are using it in production for large system generating more than 100GB of logs per day. Splunk would be my personal recommendation as well. Lets take example and learn more about using Splunk.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lets find 404s on website using Splunk&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/22/splunk-query.png&#34; alt=&#34;splunk query for finding 404&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Query: &lt;code&gt;tag=production sourcetype=nginx-access GET 404 | rex &amp;quot;\&amp;quot;GET (?&amp;lt;url&amp;gt;\S*) &amp;quot; | stats count by url | sort -count | head 20&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Lets understand query in detail. Splunk support &lt;a href=&#34;http://martinfowler.com/articles/collection-pipeline/&#34;&gt;unix style pipes in query&lt;/a&gt;, so you could pass output of one command to another and build on. In above example we used 5 different commands,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;tag=production&lt;/code&gt; and &lt;code&gt;sourcetype=nginx-access&lt;/code&gt; with &lt;code&gt;GET 404&lt;/code&gt; returns all 404 log statements from all productions servers and source file name nginx-access&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rex &amp;quot;\&amp;quot;GET (?&amp;lt;url&amp;gt;\S*) &amp;quot;&lt;/code&gt; extract URL from the log using reg-ex&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;stats count&lt;/code&gt; by url group and count by url&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sort -count&lt;/code&gt; sort in descending order on count&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;head 20&lt;/code&gt; take first 20 from the result set&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://logentries.com/&#34;&gt;LogEntries&lt;/a&gt; is another feature rich SaaS solution on cloud. Other options are &lt;a href=&#34;https://www.loggly.com/&#34;&gt;Loogly&lt;/a&gt;, &lt;a href=&#34;https://papertrailapp.com/&#34;&gt;PaperTrail&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.elasticsearch.org/overview/logstash/&#34;&gt;LogStash&lt;/a&gt; + &lt;a href=&#34;http://www.elasticsearch.org/overview/elasticsearch/&#34;&gt;Elasticsearch&lt;/a&gt; + &lt;a href=&#34;http://www.elasticsearch.org/overview/kibana/&#34;&gt;Kibana&lt;/a&gt; combination is best open-source one in this space.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://graylog2.org/&#34;&gt;GrayLog2&lt;/a&gt;, open-source log analytics solutions. Used with syslog to aggregate logs.&lt;/p&gt;
+&lt;p&gt;Even though structured logging is quite useful on individual system. However until we have logs from all the system collected and indexed together, power of structured logging is under utilized. So lets look at what are different ways we can aggregate logs from multiple systems.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-aggregate-logs&#34;&gt;How to aggregate logs?&lt;/h2&gt;
+&lt;p&gt;There are multiple approaches available for log aggregation.&lt;/p&gt;
+&lt;h4 id=&#34;log-file-replication&#34;&gt;Log File Replication&lt;/h4&gt;
+&lt;p&gt;Simplest one is, continue logging to file system on application server and set up an independent process to monitor files and send logs to central log server every &amp;lsquo;n&amp;rsquo; milliseconds.&lt;/p&gt;
+&lt;h4 id=&#34;syslog&#34;&gt;Syslog&lt;/h4&gt;
+&lt;p&gt;To achieve real time monitoring and alerting we can use syslog approach, directly feeding logs to a central log server. Syslog is available by default on most of the linux machines. &lt;a href=&#34;http://www.rsyslog.com/&#34;&gt;rsyslog&lt;/a&gt; or &lt;a href=&#34;http://www.balabit.com/network-security/syslog-ng/opensource-logging-system/&#34;&gt;syslog-ng&lt;/a&gt; are two popular syslog implementations.&lt;/p&gt;
+&lt;h4 id=&#34;agents&#34;&gt;Agents&lt;/h4&gt;
+&lt;p&gt;Most of the products in this space provide their own agents, which runs on client and sends logs real-time to central log server. e.g. &lt;a href=&#34;http://wiki.splunk.com/Community:Getting_data_into_Splunk&#34;&gt;Splunk&lt;/a&gt;, &lt;a href=&#34;https://logentries.com/doc/forwarders/&#34;&gt;LogEntries&lt;/a&gt; etc. There are specific tools available just for aggregation purposes like &lt;a href=&#34;http://flume.apache.org/&#34;&gt;Apache Flume&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/22/centralised-logging.svg&#34; alt=&#34;centralised aggregated logs&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In distributed systems it is important that we have realtime log aggregation setup. And it is equally important that time on all application servers is in sync. Since a millisecond differences can have unordered logs and leads to confusion and errors while debugging and reporting.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;more-usages&#34;&gt;More usages&lt;/h2&gt;
+&lt;h4 id=&#34;debugging&#34;&gt;Debugging&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;With database logs find all slow running database queries&lt;/li&gt;
+&lt;li&gt;Using Nginx access logs, find slow response pages&lt;/li&gt;
+&lt;li&gt;Nginx access logs to generate daily reports for 404s&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;reporting&#34;&gt;Reporting&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;With transaction logs, turn data into knowledge. Generating reports for sales, registrations, popular products added in cart etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;monitoring--alerting&#34;&gt;Monitoring &amp;amp; Alerting&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Email alert setup for jobs&lt;/li&gt;
+&lt;li&gt;With logging of server memory, cpu, disk and network utilisation provides server monitoring.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;performance-benchmarking&#34;&gt;Performance Benchmarking&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Daily report for server response time, and when 90 percentile of response time goes higher than 3 seconds send alerts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;analytics&#34;&gt;Analytics&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Logs collected over years is the biggest data available for analytics. We could also achieve real-time analytics such as most popular products.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And these are just some examples of structured logging usage. However, once infrastructure in place, it is upto us to explore and find more opportunity to leverage it.&lt;/p&gt;
+- https://sunitparekh.github.io/posts/22-structured-logging/ - 2020 sunitparekh.in</description>
+        </item>
+    
+    
   </channel>
 </rss> 

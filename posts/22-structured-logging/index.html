@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html><head>
+<title>Use structured logging for log search and analytics</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="Logging is being followed in software development since long. Structured logging provides meaning to logs and helps not only just for debugging, but for reporting, monitoring and alerting, performance benchmarking and with analytics as well.">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+
+
+<link rel="stylesheet" href="https://sunitparekh.github.io/scss/journal.min.84af105c3da886a344e941fa0c28aebca35d8d2c6a1436c912ab6abfd0b38b24.css" integrity="sha256-hK8QXD2ohqNE6UH6DCiuvKNdjSxqFDbJEqtqv9CziyQ=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://sunitparekh.github.io/scss/dark-mode.min.44ffbe8c99d1feb1ffc20f55f3c06e3ab0c186618d58d9d207055e129f096bea.css" integrity="sha256-RP&#43;&#43;jJnR/rH/wg9V88BuOrDBhmGNWNnSBwVeEp8Ja&#43;o=" media="screen">
+
+
+<script src="https://sunitparekh.github.io//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Rubik|Open+Sans:wght@300;400|Roboto:wght@300|Montserrat|Fira+Mono|Material+Icons");
+</script>
+
+<script src="https://sunitparekh.github.io//js/table.js"></script>
+
+
+
+
+<script src="https://sunitparekh.github.io//js/toc.js"></script>
+
+
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://sunitparekh.github.io/">
+    
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="nav-title">
+            sUnit Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            insights on software development
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Posts
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS Feed
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#what-is-structured-logging" v-on:click="closeDrawer" id="what-is-structured-logging-nav">
+										 What is structured logging?
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#examples" v-on:click="closeDrawer" id="examples-nav">
+										 Examples
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#background-job-logs" v-on:click="closeDrawer" id="background-job-logs-nav">
+										 Background job logs
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#distributed-correlated-logs" v-on:click="closeDrawer" id="distributed-correlated-logs-nav">
+										 Distributed correlated logs
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#tools" v-on:click="closeDrawer" id="tools-nav">
+										 Tools
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#how-to-aggregate-logs" v-on:click="closeDrawer" id="how-to-aggregate-logs-nav">
+										 How to aggregate logs?
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#log-file-replication" v-on:click="closeDrawer" id="log-file-replication-nav">
+										 Log File Replication
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#syslog" v-on:click="closeDrawer" id="syslog-nav">
+										 Syslog
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#agents" v-on:click="closeDrawer" id="agents-nav">
+										 Agents
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#more-usages" v-on:click="closeDrawer" id="more-usages-nav">
+										 More usages
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#debugging" v-on:click="closeDrawer" id="debugging-nav">
+										 Debugging
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#reporting" v-on:click="closeDrawer" id="reporting-nav">
+										 Reporting
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#monitoring--alerting" v-on:click="closeDrawer" id="monitoring--alerting-nav">
+										 Monitoring &amp; Alerting
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#performance-benchmarking" v-on:click="closeDrawer" id="performance-benchmarking-nav">
+										 Performance Benchmarking
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#analytics" v-on:click="closeDrawer" id="analytics-nav">
+										 Analytics
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Posts
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS Feed
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#what-is-structured-logging" v-on:click="closeDrawer" id="what-is-structured-logging-nav">
+										 What is structured logging?
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#examples" v-on:click="closeDrawer" id="examples-nav">
+										 Examples
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#background-job-logs" v-on:click="closeDrawer" id="background-job-logs-nav">
+										 Background job logs
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#distributed-correlated-logs" v-on:click="closeDrawer" id="distributed-correlated-logs-nav">
+										 Distributed correlated logs
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#tools" v-on:click="closeDrawer" id="tools-nav">
+										 Tools
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#how-to-aggregate-logs" v-on:click="closeDrawer" id="how-to-aggregate-logs-nav">
+										 How to aggregate logs?
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#log-file-replication" v-on:click="closeDrawer" id="log-file-replication-nav">
+										 Log File Replication
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#syslog" v-on:click="closeDrawer" id="syslog-nav">
+										 Syslog
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#agents" v-on:click="closeDrawer" id="agents-nav">
+										 Agents
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#more-usages" v-on:click="closeDrawer" id="more-usages-nav">
+										 More usages
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#debugging" v-on:click="closeDrawer" id="debugging-nav">
+										 Debugging
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#reporting" v-on:click="closeDrawer" id="reporting-nav">
+										 Reporting
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#monitoring--alerting" v-on:click="closeDrawer" id="monitoring--alerting-nav">
+										 Monitoring &amp; Alerting
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#performance-benchmarking" v-on:click="closeDrawer" id="performance-benchmarking-nav">
+										 Performance Benchmarking
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#analytics" v-on:click="closeDrawer" id="analytics-nav">
+										 Analytics
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://sunitparekh.github.io/">
+            sUnit Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://sunitparekh.github.io/">
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="single-column-header-title">sUnit Blog</div>
+        
+        <div class="single-column-header-subtitle">insights on software development</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('/images/background.png'); ">
+                <div class="post-title">
+                    Use structured logging for log search and analytics
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            Sep 6, 2014
+                        </time>
+                        
+                    </br>
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/software-development">software-development</a>
+                                &nbsp;
+                            
+                                <a href="/tags/logging">logging</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>Logging is followed in almost every project. However, most of the time we end up using logs only for debugging and auditing purpose. Since past few projects we have been exploring more opportunities for leveraging logs for purposes like application metrics collection, reporting, monitoring and alerting. And during this, I learnt about structured logging and how it enables us to achieve lot more using logs.</p>
+<p>Lets first look at what we need to follow while logging to achieve structured logging.</p>
+<h2 id="what-is-structured-logging">What is structured logging?</h2>
+<p>Not only log level is important, but what we log &amp; how we log also matters. Lets look at the default log message format,</p>
+<pre><code class="language-log" data-lang="log">127.0.0.1 [2014-07-22T18:12:27.200+0530] &quot;GET /api/modules/doc_id/navigation HTTP/1.1&quot; 200 476
+</code></pre><p>Above message is interpreted well by humans since we know, <code>120.0.0.1</code> is IP, <code>2014-07-22T18:12:27.200+0530</code> is timestamp, <code>GET</code> is request methods, <code>200</code> is response status and <code>476</code> is server response time. And such interpretation is required for each message logging.</p>
+<p>Let&rsquo;s provide structure to the above log message,</p>
+<pre><code class="language-log" data-lang="log">ip=&quot;127.0.0.1&quot; timestamp=&quot;2014-07-22T18:12:27.200+0530&quot; method=GET
+url=&quot;/api/modules/doc_id/navigation&quot; protocol=HTTP/1.1 status=200 responseTime=476
+</code></pre><p>Above structured message is self explanatory and easy to parse and index by system. This technique of <code>key=value</code> style logging is also known as logging with context. Using above log message keys we can find all slow pages, by querying logs with <code>status = 200</code> and <code>responseTime &gt; 2000</code>.</p>
+<p>Now lets take some examples of structured logs to understand it usage better.</p>
+<h2 id="examples">Examples</h2>
+<h4 id="background-job-logs">Background job logs</h4>
+<p>Most of the application now days have have background jobs running at regular interval. With following structured logging for each jobs,</p>
+<pre><code class="language-log" data-lang="log">timestamp=&quot;2014-07-22T18:12:27.200+0530&quot; host=server20  tag=jobserver jobName=image_upload
+jobStartTime=&quot;2014-07-22T18:10:00.100+0530&quot; jobEndTime=&quot;2014-07-22T18:12:27.100+0530&quot;
+jobExecutionTime=9840 jobStatus=success noOfImageUploaded=125
+</code></pre><p>following can be achieved,</p>
+<ul>
+<li>Get alert message when jobStatus is failure, we do</li>
+<li>Monitor average job execution time and we have setup for each job if it reaches more than average sends alert.</li>
+<li>Monitoring average response time also helps in tuning the frequency of the job runs.</li>
+<li>To analyze random failure or slowness in jobs, information in log is really useful to find if it is failing on specific hosts or at specific time or when run in parallel with any other jobs or no of items are too many to process etc.</li>
+<li>Using more meta info like noOfImageUpload and jobExecutionTime we can calculate average time for each image upload.</li>
+</ul>
+<h4 id="distributed-correlated-logs">Distributed correlated logs</h4>
+<p>With distributed and microservice architecture, it is quite natural to have logs spread across systems. With structure logs and using common transaction id shared across systems, we can correlate logs and turn logs into information used for debugging, auditing, reporting and monitoring.</p>
+<p>Lets take the example of order request after successful payment.</p>
+<pre><code class="language-log" data-lang="log">timestamp=&quot;2014-07-22T18:12:27.100+0530&quot; host=server01 tag=webServer
+transactionId=458748939 cientIP=83.84.85.86 sessionId=123456789
+message=&quot;Order confirmation request received&quot;
+
+timestamp=&quot;2014-07-22T18:12:27.200+0530&quot; host=server03 tag=orderService
+transactionId=458748939 message=&quot;Order created&quot;
+orderAmount=550
+
+timestamp=&quot;2014-07-22T18:12:27.250+0530&quot; host=server03 tag=inventoryService
+transactionId=458748939 message=&quot;Online inventory updated&quot;
+
+timestamp=&quot;2014-07-22T18:12:27.300+0530&quot; host=server07 tag=paymentService
+transactionId=458748939 message=&quot;Payment details stored against order.&quot;
+paymentMode=CreditCard
+
+timestamp=&quot;2014-07-22T18:12:27.350+0530&quot; host=server05  tag=couponService
+transactionId=458748939 message=&quot;Redeem coupon ABCDE marked for user.&quot;
+couponType=REWARD couponCode=ABCDE
+
+timestamp=&quot;2014-07-22T18:12:27.400+0530&quot; host=server01 tag=webServer
+transactionId=458748939 message=&quot;Request completed&quot;
+
+timestamp=&quot;2014-07-22T18:12:28.500+0530&quot; host=server06  tag=emailService
+transactionId=458748939 message=&quot;Order email sent&quot;
+
+timestamp=&quot;2014-07-22T18:12:27.450+0530&quot; host=server05  tag=rewardService
+transactionId=458748939 message=&quot;Reward points updated.&quot;
+
+timestamp=&quot;2014-07-22T18:15:00.100+0530&quot; host=server25  tag=shippingService
+transactionId=458748939 message=&quot;Order received by shipment system.&quot;
+</code></pre><p>with above messages we can,</p>
+<ul>
+<li>We are better equipped with debugging issues across systems including async steps of the transaction. Using transactionId we can connect logs and findout client/user specific details and track incident.  e.g. track couponCode used by user with connecting logs from couponService to webServer</li>
+<li>Using paymentMode, we can learn more about what kind of payment modes are preferred by customers.</li>
+<li>Calculate average response time in processing order request.</li>
+</ul>
+<p>Leverage apache <code>mod_unique_id</code> module to generate transaction id at web server and later share it with other services by passing it in request headers.</p>
+<h2 id="tools">Tools</h2>
+<p><a href="http://www.splunk.com/">Splunk</a>, is best in class, commercial product. We are using it in production for large system generating more than 100GB of logs per day. Splunk would be my personal recommendation as well. Lets take example and learn more about using Splunk.</p>
+<p><strong>Lets find 404s on website using Splunk</strong></p>
+<p><img src="/images/22/splunk-query.png" alt="splunk query for finding 404"></p>
+<p>Query: <code>tag=production sourcetype=nginx-access GET 404 | rex &quot;\&quot;GET (?&lt;url&gt;\S*) &quot; | stats count by url | sort -count | head 20</code></p>
+<p>Lets understand query in detail. Splunk support <a href="http://martinfowler.com/articles/collection-pipeline/">unix style pipes in query</a>, so you could pass output of one command to another and build on. In above example we used 5 different commands,</p>
+<ol>
+<li><code>tag=production</code> and <code>sourcetype=nginx-access</code> with <code>GET 404</code> returns all 404 log statements from all productions servers and source file name nginx-access</li>
+<li><code>rex &quot;\&quot;GET (?&lt;url&gt;\S*) &quot;</code> extract URL from the log using reg-ex</li>
+<li><code>stats count</code> by url group and count by url</li>
+<li><code>sort -count</code> sort in descending order on count</li>
+<li><code>head 20</code> take first 20 from the result set</li>
+</ol>
+<p><a href="https://logentries.com/">LogEntries</a> is another feature rich SaaS solution on cloud. Other options are <a href="https://www.loggly.com/">Loogly</a>, <a href="https://papertrailapp.com/">PaperTrail</a>.</p>
+<p><a href="http://www.elasticsearch.org/overview/logstash/">LogStash</a> + <a href="http://www.elasticsearch.org/overview/elasticsearch/">Elasticsearch</a> + <a href="http://www.elasticsearch.org/overview/kibana/">Kibana</a> combination is best open-source one in this space.</p>
+<p><a href="http://graylog2.org/">GrayLog2</a>, open-source log analytics solutions. Used with syslog to aggregate logs.</p>
+<p>Even though structured logging is quite useful on individual system. However until we have logs from all the system collected and indexed together, power of structured logging is under utilized. So lets look at what are different ways we can aggregate logs from multiple systems.</p>
+<h2 id="how-to-aggregate-logs">How to aggregate logs?</h2>
+<p>There are multiple approaches available for log aggregation.</p>
+<h4 id="log-file-replication">Log File Replication</h4>
+<p>Simplest one is, continue logging to file system on application server and set up an independent process to monitor files and send logs to central log server every &lsquo;n&rsquo; milliseconds.</p>
+<h4 id="syslog">Syslog</h4>
+<p>To achieve real time monitoring and alerting we can use syslog approach, directly feeding logs to a central log server. Syslog is available by default on most of the linux machines. <a href="http://www.rsyslog.com/">rsyslog</a> or <a href="http://www.balabit.com/network-security/syslog-ng/opensource-logging-system/">syslog-ng</a> are two popular syslog implementations.</p>
+<h4 id="agents">Agents</h4>
+<p>Most of the products in this space provide their own agents, which runs on client and sends logs real-time to central log server. e.g. <a href="http://wiki.splunk.com/Community:Getting_data_into_Splunk">Splunk</a>, <a href="https://logentries.com/doc/forwarders/">LogEntries</a> etc. There are specific tools available just for aggregation purposes like <a href="http://flume.apache.org/">Apache Flume</a>.</p>
+<p><img src="/images/22/centralised-logging.svg" alt="centralised aggregated logs"></p>
+<blockquote>
+<p>In distributed systems it is important that we have realtime log aggregation setup. And it is equally important that time on all application servers is in sync. Since a millisecond differences can have unordered logs and leads to confusion and errors while debugging and reporting.</p>
+</blockquote>
+<h2 id="more-usages">More usages</h2>
+<h4 id="debugging">Debugging</h4>
+<ul>
+<li>With database logs find all slow running database queries</li>
+<li>Using Nginx access logs, find slow response pages</li>
+<li>Nginx access logs to generate daily reports for 404s</li>
+</ul>
+<h4 id="reporting">Reporting</h4>
+<ul>
+<li>With transaction logs, turn data into knowledge. Generating reports for sales, registrations, popular products added in cart etc.</li>
+</ul>
+<h4 id="monitoring--alerting">Monitoring &amp; Alerting</h4>
+<ul>
+<li>Email alert setup for jobs</li>
+<li>With logging of server memory, cpu, disk and network utilisation provides server monitoring.</li>
+</ul>
+<h4 id="performance-benchmarking">Performance Benchmarking</h4>
+<ul>
+<li>Daily report for server response time, and when 90 percentile of response time goes higher than 3 seconds send alerts.</li>
+</ul>
+<h4 id="analytics">Analytics</h4>
+<ul>
+<li>Logs collected over years is the biggest data available for analytics. We could also achieve real-time analytics such as most popular products.</li>
+</ul>
+<p>And these are just some examples of structured logging usage. However, once infrastructure in place, it is upto us to explore and find more opportunity to leverage it.</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2014-09-06</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://sunitparekh.github.io/posts/23-two-stack-cms/">
+                    Next<br>Building a Two-Stack CMS for a global product catalog
+                </a>
+                
+                
+                
+                <a class="older-posts">
+                    Previous<br>No older posts.
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	</div>
+    	</div>
+    <script src="https://sunitparekh.github.io//js/journal.js"></script>
+    </body>
+</html>
