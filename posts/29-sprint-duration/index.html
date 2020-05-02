@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html><head>
+<title>Distributed Agile - What should be the Sprint duration?</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="What should be the  Sprint duration? this question comes up quite commonly on agile projects and opinions vary from as short as a week to as long as 6 weeks. Decision on an appropriate Sprint length depend on many factors. Few of the factors that I consider while deciding on the Sprint length are as follows, however, each factor adds different dimensions when the team is distributed across time zones.">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+
+
+<link rel="stylesheet" href="http://sunitparekh.in/scss/journal.min.b8ae32668c1bef3af00bc96fb872e13b6841f318f45b5e91a62341b49231edf6.css" integrity="sha256-uK4yZowb7zrwC8lvuHLhO2hB8xj0W16RpiNBtJIx7fY=" media="screen">
+
+
+
+<link rel="stylesheet" href="http://sunitparekh.in/scss/dark-mode.min.d89ff689fbba63c3cc2e9605f6bba153f3079fdd4bfb7472f66db42035f0a640.css" integrity="sha256-2J/2ifu6Y8PMLpYF9ruhU/MHn91L&#43;3Ry9m20IDXwpkA=" media="screen">
+
+
+<script src="http://sunitparekh.in//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Rubik|Open+Sans:wght@300;400|Roboto:wght@300|Montserrat|Fira+Mono|Material+Icons");
+</script>
+
+<script src="http://sunitparekh.in//js/table.js"></script>
+
+
+
+
+<script src="http://sunitparekh.in//js/toc.js"></script>
+
+
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="http://sunitparekh.in/">
+    
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="nav-title">
+            sUnit Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            insights on software development
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Posts
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS Feed
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#decision-making" v-on:click="closeDrawer" id="decision-making-nav">
+										 Decision Making:
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#team-distribution" v-on:click="closeDrawer" id="team-distribution-nav">
+										 Team Distribution:
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#story-size-e2e-elapsed-time" v-on:click="closeDrawer" id="story-size-e2e-elapsed-time-nav">
+										 Story Size (E2E elapsed time):
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#regression-testing-effort-and-size" v-on:click="closeDrawer" id="regression-testing-effort-and-size-nav">
+										 Regression testing effort and size:
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#release-sign-off-and-deployment-process" v-on:click="closeDrawer" id="release-sign-off-and-deployment-process-nav">
+										 Release sign-off and deployment process:
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#agile-maturity-of-team" v-on:click="closeDrawer" id="agile-maturity-of-team-nav">
+										 Agile maturity of team:
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#real-life-project-example" v-on:click="closeDrawer" id="real-life-project-example-nav">
+										 Real-life project example
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#conclusion" v-on:click="closeDrawer" id="conclusion-nav">
+										 Conclusion
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Posts
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS Feed
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#decision-making" v-on:click="closeDrawer" id="decision-making-nav">
+										 Decision Making:
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#team-distribution" v-on:click="closeDrawer" id="team-distribution-nav">
+										 Team Distribution:
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#story-size-e2e-elapsed-time" v-on:click="closeDrawer" id="story-size-e2e-elapsed-time-nav">
+										 Story Size (E2E elapsed time):
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#regression-testing-effort-and-size" v-on:click="closeDrawer" id="regression-testing-effort-and-size-nav">
+										 Regression testing effort and size:
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#release-sign-off-and-deployment-process" v-on:click="closeDrawer" id="release-sign-off-and-deployment-process-nav">
+										 Release sign-off and deployment process:
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#agile-maturity-of-team" v-on:click="closeDrawer" id="agile-maturity-of-team-nav">
+										 Agile maturity of team:
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#real-life-project-example" v-on:click="closeDrawer" id="real-life-project-example-nav">
+										 Real-life project example
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#conclusion" v-on:click="closeDrawer" id="conclusion-nav">
+										 Conclusion
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="http://sunitparekh.in/">
+            sUnit Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="http://sunitparekh.in/">
+        <div class="single-column-header-title">sUnit Blog</div>
+        
+        <div class="single-column-header-subtitle">insights on software development</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('http://sunitparekh.in/images/29/featured.png'); ">
+                <div class="post-title">
+                    Distributed Agile - What should be the Sprint duration?
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            Aug 17, 2016
+                        </time>
+                        
+                    </br>
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/agile">agile</a>
+                                &nbsp;
+                            
+                                <a href="/tags/sprint">sprint</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p><strong>What should be the  Sprint duration?</strong> this question comes up quite commonly on agile projects and opinions vary from as short as a week to as long as 6 weeks. Decision on an appropriate Sprint length depend on many factors. Few of the factors that I consider while deciding on the Sprint length are as follows, however, each factor adds different dimensions when the team is distributed across time zones.</p>
+<p><img src="/images/29/featured.png" alt="sprint duration factors"></p>
+<h2 id="decision-making">Decision Making:</h2>
+<p>In most agile team all decision makers from business to technical people are co-located or available within a working day. Sometimes business and product owners are sitting in different locations and it takes a minimum of two working days to make decisions. And if one of them is on leave, decisions gets further delayed. Faster decision-making drives towards shorter sprint cycles and longer decision making drives towards longer cycles.</p>
+<h2 id="team-distribution">Team Distribution:</h2>
+<p>Nowadays it is quite common to have a distributed team. Number of locations includes everyone from business stakeholders, users, product owner, technical stakeholders, developers, testers, infrastructure and release teams. With a  distributed team, there are overheads including prioritisation and planning to tracking and  development to testing and release. The maximum overhead with distributed teams is the communication effort and time to make sure all are on same page and similar expectations. Having a healthy overlap (2 to 4 working hrs) between teams works in favor, however, with time zone differences such as India and US West Coast this becomes particularly impossible. The more the teams are distributed, the longer the sprint cycle become.</p>
+<h2 id="story-size-e2e-elapsed-time">Story Size (E2E elapsed time):</h2>
+<p>Every story that is part of the Sprint should be completed end 2 end from low level design to development and testing within the Sprint. A simple rule is  that the largest sized story should fit within a Sprint. E.g. if my largest and most complex story takes 2-3 elapsed days for design,  6-8 elapsed days for development and 3-4 elapsed days for testing, then having a 2 weeks cycle of is NOT ideal. This is a very important aspect to consider if one would like to deliver meaty features to users every sprint. Either figure out creative ways to fit stories within sprint, or, as a last resort, increase the length of your sprint.</p>
+<h2 id="regression-testing-effort-and-size">Regression testing effort and size:</h2>
+<p>For frequent releases and continuous delivery, it is very important to have shorter testing cycles. Automation is a key, starting from unit testing till end2end functional testing, performance testing, capacity testing and security testing - everything should be automated in an optimal manner. Shorter the full testing cycle, shorter the Sprint length. Read more about testing automation <a href="https://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests">here</a></p>
+<h2 id="release-sign-off-and-deployment-process">Release sign-off and deployment process:</h2>
+<p>This factor is very important in deciding the duration of the Sprint cycle as well. In large organisations regular releases are scheduled during weekends (off hours) and done by independent teams (release management and infrastructure team). Also the process of reserving the release slot needs multiple level of approval with all the details and testing evidences attached. Now all these processes with these teams distributed across time zones makes releases more complicated and lengthy even though we have a fully automated deployment using CI/CD infrastructure in place. So effort and time for the release signoff and deployment process directly impacts the Sprint duration. Read more about CI/CD <a href="http://www.slideshare.net/gsluthra/recipes-for-continuous-delivery">here</a></p>
+<h2 id="agile-maturity-of-team">Agile maturity of team:</h2>
+<p>When the team is new to agile practices, initial time gets spent in learning agile practices such as sprint prioritisation and planning, automated testing, continuous integration, automated deployment, retrospectives, etc. While learning agile practices if the team tries to follow shorter sprint cycle, then the team is going to find it difficult to follow and learn agile practices effectively, as it will be busy doing sprint ceremonies. So sometimes it is recommended that you start with longer spring cycle and as the team maturity increases, shorten the sprint duration in a planned manner.</p>
+<h2 id="real-life-project-example">Real-life project example</h2>
+<blockquote>
+<p>On one of my project initially after project inception with distributed team in 4 location (US West Coast, Brussels, London, India) we started with 4 week sprint. Our go-live was after 8 sprints (almost 7 months) and after that we moved to 3 week sprint and every 2 sprint release to production. We kept release every 2 sprint till we smooth out overall processes with multiple team having minimum overheads. After six months team re-visited release duration, and moved to releasing to production every sprint i.e. 3 weeks. However sprint duration was kept at 3 week only so release has some meaty features in it.</p>
+</blockquote>
+<h2 id="conclusion">Conclusion</h2>
+<p>The above factors help in defining the Sprint cycle and help deliver sizeable number of features to production considering distributed team overheads. Balancing pure development effort vs. all other non-development effort is the key here, otherwise the team will deliver lesser features against effort spent on non-development activities.</p>
+<blockquote>
+<p>In my view, for co-located teams or distributed teams with healthy overlap time and at intermediate level of agile engineering practices I would suggest 2 week sprint duration. And for highly distributed team which is mostly new to Agile (and CD) practices, I recommend 4 weeks of initial Sprint duration.</p>
+</blockquote>
+<p>Philosophy of &ldquo;shorter sprints are better&rdquo; is not always right. Sometimes with shorter sprints and significant non-development effort, team&rsquo;s stress level increases while stakeholder sees less deliverable, watch-out for such cases.</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2016-08-17</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="http://sunitparekh.in/posts/30-three-branching-model/">
+                    Next<br>Release based 3 branch model for agile software development
+                </a>
+                
+                
+                
+                <a class="older-posts" href="http://sunitparekh.in/posts/28-ownership-model/">
+                    Previous<br>Ownership model for distributed team
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	</div>
+    	</div>
+    <script src="http://sunitparekh.in//js/journal.js"></script>
+    </body>
+</html>

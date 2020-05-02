@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on sUnit Blog</title>
+    <link>http://sunitparekh.in/tags/</link>
+    <description>Recent content in Tags on sUnit Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2020 sunitparekh.in</copyright>
+    <lastBuildDate>Sun, 21 Aug 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://sunitparekh.in/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>agile</title>
+      <link>http://sunitparekh.in/tags/agile/</link>
+      <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://sunitparekh.in/tags/agile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>branching</title>
+      <link>http://sunitparekh.in/tags/branching/</link>
+      <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://sunitparekh.in/tags/branching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>http://sunitparekh.in/tags/git/</link>
+      <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://sunitparekh.in/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sprint</title>
+      <link>http://sunitparekh.in/tags/sprint/</link>
+      <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://sunitparekh.in/tags/sprint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>distributed-teams</title>
+      <link>http://sunitparekh.in/tags/distributed-teams/</link>
+      <pubDate>Wed, 13 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://sunitparekh.in/tags/distributed-teams/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software-development</title>
+      <link>http://sunitparekh.in/tags/software-development/</link>
+      <pubDate>Wed, 13 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://sunitparekh.in/tags/software-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>testing</title>
+      <link>http://sunitparekh.in/tags/testing/</link>
+      <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sunitparekh.in/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

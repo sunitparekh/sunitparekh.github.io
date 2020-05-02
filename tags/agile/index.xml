@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>agile on sUnit Blog</title>
+    <link>http://sunitparekh.in/tags/agile/</link>
+    <description>Recent content in agile on sUnit Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2020 sunitparekh.in</copyright>
+    <lastBuildDate>Sun, 21 Aug 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://sunitparekh.in/tags/agile/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Release based 3 branch model for agile software development</title>
+      <link>http://sunitparekh.in/posts/30-three-branching-model/</link>
+      <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://sunitparekh.in/posts/30-three-branching-model/</guid>
+      <description>On large teams it is very important that everyone understands and follow the same branching model/workflow. One of very popular branching workflow is GitFlow, however with distributed and novice team following GitFlow is difficult. So over a period of time I have been following simple 3 branch model for development which works fine for agile and continuous delivery software development method.
+3 Branch workflow model    Challenges with following GitFlow on large distributed teams  Team to be at advance level of using Git version control with good hold on branching, merging techniques.</description>
+    </item>
+    
+    <item>
+      <title>Distributed Agile - What should be the Sprint duration?</title>
+      <link>http://sunitparekh.in/posts/29-sprint-duration/</link>
+      <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://sunitparekh.in/posts/29-sprint-duration/</guid>
+      <description>What should be the Sprint duration? this question comes up quite commonly on agile projects and opinions vary from as short as a week to as long as 6 weeks. Decision on an appropriate Sprint length depend on many factors. Few of the factors that I consider while deciding on the Sprint length are as follows, however, each factor adds different dimensions when the team is distributed across time zones.</description>
+    </item>
+    
+    <item>
+      <title>Testing emails with Fake SMTP service</title>
+      <link>http://sunitparekh.in/posts/27-testing-emails/</link>
+      <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sunitparekh.in/posts/27-testing-emails/</guid>
+      <description>Testing is key activity of every software development projects. However testing certain features is not easy and need special support functions. One of such functionality is email testing. In this article I introduce few tools that I used in my projects for achieving email testing easily without any side effects.
+To test emails effectively we end up using real email addresses, which leads to cluttering mailbox with unwanted emails. For testing different scenarios we need multiple email address, and testing becomes more difficult when it requires checking mailbox of other users.</description>
+    </item>
+    
+  </channel>
+</rss>

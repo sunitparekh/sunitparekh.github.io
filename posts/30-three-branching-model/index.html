@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html><head>
+<title>Release based 3 branch model for agile software development</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="On large teams it is very important that everyone understands and follow the same branching model/workflow. One of very popular branching workflow is [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/), however with largely distributed team and novice team following GitFlow is difficult. So over a period of time I have been following simple 3 branch model for development which works fine for agile and continuous delivery software development method.">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+
+
+<link rel="stylesheet" href="http://sunitparekh.in/scss/journal.min.b8ae32668c1bef3af00bc96fb872e13b6841f318f45b5e91a62341b49231edf6.css" integrity="sha256-uK4yZowb7zrwC8lvuHLhO2hB8xj0W16RpiNBtJIx7fY=" media="screen">
+
+
+
+<link rel="stylesheet" href="http://sunitparekh.in/scss/dark-mode.min.d89ff689fbba63c3cc2e9605f6bba153f3079fdd4bfb7472f66db42035f0a640.css" integrity="sha256-2J/2ifu6Y8PMLpYF9ruhU/MHn91L&#43;3Ry9m20IDXwpkA=" media="screen">
+
+
+<script src="http://sunitparekh.in//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Rubik|Open+Sans:wght@300;400|Roboto:wght@300|Montserrat|Fira+Mono|Material+Icons");
+</script>
+
+<script src="http://sunitparekh.in//js/table.js"></script>
+
+
+
+
+<script src="http://sunitparekh.in//js/toc.js"></script>
+
+
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="http://sunitparekh.in/">
+    
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="nav-title">
+            sUnit Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            insights on software development
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Posts
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS Feed
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#3-branch-workflow-model" v-on:click="closeDrawer" id="3-branch-workflow-model-nav">
+										 3 Branch workflow model
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#challenges-with-following-gitflow-on-large-distributed-teams" v-on:click="closeDrawer" id="challenges-with-following-gitflow-on-large-distributed-teams-nav">
+										 Challenges with following GitFlow on large distributed teams
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#slides" v-on:click="closeDrawer" id="slides-nav">
+										 Slides
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Posts
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS Feed
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#3-branch-workflow-model" v-on:click="closeDrawer" id="3-branch-workflow-model-nav">
+										 3 Branch workflow model
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#challenges-with-following-gitflow-on-large-distributed-teams" v-on:click="closeDrawer" id="challenges-with-following-gitflow-on-large-distributed-teams-nav">
+										 Challenges with following GitFlow on large distributed teams
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#slides" v-on:click="closeDrawer" id="slides-nav">
+										 Slides
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="http://sunitparekh.in/">
+            sUnit Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="http://sunitparekh.in/">
+        <div class="single-column-header-title">sUnit Blog</div>
+        
+        <div class="single-column-header-subtitle">insights on software development</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('http://sunitparekh.in/images/30/featured.png'); ">
+                <div class="post-title">
+                    Release based 3 branch model for agile software development
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            Aug 21, 2016
+                        </time>
+                        
+                    </br>
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/agile">agile</a>
+                                &nbsp;
+                            
+                                <a href="/tags/git">git</a>
+                                &nbsp;
+                            
+                                <a href="/tags/branching">branching</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>On large teams it is very important that everyone understands and follow the same branching model/workflow. One of very popular branching workflow is <a href="http://nvie.com/posts/a-successful-git-branching-model/">GitFlow</a>, however with distributed and novice team following GitFlow is difficult. So over a period of time I have been following simple 3 branch model for development which works fine for agile and continuous delivery software development method.</p>
+<h2 id="3-branch-workflow-model">3 Branch workflow model</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/xXc3YvzJPD4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<hr>
+<h2 id="challenges-with-following-gitflow-on-large-distributed-teams">Challenges with following GitFlow on large distributed teams</h2>
+<ol>
+<li>Team to be at advance level of using Git version control with good hold on branching, merging techniques.</li>
+<li>Limited number of downstream environments (DEV, QAT, UAT, &hellip;) it is not possible to deploy all features changes for testing, showcase/demo purpose at a time.</li>
+<li>Refactoring becomes difficult since it creates lot of merge issues across feature branches.</li>
+</ol>
+<hr>
+<h2 id="slides">Slides</h2>
+<blockquote>
+<p>Slides are available <a href="https://docs.google.com/presentation/d/117bnmIVoBOLtDqgHSPta2guzlCEBNNyaFA-Oz7dyGaI/edit?usp=sharing">here</a></p>
+</blockquote>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2016-08-21</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+                    Next<br>No newer posts.
+                </a>
+                
+                
+                
+                <a class="older-posts" href="http://sunitparekh.in/posts/29-sprint-duration/">
+                    Previous<br>Distributed Agile - What should be the Sprint duration?
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	</div>
+    	</div>
+    <script src="http://sunitparekh.in//js/journal.js"></script>
+    </body>
+</html>

@@ -1,0 +1,179 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sUnit Blog</title>
+    <link>http://sunitparekh.in/</link>
+    <description>Recent content on sUnit Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2020 sunitparekh.in</copyright>
+    <lastBuildDate>Sun, 21 Aug 2016 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="http://sunitparekh.in/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Release based 3 branch model for agile software development</title>
+        <link>http://sunitparekh.in/posts/30-three-branching-model/</link>
+        <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
+        
+        <guid>http://sunitparekh.in/posts/30-three-branching-model/</guid>
+        <description>sUnit Blog http://sunitparekh.in/posts/30-three-branching-model/ -&lt;p&gt;On large teams it is very important that everyone understands and follow the same branching model/workflow. One of very popular branching workflow is &lt;a href=&#34;http://nvie.com/posts/a-successful-git-branching-model/&#34;&gt;GitFlow&lt;/a&gt;, however with distributed and novice team following GitFlow is difficult. So over a period of time I have been following simple 3 branch model for development which works fine for agile and continuous delivery software development method.&lt;/p&gt;
+&lt;h2 id=&#34;3-branch-workflow-model&#34;&gt;3 Branch workflow model&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/xXc3YvzJPD4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;challenges-with-following-gitflow-on-large-distributed-teams&#34;&gt;Challenges with following GitFlow on large distributed teams&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Team to be at advance level of using Git version control with good hold on branching, merging techniques.&lt;/li&gt;
+&lt;li&gt;Limited number of downstream environments (DEV, QAT, UAT, &amp;hellip;) it is not possible to deploy all features changes for testing, showcase/demo purpose at a time.&lt;/li&gt;
+&lt;li&gt;Refactoring becomes difficult since it creates lot of merge issues across feature branches.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;slides&#34;&gt;Slides&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Slides are available &lt;a href=&#34;https://docs.google.com/presentation/d/117bnmIVoBOLtDqgHSPta2guzlCEBNNyaFA-Oz7dyGaI/edit?usp=sharing&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+- http://sunitparekh.in/posts/30-three-branching-model/ - 2020 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Distributed Agile - What should be the Sprint duration?</title>
+        <link>http://sunitparekh.in/posts/29-sprint-duration/</link>
+        <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
+        
+        <guid>http://sunitparekh.in/posts/29-sprint-duration/</guid>
+        <description>sUnit Blog http://sunitparekh.in/posts/29-sprint-duration/ -&lt;p&gt;&lt;strong&gt;What should be the  Sprint duration?&lt;/strong&gt; this question comes up quite commonly on agile projects and opinions vary from as short as a week to as long as 6 weeks. Decision on an appropriate Sprint length depend on many factors. Few of the factors that I consider while deciding on the Sprint length are as follows, however, each factor adds different dimensions when the team is distributed across time zones.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://sunitparekh.in/images/29/featured.png&#34; alt=&#34;sprint duration factors&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;decision-making&#34;&gt;Decision Making:&lt;/h2&gt;
+&lt;p&gt;In most agile team all decision makers from business to technical people are co-located or available within a working day. Sometimes business and product owners are sitting in different locations and it takes a minimum of two working days to make decisions. And if one of them is on leave, decisions gets further delayed. Faster decision-making drives towards shorter sprint cycles and longer decision making drives towards longer cycles.&lt;/p&gt;
+&lt;h2 id=&#34;team-distribution&#34;&gt;Team Distribution:&lt;/h2&gt;
+&lt;p&gt;Nowadays it is quite common to have a distributed team. Number of locations includes everyone from business stakeholders, users, product owner, technical stakeholders, developers, testers, infrastructure and release teams. With a  distributed team, there are overheads including prioritisation and planning to tracking and  development to testing and release. The maximum overhead with distributed teams is the communication effort and time to make sure all are on same page and similar expectations. Having a healthy overlap (2 to 4 working hrs) between teams works in favor, however, with time zone differences such as India and US West Coast this becomes particularly impossible. The more the teams are distributed, the longer the sprint cycle become.&lt;/p&gt;
+&lt;h2 id=&#34;story-size-e2e-elapsed-time&#34;&gt;Story Size (E2E elapsed time):&lt;/h2&gt;
+&lt;p&gt;Every story that is part of the Sprint should be completed end 2 end from low level design to development and testing within the Sprint. A simple rule is  that the largest sized story should fit within a Sprint. E.g. if my largest and most complex story takes 2-3 elapsed days for design,  6-8 elapsed days for development and 3-4 elapsed days for testing, then having a 2 weeks cycle of is NOT ideal. This is a very important aspect to consider if one would like to deliver meaty features to users every sprint. Either figure out creative ways to fit stories within sprint, or, as a last resort, increase the length of your sprint.&lt;/p&gt;
+&lt;h2 id=&#34;regression-testing-effort-and-size&#34;&gt;Regression testing effort and size:&lt;/h2&gt;
+&lt;p&gt;For frequent releases and continuous delivery, it is very important to have shorter testing cycles. Automation is a key, starting from unit testing till end2end functional testing, performance testing, capacity testing and security testing - everything should be automated in an optimal manner. Shorter the full testing cycle, shorter the Sprint length. Read more about testing automation &lt;a href=&#34;https://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;release-sign-off-and-deployment-process&#34;&gt;Release sign-off and deployment process:&lt;/h2&gt;
+&lt;p&gt;This factor is very important in deciding the duration of the Sprint cycle as well. In large organisations regular releases are scheduled during weekends (off hours) and done by independent teams (release management and infrastructure team). Also the process of reserving the release slot needs multiple level of approval with all the details and testing evidences attached. Now all these processes with these teams distributed across time zones makes releases more complicated and lengthy even though we have a fully automated deployment using CI/CD infrastructure in place. So effort and time for the release signoff and deployment process directly impacts the Sprint duration. Read more about CI/CD &lt;a href=&#34;http://www.slideshare.net/gsluthra/recipes-for-continuous-delivery&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;agile-maturity-of-team&#34;&gt;Agile maturity of team:&lt;/h2&gt;
+&lt;p&gt;When the team is new to agile practices, initial time gets spent in learning agile practices such as sprint prioritisation and planning, automated testing, continuous integration, automated deployment, retrospectives, etc. While learning agile practices if the team tries to follow shorter sprint cycle, then the team is going to find it difficult to follow and learn agile practices effectively, as it will be busy doing sprint ceremonies. So sometimes it is recommended that you start with longer spring cycle and as the team maturity increases, shorten the sprint duration in a planned manner.&lt;/p&gt;
+&lt;h2 id=&#34;real-life-project-example&#34;&gt;Real-life project example&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;On one of my project initially after project inception with distributed team in 4 location (US West Coast, Brussels, London, India) we started with 4 week sprint. Our go-live was after 8 sprints (almost 7 months) and after that we moved to 3 week sprint and every 2 sprint release to production. We kept release every 2 sprint till we smooth out overall processes with multiple team having minimum overheads. After six months team re-visited release duration, and moved to releasing to production every sprint i.e. 3 weeks. However sprint duration was kept at 3 week only so release has some meaty features in it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;The above factors help in defining the Sprint cycle and help deliver sizeable number of features to production considering distributed team overheads. Balancing pure development effort vs. all other non-development effort is the key here, otherwise the team will deliver lesser features against effort spent on non-development activities.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In my view, for co-located teams or distributed teams with healthy overlap time and at intermediate level of agile engineering practices I would suggest 2 week sprint duration. And for highly distributed team which is mostly new to Agile (and CD) practices, I recommend 4 weeks of initial Sprint duration.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Philosophy of &amp;ldquo;shorter sprints are better&amp;rdquo; is not always right. Sometimes with shorter sprints and significant non-development effort, team&amp;rsquo;s stress level increases while stakeholder sees less deliverable, watch-out for such cases.&lt;/p&gt;
+- http://sunitparekh.in/posts/29-sprint-duration/ - 2020 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Ownership model for distributed team</title>
+        <link>http://sunitparekh.in/posts/28-ownership-model/</link>
+        <pubDate>Wed, 13 Apr 2016 00:00:00 +0000</pubDate>
+        
+        <guid>http://sunitparekh.in/posts/28-ownership-model/</guid>
+        <description>sUnit Blog http://sunitparekh.in/posts/28-ownership-model/ -&lt;p&gt;Setting up distributed team is very common in new world of software development. However, it is equally important that each team operates in complete autonomy and there is a need for teams to be independent, taking ownership and deliver. However, everyone has different views and understanding of ownership. I would like to take this opportunity to explain my view on different aspects of ownership which can help stakeholders and team in having common understanding of expectations and help deliver with ownership and accountability.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s start with first understanding different aspects of ownership. Software development ownership can be viewed as three types &lt;strong&gt;technical&lt;/strong&gt;, &lt;strong&gt;solution&lt;/strong&gt; and &lt;strong&gt;business&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;3-types-of-ownership&#34;&gt;3 Types of ownership&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;http://sunitparekh.in/images/28/3-pillers.png&#34; alt=&#34;3 Types of Ownership for Distributed Teams&#34; title=&#34;3 Types of Ownership for Distributed Teams&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Technical ownership&lt;/strong&gt; means delivering quality product (code) by following engineering practices such as unit testing, refactoring, continuous integration, automated build and deployment etc. with full autonomy. Technical ownership also includes owning technical decisions at low level including following design patterns, cleaner API development for software development.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In &lt;em&gt;technical ownership&lt;/em&gt; delivering quality code could be the first step and reaching continuous delivery with automated build and deployment could be the higher level of maturity.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Solution ownership&lt;/strong&gt; is about providing solutions to solve business problems. e.g. a) for retail website building recommendation engine based on what a user is searching for, b) to achieve mobile first build UX/UI with responsive web design approach. Solution also involves how we can deliver the feature e.g. define MVP and roll out as first cut to end users and with each release keep enhancing the feature as needed.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For &lt;em&gt;solution ownership&lt;/em&gt; deciding appropriate technology to solve the problem (using ElasticSearch for free text search) is first and making tech stack, frameworks and architecture decisions and delivering it (Java vs .NET, microservice architecture, NoSQL datastore), is higher level of maturity&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Business ownership&lt;/strong&gt; involves working closely with business in defining business needs and helps in building digital solution to solve the problem. e.g. on retail website defining the reward scheme and to promote mobile applications give more reward. Plays partner role with business owners and gets involved in defining long term business strategies as well.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The most tricky one is &lt;em&gt;business ownership&lt;/em&gt; where it is very difficult to define what is expected. One way to detect this maybe how early do you get involved in the discussion. Do you get to define the requirement, and identify the problem or does get involved only after the requirement and likely solution have been decided.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;distributed-team-models-based-on-ownership&#34;&gt;Distributed team models based on ownership&lt;/h3&gt;
+&lt;p&gt;Lets take example of retail business and see two classical distributed team models,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Vertical (Feature) based full ownership team model&lt;/strong&gt;: setup teams with all roles to take up full ownership of feature. E.g. Product Catalog team, Order management team, Shipping management team. Each team has full autonomy to operate from business decision to technology choices made in respective area.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Horizontal (Competency) based ownership team model&lt;/strong&gt;: Front end web team, Mobile team, API team, Operations team&amp;hellip; each team has specific role to play and take ownership of each area specifically technical and solution ownership.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://sunitparekh.in/images/28/featured.png&#34; alt=&#34;Horizontal/Competency based Distributed Team Model&#34; title=&#34;Horizontal/Competency based Distributed Team Model&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Feature based full ownership team is what I think better for ownership and accountability. However, I have see more horizontal/competency based ownership model in practice. In my view having clarify with all members about the team model is more important and choose whatever works for you.&lt;/p&gt;
+&lt;h3 id=&#34;type-of-ownership-and-roles&#34;&gt;Type of ownership and roles&lt;/h3&gt;
+&lt;p&gt;It is important to understand, what is expected from the team and capability &amp;amp; strength of each team? Above becomes less relevant when team is co-located since everyone is within walk and talk reach. And it becomes more relevant in distributed team, each team requires specific roles to achieve each type of ownership.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Developers, QAs and BAs can help achieve Technical ownership.&lt;/li&gt;
+&lt;li&gt;We need tech leadership to provide architecture solution along with supporting roles like project management for execution and planning.&lt;/li&gt;
+&lt;li&gt;Similarly we need Product Owners and Senior BAs to achieve Business ownership.&lt;/li&gt;
+&lt;/ol&gt;
+- http://sunitparekh.in/posts/28-ownership-model/ - 2020 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Testing emails with Fake SMTP service</title>
+        <link>http://sunitparekh.in/posts/27-testing-emails/</link>
+        <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
+        
+        <guid>http://sunitparekh.in/posts/27-testing-emails/</guid>
+        <description>sUnit Blog http://sunitparekh.in/posts/27-testing-emails/ -&lt;p&gt;Testing is key activity of every software development projects. However testing certain features is not easy and need special support functions. One of such functionality is email testing. In this article I introduce few tools that I used in my projects for achieving email testing easily without any side effects.&lt;/p&gt;
+&lt;p&gt;To test emails effectively we end up using real email addresses, which leads to cluttering mailbox with unwanted emails. For testing different scenarios we need multiple email address, and testing becomes more difficult when it requires checking mailbox of other users. Also we never want to send emails to real users, otherwise they gets confused with test emails and real emails. Also we do not want to make any code modification for testing emails, this leads to code maintenance issues.&lt;/p&gt;
+&lt;p&gt;To overcome above problems, what we need is, &lt;strong&gt;Fake SMTP server (Email Service) which acts as outgoing server, however, it never delivers email message to users and provides a user interface to check and verify all outgoing emails.&lt;/strong&gt; In short application sends email to users however it never goes out of SMTP server.&lt;/p&gt;
+&lt;p&gt;We need Fake SMTP server for following different scenarios,&lt;/p&gt;
+&lt;h2 id=&#34;1-unit-testing&#34;&gt;1. Unit Testing&lt;/h2&gt;
+&lt;p&gt;Embedded version with Assertion support for Unit Testing, so emails can be verified using asserts in unit tests. &lt;a href=&#34;http://quintanasoft.com/dumbster/&#34;&gt;Dumbster&lt;/a&gt; is handy library here. Some frameworks like &lt;a href=&#34;http://guides.rubyonrails.org/testing.html#testing-your-mailers&#34;&gt;Rails&lt;/a&gt; has inbuilt support for unit testing emails.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TestEmail&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Test&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;testSend&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        SimpleSmtpServer server &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; SimpleSmtpServer&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;start&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        sendMessage&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Subject&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Test Body&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;abc@example.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+        server&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;stop&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        assertThat&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;server&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getReceivedEmailSize&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(),&lt;/span&gt;equalTo&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;));&lt;/span&gt;
+
+        Iterator emails &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; server&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getReceivedEmail&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        SmtpMessage email &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;SmtpMessage&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;emails&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;next&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        assertThat&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;email&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getHeaderValue&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Subject&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;),&lt;/span&gt;equalTo&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Subject&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;));&lt;/span&gt;
+        assertThat&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;email&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getHeaderValue&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;To&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;),&lt;/span&gt;equalTo&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;abc@example.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;));&lt;/span&gt;
+        assertThat&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;email&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getBody&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(),&lt;/span&gt;equalTo&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Test Body&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;));&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-local-developer-box-testing&#34;&gt;2. Local Developer Box Testing&lt;/h2&gt;
+&lt;p&gt;Local SMTP service with standalone application for developer box testing. So after development developers/testers can verify emails functionality locally.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://nilhcem.github.io/FakeSMTP/&#34;&gt;&lt;strong&gt;FakeSMTP&lt;/strong&gt;&lt;/a&gt; No installation required. Just run a simple JAR file. Works on any platform.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jaben/papercut&#34;&gt;&lt;strong&gt;Papercut&lt;/strong&gt;&lt;/a&gt; Windows only solution. Better UI than FakeSMTP but requires installation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;3-hosted-service&#34;&gt;3. Hosted Service&lt;/h2&gt;
+&lt;p&gt;Hosted service with Web UI for Non-Production (QA, UAT, Staging) environments, which helps multiple tester to verify email functionality.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://mailcatcher.me/&#34;&gt;&lt;strong&gt;Mailcatcher&lt;/strong&gt;&lt;/a&gt; It has a web view which allows viewing messages from anywhere, ruby application that can runs independently.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mailtrap.io&#34;&gt;&lt;strong&gt;Mailtrap.io&lt;/strong&gt;&lt;/a&gt; Cloud based SaaS solution, very sophisticated but paid.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;http://sunitparekh.in/images/27/featured.png&#34; alt=&#34;mailcatcher.me&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Using tools and techniques which are applicable for different stages of testing, we can effectively test all email scenarios without delivering emails to real users. Above solutions doesn&amp;rsquo;t require any change in production code for testing, just needs different configuration of SMTP server.&lt;/p&gt;
+&lt;p&gt;Happy Testing !!!&lt;/p&gt;
+- http://sunitparekh.in/posts/27-testing-emails/ - 2020 sunitparekh.in</description>
+        </item>
+    
+    
+  </channel>
+</rss> 
