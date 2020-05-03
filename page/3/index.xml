@@ -6,9 +6,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
-    <lastBuildDate>Sun, 21 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://sunitparekh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Project envisioning exercise - Process Timeline Map</title>
+        <link>https://sunitparekh.github.io/posts/11-process-timeline-map/</link>
+        <pubDate>Mon, 07 May 2012 00:00:00 +0000</pubDate>
+        
+        <guid>https://sunitparekh.github.io/posts/11-process-timeline-map/</guid>
+        <description>sUnit Blog https://sunitparekh.github.io/posts/11-process-timeline-map/ -&lt;p&gt;One of the key challenges in an inception is to learn about the business processes and its workflow in a fair amount of detail in a relatively quick amount of time. The idea is, not to just learn about the client&amp;rsquo;s business processes, but also to ensure that various stakeholders within the client actually share that understanding instead of having varying ideas in their own heads.&lt;/p&gt;
+&lt;p&gt;There are plenty of methods to study business processes but they are time consuming and heavy weight and may be not as collaborative. A classical way is to create process map diagram &amp;amp; value stream mapping. Such methods are valuable in different settings. In our context, an inception, we try to uncover information in enough detail to be able to kickstart delivery without spending loads of time and making it a formal inception phase.&lt;/p&gt;
+&lt;p&gt;During a recent inception, we (&lt;a href=&#34;http://www.twitter.com/sunitparekh&#34;&gt;Sunit Parekh&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/#!/_birinder&#34;&gt;Birinder Singh&lt;/a&gt;, &lt;a href=&#34;http://pandafunda.blogspot.com/&#34;&gt;Sarbashrestha Panda&lt;/a&gt; &amp;amp;Amit Dhakad) combined ideas from different process analysis methods and came up with this hybrid light weight approach. It is not full blown value stream mapping but this approach does have elements of it and highlights the processes that are most time consuming and potentially wasteful.&lt;/p&gt;
+&lt;p&gt;The process map was built on a large canvas/wall, so that it would constantly be visible to all the participant in the inception. We started building the process map by plotting a timeline on x axis and noting different steps in the process flow on the y axis. Also, the actors/roles involved in the process were indicated for each process. A legends for denoting the actors was also put up on the wall for the ease of identification. Building this full as-is process map of the as-is process was done over multiple sessions spanning a couple of days.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stage 1&lt;/strong&gt;: After couple of session with business first cut of the as-is process timeline map looked something like this&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/11/process-timeline-map-as-is-stage1.jpg&#34; alt=&#34;process timeline map as is stage 1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stage 2&lt;/strong&gt;: After another iteration, the as-is process shaped up to something like this. It was also clearer in the client stakeholders&amp;rsquo; minds. It also had functional area clearly called out.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/11/process-timeline-map-as-is.jpg&#34; alt=&#34;process timeline map as is&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Advantage of having large visible canvas for the current as-is model is that it provided us a reference point at all times in inception. It became one of the living document for the team.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stage 3&lt;/strong&gt;: We then took this forward and mapped the future to-be process on top of it by putting magic chart in-between.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/11/process-timeline-map-to-be.jpg&#34; alt=&#34;process timeline map to be&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Being able to superimpose the potential &amp;lsquo;to-be&amp;rsquo; process on top of the &amp;lsquo;as-is&amp;rsquo; process allowed everyone to be able to &amp;lsquo;see&amp;rsquo; how it was lighter weight in comparison. It also allowed us to ensure and double check that we were indeed covering the key activities / steps from the current process and losing / getting rid of only the non value adding ones.&lt;/p&gt;
+&lt;p&gt;At the end, we digitalized above process map.  This structure / format / way of creating a process map was very well received by the business teams as well. They, in fact, suggested that the maps should be left as is in the room for anyone new to the business to use as a starting point for understanding their business processed. That feedback was indeed awesome. :) To me, this is called innovation and collaborative effort was what made it possible.&lt;/p&gt;
+&lt;p&gt;Stationary used for building such map:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Magic Charts with Grid&lt;/li&gt;
+&lt;li&gt;Mulitcolor Stickies  (pink was used for timeline event/instances, yellow for activities in business process)&lt;/li&gt;
+&lt;li&gt;Arrow Stickies (cut sticky in arrow shape or get 3M arrow tags)&lt;/li&gt;
+&lt;li&gt;Small Dot Stickers (used for legends such as actors for activities)&lt;/li&gt;
+&lt;li&gt;Sharpies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Post written collaboratively with &lt;a href=&#34;https://twitter.com/#!/_birinder&#34;&gt;Birinder Singh&lt;/a&gt;&lt;/p&gt;
+- https://sunitparekh.github.io/posts/11-process-timeline-map/ - 2020 sunitparekh.in</description>
+        </item>
     
     
     

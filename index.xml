@@ -6,9 +6,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
-    <lastBuildDate>Sun, 21 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://sunitparekh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>About Me</title>
+        <link>https://sunitparekh.github.io/about/</link>
+        <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://sunitparekh.github.io/about/</guid>
+        <description>sUnit Blog https://sunitparekh.github.io/about/ -&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/sunit.jpeg&#34; alt=&#34;Sunit Parekh&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;application-developer-from-thoughtworks-pune&#34;&gt;Application Developer from ThoughtWorks, Pune&lt;/h2&gt;
+&lt;p&gt;I am a polygot Application Developer, currently working at ThoughtWorks Pune. My experience includes using Java, Ruby and Scala to develop complex enterprise applications and large-scale websites. Apart from architecting solutions, I have done coaching on agile practices like TDD, Refactoring, Continuous Integration and Continuous Delivery.&lt;/p&gt;
+&lt;p&gt;I am passionate about learning new technologies and using them to solve complex business problems. I have build &lt;strong&gt;&lt;a href=&#34;http://sunitparekh.github.io/data-anonymization/&#34;&gt;Data Anonyization&lt;/a&gt;&lt;/strong&gt; a tool that helps with anonymizing production data to use for performance testing, security testing, debugging production issues and development purposes.&lt;/p&gt;
+- https://sunitparekh.github.io/about/ - 2020 sunitparekh.in</description>
+        </item>
     
     
     
@@ -434,20 +449,6 @@ transactionId=458748939 message=&amp;quot;Order received by shipment system.&amp
 &lt;/ul&gt;
 &lt;p&gt;And these are just some examples of structured logging usage. However, once infrastructure in place, it is upto us to explore and find more opportunity to leverage it.&lt;/p&gt;
 - https://sunitparekh.github.io/posts/22-structured-logging/ - 2020 sunitparekh.in</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Guidelines for Structuring Automated Tests</title>
-        <link>https://sunitparekh.github.io/posts/21-automated-tests/</link>
-        <pubDate>Tue, 22 Jul 2014 00:00:00 +0000</pubDate>
-        
-        <guid>https://sunitparekh.github.io/posts/21-automated-tests/</guid>
-        <description>sUnit Blog https://sunitparekh.github.io/posts/21-automated-tests/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpwwwthoughtworkscominsightsblogguidelines-structuring-automated-tests&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests&#34;&gt;http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://sunitparekh.github.io/images/21/featured.svg&#34; alt=&#34;Automated Tests&#34;&gt;&lt;/p&gt;
-- https://sunitparekh.github.io/posts/21-automated-tests/ - 2020 sunitparekh.in</description>
         </item>
     
     
