@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html><head>
+<title>Ruby vs Java vs .NET - How much does it matter on web projects?</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="On most of the projects we just talk and talk about which language is the right choice (Java vs Ruby vs .NET vs ...) for your web application development. This post talks about what all other things matter equally and we should pay attention to.">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+
+
+<link rel="stylesheet" href="https://sunitparekh.github.io/scss/journal.min.3eea8ca8e9a3c6aea03f095bac2c7b00e3c33042a0a6061c719813e81a6cb89b.css" integrity="sha256-PuqMqOmjxq6gPwlbrCx7AOPDMEKgpgYccZgT6BpsuJs=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://sunitparekh.github.io/scss/dark-mode.min.b46aec049a8cb66c26ba332bdc194e2e3358dd60a66329a02864d48642912bc8.css" integrity="sha256-tGrsBJqMtmwmujMr3BlOLjNY3WCmYymgKGTUhkKRK8g=" media="screen">
+
+
+<script src="https://sunitparekh.github.io//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Rubik|Open+Sans:wght@300;400|Roboto:wght@300|Montserrat|Fira+Mono|Material+Icons");
+</script>
+
+<script src="https://sunitparekh.github.io//js/table.js"></script>
+
+
+
+
+<script src="https://sunitparekh.github.io//js/toc.js"></script>
+
+
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://sunitparekh.github.io/">
+    
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="nav-title">
+            sUnit Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            insights on software development
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Posts
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS Feed
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Posts
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS Feed
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://sunitparekh.github.io/">
+            sUnit Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://sunitparekh.github.io/">
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="single-column-header-title">sUnit Blog</div>
+        
+        <div class="single-column-header-subtitle">insights on software development</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('/images/background.png'); ">
+                <div class="post-title">
+                    Ruby vs Java vs .NET - How much does it matter on web projects?
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            Apr 25, 2012
+                        </time>
+                        
+                    </br>
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/envisioning">envisioning</a>
+                                &nbsp;
+                            
+                                <a href="/tags/agile">agile</a>
+                                &nbsp;
+                            
+                                <a href="/tags/software-design">software-design</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>I was looking into some statistics on my multiple web project and found one very interesting stats on simple Lines of Code (LOC).</p>
+<p><img src="/images/8/programming-language.png" alt="code distribution metrics"></p>
+<p><!-- raw HTML omitted -->* numbers are pure production code and does not include test code<!-- raw HTML omitted --></p>
+<p>After looking at above metrics, I asked myself: during initial stage of the project, are we thinking enough about every part of the software and doing enough research around which language, technology &amp; framework to use for project?</p>
+<p>On most of the projects we just talk and talk about which language is the right choice (Java vs Ruby vs .NET vs &hellip;) for your web application development. We are in so much rush to start that we don&rsquo;t even have time to do enough study/spike on each technology decision and provide right technical solution to client.</p>
+<p>So what should I be thinking about, apart from core language and framework while deciding on architecture in initial stage of the project?</p>
+<ol>
+<li>Understand project and its components/parts during inception, discuss &amp; make initial decision about choosing framework &amp; library of different technologies. Make sure all components fit well with each other.</li>
+<li><strong>Web 2.0:</strong> JavaScript, HTML and CSS is big part of your web application code. Do not ignore that.
+<ol>
+<li>Is my application AJAX heavy? (page reload is kind of old fashioned now days). Choosing framework like angularjs, backbone.js, knockoutjs</li>
+<li>Does my application has image cropping or chart need. Should I do it in browser using JavaScript such as raphaeljs.</li>
+<li>Check out templating engine and its support e.g. mustache, haml and its port for specific language.</li>
+<li>how about using less or saas for CSS. This can help reducing your css effort significantly and more beautiful, concise, clean code.</li>
+</ol>
+</li>
+<li><strong>Data Store:</strong> Which data store is the right choice for kind of data processed and maintained by application?
+<ol>
+<li>Choices are plenty now days, starting from traditional relational database, NoSQL databases (mongodb, riak, couchdb &hellip;), graph database (neo4j), fast in-memory like databases (redis &amp; memcached).</li>
+<li>Can I leverage client side data store (browser datastore) for features like storing user preferences, session information etc.</li>
+</ol>
+</li>
+<li><strong>Evaluate Product as a Service:</strong> Can I leverage on PaaS for any feature in application?
+<ol>
+<li>Do I need push notification service to serve dynamic content on my pages? checkout pubnub</li>
+<li>Is image processing such as resize and cropping is required for website? checkout services like lightspun and boxresizer</li>
+</ol>
+</li>
+<li><strong>Go Could:</strong> Discuss and make initial thoughts on production environment setup and deployment. This helps on setting up local env which can be as close as production env and other non production setup.
+<ol>
+<li>Leverage could as much as possible.</li>
+<li>Do I need to provision env using Chef or Puppet? Can I use same for local env setting and using tools like vagrant?</li>
+<li>Can I use S3 with ColudFront to serve my static content?</li>
+</ol>
+</li>
+<li><strong>Automated testing:</strong> how much and at which level? Decide on unit tests, integration tests and functional tests distribution. Make sure not to repeat same tests.  Follow software testing pyramid structure.
+<ol>
+<li>Unit can be at different levels
+<ol>
+<li>core programming level unit tests</li>
+<li>javascript unit tests are important since most of the sites now days are javascript heavy.  Check out Jasmine for JavaScript unit testing.</li>
+<li>template level unit tests</li>
+</ol>
+</li>
+<li>Service level integration tests using your choice of unit testing framework.</li>
+<li>end2end functional tests, their are plenty of tools now days for browser functional testing. checkout phantomjs, tobi, cucumber, capybara and last but most popular selenium webdriver.</li>
+</ol>
+</li>
+</ol>
+<p>Rest all that should continue such as choosing right technology with framework for server side development such as RoR or Java/Spring or Python/django etc&hellip;</p>
+<p>Happy project envisioning.</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2012-04-25</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://sunitparekh.github.io/posts/9-term-cloud/">
+                    Next<br>Project envisioning exercise - Term cloud
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://sunitparekh.github.io/posts/7-amazon-s3-https/">
+                    Previous<br>Amazon S3 learning with HTTPS serving very slow
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	</div>
+    	</div>
+    <script src="https://sunitparekh.github.io//js/journal.js"></script>
+    </body>
+</html>

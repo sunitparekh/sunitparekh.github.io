@@ -69,5 +69,73 @@ To test emails effectively we end up using real email addresses, which leads to 
 Most of the time legacy projects are facing typical issues like fragile codebase, too much technical debt, old libraries &amp;amp; frameworks. Which resulting into long development and testing cycles. To solve these problems, team decides to follow Agile practices.</description>
     </item>
     
+    <item>
+      <title>Cross functional requirements</title>
+      <link>https://sunitparekh.github.io/posts/17-xfr/</link>
+      <pubDate>Sat, 04 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/17-xfr/</guid>
+      <description>It&amp;rsquo;s always been difficult to identify and easy to miss-out on creating stories for cross functional requirement (XFR) a.k.a NonFunctional requirements (NFR) during inception. Inception is a short, time boxed, 2-3 weeks initial requirement gathering phase of the software development project lifecycle. I have been to multiple inception and figured out a nice and collaborating way of capturing and converting cross functional requirements into stories. We run it like a workshops, collaborating with client to identify and capture XFRs.</description>
+    </item>
+    
+    <item>
+      <title>Distributed team communication plan with anatomy of an iteration</title>
+      <link>https://sunitparekh.github.io/posts/12-distributed-team-communication/</link>
+      <pubDate>Sun, 13 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/12-distributed-team-communication/</guid>
+      <description>Agile software development is getting more and more attention now a days. One of the variations of it is called &amp;lsquo;Distributed Agile Development&amp;rsquo;. And a key ingredient for distributed teams to work effectively is &amp;ldquo;communication&amp;rdquo;. Quote from Kent Back on communication &amp;ldquo;Problems with projects can invariably be traced back to somebody not talking to somebody else about something important.&amp;rdquo;
+Currently we are doing an inception with a client and their past experience with distributed team has left them with some bitterness.</description>
+    </item>
+    
+    <item>
+      <title>Project envisioning exercise - Process Timeline Map</title>
+      <link>https://sunitparekh.github.io/posts/11-process-timeline-map/</link>
+      <pubDate>Mon, 07 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/11-process-timeline-map/</guid>
+      <description>One of the key challenges in an inception is to learn about the business processes and its workflow in a fair amount of detail in a relatively quick amount of time. The idea is, not to just learn about the client&amp;rsquo;s business processes, but also to ensure that various stakeholders within the client actually share that understanding instead of having varying ideas in their own heads.
+There are plenty of methods to study business processes but they are time consuming and heavy weight and may be not as collaborative.</description>
+    </item>
+    
+    <item>
+      <title>Project envisioning exercise - Product Map</title>
+      <link>https://sunitparekh.github.io/posts/10-product-map/</link>
+      <pubDate>Sun, 29 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/10-product-map/</guid>
+      <description>One of the key factors for our project is that the client is almost 80+ yrs old in business. There are multiple products with different variations of it in the market. Now one of the task/session was to understand their product space, their groupings and how they differ from each other.
+For understanding product and its family and how they differ from each other, we (Inception team - Sunit, Amit, Panda and Birinder) came up with a simple idea of creating a &amp;ldquo;Product Map&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Project envisioning exercise - Term cloud</title>
+      <link>https://sunitparekh.github.io/posts/9-term-cloud/</link>
+      <pubDate>Sat, 28 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/9-term-cloud/</guid>
+      <description>During inception one of the job of the inception team is to learn the terminology used by the business. Generally the board is put up with all the business buzzwords, terms that they use in their day to day job. We started doing that on one board called &amp;lsquo;Term Cloud&amp;rsquo;. Generally this board gets populated as side effect of all the games &amp;amp; exercise we do during inception also know as glossary, domain terms.</description>
+    </item>
+    
+    <item>
+      <title>Ruby vs Java vs .NET - How much does it matter on web projects?</title>
+      <link>https://sunitparekh.github.io/posts/8-programming-language/</link>
+      <pubDate>Wed, 25 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/8-programming-language/</guid>
+      <description>I was looking into some statistics on my multiple web project and found one very interesting stats on simple Lines of Code (LOC).
+* numbers are pure production code and does not include test codeAfter looking at above metrics, I asked myself: during initial stage of the project, are we thinking enough about every part of the software and doing enough research around which language, technology &amp;amp; framework to use for project?</description>
+    </item>
+    
+    <item>
+      <title>Design for feature and code for story</title>
+      <link>https://sunitparekh.github.io/posts/5-design-for-feature/</link>
+      <pubDate>Fri, 15 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/5-design-for-feature/</guid>
+      <description>I have been practicing agile development engineering practices for almost more than 4 yrs now. One of practice about agile development is it talks about &amp;lsquo;code for story&amp;rsquo;, which means you just do simple enough implementation required for the story. Why? because you don&amp;rsquo;t know what&amp;rsquo;s required in future and will remain as it is or change.
+Now considering &amp;lsquo;code for story&amp;rsquo; practice, this is what happens on the ground. Pair picks up a first story of a feature and &amp;lsquo;just did what was required for the story to implement&amp;rsquo;, after few days another pair picks up a story on same feature and says &amp;lsquo;Ohh&amp;hellip; I have to first refactor the code so that it can be extended to implement next story&amp;rsquo;, which means the work done by first story is partially or fully refactored.</description>
+    </item>
+    
   </channel>
 </rss>

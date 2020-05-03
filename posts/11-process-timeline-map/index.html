@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html><head>
+<title>Project envisioning exercise - Process Timeline Map</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="Describes the method to study business processes in visual way to build common understanding with business during project inception.">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+
+
+<link rel="stylesheet" href="https://sunitparekh.github.io/scss/journal.min.3eea8ca8e9a3c6aea03f095bac2c7b00e3c33042a0a6061c719813e81a6cb89b.css" integrity="sha256-PuqMqOmjxq6gPwlbrCx7AOPDMEKgpgYccZgT6BpsuJs=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://sunitparekh.github.io/scss/dark-mode.min.b46aec049a8cb66c26ba332bdc194e2e3358dd60a66329a02864d48642912bc8.css" integrity="sha256-tGrsBJqMtmwmujMr3BlOLjNY3WCmYymgKGTUhkKRK8g=" media="screen">
+
+
+<script src="https://sunitparekh.github.io//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Rubik|Open+Sans:wght@300;400|Roboto:wght@300|Montserrat|Fira+Mono|Material+Icons");
+</script>
+
+<script src="https://sunitparekh.github.io//js/table.js"></script>
+
+
+
+
+<script src="https://sunitparekh.github.io//js/toc.js"></script>
+
+
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://sunitparekh.github.io/">
+    
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="nav-title">
+            sUnit Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            insights on software development
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Posts
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS Feed
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Posts
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS Feed
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://sunitparekh.github.io/">
+            sUnit Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://sunitparekh.github.io/">
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="single-column-header-title">sUnit Blog</div>
+        
+        <div class="single-column-header-subtitle">insights on software development</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('/images/background.png'); ">
+                <div class="post-title">
+                    Project envisioning exercise - Process Timeline Map
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            May 7, 2012
+                        </time>
+                        
+                    </br>
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/envisioning">envisioning</a>
+                                &nbsp;
+                            
+                                <a href="/tags/agile">agile</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>One of the key challenges in an inception is to learn about the business processes and its workflow in a fair amount of detail in a relatively quick amount of time. The idea is, not to just learn about the client&rsquo;s business processes, but also to ensure that various stakeholders within the client actually share that understanding instead of having varying ideas in their own heads.</p>
+<p>There are plenty of methods to study business processes but they are time consuming and heavy weight and may be not as collaborative. A classical way is to create process map diagram &amp; value stream mapping. Such methods are valuable in different settings. In our context, an inception, we try to uncover information in enough detail to be able to kickstart delivery without spending loads of time and making it a formal inception phase.</p>
+<p>During a recent inception, we (<a href="http://www.twitter.com/sunitparekh">Sunit Parekh</a>, <a href="https://twitter.com/#!/_birinder">Birinder Singh</a>, <a href="http://pandafunda.blogspot.com/">Sarbashrestha Panda</a> &amp;Amit Dhakad) combined ideas from different process analysis methods and came up with this hybrid light weight approach. It is not full blown value stream mapping but this approach does have elements of it and highlights the processes that are most time consuming and potentially wasteful.</p>
+<p>The process map was built on a large canvas/wall, so that it would constantly be visible to all the participant in the inception. We started building the process map by plotting a timeline on x axis and noting different steps in the process flow on the y axis. Also, the actors/roles involved in the process were indicated for each process. A legends for denoting the actors was also put up on the wall for the ease of identification. Building this full as-is process map of the as-is process was done over multiple sessions spanning a couple of days.</p>
+<p><strong>Stage 1</strong>: After couple of session with business first cut of the as-is process timeline map looked something like this</p>
+<p><img src="/images/11/process-timeline-map-as-is-stage1.jpg" alt="process timeline map as is stage 1"></p>
+<p><strong>Stage 2</strong>: After another iteration, the as-is process shaped up to something like this. It was also clearer in the client stakeholders&rsquo; minds. It also had functional area clearly called out.</p>
+<p><img src="/images/11/process-timeline-map-as-is.jpg" alt="process timeline map as is"></p>
+<p>Advantage of having large visible canvas for the current as-is model is that it provided us a reference point at all times in inception. It became one of the living document for the team.</p>
+<p><strong>Stage 3</strong>: We then took this forward and mapped the future to-be process on top of it by putting magic chart in-between.</p>
+<p><img src="/images/11/process-timeline-map-to-be.jpg" alt="process timeline map to be"></p>
+<p>Being able to superimpose the potential &lsquo;to-be&rsquo; process on top of the &lsquo;as-is&rsquo; process allowed everyone to be able to &lsquo;see&rsquo; how it was lighter weight in comparison. It also allowed us to ensure and double check that we were indeed covering the key activities / steps from the current process and losing / getting rid of only the non value adding ones.</p>
+<p>At the end, we digitalized above process map.  This structure / format / way of creating a process map was very well received by the business teams as well. They, in fact, suggested that the maps should be left as is in the room for anyone new to the business to use as a starting point for understanding their business processed. That feedback was indeed awesome. :) To me, this is called innovation and collaborative effort was what made it possible.</p>
+<p>Stationary used for building such map:</p>
+<ul>
+<li>Magic Charts with Grid</li>
+<li>Mulitcolor Stickies  (pink was used for timeline event/instances, yellow for activities in business process)</li>
+<li>Arrow Stickies (cut sticky in arrow shape or get 3M arrow tags)</li>
+<li>Small Dot Stickers (used for legends such as actors for activities)</li>
+<li>Sharpies</li>
+</ul>
+<p>Post written collaboratively with <a href="https://twitter.com/#!/_birinder">Birinder Singh</a></p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2012-05-07</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://sunitparekh.github.io/posts/12-distributed-team-communication/">
+                    Next<br>Distributed team communication plan with anatomy of an iteration
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://sunitparekh.github.io/posts/10-product-map/">
+                    Previous<br>Project envisioning exercise - Product Map
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	</div>
+    	</div>
+    <script src="https://sunitparekh.github.io//js/journal.js"></script>
+    </body>
+</html>

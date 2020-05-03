@@ -138,5 +138,32 @@
       <description></description>
     </item>
     
+    <item>
+      <title>data-anonymization</title>
+      <link>https://sunitparekh.github.io/tags/data-anonymization/</link>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/tags/data-anonymization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws</title>
+      <link>https://sunitparekh.github.io/tags/aws/</link>
+      <pubDate>Sat, 25 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NoSQL</title>
+      <link>https://sunitparekh.github.io/tags/nosql/</link>
+      <pubDate>Tue, 14 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/tags/nosql/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

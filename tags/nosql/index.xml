@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NoSQL on sUnit Blog</title>
+    <link>https://sunitparekh.github.io/tags/nosql/</link>
+    <description>Recent content in NoSQL on sUnit Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2020 sunitparekh.in</copyright>
+    <lastBuildDate>Tue, 14 Feb 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sunitparekh.github.io/tags/nosql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NoSQL learning &amp; gotchas based on MongoDB experience</title>
+      <link>https://sunitparekh.github.io/posts/6-nosql-learnings/</link>
+      <pubDate>Tue, 14 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/6-nosql-learnings/</guid>
+      <description>I have been working on NoSQL database had some interesting learning on when not to use NoSQL database. All following learning are based on my NoSQL experience with mongoDB. This is an ongoing document which I am planning to keep updating as I keep learning.
+When NOT to choose NoSQL database One primary gotcha of new technology is, when to use it by knowing when not to use it. Here is list of reasons, when you have to be careful choosing NoSQL,</description>
+    </item>
+    
+  </channel>
+</rss>

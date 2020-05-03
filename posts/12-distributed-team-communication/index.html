@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html><head>
+<title>Distributed team communication plan with anatomy of an iteration</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="One of the variations of agile it is called Distributed Agile Development. And a key ingredient for distributed teams to work effectively is communication. This post describes method of how to come up with effective communication plan collaboratively with everyone including business.">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+
+
+<link rel="stylesheet" href="https://sunitparekh.github.io/scss/journal.min.3eea8ca8e9a3c6aea03f095bac2c7b00e3c33042a0a6061c719813e81a6cb89b.css" integrity="sha256-PuqMqOmjxq6gPwlbrCx7AOPDMEKgpgYccZgT6BpsuJs=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://sunitparekh.github.io/scss/dark-mode.min.b46aec049a8cb66c26ba332bdc194e2e3358dd60a66329a02864d48642912bc8.css" integrity="sha256-tGrsBJqMtmwmujMr3BlOLjNY3WCmYymgKGTUhkKRK8g=" media="screen">
+
+
+<script src="https://sunitparekh.github.io//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Rubik|Open+Sans:wght@300;400|Roboto:wght@300|Montserrat|Fira+Mono|Material+Icons");
+</script>
+
+<script src="https://sunitparekh.github.io//js/table.js"></script>
+
+
+
+
+<script src="https://sunitparekh.github.io//js/toc.js"></script>
+
+
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://sunitparekh.github.io/">
+    
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="nav-title">
+            sUnit Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            insights on software development
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Posts
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS Feed
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Posts
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS Feed
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://sunitparekh.github.io/">
+            sUnit Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://sunitparekh.github.io/">
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="single-column-header-title">sUnit Blog</div>
+        
+        <div class="single-column-header-subtitle">insights on software development</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('/images/background.png'); ">
+                <div class="post-title">
+                    Distributed team communication plan with anatomy of an iteration
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            May 13, 2012
+                        </time>
+                        
+                    </br>
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/agile">agile</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>Agile software development is getting more and more attention now a days. One of the variations of it is called &lsquo;Distributed Agile Development&rsquo;. And a key ingredient for distributed teams to work effectively is &ldquo;communication&rdquo;. Quote from Kent Back on communication &ldquo;Problems with projects can invariably be traced back to somebody not talking to somebody else about something important.&rdquo;</p>
+<p>Currently we are doing an inception with a client and their past experience with distributed team has left them with some bitterness. In addition, the client has just started adopting agile practices in their software development cycle, so along with delivery we are also doing enablement for them. Also making sure business and new team member understand the different buzzwords of agile software development is very important.</p>
+<p>In my experience every team has variations in mechanics of implementing agile, keeping all the principles intact. For example, story prioritization for some teams is Iteration Planning Meeting (aka Iteration Kick Off) and  some teams go for  more lean  like method of story prioritization and adopts an iteration-less Kanban style pull mechanism. For  distributed teams, the variations are important to know and everyone should understand the why&rsquo;s of it. Daily standup need to be little different when working in distributed model, Iteration showcase and iteration length varies too from team to team. In my opinion all such mechanics are decided and derived based different parameters. However, the important part is to discuss, decide and communicate  the mechanics &amp;process of project&rsquo;s agile development with all team members including business.</p>
+<p>And its very important to plan for some session during inception to address need around all of the above.
+Taking &ldquo;Story Lifecycle&rdquo; and &ldquo;Anatomy of Iteration&rdquo; our team (<a href="http://www.twitter.com/sunitparekh">Sunit Parekh</a>, <a href="https://twitter.com/#!/_birinder">Birinder Singh</a>, <a href="http://pandafunda.blogspot.com/">Sarbashrestha Panda</a> &amp;Amit Dhakad) did the following session in little different settings and format. This blog is all about sharing the mechanics of running the session. I am calling it &ldquo;Communication plan with anatomy of iteration lifecycle&rdquo; and some of following is for the distributed team structure, where the business, SMEs, Product Owner and Product Sponsor are in UK and the development team is back in India.  Hence few of the mechanics differ from co-located team structure.</p>
+<p>Topics to broadly cover during session are,</p>
+<ol>
+<li>What is a story and Story lifecycle?</li>
+<li>What is an iteration and Anatomy of iteration &amp; lifecycle?</li>
+<li>Definition of Story Done</li>
+<li>Testing strategy (automated and manual)</li>
+</ol>
+<p>We created a timeline on the board to start the session with first talking about what is story and story lifecycle.</p>
+<p><img src="/images/12/anatomy-of-iteration-1.jpg" alt="communication plan empty"></p>
+<p>As we kept discussing about the iteration, we started moving story stages onto iteration lifecycle. Also started building the events as shown in the picture below. Session took an hour to run.</p>
+<p><img src="/images/12/distributed-team-communication.jpg" alt="communication plan with iteration lifecycle"></p>
+<p>Keep most of the stickies written before the session. This helps to remember all points to cover and running the session quickly. Have discussions during the session and make it as interactive as possible. As a team decides most of the stuff (e.g. definition of story done, iteration length, meetings/calls, Skype or Google Hangout) rather than dictating to others, this is very important as that makes it team&rsquo;s plan.</p>
+<p>Here are a few things, that is different for a distributed agile team:</p>
+<ol>
+<li><strong>Standup</strong>, can be little different format. We use mingle card wall to just talk about cards updates if there are any queries or updates, achievements of the team during day, along with any blockers and show-stoppers for team. Keep it short. 15 min.</li>
+<li><strong>BA Catchup</strong>, business is busy most of the day with their job and so it is important to block SMEs calendar for certain time of the day so that can be utilized for any questions, queries and demo&rsquo;s for feedback. Daily 1 hr. We do it just followed by distributed team standup.</li>
+<li><strong>Story prioritization</strong>, continuous process like Kanban. Regularly BA Catchup call is used for story prioritization.</li>
+<li><strong>Iteration Kickoff and Iteration Showcase</strong>, we like Kanban style prioritization however it is good to get everyone together and share the project status, updates and showcase key features build since last meet and what&rsquo;s the plan ahead for team. We do this as one meeting scheduled at the end of iteration as iteration showcase.</li>
+<li><strong>Tech Huddles</strong>, during initial stage of the project couple of times a week and later it&rsquo;s kind of need basis once or twice a week.</li>
+</ol>
+<p>Please share your comments, suggestions &amp;experiences about this kind of sessions. What more we should cover, what we should watch out for&hellip;</p>
+<p>Special thanks to <a href="http://pandafunda.blogspot.com/">Sarbashrestha Panda</a> for reviewing the post and recommending valuable amendments.</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2012-05-13</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://sunitparekh.github.io/posts/13-push-notification/">
+                    Next<br>Get notified with push notification
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://sunitparekh.github.io/posts/11-process-timeline-map/">
+                    Previous<br>Project envisioning exercise - Process Timeline Map
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	</div>
+    	</div>
+    <script src="https://sunitparekh.github.io//js/journal.js"></script>
+    </body>
+</html>

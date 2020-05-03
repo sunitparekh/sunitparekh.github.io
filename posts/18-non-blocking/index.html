@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html><head>
+<title>Building highly scalable and performance application using non-blocking architecture</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="Article shows the modern way of building websites using non-blocking architecture pattern. Why this style of architecture is beneficial and what are the frameworks available to implement.">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+
+
+<link rel="stylesheet" href="https://sunitparekh.github.io/scss/journal.min.3eea8ca8e9a3c6aea03f095bac2c7b00e3c33042a0a6061c719813e81a6cb89b.css" integrity="sha256-PuqMqOmjxq6gPwlbrCx7AOPDMEKgpgYccZgT6BpsuJs=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://sunitparekh.github.io/scss/dark-mode.min.b46aec049a8cb66c26ba332bdc194e2e3358dd60a66329a02864d48642912bc8.css" integrity="sha256-tGrsBJqMtmwmujMr3BlOLjNY3WCmYymgKGTUhkKRK8g=" media="screen">
+
+
+<script src="https://sunitparekh.github.io//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Rubik|Open+Sans:wght@300;400|Roboto:wght@300|Montserrat|Fira+Mono|Material+Icons");
+</script>
+
+<script src="https://sunitparekh.github.io//js/table.js"></script>
+
+
+
+
+<script src="https://sunitparekh.github.io//js/toc.js"></script>
+
+
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://sunitparekh.github.io/">
+    
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="nav-title">
+            sUnit Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            insights on software development
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Posts
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS Feed
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Posts
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS Feed
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://sunitparekh.github.io/">
+            sUnit Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://sunitparekh.github.io/">
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="single-column-header-title">sUnit Blog</div>
+        
+        <div class="single-column-header-subtitle">insights on software development</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('/images/background.png'); ">
+                <div class="post-title">
+                    Building highly scalable and performance application using non-blocking architecture
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            May 7, 2013
+                        </time>
+                        
+                    </br>
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/software-design">software-design</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>I have been working on web application development since last 12+ years and had privileged to work on more than 20+ different project. Now days the expectations from web apps are totally different than it was few years back. End users are provided with rich content on single page (Amazon, CNN, &hellip;). On a single page, lots of data needs to be mashed up and data may come from different sources.</p>
+<p><img src="/images/18/1-website-screenshots.jpg" alt="Websites with data mashup"></p>
+<p>We know how to put together the N-tier architecture.</p>
+<p><img src="/images/18/2-service-oriented-architecture.svg" alt="Service oriented architecture"></p>
+<p>And the request workflow will be as following,</p>
+<p><img src="/images/18/3-request-workflow.png" alt="Request workflow"></p>
+<p>Now if we notice the above workflow, it is sequential and most of the time thread on web server and app server spend is waiting for response form app server and database respectively rather than doing some meaningful work (processing). This is what is called BLOCKING. Lets take same example and try to draw web server thread timeline.</p>
+<p><img src="/images/18/4-sequencial-timeline.jpg" alt="Sequential workflow timeline"></p>
+<p><img src="/images/18/5-legends.jpg" alt="timeline legends"></p>
+<p>RED is time spend by thread waiting for response/result from app server. And GREEN is the time spend doing some meaningful processing by web server. In above example it was total 10 sec response time and 1 thread involved in processing. Lets assume that above 3 calls to app server can be parallelise to optimise response time to end user.</p>
+<p><img src="/images/18/6-standard-parallel-processing.jpg" alt="Standard parallel processing"></p>
+<p>In parallel processing the response time was reduced to 7 sec. However, total 4 threads participated in processing and in total 13 sec of thread time it took. Again here also the processing was BLOCKING. Which means parallel processing provides better performance in terms of response time, but required more resources to process the request.</p>
+<p>What we need is parallel processing with non-blocking threads. Means when the thread is waiting for the response from other systems, it should be made available to do some other meaningful work. Something like following,</p>
+<p><img src="/images/18/7-non-blocking-execution.jpg" alt="Non blocking execution timeline"></p>
+<p>If we can achieve non-blocking architecture than the response time goes down to as low as 5 sec. And also consumes less thread resources. Now the question is how I can achieve this? In today&rsquo;s polygot programming world, we have plenty of alternatives available.</p>
+<p><img src="/images/18/8-tech-options.jpg" alt="Non blocking technical options"></p>
+<p>Non-blocking is not new, Nginx is event based and uses similar principle, Messsage based architecture is another classical example to solve similar problems, however that brings in asynchronous complexity.  MongoDB and similar polygot persistence works on same principles and provides eventual consistency.</p>
+<p>I recommend trying out following technology/framework choices to achieve non-blocking architecture,</p>
+<ol>
+<li><strong><a href="http://nodejs.org/">NodeJS</a></strong>, this is the most popular choice so far in today&rsquo;s technology choices. And Passanger can provide NodeJS cluster running multiple process on one machine. However, programming in NodeJS is all about callbacks. And lots of OO programmers don&rsquo;t like it. There are plenty of frameworks in NodeJS for web application, the popular ones are is <a href="http://expressjs.com/">express.js</a>, <a href="http://meteor.com/">meteor</a> &hellip;</li>
+<li><strong><a href="http://www.playframework.com/">Play Framework</a></strong>, this is Scala based web application framework. Framework is very mature and easy to adpat for Java shop organisations. It uses internally Netty, Scala and Akka and provides very nice abstracts to avoids callbacks hell. Based on Scala means love for OO programmers as well. Akka can also be used independently.</li>
+</ol>
+<p><strong>Disclaimer:</strong> Consider non-blocking architecture when your application have blocking calls and wait times. If your application has more about computation/processing and less or negligible blocking/waiting time the above architecture pattern may not provide better or favorable results.</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2013-05-07</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://sunitparekh.github.io/posts/19-blue-green-deployment/">
+                    Next<br>Zero downtime using blue-green deployment strategy
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://sunitparekh.github.io/posts/17-xfr/">
+                    Previous<br>Cross functional requirements
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	</div>
+    	</div>
+    <script src="https://sunitparekh.github.io//js/journal.js"></script>
+    </body>
+</html>

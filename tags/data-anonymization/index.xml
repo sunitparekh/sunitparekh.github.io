@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data-anonymization on sUnit Blog</title>
+    <link>https://sunitparekh.github.io/tags/data-anonymization/</link>
+    <description>Recent content in data-anonymization on sUnit Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2020 sunitparekh.in</copyright>
+    <lastBuildDate>Tue, 04 Sep 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sunitparekh.github.io/tags/data-anonymization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Data Anonymization techniques, Blacklist and Whitelist?</title>
+      <link>https://sunitparekh.github.io/posts/15-data-anonymization-techniques/</link>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/15-data-anonymization-techniques/</guid>
+      <description>Continuation of my previous post about the need for anonymized production data dump, here is more details on two anonymization approaches blacklist and whitelist. Lets take one simple example and understand both the approaches. Consider two tables of database: Customers and Config.
+Blacklist This approach essentially leaves all fields unchanged with the exception of those specified by the user, which are scrambled/anonymized (hence the name Blacklist!). For Blacklist, create a copy of the prod database and choose the fields to be anonymized e.</description>
+    </item>
+    
+    <item>
+      <title>Data Anonymization, need for every site in production</title>
+      <link>https://sunitparekh.github.io/posts/14-data-anonymization/</link>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunitparekh.github.io/posts/14-data-anonymization/</guid>
+      <description>On one of my previous projects, we wrote a jMeter performance test suite, which runs periodically on performance environment. Once the application was in production, we enhanced our performance test suite based on actual user behaviours from Apache access logs and Omniture analytics. That provided us a great level of confidence in development for scaling. Now the next step was to get the production dataset so our performance testing becomes almost like production peak load.</description>
+    </item>
+    
+  </channel>
+</rss>
