@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
-    <lastBuildDate>Sun, 21 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="//www.sunitparekh.in/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,36 @@
     <item>
       <title>agile</title>
       <link>//www.sunitparekh.in/tags/agile/</link>
-      <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>//www.sunitparekh.in/tags/agile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pairing</title>
+      <link>//www.sunitparekh.in/tags/pairing/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/tags/pairing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>api</title>
+      <link>//www.sunitparekh.in/tags/api/</link>
+      <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>json</title>
+      <link>//www.sunitparekh.in/tags/json/</link>
+      <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/tags/json/</guid>
       <description></description>
     </item>
     

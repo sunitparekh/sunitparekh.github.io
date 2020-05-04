@@ -7,10 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
-    <lastBuildDate>Sun, 21 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="//www.sunitparekh.in/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Remote Pairing Cheat Sheet</title>
+      <link>//www.sunitparekh.in/posts/32-remote-pairing/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/32-remote-pairing/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/insights/blog/remote-pairing-cheat-sheet</description>
+    </item>
+    
+    <item>
+      <title>Guidelines on JSON responses for RESTful services</title>
+      <link>//www.sunitparekh.in/posts/31-json-responses/</link>
+      <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/31-json-responses/</guid>
+      <description>Now days RESTful API is followed heavily on most of the projects. Since it doesn’t prescribe every details, many times I have seen developers start following different ways of implement for similar patterns in API, leading to inconsistent API. So during initial stage of the project it is very important to discuss and define guidelines for RESTful APIs. In this article I am focusing on JSON response guidelines.
+Responding success and failure First question that comes in discussion is, How shall we craft response for success and failure?</description>
+    </item>
     
     <item>
       <title>Release based 3 branch model for agile software development</title>

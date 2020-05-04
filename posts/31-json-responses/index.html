@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html><head>
+<title>Guidelines on JSON responses for RESTful services</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="Now days RESTful API is followed heavily on most of the projects. Since it doesn’t prescribe every details, many times I have seen developers start following different ways of implement for similar patterns in API, leading to inconsistent API. So during initial stage of the project it is very important to discuss and define guidelines for RESTful APIs. In this article I am focusing on JSON response guidelines..">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-49663495-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+
+
+<link rel="stylesheet" href="//www.sunitparekh.in/scss/journal.min.3eea8ca8e9a3c6aea03f095bac2c7b00e3c33042a0a6061c719813e81a6cb89b.css" integrity="sha256-PuqMqOmjxq6gPwlbrCx7AOPDMEKgpgYccZgT6BpsuJs=" media="screen">
+
+
+
+<link rel="stylesheet" href="//www.sunitparekh.in/scss/dark-mode.min.b46aec049a8cb66c26ba332bdc194e2e3358dd60a66329a02864d48642912bc8.css" integrity="sha256-tGrsBJqMtmwmujMr3BlOLjNY3WCmYymgKGTUhkKRK8g=" media="screen">
+
+
+<script src="//www.sunitparekh.in//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Rubik|Open+Sans:wght@300;400|Roboto:wght@300|Montserrat|Fira+Mono|Material+Icons");
+</script>
+
+<script src="//www.sunitparekh.in//js/table.js"></script>
+
+
+
+
+<script src="//www.sunitparekh.in//js/toc.js"></script>
+
+
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="//www.sunitparekh.in/">
+    
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="nav-title">
+            sUnit Blog
+        </div>
+        
+        <div class="nav-subtitle">
+            insights on software development
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Posts
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS Feed
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/about">
+                About
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#responding-success-and-failure" v-on:click="closeDrawer" id="responding-success-and-failure-nav">
+										 Responding success and failure
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#list-and-search-result-type-of-responses" v-on:click="closeDrawer" id="list-and-search-result-type-of-responses-nav">
+										 List and search result type of responses
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#json-key-propertyfield-name-naming-convention" v-on:click="closeDrawer" id="json-key-propertyfield-name-naming-convention-nav">
+										 JSON key (property/field name) naming convention
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#handling-null-values" v-on:click="closeDrawer" id="handling-null-values-nav">
+										 Handling NULL values
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#date-and-datetime-responses" v-on:click="closeDrawer" id="date-and-datetime-responses-nav">
+										 Date and DateTime responses
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#multiline-string-values" v-on:click="closeDrawer" id="multiline-string-values-nav">
+										 Multiline string values
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#summary" v-on:click="closeDrawer" id="summary-nav">
+										 Summary
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Posts
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS Feed
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/about">
+                    About
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#responding-success-and-failure" v-on:click="closeDrawer" id="responding-success-and-failure-nav">
+										 Responding success and failure
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#list-and-search-result-type-of-responses" v-on:click="closeDrawer" id="list-and-search-result-type-of-responses-nav">
+										 List and search result type of responses
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#json-key-propertyfield-name-naming-convention" v-on:click="closeDrawer" id="json-key-propertyfield-name-naming-convention-nav">
+										 JSON key (property/field name) naming convention
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#handling-null-values" v-on:click="closeDrawer" id="handling-null-values-nav">
+										 Handling NULL values
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#date-and-datetime-responses" v-on:click="closeDrawer" id="date-and-datetime-responses-nav">
+										 Date and DateTime responses
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#multiline-string-values" v-on:click="closeDrawer" id="multiline-string-values-nav">
+										 Multiline string values
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+				
+				
+					
+						
+						
+							<ul>
+						
+							<ul>
+						
+						
+								<li>
+				 					<a href="#summary" v-on:click="closeDrawer" id="summary-nav">
+										 Summary
+									</a>
+								</li>
+						
+							</ul>
+						
+							</ul>
+						
+					
+				
+			
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="//www.sunitparekh.in/">
+            sUnit Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="//www.sunitparekh.in/">
+        <div>
+            <img src="/images/favicon.png" height="100"/>
+        </div>    
+        <div class="single-column-header-title">sUnit Blog</div>
+        
+        <div class="single-column-header-subtitle">insights on software development</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('/images/background.png'); ">
+                <div class="post-title">
+                    Guidelines on JSON responses for RESTful services
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            Apr 3, 2018
+                        </time>
+                        
+                    </br>
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/json">json</a>
+                                &nbsp;
+                            
+                                <a href="/tags/api">api</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>Now days RESTful API is followed heavily on most of the projects. Since it doesn’t prescribe every details, many times I have seen developers start following different ways of implement for similar patterns in API, leading to inconsistent API. So during initial stage of the project it is very important to discuss and define guidelines for RESTful APIs. In this article I am focusing on JSON response guidelines.</p>
+<p><img src="/images/31/api.png" alt="API"></p>
+<h2 id="responding-success-and-failure">Responding success and failure</h2>
+<p>First question that comes in discussion is, <em>How shall we craft response for success and failure?</em> Different options are,</p>
+<ol>
+<li>Use HTTP status codes conveying the status + json body in response payload</li>
+<li>always return 200 and response payload to have status and data fields.</li>
+</ol>
+<p>My take is <strong>use HTTP status code to convey the response status</strong>. And I prefer not to create envelope response but return requested object at top level JSON. And for errors return appropriate HTTP status code with more detailed error message and errors as JSON response.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">200</span>
+<span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
+
+{
+  <span style="color:#f92672">&#34;employeeId&#34;</span>:<span style="color:#ae81ff">123456</span>,
+  <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
+  <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
+  <span style="color:#f92672">&#34;gender&#34;</span>: <span style="color:#e6db74">&#34;Male&#34;</span>,
+  <span style="color:#f92672">&#34;hireDate&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01&#34;</span>,
+  <span style="color:#f92672">&#34;birthDate&#34;</span>: <span style="color:#e6db74">&#34;1990-01-01&#34;</span>,
+  <span style="color:#f92672">&#34;office&#34;</span>: <span style="color:#e6db74">&#34;Pune&#34;</span>
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">404</span>
+<span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
+
+{
+  <span style="color:#f92672">&#34;code&#34;</span>: <span style="color:#e6db74">&#34;NOT_FOUND&#34;</span>,
+  <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Oops! Requested employee 123456 not found.&#34;</span>
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">400</span>
+<span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
+
+{
+  <span style="color:#f92672">&#34;code&#34;</span>: <span style="color:#e6db74">&#34;INVALID_INPUT&#34;</span>,
+  <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Oops! Invalid data provided for employee.&#34;</span>
+  <span style="color:#e6db74">&#34;errors&#34;</span>: [
+    {
+      <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Last name is required field.&#34;</span>,
+      <span style="color:#f92672">&#34;field&#34;</span>: <span style="color:#e6db74">&#34;lastName&#34;</span>
+    },
+    {
+      <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Age of the employee should be greater than 18&#34;</span>,
+      <span style="color:#f92672">&#34;field&#34;</span>: <span style="color:#e6db74">&#34;dateOfBirth&#34;</span>
+    }
+  ]
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">401</span>
+<span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
+
+{
+  <span style="color:#f92672">&#34;code&#34;</span>: <span style="color:#e6db74">&#34;UNAUTHORIZED_ACCESS&#34;</span>,
+  <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Unauthorized access for the requested content.&#34;</span>
+}
+</code></pre></div><p>Effective use of HTTP status code helps with leveraging HTTP caching and coding clients. Also it is important to discuss and decide which status code to use when. Read more <a href="http://www.restapitutorial.com/httpstatuscodes.html">here</a> about status codes.</p>
+<h2 id="list-and-search-result-type-of-responses">List and search result type of responses</h2>
+<p>Next question comes up is, how to return list or search result like responses?
+This is the heavily debatable and many times inconclusive topic for whole team to agree. Okay, what are the options?</p>
+<ol>
+<li>use envelope style response, result includes count plus data, however for error conditions such as bad input or un-authorized request use appropriate HTTP status code</li>
+<li>return only data with HTTP status code and use response headers for count fields</li>
+<li>always return 200 and status in response body</li>
+</ol>
+<p>My take, here I am divided between option 1 and 2. Still preferred option is <strong>Option 2, return only data and convey summary fields using headers</strong>. Another alternative to sending count field in response header is have separate count API. This is also useful many times as you need count only once.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">200</span>
+<span style="color:#960050;background-color:#1e0010">Total-Count:</span> <span style="color:#ae81ff">100</span>
+<span style="color:#960050;background-color:#1e0010">Next-Page:</span> <span style="color:#66d9ef">true</span>
+<span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
+
+[
+  {
+    <span style="color:#f92672">&#34;employeeId&#34;</span>:<span style="color:#ae81ff">123456</span>,
+    <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
+    <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
+    <span style="color:#f92672">&#34;gender&#34;</span>: <span style="color:#e6db74">&#34;Male&#34;</span>,
+    <span style="color:#f92672">&#34;hireDate&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01&#34;</span>,
+    <span style="color:#f92672">&#34;birthDate&#34;</span>: <span style="color:#e6db74">&#34;1990-01-01&#34;</span>,
+    <span style="color:#f92672">&#34;office&#34;</span>: <span style="color:#e6db74">&#34;Pune&#34;</span>
+  },
+  {
+    <span style="color:#f92672">&#34;employeeId&#34;</span>:<span style="color:#ae81ff">123457</span>,
+    <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
+    <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
+    <span style="color:#f92672">&#34;gender&#34;</span>: <span style="color:#e6db74">&#34;Male&#34;</span>,
+    <span style="color:#f92672">&#34;hireDate&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01&#34;</span>,
+    <span style="color:#f92672">&#34;birthDate&#34;</span>: <span style="color:#e6db74">&#34;1990-01-01&#34;</span>,
+    <span style="color:#f92672">&#34;office&#34;</span>: <span style="color:#e6db74">&#34;Pune&#34;</span>
+  }
+]
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">200</span>
+<span style="color:#960050;background-color:#1e0010">Total-Count:</span> <span style="color:#ae81ff">0</span>
+<span style="color:#960050;background-color:#1e0010">Next-Page:</span> <span style="color:#66d9ef">false</span>
+<span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
+
+[]
+</code></pre></div><p>Use of response header is key in the above example. Next-Page response header tells client that I have more data (next page) available. And such headers can be really useful for loading next pages on scroll.</p>
+<p>However, when I look at API like <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-body.html">elasticsearch</a> I get convinced that Option 2 is also right. Choose one for the project and follow it.</p>
+<h2 id="json-key-propertyfield-name-naming-convention">JSON key (property/field name) naming convention</h2>
+<p>Now it’s time to get inside the JSON fields. What should be naming convention for fields? Options are</p>
+<ol>
+<li><code>camelCase</code></li>
+<li><code>snake_case</code></li>
+<li><code>spinal-case</code></li>
+</ol>
+<p>My choice here is <strong><code>camelCase</code></strong> and that must be from my background as Java developer. I have seen equal use of <code>snake_case</code> as well, but very rare use of <code>spinal-case</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">200</span>
+<span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
+
+{
+  <span style="color:#f92672">&#34;employeeId&#34;</span>:<span style="color:#ae81ff">123456</span>,
+  <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
+  <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
+  <span style="color:#f92672">&#34;gender&#34;</span>: <span style="color:#e6db74">&#34;Male&#34;</span>,
+  <span style="color:#f92672">&#34;hireDate&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01&#34;</span>,
+  <span style="color:#f92672">&#34;birthDate&#34;</span>: <span style="color:#e6db74">&#34;1990-01-01&#34;</span>,
+  <span style="color:#f92672">&#34;office&#34;</span>: <span style="color:#e6db74">&#34;Pune&#34;</span>
+}
+</code></pre></div><p>Avoid using dot (.) in key names, as they conflict with the JSON path.</p>
+<h2 id="handling-null-values">Handling NULL values</h2>
+<p>It’s time to look at, how to return NULL values? This is again another area of debate starts. Options are,</p>
+<ol>
+<li>Do not return NULL values</li>
+<li>Return as null value</li>
+</ol>
+<p>I prefer <strong>Option 1) Do not return NULL values.</strong> However, question becomes tricky when value is object or array and it is empty. In that case empty {} or [] is valid JSON response.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">Response</span> <span style="color:#960050;background-color:#1e0010">with</span> <span style="color:#66d9ef">null</span> <span style="color:#960050;background-color:#1e0010">and</span> <span style="color:#960050;background-color:#1e0010">empty</span> <span style="color:#960050;background-color:#1e0010">values</span> 
+<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">--</span> <span style="color:#960050;background-color:#1e0010">NOT</span> <span style="color:#960050;background-color:#1e0010">RECOMMENDED,</span> <span style="color:#960050;background-color:#1e0010">JUST</span> <span style="color:#960050;background-color:#1e0010">FOR</span> <span style="color:#960050;background-color:#1e0010">REPRESENTATION</span> <span style="color:#960050;background-color:#1e0010">PURPOSE</span> <span style="color:#960050;background-color:#1e0010">--</span>
+{
+  <span style="color:#f92672">&#34;employeeId&#34;</span>: <span style="color:#ae81ff">12345</span>,
+  <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
+  <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
+
+  <span style="color:#f92672">&#34;mobile&#34;</span>: <span style="color:#66d9ef">null</span>,
+  <span style="color:#f92672">&#34;addresses&#34;</span>: []
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">Response</span> <span style="color:#960050;background-color:#1e0010">without</span> <span style="color:#960050;background-color:#1e0010">Null</span> <span style="color:#960050;background-color:#1e0010">Values,</span> <span style="color:#960050;background-color:#1e0010">Empty</span> <span style="color:#960050;background-color:#1e0010">object</span> <span style="color:#960050;background-color:#1e0010">or</span> <span style="color:#960050;background-color:#1e0010">array</span> <span style="color:#960050;background-color:#1e0010">is</span> <span style="color:#960050;background-color:#1e0010">still</span> <span style="color:#960050;background-color:#1e0010">present</span>
+{
+  <span style="color:#f92672">&#34;employeeId&#34;</span>: <span style="color:#ae81ff">12345</span>,
+  <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
+  <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
+  <span style="color:#f92672">&#34;addresses&#34;</span>: []
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">Response</span> <span style="color:#960050;background-color:#1e0010">without</span> <span style="color:#960050;background-color:#1e0010">Null</span> <span style="color:#960050;background-color:#1e0010">and</span> <span style="color:#960050;background-color:#1e0010">Empty</span> <span style="color:#960050;background-color:#1e0010">Values</span>
+{
+  <span style="color:#f92672">&#34;employeeId&#34;</span>: <span style="color:#ae81ff">12345</span>,
+  <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
+  <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>
+}
+</code></pre></div><p>I do not prefer null values as it can have side effects while parsing on client side. E.g. In JavaScript null has special meaning. Just be careful not to choose returning empty string (“”) which does not express as value doesn’t exists.</p>
+<h2 id="date-and-datetime-responses">Date and DateTime responses</h2>
+<p>This one is most important, What should be format for date and datetime (timestamp) type of fields? <strong>Option here is <a href="https://www.w3.org/TR/NOTE-datetime">ISO 8601</a> format returned as string.</strong> However, many time not knowing it, make developer to follow “default toString” or “self-made formats”. Most of the languages have default support for serializing and deserializing, date and datetime in ISO 8601 format.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">audit</span> <span style="color:#960050;background-color:#1e0010">fields</span>
+{
+    <span style="color:#f92672">&#34;createdBy&#34;</span>: <span style="color:#e6db74">&#34;123456&#34;</span>,
+    <span style="color:#f92672">&#34;createdAt&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01T18:25:43.511Z&#34;</span>,
+    <span style="color:#f92672">&#34;createdBy&#34;</span>: <span style="color:#e6db74">&#34;123456&#34;</span>,
+    <span style="color:#f92672">&#34;createdAt&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01T18:25:43.511Z&#34;</span>,
+}
+</code></pre></div><p>Even if you choose to return datetime always in only one timezone such as UTC. I still recommend to choose ISO 8601 standard which includes timezone.</p>
+<h2 id="multiline-string-values">Multiline string values</h2>
+<p>Many times I need to send large multiline string as values e.g. Address. How do I pass multiline string value? Options are</p>
+<ol>
+<li>as array of strings</li>
+<li>base64 encoding</li>
+</ol>
+<p>Solution that worked for me is <strong>base64 encoding for values</strong>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">multiple</span> <span style="color:#960050;background-color:#1e0010">as</span> <span style="color:#960050;background-color:#1e0010">array</span>
+{
+    <span style="color:#f92672">&#34;singleLine&#34;</span>: <span style="color:#e6db74">&#34;Some singleline String&#34;</span>,
+    <span style="color:#f92672">&#34;multiline&#34;</span>: [<span style="color:#e6db74">&#34;Line one&#34;</span>, <span style="color:#e6db74">&#34;Line Two&#34;</span>, <span style="color:#e6db74">&#34;Line Three&#34;</span>]
+}
+<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">multiple</span> <span style="color:#960050;background-color:#1e0010">as</span> <span style="color:#960050;background-color:#1e0010">base</span><span style="color:#ae81ff">64</span> <span style="color:#960050;background-color:#1e0010">encoded</span> <span style="color:#960050;background-color:#1e0010">string</span>
+{
+    <span style="color:#f92672">&#34;singleLine&#34;</span>: <span style="color:#e6db74">&#34;Some singleline String&#34;</span>,
+    <span style="color:#f92672">&#34;multiline&#34;</span>: <span style="color:#e6db74">&#34;TGluZSBvbmUKTGluZSBUd28KTGluZSBUaHJlZQ==&#34;</span>
+}
+</code></pre></div><p>Another example is to use <code>base64url</code> encoded query param for GET request providing search criteria as JSON. :-)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{ <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;sunit&#34;</span>, <span style="color:#f92672">&#34;office&#34;</span>: <span style="color:#e6db74">&#34;pune&#34;</span>}
+
+<span style="color:#960050;background-color:#1e0010">/*</span> <span style="color:#960050;background-color:#1e0010">above</span> <span style="color:#960050;background-color:#1e0010">search</span> <span style="color:#960050;background-color:#1e0010">criteria</span> <span style="color:#960050;background-color:#1e0010">parameters</span> <span style="color:#960050;background-color:#1e0010">send</span> <span style="color:#960050;background-color:#1e0010">in</span> <span style="color:#960050;background-color:#1e0010">GET</span> <span style="color:#960050;background-color:#1e0010">request</span> <span style="color:#960050;background-color:#1e0010">param</span> <span style="color:#960050;background-color:#1e0010">as</span> <span style="color:#960050;background-color:#1e0010">base</span><span style="color:#ae81ff">64</span><span style="color:#960050;background-color:#1e0010">url</span> <span style="color:#960050;background-color:#1e0010">encoded</span> <span style="color:#960050;background-color:#1e0010">*/</span>
+
+<span style="color:#960050;background-color:#1e0010">/search?query=</span><span style="color:#e6db74">&#34;eyAibmFtZSI6ICJzdW5pdCIsICJvZmZpY2UiOiAicHVuZSJ9&#34;</span>
+</code></pre></div><h2 id="summary">Summary</h2>
+<p>And there are many more discussion and decisions to be made for JSON responses guidelines, such as,</p>
+<ol>
+<li>How to represent structural data? nested vs flatten</li>
+<li>Define standards for paginated results? (params and result both)</li>
+<li>Singular vs Plural Property Names?</li>
+<li>If needed, how would you version your API and how to return response with version info ?</li>
+<li>Think about more data types? e.g. Latitude/Longitude values</li>
+</ol>
+<blockquote>
+<p>Point I would like to derive from this article is, at the beginning of the project collectively define guidelines for RESTful services for the project and write it down. Also keep it open for discussion and further amendments.</p>
+</blockquote>
+<p>Another new trend to explore is <a href="https://www.howtographql.com/">GraphQL</a> for building API that needs to be consumed by many discrete client needs.</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2018-04-03</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="//www.sunitparekh.in/posts/32-remote-pairing/">
+                    Next<br>The Remote Pairing Cheat Sheet
+                </a>
+                
+                
+                
+                <a class="older-posts" href="//www.sunitparekh.in/posts/30-three-branching-model/">
+                    Previous<br>Release based 3 branch model for agile software development
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 sunitparekh.in
+	</div>
+    	</div>
+    <script src="//www.sunitparekh.in//js/journal.js"></script>
+    </body>
+</html>

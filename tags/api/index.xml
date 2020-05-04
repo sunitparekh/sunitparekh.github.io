@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>api on sUnit Blog</title>
+    <link>//www.sunitparekh.in/tags/api/</link>
+    <description>Recent content in api on sUnit Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2020 sunitparekh.in</copyright>
+    <lastBuildDate>Tue, 03 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//www.sunitparekh.in/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Guidelines on JSON responses for RESTful services</title>
+      <link>//www.sunitparekh.in/posts/31-json-responses/</link>
+      <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/31-json-responses/</guid>
+      <description>Now days RESTful API is followed heavily on most of the projects. Since it doesn’t prescribe every details, many times I have seen developers start following different ways of implement for similar patterns in API, leading to inconsistent API. So during initial stage of the project it is very important to discuss and define guidelines for RESTful APIs. In this article I am focusing on JSON response guidelines.
+Responding success and failure First question that comes in discussion is, How shall we craft response for success and failure?</description>
+    </item>
+    
+  </channel>
+</rss>
