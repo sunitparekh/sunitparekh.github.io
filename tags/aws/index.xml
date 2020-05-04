@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>aws on sUnit Blog</title>
-    <link>https://sunitparekh.github.io/tags/aws/</link>
+    <link>http://sunitparekh.in/tags/aws/</link>
     <description>Recent content in aws on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Sat, 25 Feb 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://sunitparekh.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://sunitparekh.in/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Amazon S3 learning with HTTPS serving very slow</title>
-      <link>https://sunitparekh.github.io/posts/7-amazon-s3-https/</link>
+      <link>http://sunitparekh.in/posts/7-amazon-s3-https/</link>
       <pubDate>Sat, 25 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://sunitparekh.github.io/posts/7-amazon-s3-https/</guid>
+      <guid>http://sunitparekh.in/posts/7-amazon-s3-https/</guid>
       <description>On our site we have lots of images thumbnail getting served on HTTPS by Amazon S3. We were seeing very high load time in browsers upto 2-3 sec for approx 40-50KB size.
 We tried following load test on S3 and the results helped us making decision.
 Conclusion:  Serving S3 content over HTTPS is slow S3 performance is not effected (does not degred by # of objects in bucket Using CloudFront to serve S3 content over HTTPS gives significant improvement in time  </description>

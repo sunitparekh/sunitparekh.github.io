@@ -2,137 +2,137 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>agile on sUnit Blog</title>
-    <link>https://sunitparekh.github.io/tags/agile/</link>
+    <link>http://sunitparekh.in/tags/agile/</link>
     <description>Recent content in agile on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Sun, 21 Aug 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://sunitparekh.github.io/tags/agile/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://sunitparekh.in/tags/agile/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Release based 3 branch model for agile software development</title>
-      <link>https://sunitparekh.github.io/posts/30-three-branching-model/</link>
+      <link>http://sunitparekh.in/posts/30-three-branching-model/</link>
       <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sunitparekh.github.io/posts/30-three-branching-model/</guid>
+      <guid>http://sunitparekh.in/posts/30-three-branching-model/</guid>
       <description>On large teams it is very important that everyone understands and follow the same branching model/workflow. One of very popular branching workflow is GitFlow, however with distributed and novice team following GitFlow is difficult. So over a period of time I have been following simple 3 branch model for development which works fine for agile and continuous delivery software development method.
 3 Branch workflow model    Challenges with following GitFlow on large distributed teams  Team to be at advance level of using Git version control with good hold on branching, merging techniques.</description>
     </item>
     
     <item>
       <title>Distributed Agile - What should be the Sprint duration?</title>
-      <link>https://sunitparekh.github.io/posts/29-sprint-duration/</link>
+      <link>http://sunitparekh.in/posts/29-sprint-duration/</link>
       <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sunitparekh.github.io/posts/29-sprint-duration/</guid>
+      <guid>http://sunitparekh.in/posts/29-sprint-duration/</guid>
       <description>What should be the Sprint duration? this question comes up quite commonly on agile projects and opinions vary from as short as a week to as long as 6 weeks. Decision on an appropriate Sprint length depend on many factors. Few of the factors that I consider while deciding on the Sprint length are as follows, however, each factor adds different dimensions when the team is distributed across time zones.</description>
     </item>
     
     <item>
       <title>Testing emails with Fake SMTP service</title>
-      <link>https://sunitparekh.github.io/posts/27-testing-emails/</link>
+      <link>http://sunitparekh.in/posts/27-testing-emails/</link>
       <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://sunitparekh.github.io/posts/27-testing-emails/</guid>
+      <guid>http://sunitparekh.in/posts/27-testing-emails/</guid>
       <description>Testing is key activity of every software development projects. However testing certain features is not easy and need special support functions. One of such functionality is email testing. In this article I introduce few tools that I used in my projects for achieving email testing easily without any side effects.
 To test emails effectively we end up using real email addresses, which leads to cluttering mailbox with unwanted emails. For testing different scenarios we need multiple email address, and testing becomes more difficult when it requires checking mailbox of other users.</description>
     </item>
     
     <item>
       <title>Collaboration Techniques for Large Distributed Agile Projects</title>
-      <link>https://sunitparekh.github.io/posts/26-collaboration-techniques/</link>
+      <link>http://sunitparekh.in/posts/26-collaboration-techniques/</link>
       <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://sunitparekh.github.io/posts/26-collaboration-techniques/</guid>
+      <guid>http://sunitparekh.in/posts/26-collaboration-techniques/</guid>
       <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects</description>
     </item>
     
     <item>
       <title>Story Mapping, Visual Way of Building Product Backlog</title>
-      <link>https://sunitparekh.github.io/posts/25-story-mapping/</link>
+      <link>http://sunitparekh.in/posts/25-story-mapping/</link>
       <pubDate>Tue, 13 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://sunitparekh.github.io/posts/25-story-mapping/</guid>
+      <guid>http://sunitparekh.in/posts/25-story-mapping/</guid>
       <description>Article is published on ThoughtWorks Insights here.. http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog</description>
     </item>
     
     <item>
       <title>How to begin with Agile and Continuous Delivery on Legacy Projects?</title>
-      <link>https://sunitparekh.github.io/posts/24-legacy-projects/</link>
+      <link>http://sunitparekh.in/posts/24-legacy-projects/</link>
       <pubDate>Fri, 31 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://sunitparekh.github.io/posts/24-legacy-projects/</guid>
+      <guid>http://sunitparekh.in/posts/24-legacy-projects/</guid>
       <description>In my interactions with people, I hear &amp;ldquo;Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don&amp;rsquo;t know where to start or we can&amp;rsquo;t do agile and continuous delivery on our project&amp;rdquo;.
 Most of the time legacy projects are facing typical issues like fragile codebase, too much technical debt, old libraries &amp;amp; frameworks. Which resulting into long development and testing cycles. To solve these problems, team decides to follow Agile practices.</description>
     </item>
     
     <item>
       <title>Cross functional requirements</title>
-      <link>https://sunitparekh.github.io/posts/17-xfr/</link>
+      <link>http://sunitparekh.in/posts/17-xfr/</link>
       <pubDate>Sat, 04 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://sunitparekh.github.io/posts/17-xfr/</guid>
+      <guid>http://sunitparekh.in/posts/17-xfr/</guid>
       <description>It&amp;rsquo;s always been difficult to identify and easy to miss-out on creating stories for cross functional requirement (XFR) a.k.a NonFunctional requirements (NFR) during inception. Inception is a short, time boxed, 2-3 weeks initial requirement gathering phase of the software development project lifecycle. I have been to multiple inception and figured out a nice and collaborating way of capturing and converting cross functional requirements into stories. We run it like a workshops, collaborating with client to identify and capture XFRs.</description>
     </item>
     
     <item>
       <title>Distributed team communication plan with anatomy of an iteration</title>
-      <link>https://sunitparekh.github.io/posts/12-distributed-team-communication/</link>
+      <link>http://sunitparekh.in/posts/12-distributed-team-communication/</link>
       <pubDate>Sun, 13 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://sunitparekh.github.io/posts/12-distributed-team-communication/</guid>
+      <guid>http://sunitparekh.in/posts/12-distributed-team-communication/</guid>
       <description>Agile software development is getting more and more attention now a days. One of the variations of it is called &amp;lsquo;Distributed Agile Development&amp;rsquo;. And a key ingredient for distributed teams to work effectively is &amp;ldquo;communication&amp;rdquo;. Quote from Kent Back on communication &amp;ldquo;Problems with projects can invariably be traced back to somebody not talking to somebody else about something important.&amp;rdquo;
 Currently we are doing an inception with a client and their past experience with distributed team has left them with some bitterness.</description>
     </item>
     
     <item>
       <title>Project envisioning exercise - Process Timeline Map</title>
-      <link>https://sunitparekh.github.io/posts/11-process-timeline-map/</link>
+      <link>http://sunitparekh.in/posts/11-process-timeline-map/</link>
       <pubDate>Mon, 07 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://sunitparekh.github.io/posts/11-process-timeline-map/</guid>
+      <guid>http://sunitparekh.in/posts/11-process-timeline-map/</guid>
       <description>One of the key challenges in an inception is to learn about the business processes and its workflow in a fair amount of detail in a relatively quick amount of time. The idea is, not to just learn about the client&amp;rsquo;s business processes, but also to ensure that various stakeholders within the client actually share that understanding instead of having varying ideas in their own heads.
 There are plenty of methods to study business processes but they are time consuming and heavy weight and may be not as collaborative.</description>
     </item>
     
     <item>
       <title>Project envisioning exercise - Product Map</title>
-      <link>https://sunitparekh.github.io/posts/10-product-map/</link>
+      <link>http://sunitparekh.in/posts/10-product-map/</link>
       <pubDate>Sun, 29 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://sunitparekh.github.io/posts/10-product-map/</guid>
+      <guid>http://sunitparekh.in/posts/10-product-map/</guid>
       <description>One of the key factors for our project is that the client is almost 80+ yrs old in business. There are multiple products with different variations of it in the market. Now one of the task/session was to understand their product space, their groupings and how they differ from each other.
 For understanding product and its family and how they differ from each other, we (Inception team - Sunit, Amit, Panda and Birinder) came up with a simple idea of creating a &amp;ldquo;Product Map&amp;rdquo;.</description>
     </item>
     
     <item>
       <title>Project envisioning exercise - Term cloud</title>
-      <link>https://sunitparekh.github.io/posts/9-term-cloud/</link>
+      <link>http://sunitparekh.in/posts/9-term-cloud/</link>
       <pubDate>Sat, 28 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://sunitparekh.github.io/posts/9-term-cloud/</guid>
+      <guid>http://sunitparekh.in/posts/9-term-cloud/</guid>
       <description>During inception one of the job of the inception team is to learn the terminology used by the business. Generally the board is put up with all the business buzzwords, terms that they use in their day to day job. We started doing that on one board called &amp;lsquo;Term Cloud&amp;rsquo;. Generally this board gets populated as side effect of all the games &amp;amp; exercise we do during inception also know as glossary, domain terms.</description>
     </item>
     
     <item>
       <title>Ruby vs Java vs .NET - How much does it matter on web projects?</title>
-      <link>https://sunitparekh.github.io/posts/8-programming-language/</link>
+      <link>http://sunitparekh.in/posts/8-programming-language/</link>
       <pubDate>Wed, 25 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://sunitparekh.github.io/posts/8-programming-language/</guid>
+      <guid>http://sunitparekh.in/posts/8-programming-language/</guid>
       <description>I was looking into some statistics on my multiple web project and found one very interesting stats on simple Lines of Code (LOC).
 * numbers are pure production code and does not include test codeAfter looking at above metrics, I asked myself: during initial stage of the project, are we thinking enough about every part of the software and doing enough research around which language, technology &amp;amp; framework to use for project?</description>
     </item>
     
     <item>
       <title>Design for feature and code for story</title>
-      <link>https://sunitparekh.github.io/posts/5-design-for-feature/</link>
+      <link>http://sunitparekh.in/posts/5-design-for-feature/</link>
       <pubDate>Fri, 15 Apr 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://sunitparekh.github.io/posts/5-design-for-feature/</guid>
+      <guid>http://sunitparekh.in/posts/5-design-for-feature/</guid>
       <description>I have been practicing agile development engineering practices for almost more than 4 yrs now. One of practice about agile development is it talks about &amp;lsquo;code for story&amp;rsquo;, which means you just do simple enough implementation required for the story. Why? because you don&amp;rsquo;t know what&amp;rsquo;s required in future and will remain as it is or change.
 Now considering &amp;lsquo;code for story&amp;rsquo; practice, this is what happens on the ground. Pair picks up a first story of a feature and &amp;lsquo;just did what was required for the story to implement&amp;rsquo;, after few days another pair picks up a story on same feature and says &amp;lsquo;Ohh&amp;hellip; I have to first refactor the code so that it can be extended to implement next story&amp;rsquo;, which means the work done by first story is partially or fully refactored.</description>
     </item>
