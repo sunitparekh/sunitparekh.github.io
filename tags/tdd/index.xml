@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tdd on sUnit Blog</title>
-    <link>https://www.sunitparekh.in/tags/tdd/</link>
+    <link>//www.sunitparekh.in/tags/tdd/</link>
     <description>Recent content in tdd on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Fri, 06 Jun 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.sunitparekh.in/tags/tdd/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//www.sunitparekh.in/tags/tdd/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Using TDD to Influence Design</title>
-      <link>https://www.sunitparekh.in/posts/20-tdd-influence-design/</link>
+      <link>//www.sunitparekh.in/posts/20-tdd-influence-design/</link>
       <pubDate>Fri, 06 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/20-tdd-influence-design/</guid>
+      <guid>//www.sunitparekh.in/posts/20-tdd-influence-design/</guid>
       <description>Article is published on ThoughtWorks Insights here.. http://www.thoughtworks.com/insights/blog/using-tdd-influence-design</description>
     </item>
     

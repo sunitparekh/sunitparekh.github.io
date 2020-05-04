@@ -1,52 +1,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sUnit Blog</title>
-    <link>https://www.sunitparekh.in/</link>
+    <link>//www.sunitparekh.in/</link>
     <description>Recent content on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://www.sunitparekh.in/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="//www.sunitparekh.in/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>Guidelines for Structuring Automated Tests</title>
-        <link>https://www.sunitparekh.in/posts/21-automated-tests/</link>
+        <link>//www.sunitparekh.in/posts/21-automated-tests/</link>
         <pubDate>Tue, 22 Jul 2014 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/21-automated-tests/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/21-automated-tests/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpwwwthoughtworkscominsightsblogguidelines-structuring-automated-tests&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
+        <guid>//www.sunitparekh.in/posts/21-automated-tests/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/21-automated-tests/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpwwwthoughtworkscominsightsblogguidelines-structuring-automated-tests&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests&#34;&gt;http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/21/featured.svg&#34; alt=&#34;Automated Tests&#34;&gt;&lt;/p&gt;
-- https://www.sunitparekh.in/posts/21-automated-tests/ - 2020 sunitparekh.in</description>
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/21/featured.svg&#34; alt=&#34;Automated Tests&#34;&gt;&lt;/p&gt;
+- //www.sunitparekh.in/posts/21-automated-tests/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Using TDD to Influence Design</title>
-        <link>https://www.sunitparekh.in/posts/20-tdd-influence-design/</link>
+        <link>//www.sunitparekh.in/posts/20-tdd-influence-design/</link>
         <pubDate>Fri, 06 Jun 2014 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/20-tdd-influence-design/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/20-tdd-influence-design/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpwwwthoughtworkscominsightsblogusing-tdd-influence-design&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;http://www.thoughtworks.com/insights/blog/using-tdd-influence-design&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
+        <guid>//www.sunitparekh.in/posts/20-tdd-influence-design/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/20-tdd-influence-design/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpwwwthoughtworkscominsightsblogusing-tdd-influence-design&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;http://www.thoughtworks.com/insights/blog/using-tdd-influence-design&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.thoughtworks.com/insights/blog/using-tdd-influence-design&#34;&gt;http://www.thoughtworks.com/insights/blog/using-tdd-influence-design&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/20/tdd.png&#34; alt=&#34;TDD&#34;&gt;&lt;/p&gt;
-- https://www.sunitparekh.in/posts/20-tdd-influence-design/ - 2020 sunitparekh.in</description>
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/20/tdd.png&#34; alt=&#34;TDD&#34;&gt;&lt;/p&gt;
+- //www.sunitparekh.in/posts/20-tdd-influence-design/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Zero downtime using blue-green deployment strategy</title>
-        <link>https://www.sunitparekh.in/posts/19-blue-green-deployment/</link>
+        <link>//www.sunitparekh.in/posts/19-blue-green-deployment/</link>
         <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/19-blue-green-deployment/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/19-blue-green-deployment/ -&lt;p&gt;Zero downtime during application deployment is one of the key requirements for continuos delivery. And no business would like their site to be down and showing maintenance page every few days/weeks during deployment.&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/19-blue-green-deployment/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/19-blue-green-deployment/ -&lt;p&gt;Zero downtime during application deployment is one of the key requirements for continuos delivery. And no business would like their site to be down and showing maintenance page every few days/weeks during deployment.&lt;/p&gt;
 &lt;p&gt;To achieve this we decide to go for &lt;a href=&#34;http://martinfowler.com/bliki/BlueGreenDeployment.html&#34;&gt;blue-green deployment&lt;/a&gt;. However, we were challenged with how to do this in legacy style data center infrastructure where we are,&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Not able to spin new machines and throw away old machines automatically using scripts&lt;/li&gt;
@@ -58,50 +58,50 @@
 &lt;p&gt;&lt;strong&gt;Decision 2:&lt;/strong&gt; Use RPM to package apps and run like a service to start and stop. This enabled us to deploy application easily with the standard chef recipes. All application components are packaged as RPMs and published to repository from CI pipeline. Standardise deployment process across all components/application. We used FPM gem to build RPMs.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Decision 3:&lt;/strong&gt; All application/component should provide 2 state heartbeat, live or standby, with ability to change the current state of the heartbeat at runtime using api call. Configure one load-balance to listen to live heartbeat and another to standby. Allows to add/remove instances from load-balancer by changing heartbeat state.&lt;/p&gt;
 &lt;p&gt;And with above changes the deployment steps are,&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/19/1-state-before-deployment.svg&#34; alt=&#34;Pre deployment state&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/1-state-before-deployment.svg&#34; alt=&#34;Pre deployment state&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 1:&lt;/strong&gt; Change heartbeat of the green stack to state &amp;lsquo;standby&amp;rsquo;. This will remove green stack from LIVE load-balancer pool and no new request send to green stack.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/19/2-green-standby.svg&#34; alt=&#34;Change heartbeat of the green stack&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/2-green-standby.svg&#34; alt=&#34;Change heartbeat of the green stack&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 2:&lt;/strong&gt; Deploy latest version of the application to green stack. Wait sometime to complete the inflight request on green stack before deployment.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/19/3-green-v2.svg&#34; alt=&#34;Deploy latest version to green stack&#34; title=&#34;Deploy latest version to green stack&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/3-green-v2.svg&#34; alt=&#34;Deploy latest version to green stack&#34; title=&#34;Deploy latest version to green stack&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 3:&lt;/strong&gt; Sanity test green stack using standby load-balancer. Ideally automated, this will make sure deployment is good.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 4:&lt;/strong&gt; Revert heartbeat of the green stack to state &amp;lsquo;live&amp;rsquo;. This will put the green stack back to LIVE load-balancer pool.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/19/4-green-v2-live.svg&#34; alt=&#34;Revert heartbeat of the green stack to state &amp;lsquo;live&amp;rsquo;&#34; title=&#34;Revert heartbeat of the green stack to state &#39;live&#39;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/4-green-v2-live.svg&#34; alt=&#34;Revert heartbeat of the green stack to state &amp;lsquo;live&amp;rsquo;&#34; title=&#34;Revert heartbeat of the green stack to state &#39;live&#39;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;If you notice the blue stack running on v1 and green stack running on v2. And both the stacks are connected to same database. Which means v2 codebase should work with old data models. And if there is any database migration should be carried only after all stack upgraded to latest version.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 5:&lt;/strong&gt; Repeat above steps for blue stack,&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/19/5-blue-standby.svg&#34; alt=&#34;Change heartbeat of the blue stack&#34; title=&#34;Change heartbeat of the blue stack&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/19/6-blue-v2.svg&#34; alt=&#34;Deploy latest version to blue stack&#34; title=&#34;Deploy latest version to blue stack&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/5-blue-standby.svg&#34; alt=&#34;Change heartbeat of the blue stack&#34; title=&#34;Change heartbeat of the blue stack&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/6-blue-v2.svg&#34; alt=&#34;Deploy latest version to blue stack&#34; title=&#34;Deploy latest version to blue stack&#34;&gt;&lt;/p&gt;
 &lt;p&gt;And finally v2 deployed fully,&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/19/7-blue-v2-live.svg&#34; alt=&#34;latest version deployed on all stacks&#34; title=&#34;latest version deployed on all stacks&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/7-blue-v2-live.svg&#34; alt=&#34;latest version deployed on all stacks&#34; title=&#34;latest version deployed on all stacks&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 6:&lt;/strong&gt; Optional, run database migration (independent of the deployment)&lt;/p&gt;
 &lt;p&gt;What we achieved is, at any give point of time either blue or green stack is actively servicing the requests without downtime.&lt;/p&gt;
 &lt;p&gt;However, the one point to note here is that during deployment only half capacity available, which means deployment should be avoided at peak load time.&lt;/p&gt;
-- https://www.sunitparekh.in/posts/19-blue-green-deployment/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/19-blue-green-deployment/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Building highly scalable and performance application using non-blocking architecture</title>
-        <link>https://www.sunitparekh.in/posts/18-non-blocking/</link>
+        <link>//www.sunitparekh.in/posts/18-non-blocking/</link>
         <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/18-non-blocking/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/18-non-blocking/ -&lt;p&gt;I have been working on web application development since last 12+ years and had privileged to work on more than 20+ different project. Now days the expectations from web apps are totally different than it was few years back. End users are provided with rich content on single page (Amazon, CNN, &amp;hellip;). On a single page, lots of data needs to be mashed up and data may come from different sources.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/18/1-website-screenshots.jpg&#34; alt=&#34;Websites with data mashup&#34;&gt;&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/18-non-blocking/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/18-non-blocking/ -&lt;p&gt;I have been working on web application development since last 12+ years and had privileged to work on more than 20+ different project. Now days the expectations from web apps are totally different than it was few years back. End users are provided with rich content on single page (Amazon, CNN, &amp;hellip;). On a single page, lots of data needs to be mashed up and data may come from different sources.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/1-website-screenshots.jpg&#34; alt=&#34;Websites with data mashup&#34;&gt;&lt;/p&gt;
 &lt;p&gt;We know how to put together the N-tier architecture.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/18/2-service-oriented-architecture.svg&#34; alt=&#34;Service oriented architecture&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/2-service-oriented-architecture.svg&#34; alt=&#34;Service oriented architecture&#34;&gt;&lt;/p&gt;
 &lt;p&gt;And the request workflow will be as following,&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/18/3-request-workflow.png&#34; alt=&#34;Request workflow&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/3-request-workflow.png&#34; alt=&#34;Request workflow&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Now if we notice the above workflow, it is sequential and most of the time thread on web server and app server spend is waiting for response form app server and database respectively rather than doing some meaningful work (processing). This is what is called BLOCKING. Lets take same example and try to draw web server thread timeline.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/18/4-sequencial-timeline.jpg&#34; alt=&#34;Sequential workflow timeline&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/18/5-legends.jpg&#34; alt=&#34;timeline legends&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/4-sequencial-timeline.jpg&#34; alt=&#34;Sequential workflow timeline&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/5-legends.jpg&#34; alt=&#34;timeline legends&#34;&gt;&lt;/p&gt;
 &lt;p&gt;RED is time spend by thread waiting for response/result from app server. And GREEN is the time spend doing some meaningful processing by web server. In above example it was total 10 sec response time and 1 thread involved in processing. Lets assume that above 3 calls to app server can be parallelise to optimise response time to end user.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/18/6-standard-parallel-processing.jpg&#34; alt=&#34;Standard parallel processing&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/6-standard-parallel-processing.jpg&#34; alt=&#34;Standard parallel processing&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In parallel processing the response time was reduced to 7 sec. However, total 4 threads participated in processing and in total 13 sec of thread time it took. Again here also the processing was BLOCKING. Which means parallel processing provides better performance in terms of response time, but required more resources to process the request.&lt;/p&gt;
 &lt;p&gt;What we need is parallel processing with non-blocking threads. Means when the thread is waiting for the response from other systems, it should be made available to do some other meaningful work. Something like following,&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/18/7-non-blocking-execution.jpg&#34; alt=&#34;Non blocking execution timeline&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/7-non-blocking-execution.jpg&#34; alt=&#34;Non blocking execution timeline&#34;&gt;&lt;/p&gt;
 &lt;p&gt;If we can achieve non-blocking architecture than the response time goes down to as low as 5 sec. And also consumes less thread resources. Now the question is how I can achieve this? In today&amp;rsquo;s polygot programming world, we have plenty of alternatives available.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/18/8-tech-options.jpg&#34; alt=&#34;Non blocking technical options&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/8-tech-options.jpg&#34; alt=&#34;Non blocking technical options&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Non-blocking is not new, Nginx is event based and uses similar principle, Messsage based architecture is another classical example to solve similar problems, however that brings in asynchronous complexity.  MongoDB and similar polygot persistence works on same principles and provides eventual consistency.&lt;/p&gt;
 &lt;p&gt;I recommend trying out following technology/framework choices to achieve non-blocking architecture,&lt;/p&gt;
 &lt;ol&gt;
@@ -109,126 +109,126 @@
 &lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://www.playframework.com/&#34;&gt;Play Framework&lt;/a&gt;&lt;/strong&gt;, this is Scala based web application framework. Framework is very mature and easy to adpat for Java shop organisations. It uses internally Netty, Scala and Akka and provides very nice abstracts to avoids callbacks hell. Based on Scala means love for OO programmers as well. Akka can also be used independently.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; Consider non-blocking architecture when your application have blocking calls and wait times. If your application has more about computation/processing and less or negligible blocking/waiting time the above architecture pattern may not provide better or favorable results.&lt;/p&gt;
-- https://www.sunitparekh.in/posts/18-non-blocking/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/18-non-blocking/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Cross functional requirements</title>
-        <link>https://www.sunitparekh.in/posts/17-xfr/</link>
+        <link>//www.sunitparekh.in/posts/17-xfr/</link>
         <pubDate>Sat, 04 May 2013 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/17-xfr/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/17-xfr/ -&lt;p&gt;It&amp;rsquo;s always been difficult to identify and easy to miss-out on creating stories for cross functional requirement (XFR) a.k.a NonFunctional requirements (NFR) during inception. Inception is a short, time boxed, 2-3 weeks initial requirement gathering phase of the software development project lifecycle. I have been to multiple inception and figured out a nice and collaborating way of capturing and converting cross functional requirements into stories. We run it like a workshops, collaborating with client to identify and capture XFRs.&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/17-xfr/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/17-xfr/ -&lt;p&gt;It&amp;rsquo;s always been difficult to identify and easy to miss-out on creating stories for cross functional requirement (XFR) a.k.a NonFunctional requirements (NFR) during inception. Inception is a short, time boxed, 2-3 weeks initial requirement gathering phase of the software development project lifecycle. I have been to multiple inception and figured out a nice and collaborating way of capturing and converting cross functional requirements into stories. We run it like a workshops, collaborating with client to identify and capture XFRs.&lt;/p&gt;
 &lt;p&gt;After understanding and going to functional requirement, plan for XFR session with all the members of the team including stakeholders. We have list of XFRs printed on the cards at ThoughtWorks similar to the one shown below.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/17/cross-functional-requirements.png&#34; alt=&#34;cross functional bilities&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/17/cross-functional-requirements.png&#34; alt=&#34;cross functional bilities&#34;&gt;&lt;/p&gt;
 &lt;p&gt;There are around 35+ such &amp;ldquo;bility&amp;rdquo; that need to be discussed. During the session we take one &amp;lsquo;bility&amp;rsquo; at a time and not down on stickies what are the requirements related to that &amp;lsquo;bility&amp;rsquo;. It is important to discuss each and every &amp;lsquo;bility&amp;rsquo; and there is a possibility few are not application to the project we are working on. Mark them as NA.&lt;/p&gt;
 &lt;p&gt;Once all the &amp;lsquo;bility&amp;rsquo; is discussed break out in small team, discuss each XFR requirements and convert them into stories.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/17/cards-wall.jpg&#34; alt=&#34;cross functional requirement wall&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/17/cards-wall.jpg&#34; alt=&#34;cross functional requirement wall&#34;&gt;&lt;/p&gt;
 &lt;p&gt;After creating the story list of XFRs, treat them as other stories. Combine the backlog of functional and XFR stories, estimate and prioritise stories together.&lt;/p&gt;
 &lt;p&gt;As documentation,  I like to use mind map since it fits that format nicely. Please have a look at the one displayed below for your reference.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/17/mind-map.png&#34; alt=&#34;cross functional requirement mindmap&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/17/mind-map.png&#34; alt=&#34;cross functional requirement mindmap&#34;&gt;&lt;/p&gt;
 &lt;p&gt;I like calling NFRs as cross functional requirements (XFR) rather than non-functional, since most of the non-functional requirements are kind of indirect functional requirements. e.g. page load time for end user is performance requirement which indirectly related to better user experience.&lt;/p&gt;
-- https://www.sunitparekh.in/posts/17-xfr/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/17-xfr/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Why responsive web design?</title>
-        <link>https://www.sunitparekh.in/posts/16-responsive-design/</link>
+        <link>//www.sunitparekh.in/posts/16-responsive-design/</link>
         <pubDate>Tue, 12 Feb 2013 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/16-responsive-design/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/16-responsive-design/ -&lt;p&gt;Lots of time when I discuss Responsive Web Design (RWD), sometime I find out that we don&amp;rsquo;t know the problem, we are trying to solve with RWD. And the objective of this blog post is look into the history and learn what problem we try to solve with RWD.&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/16-responsive-design/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/16-responsive-design/ -&lt;p&gt;Lots of time when I discuss Responsive Web Design (RWD), sometime I find out that we don&amp;rsquo;t know the problem, we are trying to solve with RWD. And the objective of this blog post is look into the history and learn what problem we try to solve with RWD.&lt;/p&gt;
 &lt;p&gt;The multiple screen resolution problem is not new, even in old days the monitors had  different screen resolution. The problem exist from old days. In first attempt we solved multiple screen resolution problem with Fixed Width web page design (Fixed Width Layout Approach).  960px based fixed width design were very common for websites. One of the most popular CSS framework with fixed width was blueprint. The problem with fixed-width layout is white (empty) space on side of the screens. Designer also used that space by having creative backgrounds for the page.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/16/cricinfo-white-space.png&#34; alt=&#34;Cricinfo fix-width web pages&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/16/apple-with-white-space.png&#34; alt=&#34;Apple fix-width web pages&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/cricinfo-white-space.png&#34; alt=&#34;Cricinfo fix-width web pages&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/apple-with-white-space.png&#34; alt=&#34;Apple fix-width web pages&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The multiple screen resolution problem didn&amp;rsquo;t go away, after smartphones and tablets the problem became more prominent. In second attempt to solve the problem, used multiple templates for different devices on server side (Seperate Mobile Website Approach). The downside of using the server side device specific templating is that, HTTP caching can&amp;rsquo;t be done. Which is non-negociable for scalability, and to overcome caching issues, on first request the application server recognises the browser agent and redirects the site to device specific page like &lt;a href=&#34;http://www.cricinfo.com&#34;&gt;www.cricinfo.com&lt;/a&gt; or m.cricinfo.com By using different sites/urls for different devices  HTTP caching problem was solved.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/16/cricinfo-white-space.png&#34; alt=&#34;Cricinfo fix-width web pages&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/16/cricinfo-mobile-redirect.png&#34; alt=&#34;Cricinfo mobile redirect web page&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/cricinfo-white-space.png&#34; alt=&#34;Cricinfo fix-width web pages&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/cricinfo-mobile-redirect.png&#34; alt=&#34;Cricinfo mobile redirect web page&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Try visiting page: &lt;a href=&#34;http://www.guardian.com&#34;&gt;guardian.com&lt;/a&gt; and &lt;a href=&#34;http://www.cricinfo.com&#34;&gt;cricinfo.com&lt;/a&gt; on mobile device and notice the redirect.&lt;/p&gt;
 &lt;p&gt;Now the problem started with maintaining multiple sites/applications. Use experience was not consistent across devices. It was very difficult to keep the feature parity across the device specific sites. Application development, maintenance &amp;amp; production cost &amp;amp; effort increased significantly.&lt;/p&gt;
 &lt;p&gt;During same time period people realised that we are wasting so much screen real estate by doing the fixed grid layout, and the &lt;a href=&#34;http://fluidgrids.com/&#34;&gt;fluid grid&lt;/a&gt; layout design started becoming popular for desktops.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/16/fluid-grid-layout.png&#34; alt=&#34;Fluid grid desktop web page&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/16/fluid-grid-layout-mobile.png&#34; alt=&#34;Fluid grid mobile web page&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/fluid-grid-layout.png&#34; alt=&#34;Fluid grid desktop web page&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/fluid-grid-layout-mobile.png&#34; alt=&#34;Fluid grid mobile web page&#34;&gt;&lt;/p&gt;
 &lt;p&gt;However, fluid grid system depends heavily on browser support and performance. Making it old browser compatible was a big task.&lt;/p&gt;
 &lt;p&gt;The latest attempt of providing best viewing experience on all devices &amp;amp; screen resolution at client side (browsers) is known as Responsive Web Design.  With frameworks like &lt;a href=&#34;http://twitter.github.com/bootstrap/&#34;&gt;Twitter Bootstrap&lt;/a&gt;,  it has become easy to get started learning and using Responsive Web Design concept.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/16/bootstrap-desktop.png&#34; alt=&#34;Bootstrap desktop web page&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/16/bootstrap-mobile.png&#34; alt=&#34;Bootstrap mobile web page&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/bootstrap-desktop.png&#34; alt=&#34;Bootstrap desktop web page&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/bootstrap-mobile.png&#34; alt=&#34;Bootstrap mobile web page&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Notice menu, text, links and buttons in above two screenshots. Same site visited in desktop browser and mobile browser.&lt;/p&gt;
 &lt;p&gt;To achieve HTTP caching it was very important that all this dynamic behaviour to be kept on client side, so server has to render the same page for all devices irrespective of the screen sizes and resolutions. With this approach HTTP caching CDN/Reverse proxy can be leveraged agin to achieve high scalability.&lt;/p&gt;
 &lt;p&gt;Be aware when using Responsive Web Design,
 Works best with latest browsers and high end smartphones, Since RWD relies heavily on client side optimisation and adoption, client needs be powerful.
 Slow internet connection speed will give bad user experience since it might take very long to load page. Since all content irrespective of the device is transferred to client. Sometime multiple variations are kept like Menu and the overall web page size increases. Specially for mobile the page size might be very large. Checkout the &lt;a href=&#34;https://github.com/twitter/bootstrap&#34;&gt;size of twitter bootstrap&lt;/a&gt;.&lt;/p&gt;
-- https://www.sunitparekh.in/posts/16-responsive-design/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/16-responsive-design/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Data Anonymization techniques, Blacklist and Whitelist?</title>
-        <link>https://www.sunitparekh.in/posts/15-data-anonymization-techniques/</link>
+        <link>//www.sunitparekh.in/posts/15-data-anonymization-techniques/</link>
         <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/15-data-anonymization-techniques/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/15-data-anonymization-techniques/ -&lt;p&gt;Continuation of my &lt;a href=&#34;ref:posts:data-anonymization&#34;&gt;previous post&lt;/a&gt; about the need for anonymized production data dump, here is more details on two anonymization approaches blacklist and whitelist. Lets take one simple example and understand both the approaches. Consider two tables of database: Customers and Config.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/15/sample-data.png&#34; alt=&#34;sample data set&#34;&gt;&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/15-data-anonymization-techniques/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/15-data-anonymization-techniques/ -&lt;p&gt;Continuation of my &lt;a href=&#34;ref:posts:data-anonymization&#34;&gt;previous post&lt;/a&gt; about the need for anonymized production data dump, here is more details on two anonymization approaches blacklist and whitelist. Lets take one simple example and understand both the approaches. Consider two tables of database: Customers and Config.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/15/sample-data.png&#34; alt=&#34;sample data set&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;blacklist&#34;&gt;Blacklist&lt;/h2&gt;
 &lt;p&gt;This approach essentially leaves all fields unchanged with the exception of those specified by the user, which are scrambled/anonymized (hence the name Blacklist!).
 For Blacklist, create a copy of the prod database and choose the fields to be anonymized e.g. username, password, email, name, geo location etc. Fields are anonymized based on user-defined rules. Most of the fields have different rules e.g. password should be set to same value for all users, email needs to be valid.&lt;/p&gt;
 &lt;p&gt;Considering above example. Lets anonymize data using blacklist approach. In above we want to anonymize Customers.Name and Customers.Email, so that we can not identify user. After anonymization the data will look like following.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/15/blacklist.png&#34; alt=&#34;data set after blacklist&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/15/blacklist.png&#34; alt=&#34;data set after blacklist&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Look at the Age field and config table, they remained as is.  That is, apart from data specified in anonymization rules, all other data remains as is after anonymization. This could be a data security issue. Such as when new fields are added they will not be anonymized by default. Human error in missing any users personal data could be damaging.&lt;/p&gt;
 &lt;h2 id=&#34;whitelist&#34;&gt;Whitelist&lt;/h2&gt;
 &lt;p&gt;This approach, by default scrambles/anonymizes all fields except a list of fields which are allowed to copied as is. Hence the name whitelist! By default all data needs to be anonymized. So from production database data is sanitized record by record and inserted as anonymized data into destination database. Source database needs to be read-only. All fields would be anonymized using default anonymization strategy which is based on the datatype, unless an anonymization strategy is specified. For instance, special strategies could be used for emails, passwords, usernames etc. A whitelisted field implies that it&amp;rsquo;s okay to copy the data as is and anonymization isn&amp;rsquo;t required.&lt;/p&gt;
 &lt;p&gt;Using whitelist approach and applying similar rules to anonymize only Name and Email for above example will produce output like following.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/15/whitelist.png&#34; alt=&#34;data set after whitelist&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/15/whitelist.png&#34; alt=&#34;data set after whitelist&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Age field value is anonymized. Which means if u haven&amp;rsquo;t specified any rule for anonymization the system should anonymize it using default anonymization rules for the data type. To get Age field as-is it is required to mention it as whitelist. Also, the config table didn&amp;rsquo;t show up at all, means if I don&amp;rsquo;t ask for the table explicitly it should not be copied at all.&lt;/p&gt;
 &lt;p&gt;This way any new field will be anonymized by default and if we need them as is add it to the whitelist explicitly. This prevents any human error and protects sensitive information.&lt;/p&gt;
 &lt;p&gt;Data Anonymization tool supports both blacklist and whitelist approach for anonymization. Read more here about the tool and how easy to use it is .&lt;/p&gt;
 &lt;p&gt;Data Anonymization tool &lt;a href=&#34;http://sunitparekh.github.com/data-anonymization&#34;&gt;home page&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/15/featured.png&#34; alt=&#34;Data Anonymization Techniques&#34;&gt;&lt;/p&gt;
-- https://www.sunitparekh.in/posts/15-data-anonymization-techniques/ - 2020 sunitparekh.in</description>
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/15/featured.png&#34; alt=&#34;Data Anonymization Techniques&#34;&gt;&lt;/p&gt;
+- //www.sunitparekh.in/posts/15-data-anonymization-techniques/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Data Anonymization, need for every site in production</title>
-        <link>https://www.sunitparekh.in/posts/14-data-anonymization/</link>
+        <link>//www.sunitparekh.in/posts/14-data-anonymization/</link>
         <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/14-data-anonymization/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/14-data-anonymization/ -&lt;p&gt;On one of my previous projects, we wrote a jMeter performance test suite, which runs periodically on performance environment. Once the application was in production, we enhanced our performance test suite based on actual user behaviours from Apache access logs and Omniture analytics. That provided us a great level of confidence in development for scaling. Now the next step was to get the production dataset so our performance testing becomes almost like production peak load.&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/14-data-anonymization/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/14-data-anonymization/ -&lt;p&gt;On one of my previous projects, we wrote a jMeter performance test suite, which runs periodically on performance environment. Once the application was in production, we enhanced our performance test suite based on actual user behaviours from Apache access logs and Omniture analytics. That provided us a great level of confidence in development for scaling. Now the next step was to get the production dataset so our performance testing becomes almost like production peak load.&lt;/p&gt;
 &lt;p&gt;Also we had few bugs manifesting themselves only in production and we were not able to reproduce the same on our local environment due to the dataset. In production the data has evolved over a period of time and might have some bad/inconsistent data leading to edge cases or defects not happening in other environments. To fix such issues it was required to have a production dataset to enable our team to debug and fix such issues with confidence rather than guess-work.&lt;/p&gt;
 &lt;p&gt;One other time, we had issues with our migration scripts, when the migration script failed during production release. The reason was again the kind of data that had evolved in the production system. It could have been avoided if we had a production dump to rehearse the production deployment.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/14/data-anonymization.png&#34; alt=&#34;Why data anonymization&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/14/data-anonymization.png&#34; alt=&#34;Why data anonymization&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Considering all the above hurdles, we got together our Product Owner, and the Dev ops and Security team mates for a production dump. The initial reaction was a NO: the primary reason it being &amp;lsquo;Users&amp;rsquo; Personal Data&amp;rsquo; and according to Data Protection Act &amp;ldquo;No one should have access to users personal data&amp;rdquo;. Now what? the answer was, we can get production dataset if we sanitize/mask/anonaymize users personal data, we can get the data from production. We quickly started googling around to findout is there a quick and easy tool available to achieve anonymization of the database. Hmm&amp;hellip;. no luck.&lt;/p&gt;
 &lt;p&gt;Considering distributed teams spanning out of country, concern of security with data is increased multiple fold.&lt;/p&gt;
 &lt;p&gt;We thought lets write some scripts and anonymize production data. However, it has some serious security and data protection issues. Such as there is possiblity of missing out on certain attributes at all and those data slips into non production environments. Also it has issues with new content gets passed into non production as is without anonymization by default. There are two techniques for anonymization blacklist and whitelist.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/14/data-anonymization-techniques.png&#34; alt=&#34;Data anonymization techniques&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/14/data-anonymization-techniques.png&#34; alt=&#34;Data anonymization techniques&#34;&gt;&lt;/p&gt;
 &lt;p&gt;As this is quite a common requirement across projects, I started working on this idea with a few colleagues at ThoughtWorks to build a simple tool in Ruby based on ActiverRecord to support multiple databases.&lt;/p&gt;
 &lt;p&gt;Data Anonymization tool supports both blacklist and whitelist approach for anonymization. Read more here about the tool and how easy to use it is .&lt;/p&gt;
 &lt;p&gt;Data Anonymization tool &lt;a href=&#34;http://sunitparekh.github.com/data-anonymization&#34;&gt;home page&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;In my &lt;a href=&#34;https://www.sunitparekh.in/posts/15-data-anonymization-techniques&#34;&gt;next post&lt;/a&gt; I describe blacklist and whitelist anonymization techniques in more detail. Write to me (Twitter: @sunitparekh) or comment on this blog for any questions, feedback and suggestions.&lt;/p&gt;
-- https://www.sunitparekh.in/posts/14-data-anonymization/ - 2020 sunitparekh.in</description>
+&lt;p&gt;In my &lt;a href=&#34;//www.sunitparekh.in/posts/15-data-anonymization-techniques&#34;&gt;next post&lt;/a&gt; I describe blacklist and whitelist anonymization techniques in more detail. Write to me (Twitter: @sunitparekh) or comment on this blog for any questions, feedback and suggestions.&lt;/p&gt;
+- //www.sunitparekh.in/posts/14-data-anonymization/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Get notified with push notification</title>
-        <link>https://www.sunitparekh.in/posts/13-push-notification/</link>
+        <link>//www.sunitparekh.in/posts/13-push-notification/</link>
         <pubDate>Fri, 13 Jul 2012 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/13-push-notification/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/13-push-notification/ -&lt;p&gt;Now days it&amp;rsquo;s kind of defacto that every website requires some sort of mechanism to update changes dynamically. On my last project we had a specific need to keep updating the count of messages like Facebook does for unread messages. The website is a dot com site with reasonable user base online. It was challenging to come up with a solution so that we can get this developed quickly and scale well with the load.&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/13-push-notification/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/13-push-notification/ -&lt;p&gt;Now days it&amp;rsquo;s kind of defacto that every website requires some sort of mechanism to update changes dynamically. On my last project we had a specific need to keep updating the count of messages like Facebook does for unread messages. The website is a dot com site with reasonable user base online. It was challenging to come up with a solution so that we can get this developed quickly and scale well with the load.&lt;/p&gt;
 &lt;p&gt;We discussed multiple approach and chose one for development.&lt;/p&gt;
 &lt;h2 id=&#34;approach-1-poll-for-changes&#34;&gt;Approach 1: Poll for changes&lt;/h2&gt;
 &lt;p&gt;This is kind of classical pull approach where every &amp;lsquo;n&amp;rsquo; second poll for changes and update UI. The problem with polling every 30 sec were,&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/13/poll.png&#34; alt=&#34;poll for changes&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/13/poll.png&#34; alt=&#34;poll for changes&#34;&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Unnecessary extra load on the server means fake http requests, 1 will have new message out of 100+ requests. Major hurdle in scaling app, suddenly the no of requests on server will increase multiple fold.&lt;/li&gt;
 &lt;li&gt;Delay in data refresh based on poll frequency and it won&amp;rsquo;t be realtime.&lt;/li&gt;
@@ -237,7 +237,7 @@ For Blacklist, create a copy of the prod database and choose the fields to be an
 &lt;p&gt;Approach may be okay for sites like live cricket scores where requests can be http cached and served to multiple users and data changes frequently.&lt;/p&gt;
 &lt;h2 id=&#34;approach-2-push-for-changes&#34;&gt;Approach 2: Push for changes&lt;/h2&gt;
 &lt;p&gt;Second approach we came up with was push messages using websockets and libraries like socket.io etc.  Using push the user experience is really awesome, user gets notified instantaneously about the new messages. No extra fake requests on the server and helps in scaling easily.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/13/push.png&#34; alt=&#34;push for changes&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/13/push.png&#34; alt=&#34;push for changes&#34;&gt;&lt;/p&gt;
 &lt;p&gt;However, there are challenges&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Setting up the Notification Server. We were using Apache server and it doesn&amp;rsquo;t support websocket connections. Needs upgrade to our infrastructure.&lt;/li&gt;
@@ -246,7 +246,7 @@ For Blacklist, create a copy of the prod database and choose the fields to be an
 &lt;/ol&gt;
 &lt;p&gt;To overcome over challenges we though of going to PaaS for Push Notification like PubNub and Pusher. However the challenge with PaaS is data security. Is it okay to send user personal data to 3rd party? The answer in our case of NO.&lt;/p&gt;
 &lt;h2 id=&#34;approach-3-push-notification-for-changes&#34;&gt;Approach 3: Push notification for changes&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/13/push-notification.png&#34; alt=&#34;push notify for changes&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/13/push-notification.png&#34; alt=&#34;push notify for changes&#34;&gt;&lt;/p&gt;
 &lt;p&gt;To overcome the problem of data security we came with the tweaked approach as shown above. We use PaaS for Push Notification only to notify end user about there is new message and no data. When the notification is received we do the poll request on main server to refresh the UI.&lt;/p&gt;
 &lt;p&gt;Key advantages of using this approach:&lt;/p&gt;
 &lt;ol&gt;
@@ -257,18 +257,18 @@ For Blacklist, create a copy of the prod database and choose the fields to be an
 &lt;li&gt;High availability and scalability using PaaS&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;We are using &lt;a href=&#34;http://www.pubnub.com/&#34;&gt;PubNub&lt;/a&gt; as PaaS and experience so far is really good.&lt;/p&gt;
-- https://www.sunitparekh.in/posts/13-push-notification/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/13-push-notification/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Distributed team communication plan with anatomy of an iteration</title>
-        <link>https://www.sunitparekh.in/posts/12-distributed-team-communication/</link>
+        <link>//www.sunitparekh.in/posts/12-distributed-team-communication/</link>
         <pubDate>Sun, 13 May 2012 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/12-distributed-team-communication/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/12-distributed-team-communication/ -&lt;p&gt;Agile software development is getting more and more attention now a days. One of the variations of it is called &amp;lsquo;Distributed Agile Development&amp;rsquo;. And a key ingredient for distributed teams to work effectively is &amp;ldquo;communication&amp;rdquo;. Quote from Kent Back on communication &amp;ldquo;Problems with projects can invariably be traced back to somebody not talking to somebody else about something important.&amp;rdquo;&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/12-distributed-team-communication/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/12-distributed-team-communication/ -&lt;p&gt;Agile software development is getting more and more attention now a days. One of the variations of it is called &amp;lsquo;Distributed Agile Development&amp;rsquo;. And a key ingredient for distributed teams to work effectively is &amp;ldquo;communication&amp;rdquo;. Quote from Kent Back on communication &amp;ldquo;Problems with projects can invariably be traced back to somebody not talking to somebody else about something important.&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;Currently we are doing an inception with a client and their past experience with distributed team has left them with some bitterness. In addition, the client has just started adopting agile practices in their software development cycle, so along with delivery we are also doing enablement for them. Also making sure business and new team member understand the different buzzwords of agile software development is very important.&lt;/p&gt;
 &lt;p&gt;In my experience every team has variations in mechanics of implementing agile, keeping all the principles intact. For example, story prioritization for some teams is Iteration Planning Meeting (aka Iteration Kick Off) and  some teams go for  more lean  like method of story prioritization and adopts an iteration-less Kanban style pull mechanism. For  distributed teams, the variations are important to know and everyone should understand the why&amp;rsquo;s of it. Daily standup need to be little different when working in distributed model, Iteration showcase and iteration length varies too from team to team. In my opinion all such mechanics are decided and derived based different parameters. However, the important part is to discuss, decide and communicate  the mechanics &amp;amp;process of project&amp;rsquo;s agile development with all team members including business.&lt;/p&gt;
 &lt;p&gt;And its very important to plan for some session during inception to address need around all of the above.
@@ -281,9 +281,9 @@ Taking &amp;ldquo;Story Lifecycle&amp;rdquo; and &amp;ldquo;Anatomy of Iteration
 &lt;li&gt;Testing strategy (automated and manual)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;We created a timeline on the board to start the session with first talking about what is story and story lifecycle.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/12/anatomy-of-iteration-1.jpg&#34; alt=&#34;communication plan empty&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/12/anatomy-of-iteration-1.jpg&#34; alt=&#34;communication plan empty&#34;&gt;&lt;/p&gt;
 &lt;p&gt;As we kept discussing about the iteration, we started moving story stages onto iteration lifecycle. Also started building the events as shown in the picture below. Session took an hour to run.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/12/distributed-team-communication.jpg&#34; alt=&#34;communication plan with iteration lifecycle&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/12/distributed-team-communication.jpg&#34; alt=&#34;communication plan with iteration lifecycle&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Keep most of the stickies written before the session. This helps to remember all points to cover and running the session quickly. Have discussions during the session and make it as interactive as possible. As a team decides most of the stuff (e.g. definition of story done, iteration length, meetings/calls, Skype or Google Hangout) rather than dictating to others, this is very important as that makes it team&amp;rsquo;s plan.&lt;/p&gt;
 &lt;p&gt;Here are a few things, that is different for a distributed agile team:&lt;/p&gt;
 &lt;ol&gt;
@@ -295,7 +295,7 @@ Taking &amp;ldquo;Story Lifecycle&amp;rdquo; and &amp;ldquo;Anatomy of Iteration
 &lt;/ol&gt;
 &lt;p&gt;Please share your comments, suggestions &amp;amp;experiences about this kind of sessions. What more we should cover, what we should watch out for&amp;hellip;&lt;/p&gt;
 &lt;p&gt;Special thanks to &lt;a href=&#34;http://pandafunda.blogspot.com/&#34;&gt;Sarbashrestha Panda&lt;/a&gt; for reviewing the post and recommending valuable amendments.&lt;/p&gt;
-- https://www.sunitparekh.in/posts/12-distributed-team-communication/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/12-distributed-team-communication/ - 2020 sunitparekh.in</description>
         </item>
     
     

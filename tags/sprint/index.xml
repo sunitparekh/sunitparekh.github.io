@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sprint on sUnit Blog</title>
-    <link>https://www.sunitparekh.in/tags/sprint/</link>
+    <link>//www.sunitparekh.in/tags/sprint/</link>
     <description>Recent content in sprint on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Wed, 17 Aug 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.sunitparekh.in/tags/sprint/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//www.sunitparekh.in/tags/sprint/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Distributed Agile - What should be the Sprint duration?</title>
-      <link>https://www.sunitparekh.in/posts/29-sprint-duration/</link>
+      <link>//www.sunitparekh.in/posts/29-sprint-duration/</link>
       <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/29-sprint-duration/</guid>
+      <guid>//www.sunitparekh.in/posts/29-sprint-duration/</guid>
       <description>What should be the Sprint duration? this question comes up quite commonly on agile projects and opinions vary from as short as a week to as long as 6 weeks. Decision on an appropriate Sprint length depend on many factors. Few of the factors that I consider while deciding on the Sprint length are as follows, however, each factor adds different dimensions when the team is distributed across time zones.</description>
     </item>
     

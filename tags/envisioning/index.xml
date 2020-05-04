@@ -2,69 +2,69 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>envisioning on sUnit Blog</title>
-    <link>https://www.sunitparekh.in/tags/envisioning/</link>
+    <link>//www.sunitparekh.in/tags/envisioning/</link>
     <description>Recent content in envisioning on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Tue, 13 Jan 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.sunitparekh.in/tags/envisioning/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//www.sunitparekh.in/tags/envisioning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Story Mapping, Visual Way of Building Product Backlog</title>
-      <link>https://www.sunitparekh.in/posts/25-story-mapping/</link>
+      <link>//www.sunitparekh.in/posts/25-story-mapping/</link>
       <pubDate>Tue, 13 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/25-story-mapping/</guid>
+      <guid>//www.sunitparekh.in/posts/25-story-mapping/</guid>
       <description>Article is published on ThoughtWorks Insights here.. http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog</description>
     </item>
     
     <item>
       <title>Cross functional requirements</title>
-      <link>https://www.sunitparekh.in/posts/17-xfr/</link>
+      <link>//www.sunitparekh.in/posts/17-xfr/</link>
       <pubDate>Sat, 04 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/17-xfr/</guid>
+      <guid>//www.sunitparekh.in/posts/17-xfr/</guid>
       <description>It&amp;rsquo;s always been difficult to identify and easy to miss-out on creating stories for cross functional requirement (XFR) a.k.a NonFunctional requirements (NFR) during inception. Inception is a short, time boxed, 2-3 weeks initial requirement gathering phase of the software development project lifecycle. I have been to multiple inception and figured out a nice and collaborating way of capturing and converting cross functional requirements into stories. We run it like a workshops, collaborating with client to identify and capture XFRs.</description>
     </item>
     
     <item>
       <title>Project envisioning exercise - Process Timeline Map</title>
-      <link>https://www.sunitparekh.in/posts/11-process-timeline-map/</link>
+      <link>//www.sunitparekh.in/posts/11-process-timeline-map/</link>
       <pubDate>Mon, 07 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/11-process-timeline-map/</guid>
+      <guid>//www.sunitparekh.in/posts/11-process-timeline-map/</guid>
       <description>One of the key challenges in an inception is to learn about the business processes and its workflow in a fair amount of detail in a relatively quick amount of time. The idea is, not to just learn about the client&amp;rsquo;s business processes, but also to ensure that various stakeholders within the client actually share that understanding instead of having varying ideas in their own heads.
 There are plenty of methods to study business processes but they are time consuming and heavy weight and may be not as collaborative.</description>
     </item>
     
     <item>
       <title>Project envisioning exercise - Product Map</title>
-      <link>https://www.sunitparekh.in/posts/10-product-map/</link>
+      <link>//www.sunitparekh.in/posts/10-product-map/</link>
       <pubDate>Sun, 29 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/10-product-map/</guid>
+      <guid>//www.sunitparekh.in/posts/10-product-map/</guid>
       <description>One of the key factors for our project is that the client is almost 80+ yrs old in business. There are multiple products with different variations of it in the market. Now one of the task/session was to understand their product space, their groupings and how they differ from each other.
 For understanding product and its family and how they differ from each other, we (Inception team - Sunit, Amit, Panda and Birinder) came up with a simple idea of creating a &amp;ldquo;Product Map&amp;rdquo;.</description>
     </item>
     
     <item>
       <title>Project envisioning exercise - Term cloud</title>
-      <link>https://www.sunitparekh.in/posts/9-term-cloud/</link>
+      <link>//www.sunitparekh.in/posts/9-term-cloud/</link>
       <pubDate>Sat, 28 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/9-term-cloud/</guid>
+      <guid>//www.sunitparekh.in/posts/9-term-cloud/</guid>
       <description>During inception one of the job of the inception team is to learn the terminology used by the business. Generally the board is put up with all the business buzzwords, terms that they use in their day to day job. We started doing that on one board called &amp;lsquo;Term Cloud&amp;rsquo;. Generally this board gets populated as side effect of all the games &amp;amp; exercise we do during inception also know as glossary, domain terms.</description>
     </item>
     
     <item>
       <title>Ruby vs Java vs .NET - How much does it matter on web projects?</title>
-      <link>https://www.sunitparekh.in/posts/8-programming-language/</link>
+      <link>//www.sunitparekh.in/posts/8-programming-language/</link>
       <pubDate>Wed, 25 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/8-programming-language/</guid>
+      <guid>//www.sunitparekh.in/posts/8-programming-language/</guid>
       <description>I was looking into some statistics on my multiple web project and found one very interesting stats on simple Lines of Code (LOC).
 * numbers are pure production code and does not include test codeAfter looking at above metrics, I asked myself: during initial stage of the project, are we thinking enough about every part of the software and doing enough research around which language, technology &amp;amp; framework to use for project?</description>
     </item>

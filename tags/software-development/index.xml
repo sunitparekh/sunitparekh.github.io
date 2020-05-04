@@ -2,87 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>software-development on sUnit Blog</title>
-    <link>https://www.sunitparekh.in/tags/software-development/</link>
+    <link>//www.sunitparekh.in/tags/software-development/</link>
     <description>Recent content in software-development on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Wed, 13 Apr 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.sunitparekh.in/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//www.sunitparekh.in/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ownership model for distributed team</title>
-      <link>https://www.sunitparekh.in/posts/28-ownership-model/</link>
+      <link>//www.sunitparekh.in/posts/28-ownership-model/</link>
       <pubDate>Wed, 13 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/28-ownership-model/</guid>
+      <guid>//www.sunitparekh.in/posts/28-ownership-model/</guid>
       <description>Setting up distributed team is very common in new world of software development. However, it is equally important that each team operates in complete autonomy and there is a need for teams to be independent, taking ownership and deliver. However, everyone has different views and understanding of ownership. I would like to take this opportunity to explain my view on different aspects of ownership which can help stakeholders and team in having common understanding of expectations and help deliver with ownership and accountability.</description>
     </item>
     
     <item>
       <title>Collaboration Techniques for Large Distributed Agile Projects</title>
-      <link>https://www.sunitparekh.in/posts/26-collaboration-techniques/</link>
+      <link>//www.sunitparekh.in/posts/26-collaboration-techniques/</link>
       <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/26-collaboration-techniques/</guid>
+      <guid>//www.sunitparekh.in/posts/26-collaboration-techniques/</guid>
       <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects</description>
     </item>
     
     <item>
       <title>Story Mapping, Visual Way of Building Product Backlog</title>
-      <link>https://www.sunitparekh.in/posts/25-story-mapping/</link>
+      <link>//www.sunitparekh.in/posts/25-story-mapping/</link>
       <pubDate>Tue, 13 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/25-story-mapping/</guid>
+      <guid>//www.sunitparekh.in/posts/25-story-mapping/</guid>
       <description>Article is published on ThoughtWorks Insights here.. http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog</description>
     </item>
     
     <item>
       <title>How to begin with Agile and Continuous Delivery on Legacy Projects?</title>
-      <link>https://www.sunitparekh.in/posts/24-legacy-projects/</link>
+      <link>//www.sunitparekh.in/posts/24-legacy-projects/</link>
       <pubDate>Fri, 31 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/24-legacy-projects/</guid>
+      <guid>//www.sunitparekh.in/posts/24-legacy-projects/</guid>
       <description>In my interactions with people, I hear &amp;ldquo;Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don&amp;rsquo;t know where to start or we can&amp;rsquo;t do agile and continuous delivery on our project&amp;rdquo;.
 Most of the time legacy projects are facing typical issues like fragile codebase, too much technical debt, old libraries &amp;amp; frameworks. Which resulting into long development and testing cycles. To solve these problems, team decides to follow Agile practices.</description>
     </item>
     
     <item>
       <title>Building a Two-Stack CMS for a global product catalog</title>
-      <link>https://www.sunitparekh.in/posts/23-two-stack-cms/</link>
+      <link>//www.sunitparekh.in/posts/23-two-stack-cms/</link>
       <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/23-two-stack-cms/</guid>
+      <guid>//www.sunitparekh.in/posts/23-two-stack-cms/</guid>
       <description>Article is published on MartinFowler.com as InfoDeck here.. http://martinfowler.com/articles/two-stack-cms/</description>
     </item>
     
     <item>
       <title>Use structured logging for log search and analytics</title>
-      <link>https://www.sunitparekh.in/posts/22-structured-logging/</link>
+      <link>//www.sunitparekh.in/posts/22-structured-logging/</link>
       <pubDate>Sat, 06 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/22-structured-logging/</guid>
+      <guid>//www.sunitparekh.in/posts/22-structured-logging/</guid>
       <description>Logging is followed in almost every project. However, most of the time we end up using logs only for debugging and auditing purpose. Since past few projects we have been exploring more opportunities for leveraging logs for purposes like application metrics collection, reporting, monitoring and alerting. And during this, I learnt about structured logging and how it enables us to achieve lot more using logs.
 Lets first look at what we need to follow while logging to achieve structured logging.</description>
     </item>
     
     <item>
       <title>Guidelines for Structuring Automated Tests</title>
-      <link>https://www.sunitparekh.in/posts/21-automated-tests/</link>
+      <link>//www.sunitparekh.in/posts/21-automated-tests/</link>
       <pubDate>Tue, 22 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/21-automated-tests/</guid>
+      <guid>//www.sunitparekh.in/posts/21-automated-tests/</guid>
       <description>Article is published on ThoughtWorks Insights here.. http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests</description>
     </item>
     
     <item>
       <title>Using TDD to Influence Design</title>
-      <link>https://www.sunitparekh.in/posts/20-tdd-influence-design/</link>
+      <link>//www.sunitparekh.in/posts/20-tdd-influence-design/</link>
       <pubDate>Fri, 06 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/20-tdd-influence-design/</guid>
+      <guid>//www.sunitparekh.in/posts/20-tdd-influence-design/</guid>
       <description>Article is published on ThoughtWorks Insights here.. http://www.thoughtworks.com/insights/blog/using-tdd-influence-design</description>
     </item>
     

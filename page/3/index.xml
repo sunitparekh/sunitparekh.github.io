@@ -1,34 +1,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sUnit Blog</title>
-    <link>https://www.sunitparekh.in/</link>
+    <link>//www.sunitparekh.in/</link>
     <description>Recent content on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://www.sunitparekh.in/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="//www.sunitparekh.in/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>Project envisioning exercise - Process Timeline Map</title>
-        <link>https://www.sunitparekh.in/posts/11-process-timeline-map/</link>
+        <link>//www.sunitparekh.in/posts/11-process-timeline-map/</link>
         <pubDate>Mon, 07 May 2012 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/11-process-timeline-map/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/11-process-timeline-map/ -&lt;p&gt;One of the key challenges in an inception is to learn about the business processes and its workflow in a fair amount of detail in a relatively quick amount of time. The idea is, not to just learn about the client&amp;rsquo;s business processes, but also to ensure that various stakeholders within the client actually share that understanding instead of having varying ideas in their own heads.&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/11-process-timeline-map/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/11-process-timeline-map/ -&lt;p&gt;One of the key challenges in an inception is to learn about the business processes and its workflow in a fair amount of detail in a relatively quick amount of time. The idea is, not to just learn about the client&amp;rsquo;s business processes, but also to ensure that various stakeholders within the client actually share that understanding instead of having varying ideas in their own heads.&lt;/p&gt;
 &lt;p&gt;There are plenty of methods to study business processes but they are time consuming and heavy weight and may be not as collaborative. A classical way is to create process map diagram &amp;amp; value stream mapping. Such methods are valuable in different settings. In our context, an inception, we try to uncover information in enough detail to be able to kickstart delivery without spending loads of time and making it a formal inception phase.&lt;/p&gt;
 &lt;p&gt;During a recent inception, we (&lt;a href=&#34;http://www.twitter.com/sunitparekh&#34;&gt;Sunit Parekh&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/#!/_birinder&#34;&gt;Birinder Singh&lt;/a&gt;, &lt;a href=&#34;http://pandafunda.blogspot.com/&#34;&gt;Sarbashrestha Panda&lt;/a&gt; &amp;amp;Amit Dhakad) combined ideas from different process analysis methods and came up with this hybrid light weight approach. It is not full blown value stream mapping but this approach does have elements of it and highlights the processes that are most time consuming and potentially wasteful.&lt;/p&gt;
 &lt;p&gt;The process map was built on a large canvas/wall, so that it would constantly be visible to all the participant in the inception. We started building the process map by plotting a timeline on x axis and noting different steps in the process flow on the y axis. Also, the actors/roles involved in the process were indicated for each process. A legends for denoting the actors was also put up on the wall for the ease of identification. Building this full as-is process map of the as-is process was done over multiple sessions spanning a couple of days.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Stage 1&lt;/strong&gt;: After couple of session with business first cut of the as-is process timeline map looked something like this&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/11/process-timeline-map-as-is-stage1.jpg&#34; alt=&#34;process timeline map as is stage 1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/11/process-timeline-map-as-is-stage1.jpg&#34; alt=&#34;process timeline map as is stage 1&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Stage 2&lt;/strong&gt;: After another iteration, the as-is process shaped up to something like this. It was also clearer in the client stakeholders&amp;rsquo; minds. It also had functional area clearly called out.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/11/process-timeline-map-as-is.jpg&#34; alt=&#34;process timeline map as is&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/11/process-timeline-map-as-is.jpg&#34; alt=&#34;process timeline map as is&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Advantage of having large visible canvas for the current as-is model is that it provided us a reference point at all times in inception. It became one of the living document for the team.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Stage 3&lt;/strong&gt;: We then took this forward and mapped the future to-be process on top of it by putting magic chart in-between.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/11/process-timeline-map-to-be.jpg&#34; alt=&#34;process timeline map to be&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/11/process-timeline-map-to-be.jpg&#34; alt=&#34;process timeline map to be&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Being able to superimpose the potential &amp;lsquo;to-be&amp;rsquo; process on top of the &amp;lsquo;as-is&amp;rsquo; process allowed everyone to be able to &amp;lsquo;see&amp;rsquo; how it was lighter weight in comparison. It also allowed us to ensure and double check that we were indeed covering the key activities / steps from the current process and losing / getting rid of only the non value adding ones.&lt;/p&gt;
 &lt;p&gt;At the end, we digitalized above process map.  This structure / format / way of creating a process map was very well received by the business teams as well. They, in fact, suggested that the maps should be left as is in the room for anyone new to the business to use as a starting point for understanding their business processed. That feedback was indeed awesome. :) To me, this is called innovation and collaborative effort was what made it possible.&lt;/p&gt;
 &lt;p&gt;Stationary used for building such map:&lt;/p&gt;
@@ -40,18 +40,18 @@
 &lt;li&gt;Sharpies&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Post written collaboratively with &lt;a href=&#34;https://twitter.com/#!/_birinder&#34;&gt;Birinder Singh&lt;/a&gt;&lt;/p&gt;
-- https://www.sunitparekh.in/posts/11-process-timeline-map/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/11-process-timeline-map/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Project envisioning exercise - Product Map</title>
-        <link>https://www.sunitparekh.in/posts/10-product-map/</link>
+        <link>//www.sunitparekh.in/posts/10-product-map/</link>
         <pubDate>Sun, 29 Apr 2012 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/10-product-map/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/10-product-map/ -&lt;p&gt;One of the key factors for our project is that the client is almost 80+ yrs old in business. There are multiple products with different variations of it in the market. Now one of the task/session was to understand their product space, their groupings and how they differ from each other.&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/10-product-map/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/10-product-map/ -&lt;p&gt;One of the key factors for our project is that the client is almost 80+ yrs old in business. There are multiple products with different variations of it in the market. Now one of the task/session was to understand their product space, their groupings and how they differ from each other.&lt;/p&gt;
 &lt;p&gt;For understanding product and its family and how they differ from each other, we (Inception team - Sunit, Amit, Panda and Birinder) came up with a simple idea of creating a &amp;ldquo;Product Map&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Objective&lt;/strong&gt;: To understand the breadth and depth of the products and their variations.
 &lt;strong&gt;Duration&lt;/strong&gt;: 30 min to 1 hr (depends on the # of products and product families)
@@ -67,7 +67,7 @@
 3.3 Numbers related to product, such as revenue, time factors etc.&lt;/li&gt;
 &lt;li&gt;Start with most popular product first and considering it as the base, discuss the variations in other products in the same family. Put notes on small stickies for each variation discovered.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/10/product-map.jpg&#34; alt=&#34;product map&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/10/product-map.jpg&#34; alt=&#34;product map&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;variation&#34;&gt;Variation&lt;/h3&gt;
 &lt;p&gt;Can be used for technical debt matrix e.g. put different modules/areas of codebase as rows, technical parameter such as complexity, test coverage, clean code etc as columns and start populating matrix. Can be very useful for creating visuals for legacy codebase.&lt;/p&gt;
 &lt;h3 id=&#34;toolkit&#34;&gt;Toolkit&lt;/h3&gt;
@@ -75,18 +75,18 @@
 &lt;li&gt;In our case we put products as rows grouped together with same product family (yellow stickies in picture)  and different processes steps followed for the product as columns (pink and blue stickies in picture - blue stickies are sub steps). .&lt;/li&gt;
 &lt;li&gt;We used different colors and size of stickies to show products (yellow), process steps (pink &amp;amp; blue small) and how they differ from each other (orange small).&lt;/li&gt;
 &lt;/ul&gt;
-- https://www.sunitparekh.in/posts/10-product-map/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/10-product-map/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Project envisioning exercise - Term cloud</title>
-        <link>https://www.sunitparekh.in/posts/9-term-cloud/</link>
+        <link>//www.sunitparekh.in/posts/9-term-cloud/</link>
         <pubDate>Sat, 28 Apr 2012 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/9-term-cloud/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/9-term-cloud/ -&lt;p&gt;During inception one of the job of the inception team is to learn the terminology used by the business. Generally the board is put up with all the business buzzwords, terms that they use in their day to day job. We started doing that on one board called &amp;lsquo;Term Cloud&amp;rsquo;. Generally this board gets populated as side effect of all the games &amp;amp; exercise we do during inception also know as glossary, domain terms.&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/9-term-cloud/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/9-term-cloud/ -&lt;p&gt;During inception one of the job of the inception team is to learn the terminology used by the business. Generally the board is put up with all the business buzzwords, terms that they use in their day to day job. We started doing that on one board called &amp;lsquo;Term Cloud&amp;rsquo;. Generally this board gets populated as side effect of all the games &amp;amp; exercise we do during inception also know as glossary, domain terms.&lt;/p&gt;
 &lt;p&gt;Our team came with an idea to play &amp;lsquo;term cloud&amp;rsquo; as one of the exercise during the inception in initial days.&lt;/p&gt;
 &lt;h3 id=&#34;exercise-build-term-cloud&#34;&gt;Exercise: Build Term Cloud&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Objective&lt;/strong&gt;: Everyone speaks the same business terms including development team, SMEs and stakeholders. Helps with more collaborative communication during inception. Better domain understanding. Less confusions with buzzwords having same &amp;amp; different meanings.
@@ -94,7 +94,7 @@
 &lt;strong&gt;Duration&lt;/strong&gt;: 15-20 min
 &lt;strong&gt;Participants&lt;/strong&gt;: Business SME&amp;rsquo;s &amp;amp; Stakeholders
 &lt;strong&gt;Preparation&lt;/strong&gt;: Prepare board having &amp;lsquo;Term Cloud&amp;rsquo; written on it with few samples.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/9/term-cloud.jpg&#34; alt=&#34;term cloud&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/9/term-cloud.jpg&#34; alt=&#34;term cloud&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;how-to-execute&#34;&gt;How to execute&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Distributes stickets to write buzzwords, jargons, terms.&lt;/li&gt;
@@ -105,7 +105,7 @@
 &lt;li&gt;If different terms has same meaning, club them together.&lt;/li&gt;
 &lt;li&gt;If same terms has multiple meaning, come up with new term for less used meaning.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/9/term-cloud-sample.jpg&#34; alt=&#34;term cloud sample&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/9/term-cloud-sample.jpg&#34; alt=&#34;term cloud sample&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;variations&#34;&gt;Variations&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Instead of everyone writing stickies, go in round robin and facilitator writes it on the board.&lt;/li&gt;
@@ -115,19 +115,19 @@
 &lt;ul&gt;
 &lt;li&gt;Following is the sample from the inception that we are going through. Yellow sticky is the term and Orange is used as note to explain the term.&lt;/li&gt;
 &lt;/ul&gt;
-- https://www.sunitparekh.in/posts/9-term-cloud/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/9-term-cloud/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Ruby vs Java vs .NET - How much does it matter on web projects?</title>
-        <link>https://www.sunitparekh.in/posts/8-programming-language/</link>
+        <link>//www.sunitparekh.in/posts/8-programming-language/</link>
         <pubDate>Wed, 25 Apr 2012 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/8-programming-language/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/8-programming-language/ -&lt;p&gt;I was looking into some statistics on my multiple web project and found one very interesting stats on simple Lines of Code (LOC).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/8/programming-language.png&#34; alt=&#34;code distribution metrics&#34;&gt;&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/8-programming-language/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/8-programming-language/ -&lt;p&gt;I was looking into some statistics on my multiple web project and found one very interesting stats on simple Lines of Code (LOC).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/8/programming-language.png&#34; alt=&#34;code distribution metrics&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;* numbers are pure production code and does not include test code&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;p&gt;After looking at above metrics, I asked myself: during initial stage of the project, are we thinking enough about every part of the software and doing enough research around which language, technology &amp;amp; framework to use for project?&lt;/p&gt;
 &lt;p&gt;On most of the projects we just talk and talk about which language is the right choice (Java vs Ruby vs .NET vs &amp;hellip;) for your web application development. We are in so much rush to start that we don&amp;rsquo;t even have time to do enough study/spike on each technology decision and provide right technical solution to client.&lt;/p&gt;
@@ -177,39 +177,39 @@
 &lt;/ol&gt;
 &lt;p&gt;Rest all that should continue such as choosing right technology with framework for server side development such as RoR or Java/Spring or Python/django etc&amp;hellip;&lt;/p&gt;
 &lt;p&gt;Happy project envisioning.&lt;/p&gt;
-- https://www.sunitparekh.in/posts/8-programming-language/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/8-programming-language/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Amazon S3 learning with HTTPS serving very slow</title>
-        <link>https://www.sunitparekh.in/posts/7-amazon-s3-https/</link>
+        <link>//www.sunitparekh.in/posts/7-amazon-s3-https/</link>
         <pubDate>Sat, 25 Feb 2012 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/7-amazon-s3-https/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/7-amazon-s3-https/ -&lt;p&gt;On our site we have lots of images thumbnail getting served on HTTPS by Amazon S3. We were seeing very high load time in browsers upto 2-3 sec for approx 40-50KB size.&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/7-amazon-s3-https/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/7-amazon-s3-https/ -&lt;p&gt;On our site we have lots of images thumbnail getting served on HTTPS by Amazon S3. We were seeing very high load time in browsers upto 2-3 sec for approx 40-50KB size.&lt;/p&gt;
 &lt;p&gt;We tried following load test on S3 and the results helped us making decision.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/7/amazon-s3-slow-with-https.png&#34; alt=&#34;amazon s3 performance issue with serving images over HTTPS&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/7/amazon-s3-slow-with-https.png&#34; alt=&#34;amazon s3 performance issue with serving images over HTTPS&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;conclusion&#34;&gt;Conclusion:&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Serving S3 content over HTTPS is slow&lt;/li&gt;
 &lt;li&gt;S3 performance is not effected (does not degred by # of objects in bucket&lt;/li&gt;
 &lt;li&gt;Using CloudFront to serve S3 content over HTTPS gives significant improvement in time&lt;/li&gt;
 &lt;/ol&gt;
-- https://www.sunitparekh.in/posts/7-amazon-s3-https/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/7-amazon-s3-https/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>NoSQL learning &amp; gotchas based on MongoDB experience</title>
-        <link>https://www.sunitparekh.in/posts/6-nosql-learnings/</link>
+        <link>//www.sunitparekh.in/posts/6-nosql-learnings/</link>
         <pubDate>Tue, 14 Feb 2012 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/6-nosql-learnings/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/6-nosql-learnings/ -&lt;p&gt;I have been working on NoSQL database had some interesting learning on when not to use NoSQL database. All following learning are based on my NoSQL experience with mongoDB. This is an ongoing document which I am planning to keep updating as I keep learning.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/6/mongodb-logo.png&#34; alt=&#34;mongodb&#34;&gt;&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/6-nosql-learnings/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/6-nosql-learnings/ -&lt;p&gt;I have been working on NoSQL database had some interesting learning on when not to use NoSQL database. All following learning are based on my NoSQL experience with mongoDB. This is an ongoing document which I am planning to keep updating as I keep learning.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/6/mongodb-logo.png&#34; alt=&#34;mongodb&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;when-not-to-choose-nosql-database&#34;&gt;When NOT to choose NoSQL database&lt;/h3&gt;
 &lt;p&gt;One primary gotcha of new technology is, when to use it by knowing when not to use it. Here is list of reasons, when you have to be careful choosing NoSQL,&lt;/p&gt;
 &lt;ol&gt;
@@ -225,18 +225,18 @@
 &lt;li&gt;It&amp;rsquo;s not good practice to let your document grow over time.  MongoDB stores document in sequential manner without much buffer, assuming the document doesn&amp;rsquo;t grow over a period of time. And if you add more content in your document it has to move your whole document in new place. Trick is to create document with full content and default values OR adding some temp content while creating and removing it immediately.&lt;/li&gt;
 &lt;li&gt;Indexes are more costly in NoSQL than standard SQL database.&lt;/li&gt;
 &lt;/ol&gt;
-- https://www.sunitparekh.in/posts/6-nosql-learnings/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/6-nosql-learnings/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Design for feature and code for story</title>
-        <link>https://www.sunitparekh.in/posts/5-design-for-feature/</link>
+        <link>//www.sunitparekh.in/posts/5-design-for-feature/</link>
         <pubDate>Fri, 15 Apr 2011 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/5-design-for-feature/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/5-design-for-feature/ -&lt;p&gt;I have been practicing agile development engineering practices for almost more than 4 yrs now. One of practice about agile development is it talks about &amp;lsquo;code for story&amp;rsquo;, which means you just do simple enough implementation required for the story. Why? because you don&amp;rsquo;t know what&amp;rsquo;s required in future and will remain as it is or change.&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/5-design-for-feature/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/5-design-for-feature/ -&lt;p&gt;I have been practicing agile development engineering practices for almost more than 4 yrs now. One of practice about agile development is it talks about &amp;lsquo;code for story&amp;rsquo;, which means you just do simple enough implementation required for the story. Why? because you don&amp;rsquo;t know what&amp;rsquo;s required in future and will remain as it is or change.&lt;/p&gt;
 &lt;p&gt;Now considering &amp;lsquo;code for story&amp;rsquo; practice, this is what happens on the ground. Pair picks up a first story of a feature and &amp;lsquo;just did what was required for the story to implement&amp;rsquo;, after few days another pair picks up a story on same feature and says &amp;lsquo;Ohh&amp;hellip; I have to first refactor the code so that it can be extended to implement next story&amp;rsquo;, which means the work done by first story is partially or fully refactored. Fine, but similar approach continues as we keep picking up subsequent stories and Project Manager freaks out saying &amp;lsquo;Refactoring is good, but when it required for every story that we implement is not just right OR something wrong with my understanding of refactoring.&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;Let me take a very trivial example to explain above scenario. For the first story, I just used simple member variable since that story deals with only one item,&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Employee&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
@@ -265,7 +265,7 @@
 &lt;li&gt;Do not implement or start writing code for future stories. It&amp;rsquo;s okay if your future stories may take just few hours, don&amp;rsquo;t do it now.&lt;/li&gt;
 &lt;li&gt;Design for Feature doesn&amp;rsquo;t mean you freeze it once decided. Let design still evolve as you keep implementing stories of the feature.&lt;/li&gt;
 &lt;/ul&gt;
-- https://www.sunitparekh.in/posts/5-design-for-feature/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/5-design-for-feature/ - 2020 sunitparekh.in</description>
         </item>
     
     

@@ -1,39 +1,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sUnit Blog</title>
-    <link>https://www.sunitparekh.in/</link>
+    <link>//www.sunitparekh.in/</link>
     <description>Recent content on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://www.sunitparekh.in/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="//www.sunitparekh.in/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>About Me</title>
-        <link>https://www.sunitparekh.in/about/</link>
+        <link>//www.sunitparekh.in/about/</link>
         <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/about/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/about/ -&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/sunit.jpeg&#34; alt=&#34;Sunit Parekh&#34;&gt;&lt;/p&gt;
+        <guid>//www.sunitparekh.in/about/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/about/ -&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/sunit.jpeg&#34; alt=&#34;Sunit Parekh&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;application-developer-from-thoughtworks-pune&#34;&gt;Application Developer from ThoughtWorks, Pune&lt;/h2&gt;
 &lt;p&gt;I am a polygot Application Developer, currently working at ThoughtWorks Pune. My experience includes using Java, Ruby and Scala to develop complex enterprise applications and large-scale websites. Apart from architecting solutions, I have done coaching on agile practices like TDD, Refactoring, Continuous Integration and Continuous Delivery.&lt;/p&gt;
 &lt;p&gt;I am passionate about learning new technologies and using them to solve complex business problems. I have build &lt;strong&gt;&lt;a href=&#34;http://sunitparekh.github.io/data-anonymization/&#34;&gt;Data Anonyization&lt;/a&gt;&lt;/strong&gt; a tool that helps with anonymizing production data to use for performance testing, security testing, debugging production issues and development purposes.&lt;/p&gt;
-- https://www.sunitparekh.in/about/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/about/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Release based 3 branch model for agile software development</title>
-        <link>https://www.sunitparekh.in/posts/30-three-branching-model/</link>
+        <link>//www.sunitparekh.in/posts/30-three-branching-model/</link>
         <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/30-three-branching-model/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/30-three-branching-model/ -&lt;p&gt;On large teams it is very important that everyone understands and follow the same branching model/workflow. One of very popular branching workflow is &lt;a href=&#34;http://nvie.com/posts/a-successful-git-branching-model/&#34;&gt;GitFlow&lt;/a&gt;, however with distributed and novice team following GitFlow is difficult. So over a period of time I have been following simple 3 branch model for development which works fine for agile and continuous delivery software development method.&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/30-three-branching-model/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/30-three-branching-model/ -&lt;p&gt;On large teams it is very important that everyone understands and follow the same branching model/workflow. One of very popular branching workflow is &lt;a href=&#34;http://nvie.com/posts/a-successful-git-branching-model/&#34;&gt;GitFlow&lt;/a&gt;, however with distributed and novice team following GitFlow is difficult. So over a period of time I have been following simple 3 branch model for development which works fine for agile and continuous delivery software development method.&lt;/p&gt;
 &lt;h2 id=&#34;3-branch-workflow-model&#34;&gt;3 Branch workflow model&lt;/h2&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
@@ -52,19 +52,19 @@
 &lt;blockquote&gt;
 &lt;p&gt;Slides are available &lt;a href=&#34;https://docs.google.com/presentation/d/117bnmIVoBOLtDqgHSPta2guzlCEBNNyaFA-Oz7dyGaI/edit?usp=sharing&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-- https://www.sunitparekh.in/posts/30-three-branching-model/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/30-three-branching-model/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Distributed Agile - What should be the Sprint duration?</title>
-        <link>https://www.sunitparekh.in/posts/29-sprint-duration/</link>
+        <link>//www.sunitparekh.in/posts/29-sprint-duration/</link>
         <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/29-sprint-duration/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/29-sprint-duration/ -&lt;p&gt;&lt;strong&gt;What should be the  Sprint duration?&lt;/strong&gt; this question comes up quite commonly on agile projects and opinions vary from as short as a week to as long as 6 weeks. Decision on an appropriate Sprint length depend on many factors. Few of the factors that I consider while deciding on the Sprint length are as follows, however, each factor adds different dimensions when the team is distributed across time zones.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/29/featured.png&#34; alt=&#34;sprint duration factors&#34;&gt;&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/29-sprint-duration/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/29-sprint-duration/ -&lt;p&gt;&lt;strong&gt;What should be the  Sprint duration?&lt;/strong&gt; this question comes up quite commonly on agile projects and opinions vary from as short as a week to as long as 6 weeks. Decision on an appropriate Sprint length depend on many factors. Few of the factors that I consider while deciding on the Sprint length are as follows, however, each factor adds different dimensions when the team is distributed across time zones.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/29/featured.png&#34; alt=&#34;sprint duration factors&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;decision-making&#34;&gt;Decision Making:&lt;/h2&gt;
 &lt;p&gt;In most agile team all decision makers from business to technical people are co-located or available within a working day. Sometimes business and product owners are sitting in different locations and it takes a minimum of two working days to make decisions. And if one of them is on leave, decisions gets further delayed. Faster decision-making drives towards shorter sprint cycles and longer decision making drives towards longer cycles.&lt;/p&gt;
 &lt;h2 id=&#34;team-distribution&#34;&gt;Team Distribution:&lt;/h2&gt;
@@ -87,21 +87,21 @@
 &lt;p&gt;In my view, for co-located teams or distributed teams with healthy overlap time and at intermediate level of agile engineering practices I would suggest 2 week sprint duration. And for highly distributed team which is mostly new to Agile (and CD) practices, I recommend 4 weeks of initial Sprint duration.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Philosophy of &amp;ldquo;shorter sprints are better&amp;rdquo; is not always right. Sometimes with shorter sprints and significant non-development effort, team&amp;rsquo;s stress level increases while stakeholder sees less deliverable, watch-out for such cases.&lt;/p&gt;
-- https://www.sunitparekh.in/posts/29-sprint-duration/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/29-sprint-duration/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Ownership model for distributed team</title>
-        <link>https://www.sunitparekh.in/posts/28-ownership-model/</link>
+        <link>//www.sunitparekh.in/posts/28-ownership-model/</link>
         <pubDate>Wed, 13 Apr 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/28-ownership-model/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/28-ownership-model/ -&lt;p&gt;Setting up distributed team is very common in new world of software development. However, it is equally important that each team operates in complete autonomy and there is a need for teams to be independent, taking ownership and deliver. However, everyone has different views and understanding of ownership. I would like to take this opportunity to explain my view on different aspects of ownership which can help stakeholders and team in having common understanding of expectations and help deliver with ownership and accountability.&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/28-ownership-model/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/28-ownership-model/ -&lt;p&gt;Setting up distributed team is very common in new world of software development. However, it is equally important that each team operates in complete autonomy and there is a need for teams to be independent, taking ownership and deliver. However, everyone has different views and understanding of ownership. I would like to take this opportunity to explain my view on different aspects of ownership which can help stakeholders and team in having common understanding of expectations and help deliver with ownership and accountability.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s start with first understanding different aspects of ownership. Software development ownership can be viewed as three types &lt;strong&gt;technical&lt;/strong&gt;, &lt;strong&gt;solution&lt;/strong&gt; and &lt;strong&gt;business&lt;/strong&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;3-types-of-ownership&#34;&gt;3 Types of ownership&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/28/3-pillers.png&#34; alt=&#34;3 Types of Ownership for Distributed Teams&#34; title=&#34;3 Types of Ownership for Distributed Teams&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/28/3-pillers.png&#34; alt=&#34;3 Types of Ownership for Distributed Teams&#34; title=&#34;3 Types of Ownership for Distributed Teams&#34;&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Technical ownership&lt;/strong&gt; means delivering quality product (code) by following engineering practices such as unit testing, refactoring, continuous integration, automated build and deployment etc. with full autonomy. Technical ownership also includes owning technical decisions at low level including following design patterns, cleaner API development for software development.&lt;/li&gt;
 &lt;/ol&gt;
@@ -124,7 +124,7 @@
 &lt;p&gt;Lets take example of retail business and see two classical distributed team models,&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Vertical (Feature) based full ownership team model&lt;/strong&gt;: setup teams with all roles to take up full ownership of feature. E.g. Product Catalog team, Order management team, Shipping management team. Each team has full autonomy to operate from business decision to technology choices made in respective area.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Horizontal (Competency) based ownership team model&lt;/strong&gt;: Front end web team, Mobile team, API team, Operations team&amp;hellip; each team has specific role to play and take ownership of each area specifically technical and solution ownership.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/28/featured.png&#34; alt=&#34;Horizontal/Competency based Distributed Team Model&#34; title=&#34;Horizontal/Competency based Distributed Team Model&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/28/featured.png&#34; alt=&#34;Horizontal/Competency based Distributed Team Model&#34; title=&#34;Horizontal/Competency based Distributed Team Model&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Feature based full ownership team is what I think better for ownership and accountability. However, I have see more horizontal/competency based ownership model in practice. In my view having clarify with all members about the team model is more important and choose whatever works for you.&lt;/p&gt;
 &lt;h3 id=&#34;type-of-ownership-and-roles&#34;&gt;Type of ownership and roles&lt;/h3&gt;
 &lt;p&gt;It is important to understand, what is expected from the team and capability &amp;amp; strength of each team? Above becomes less relevant when team is co-located since everyone is within walk and talk reach. And it becomes more relevant in distributed team, each team requires specific roles to achieve each type of ownership.&lt;/p&gt;
@@ -133,18 +133,18 @@
 &lt;li&gt;We need tech leadership to provide architecture solution along with supporting roles like project management for execution and planning.&lt;/li&gt;
 &lt;li&gt;Similarly we need Product Owners and Senior BAs to achieve Business ownership.&lt;/li&gt;
 &lt;/ol&gt;
-- https://www.sunitparekh.in/posts/28-ownership-model/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/28-ownership-model/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Testing emails with Fake SMTP service</title>
-        <link>https://www.sunitparekh.in/posts/27-testing-emails/</link>
+        <link>//www.sunitparekh.in/posts/27-testing-emails/</link>
         <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/27-testing-emails/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/27-testing-emails/ -&lt;p&gt;Testing is key activity of every software development projects. However testing certain features is not easy and need special support functions. One of such functionality is email testing. In this article I introduce few tools that I used in my projects for achieving email testing easily without any side effects.&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/27-testing-emails/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/27-testing-emails/ -&lt;p&gt;Testing is key activity of every software development projects. However testing certain features is not easy and need special support functions. One of such functionality is email testing. In this article I introduce few tools that I used in my projects for achieving email testing easily without any side effects.&lt;/p&gt;
 &lt;p&gt;To test emails effectively we end up using real email addresses, which leads to cluttering mailbox with unwanted emails. For testing different scenarios we need multiple email address, and testing becomes more difficult when it requires checking mailbox of other users. Also we never want to send emails to real users, otherwise they gets confused with test emails and real emails. Also we do not want to make any code modification for testing emails, this leads to code maintenance issues.&lt;/p&gt;
 &lt;p&gt;To overcome above problems, what we need is, &lt;strong&gt;Fake SMTP server (Email Service) which acts as outgoing server, however, it never delivers email message to users and provides a user interface to check and verify all outgoing emails.&lt;/strong&gt; In short application sends email to users however it never goes out of SMTP server.&lt;/p&gt;
 &lt;p&gt;We need Fake SMTP server for following different scenarios,&lt;/p&gt;
@@ -182,49 +182,49 @@
 &lt;li&gt;&lt;a href=&#34;http://mailcatcher.me/&#34;&gt;&lt;strong&gt;Mailcatcher&lt;/strong&gt;&lt;/a&gt; It has a web view which allows viewing messages from anywhere, ruby application that can runs independently.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://mailtrap.io&#34;&gt;&lt;strong&gt;Mailtrap.io&lt;/strong&gt;&lt;/a&gt; Cloud based SaaS solution, very sophisticated but paid.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/27/featured.png&#34; alt=&#34;mailcatcher.me&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/27/featured.png&#34; alt=&#34;mailcatcher.me&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Using tools and techniques which are applicable for different stages of testing, we can effectively test all email scenarios without delivering emails to real users. Above solutions doesn&amp;rsquo;t require any change in production code for testing, just needs different configuration of SMTP server.&lt;/p&gt;
 &lt;p&gt;Happy Testing !!!&lt;/p&gt;
-- https://www.sunitparekh.in/posts/27-testing-emails/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/27-testing-emails/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Collaboration Techniques for Large Distributed Agile Projects</title>
-        <link>https://www.sunitparekh.in/posts/26-collaboration-techniques/</link>
+        <link>//www.sunitparekh.in/posts/26-collaboration-techniques/</link>
         <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/26-collaboration-techniques/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/26-collaboration-techniques/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpswwwthoughtworkscominsightsblogcollaboration-techniques-large-distributed-agile-projects&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
+        <guid>//www.sunitparekh.in/posts/26-collaboration-techniques/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/26-collaboration-techniques/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpswwwthoughtworkscominsightsblogcollaboration-techniques-large-distributed-agile-projects&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects&#34;&gt;https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects&lt;/a&gt;&lt;/p&gt;
-- https://www.sunitparekh.in/posts/26-collaboration-techniques/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/26-collaboration-techniques/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Story Mapping, Visual Way of Building Product Backlog</title>
-        <link>https://www.sunitparekh.in/posts/25-story-mapping/</link>
+        <link>//www.sunitparekh.in/posts/25-story-mapping/</link>
         <pubDate>Tue, 13 Jan 2015 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/25-story-mapping/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/25-story-mapping/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpwwwthoughtworkscominsightsblogstory-mapping-visual-way-building-product-backlog&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
+        <guid>//www.sunitparekh.in/posts/25-story-mapping/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/25-story-mapping/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpwwwthoughtworkscominsightsblogstory-mapping-visual-way-building-product-backlog&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog&#34;&gt;http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/25/featured.jpg&#34; alt=&#34;Story Map&#34;&gt;&lt;/p&gt;
-- https://www.sunitparekh.in/posts/25-story-mapping/ - 2020 sunitparekh.in</description>
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/25/featured.jpg&#34; alt=&#34;Story Map&#34;&gt;&lt;/p&gt;
+- //www.sunitparekh.in/posts/25-story-mapping/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>How to begin with Agile and Continuous Delivery on Legacy Projects?</title>
-        <link>https://www.sunitparekh.in/posts/24-legacy-projects/</link>
+        <link>//www.sunitparekh.in/posts/24-legacy-projects/</link>
         <pubDate>Fri, 31 Oct 2014 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/24-legacy-projects/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/24-legacy-projects/ -&lt;p&gt;In my interactions with people, I hear &amp;ldquo;Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don&amp;rsquo;t know where to start or we can&amp;rsquo;t do agile and continuous delivery on our project&amp;rdquo;.&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/24-legacy-projects/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/24-legacy-projects/ -&lt;p&gt;In my interactions with people, I hear &amp;ldquo;Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don&amp;rsquo;t know where to start or we can&amp;rsquo;t do agile and continuous delivery on our project&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;Most of the time legacy projects are facing typical issues like fragile codebase, too much technical debt, old libraries &amp;amp; frameworks. Which resulting into long development and testing cycles. To solve these problems, team decides to follow Agile practices. Following agile practices requires specialized skills like Continuous Integration, Test Driven Development, Refactoring and Evolutionary Design&amp;hellip; and difficulty is where to start, there are so many agile engineering practices. Should we start Big Bang, stop all development until we have CI, Automated Tests, &amp;hellip; everything in place? My answer is No Big Bang.&lt;/p&gt;
 &lt;p&gt;Here is step by step approach that worked for me to move towards CD with agile practices. Remember this is a journey and can take upto months or years to get results, based on size of the project, so have patience.&lt;/p&gt;
 &lt;h2 id=&#34;step-1-automated-build-and-deployment&#34;&gt;Step 1: Automated build and deployment&lt;/h2&gt;
@@ -236,19 +236,19 @@
 &lt;li&gt;Use &lt;a href=&#34;http://www.getchef.com/chef/&#34;&gt;Chef&lt;/a&gt; to provision servers and deploy applications triggered via downstream pipelines in CI server.&lt;/li&gt;
 &lt;li&gt;Use &lt;a href=&#34;http://flywaydb.org/&#34;&gt;Flyway&lt;/a&gt; or &lt;a href=&#34;http://www.liquibase.org/&#34;&gt;Liquibase&lt;/a&gt; for running database migrations in incremental way.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/24/simple-pipeline.svg&#34; alt=&#34;simple deployment pipeline&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/24/simple-pipeline.svg&#34; alt=&#34;simple deployment pipeline&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Next question comes in mind is, what should be the branching strategy? I recommend following 3 active branch strategy.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Master development branch&lt;/strong&gt;, used continuously for active development&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Release Candidate branch&lt;/strong&gt;, is very short lived branch, created as release candidate for production and cut from master. Once deployed to production this becomes the &lt;em&gt;Production branch&lt;/em&gt; This is also known as &lt;strong&gt;beta&lt;/strong&gt; branch.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Production branch&lt;/strong&gt;, used for defect and emergency fixes (hotfix)&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/24/3-branch-pipeline.svg&#34; alt=&#34;3 branch deployment pipeline&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/24/3-branch-pipeline.svg&#34; alt=&#34;3 branch deployment pipeline&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Doing automated deployment enables us to deploy any build at will even for small bug fix. This enables QA to get latest code for testing anytime as soon as it is checked in by developers. At this step we are still doing manual testing.
 {: .clear}&lt;/p&gt;
 &lt;h2 id=&#34;step-2-automated-sanity-test-suite&#34;&gt;Step 2: Automated sanity test suite&lt;/h2&gt;
 &lt;p&gt;Building full automation suite to get good coverage for CD is long way to go. My suggestion here is to start small, identify blockers or critical end user scenarios and write automated tests just for those. Blocker means if something fails then end user is unable to use application and critical for business to continue. e.g. in retail website, credit card payment not working in purchase workflow. Lets call this test suite as sanity. Remember to keep this as small as possible, I would say this test suite should run in 10 min max.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/24/automated-sanity-test.svg&#34; alt=&#34;automated sanity test&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/24/automated-sanity-test.svg&#34; alt=&#34;automated sanity test&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Once the &amp;lsquo;Sanity automated tests&amp;rsquo; are ready, lets put them to run on every check-in using CI setup done before. This provides safety net against critical paths for every check-in done by developer.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Tools and techniques for automated build&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -261,7 +261,7 @@
 &lt;h2 id=&#34;step-3-development-with-automated-unit-tests-and-refactoring&#34;&gt;Step 3: Development with automated unit tests and refactoring&lt;/h2&gt;
 &lt;p&gt;Now the tough one. Big bang unit testing and refactoring is &lt;em&gt;big NO&lt;/em&gt;. You need to be most careful in this part of CD adoption. First step is to define single &lt;a href=&#34;&#34;&gt;Automated Tests Strategy&lt;/a&gt;. Make sure everyone understands &lt;a href=&#34;http://martinfowler.com/bliki/TestPyramid.html&#34;&gt;Test Pyramid&lt;/a&gt; and follows principle of write more unit tests and less acceptance tests. Avoid repeating same tests in different test suites. There is one and only one test stratergy across team, do not fall into trap of different strategy for development team and testing team, remember ONE team.&lt;/p&gt;
 &lt;p&gt;I recommend baby steps again here, do refactoring and write unit tests only for features which are under development and touched for enhancement. Do not try to cover non-touched code. In case of Registration feature not changing, do not write unit tests or refactor code related to registration feature.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/24/automated-unit-test.svg&#34; alt=&#34;automated unit test&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/24/automated-unit-test.svg&#34; alt=&#34;automated unit test&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Do progressive refactoring and test coverage for code under heavy development, do just enough for others. In short invest more in changing codebase and less in dead code.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -304,32 +304,32 @@
 &lt;p&gt;Run regular retrospective on Agile adoption and CD progress as health check.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Please share your experience with Agile adoption on legacy project and challenges faced using comments.&lt;/p&gt;
-- https://www.sunitparekh.in/posts/24-legacy-projects/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/24-legacy-projects/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Building a Two-Stack CMS for a global product catalog</title>
-        <link>https://www.sunitparekh.in/posts/23-two-stack-cms/</link>
+        <link>//www.sunitparekh.in/posts/23-two-stack-cms/</link>
         <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/23-two-stack-cms/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/23-two-stack-cms/ -&lt;h2 id=&#34;article-is-published-on-martinfowlercom-as-infodeck-herehttpmartinfowlercomarticlestwo-stack-cms&#34;&gt;Article is published on MartinFowler.com as InfoDeck &lt;a href=&#34;http://martinfowler.com/articles/two-stack-cms/&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
+        <guid>//www.sunitparekh.in/posts/23-two-stack-cms/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/23-two-stack-cms/ -&lt;h2 id=&#34;article-is-published-on-martinfowlercom-as-infodeck-herehttpmartinfowlercomarticlestwo-stack-cms&#34;&gt;Article is published on MartinFowler.com as InfoDeck &lt;a href=&#34;http://martinfowler.com/articles/two-stack-cms/&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://martinfowler.com/articles/two-stack-cms/&#34;&gt;http://martinfowler.com/articles/two-stack-cms/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/23/two-stack-cms.svg&#34; alt=&#34;Two Stack CMS&#34;&gt;&lt;/p&gt;
-- https://www.sunitparekh.in/posts/23-two-stack-cms/ - 2020 sunitparekh.in</description>
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/23/two-stack-cms.svg&#34; alt=&#34;Two Stack CMS&#34;&gt;&lt;/p&gt;
+- //www.sunitparekh.in/posts/23-two-stack-cms/ - 2020 sunitparekh.in</description>
         </item>
     
     
     
         <item>
         <title>Use structured logging for log search and analytics</title>
-        <link>https://www.sunitparekh.in/posts/22-structured-logging/</link>
+        <link>//www.sunitparekh.in/posts/22-structured-logging/</link>
         <pubDate>Sat, 06 Sep 2014 00:00:00 +0000</pubDate>
         
-        <guid>https://www.sunitparekh.in/posts/22-structured-logging/</guid>
-        <description>sUnit Blog https://www.sunitparekh.in/posts/22-structured-logging/ -&lt;p&gt;Logging is followed in almost every project. However, most of the time we end up using logs only for debugging and auditing purpose. Since past few projects we have been exploring more opportunities for leveraging logs for purposes like application metrics collection, reporting, monitoring and alerting. And during this, I learnt about structured logging and how it enables us to achieve lot more using logs.&lt;/p&gt;
+        <guid>//www.sunitparekh.in/posts/22-structured-logging/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/22-structured-logging/ -&lt;p&gt;Logging is followed in almost every project. However, most of the time we end up using logs only for debugging and auditing purpose. Since past few projects we have been exploring more opportunities for leveraging logs for purposes like application metrics collection, reporting, monitoring and alerting. And during this, I learnt about structured logging and how it enables us to achieve lot more using logs.&lt;/p&gt;
 &lt;p&gt;Lets first look at what we need to follow while logging to achieve structured logging.&lt;/p&gt;
 &lt;h2 id=&#34;what-is-structured-logging&#34;&gt;What is structured logging?&lt;/h2&gt;
 &lt;p&gt;Not only log level is important, but what we log &amp;amp; how we log also matters. Lets look at the default log message format,&lt;/p&gt;
@@ -397,7 +397,7 @@ transactionId=458748939 message=&amp;quot;Order received by shipment system.&amp
 &lt;h2 id=&#34;tools&#34;&gt;Tools&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.splunk.com/&#34;&gt;Splunk&lt;/a&gt;, is best in class, commercial product. We are using it in production for large system generating more than 100GB of logs per day. Splunk would be my personal recommendation as well. Lets take example and learn more about using Splunk.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Lets find 404s on website using Splunk&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/22/splunk-query.png&#34; alt=&#34;splunk query for finding 404&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/22/splunk-query.png&#34; alt=&#34;splunk query for finding 404&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Query: &lt;code&gt;tag=production sourcetype=nginx-access GET 404 | rex &amp;quot;\&amp;quot;GET (?&amp;lt;url&amp;gt;\S*) &amp;quot; | stats count by url | sort -count | head 20&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Lets understand query in detail. Splunk support &lt;a href=&#34;http://martinfowler.com/articles/collection-pipeline/&#34;&gt;unix style pipes in query&lt;/a&gt;, so you could pass output of one command to another and build on. In above example we used 5 different commands,&lt;/p&gt;
 &lt;ol&gt;
@@ -419,7 +419,7 @@ transactionId=458748939 message=&amp;quot;Order received by shipment system.&amp
 &lt;p&gt;To achieve real time monitoring and alerting we can use syslog approach, directly feeding logs to a central log server. Syslog is available by default on most of the linux machines. &lt;a href=&#34;http://www.rsyslog.com/&#34;&gt;rsyslog&lt;/a&gt; or &lt;a href=&#34;http://www.balabit.com/network-security/syslog-ng/opensource-logging-system/&#34;&gt;syslog-ng&lt;/a&gt; are two popular syslog implementations.&lt;/p&gt;
 &lt;h4 id=&#34;agents&#34;&gt;Agents&lt;/h4&gt;
 &lt;p&gt;Most of the products in this space provide their own agents, which runs on client and sends logs real-time to central log server. e.g. &lt;a href=&#34;http://wiki.splunk.com/Community:Getting_data_into_Splunk&#34;&gt;Splunk&lt;/a&gt;, &lt;a href=&#34;https://logentries.com/doc/forwarders/&#34;&gt;LogEntries&lt;/a&gt; etc. There are specific tools available just for aggregation purposes like &lt;a href=&#34;http://flume.apache.org/&#34;&gt;Apache Flume&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.sunitparekh.in/images/22/centralised-logging.svg&#34; alt=&#34;centralised aggregated logs&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/22/centralised-logging.svg&#34; alt=&#34;centralised aggregated logs&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;In distributed systems it is important that we have realtime log aggregation setup. And it is equally important that time on all application servers is in sync. Since a millisecond differences can have unordered logs and leads to confusion and errors while debugging and reporting.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -448,7 +448,7 @@ transactionId=458748939 message=&amp;quot;Order received by shipment system.&amp
 &lt;li&gt;Logs collected over years is the biggest data available for analytics. We could also achieve real-time analytics such as most popular products.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;And these are just some examples of structured logging usage. However, once infrastructure in place, it is upto us to explore and find more opportunity to leverage it.&lt;/p&gt;
-- https://www.sunitparekh.in/posts/22-structured-logging/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/22-structured-logging/ - 2020 sunitparekh.in</description>
         </item>
     
     

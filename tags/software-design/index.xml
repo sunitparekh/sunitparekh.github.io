@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>software-design on sUnit Blog</title>
-    <link>https://www.sunitparekh.in/tags/software-design/</link>
+    <link>//www.sunitparekh.in/tags/software-design/</link>
     <description>Recent content in software-design on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Mon, 06 Oct 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.sunitparekh.in/tags/software-design/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//www.sunitparekh.in/tags/software-design/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Building a Two-Stack CMS for a global product catalog</title>
-      <link>https://www.sunitparekh.in/posts/23-two-stack-cms/</link>
+      <link>//www.sunitparekh.in/posts/23-two-stack-cms/</link>
       <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/23-two-stack-cms/</guid>
+      <guid>//www.sunitparekh.in/posts/23-two-stack-cms/</guid>
       <description>Article is published on MartinFowler.com as InfoDeck here.. http://martinfowler.com/articles/two-stack-cms/</description>
     </item>
     
     <item>
       <title>Zero downtime using blue-green deployment strategy</title>
-      <link>https://www.sunitparekh.in/posts/19-blue-green-deployment/</link>
+      <link>//www.sunitparekh.in/posts/19-blue-green-deployment/</link>
       <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/19-blue-green-deployment/</guid>
+      <guid>//www.sunitparekh.in/posts/19-blue-green-deployment/</guid>
       <description>Zero downtime during application deployment is one of the key requirements for continuos delivery. And no business would like their site to be down and showing maintenance page every few days/weeks during deployment.
 To achieve this we decide to go for blue-green deployment. However, we were challenged with how to do this in legacy style data center infrastructure where we are,
  Not able to spin new machines and throw away old machines automatically using scripts Don&amp;rsquo;t have ability to add/remove instances using scripts from load-balancer Network level configurations are done manually like firewall setting  Also keeping full in-active stack didn&amp;rsquo;t sound good idea.</description>
@@ -34,58 +34,58 @@ To achieve this we decide to go for blue-green deployment. However, we were chal
     
     <item>
       <title>Building highly scalable and performance application using non-blocking architecture</title>
-      <link>https://www.sunitparekh.in/posts/18-non-blocking/</link>
+      <link>//www.sunitparekh.in/posts/18-non-blocking/</link>
       <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/18-non-blocking/</guid>
+      <guid>//www.sunitparekh.in/posts/18-non-blocking/</guid>
       <description>I have been working on web application development since last 12+ years and had privileged to work on more than 20+ different project. Now days the expectations from web apps are totally different than it was few years back. End users are provided with rich content on single page (Amazon, CNN, &amp;hellip;). On a single page, lots of data needs to be mashed up and data may come from different sources.</description>
     </item>
     
     <item>
       <title>Why responsive web design?</title>
-      <link>https://www.sunitparekh.in/posts/16-responsive-design/</link>
+      <link>//www.sunitparekh.in/posts/16-responsive-design/</link>
       <pubDate>Tue, 12 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/16-responsive-design/</guid>
+      <guid>//www.sunitparekh.in/posts/16-responsive-design/</guid>
       <description>Lots of time when I discuss Responsive Web Design (RWD), sometime I find out that we don&amp;rsquo;t know the problem, we are trying to solve with RWD. And the objective of this blog post is look into the history and learn what problem we try to solve with RWD.
 The multiple screen resolution problem is not new, even in old days the monitors had different screen resolution. The problem exist from old days.</description>
     </item>
     
     <item>
       <title>Get notified with push notification</title>
-      <link>https://www.sunitparekh.in/posts/13-push-notification/</link>
+      <link>//www.sunitparekh.in/posts/13-push-notification/</link>
       <pubDate>Fri, 13 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/13-push-notification/</guid>
+      <guid>//www.sunitparekh.in/posts/13-push-notification/</guid>
       <description>Now days it&amp;rsquo;s kind of defacto that every website requires some sort of mechanism to update changes dynamically. On my last project we had a specific need to keep updating the count of messages like Facebook does for unread messages. The website is a dot com site with reasonable user base online. It was challenging to come up with a solution so that we can get this developed quickly and scale well with the load.</description>
     </item>
     
     <item>
       <title>Ruby vs Java vs .NET - How much does it matter on web projects?</title>
-      <link>https://www.sunitparekh.in/posts/8-programming-language/</link>
+      <link>//www.sunitparekh.in/posts/8-programming-language/</link>
       <pubDate>Wed, 25 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/8-programming-language/</guid>
+      <guid>//www.sunitparekh.in/posts/8-programming-language/</guid>
       <description>I was looking into some statistics on my multiple web project and found one very interesting stats on simple Lines of Code (LOC).
 * numbers are pure production code and does not include test codeAfter looking at above metrics, I asked myself: during initial stage of the project, are we thinking enough about every part of the software and doing enough research around which language, technology &amp;amp; framework to use for project?</description>
     </item>
     
     <item>
       <title>NoSQL learning &amp; gotchas based on MongoDB experience</title>
-      <link>https://www.sunitparekh.in/posts/6-nosql-learnings/</link>
+      <link>//www.sunitparekh.in/posts/6-nosql-learnings/</link>
       <pubDate>Tue, 14 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/6-nosql-learnings/</guid>
+      <guid>//www.sunitparekh.in/posts/6-nosql-learnings/</guid>
       <description>I have been working on NoSQL database had some interesting learning on when not to use NoSQL database. All following learning are based on my NoSQL experience with mongoDB. This is an ongoing document which I am planning to keep updating as I keep learning.
 When NOT to choose NoSQL database One primary gotcha of new technology is, when to use it by knowing when not to use it. Here is list of reasons, when you have to be careful choosing NoSQL,</description>
     </item>
     
     <item>
       <title>Design for feature and code for story</title>
-      <link>https://www.sunitparekh.in/posts/5-design-for-feature/</link>
+      <link>//www.sunitparekh.in/posts/5-design-for-feature/</link>
       <pubDate>Fri, 15 Apr 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/5-design-for-feature/</guid>
+      <guid>//www.sunitparekh.in/posts/5-design-for-feature/</guid>
       <description>I have been practicing agile development engineering practices for almost more than 4 yrs now. One of practice about agile development is it talks about &amp;lsquo;code for story&amp;rsquo;, which means you just do simple enough implementation required for the story. Why? because you don&amp;rsquo;t know what&amp;rsquo;s required in future and will remain as it is or change.
 Now considering &amp;lsquo;code for story&amp;rsquo; practice, this is what happens on the ground. Pair picks up a first story of a feature and &amp;lsquo;just did what was required for the story to implement&amp;rsquo;, after few days another pair picks up a story on same feature and says &amp;lsquo;Ohh&amp;hellip; I have to first refactor the code so that it can be extended to implement next story&amp;rsquo;, which means the work done by first story is partially or fully refactored.</description>
     </item>

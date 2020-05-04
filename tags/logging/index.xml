@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>logging on sUnit Blog</title>
-    <link>https://www.sunitparekh.in/tags/logging/</link>
+    <link>//www.sunitparekh.in/tags/logging/</link>
     <description>Recent content in logging on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Sat, 06 Sep 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.sunitparekh.in/tags/logging/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//www.sunitparekh.in/tags/logging/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Use structured logging for log search and analytics</title>
-      <link>https://www.sunitparekh.in/posts/22-structured-logging/</link>
+      <link>//www.sunitparekh.in/posts/22-structured-logging/</link>
       <pubDate>Sat, 06 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/22-structured-logging/</guid>
+      <guid>//www.sunitparekh.in/posts/22-structured-logging/</guid>
       <description>Logging is followed in almost every project. However, most of the time we end up using logs only for debugging and auditing purpose. Since past few projects we have been exploring more opportunities for leveraging logs for purposes like application metrics collection, reporting, monitoring and alerting. And during this, I learnt about structured logging and how it enables us to achieve lot more using logs.
 Lets first look at what we need to follow while logging to achieve structured logging.</description>
     </item>

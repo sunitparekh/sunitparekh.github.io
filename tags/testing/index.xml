@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>testing on sUnit Blog</title>
-    <link>https://www.sunitparekh.in/tags/testing/</link>
+    <link>//www.sunitparekh.in/tags/testing/</link>
     <description>Recent content in testing on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Sat, 17 Oct 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.sunitparekh.in/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//www.sunitparekh.in/tags/testing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Testing emails with Fake SMTP service</title>
-      <link>https://www.sunitparekh.in/posts/27-testing-emails/</link>
+      <link>//www.sunitparekh.in/posts/27-testing-emails/</link>
       <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/27-testing-emails/</guid>
+      <guid>//www.sunitparekh.in/posts/27-testing-emails/</guid>
       <description>Testing is key activity of every software development projects. However testing certain features is not easy and need special support functions. One of such functionality is email testing. In this article I introduce few tools that I used in my projects for achieving email testing easily without any side effects.
 To test emails effectively we end up using real email addresses, which leads to cluttering mailbox with unwanted emails. For testing different scenarios we need multiple email address, and testing becomes more difficult when it requires checking mailbox of other users.</description>
     </item>
     
     <item>
       <title>Guidelines for Structuring Automated Tests</title>
-      <link>https://www.sunitparekh.in/posts/21-automated-tests/</link>
+      <link>//www.sunitparekh.in/posts/21-automated-tests/</link>
       <pubDate>Tue, 22 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/21-automated-tests/</guid>
+      <guid>//www.sunitparekh.in/posts/21-automated-tests/</guid>
       <description>Article is published on ThoughtWorks Insights here.. http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests</description>
     </item>
     
     <item>
       <title>Data Anonymization techniques, Blacklist and Whitelist?</title>
-      <link>https://www.sunitparekh.in/posts/15-data-anonymization-techniques/</link>
+      <link>//www.sunitparekh.in/posts/15-data-anonymization-techniques/</link>
       <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/15-data-anonymization-techniques/</guid>
+      <guid>//www.sunitparekh.in/posts/15-data-anonymization-techniques/</guid>
       <description>Continuation of my previous post about the need for anonymized production data dump, here is more details on two anonymization approaches blacklist and whitelist. Lets take one simple example and understand both the approaches. Consider two tables of database: Customers and Config.
 Blacklist This approach essentially leaves all fields unchanged with the exception of those specified by the user, which are scrambled/anonymized (hence the name Blacklist!). For Blacklist, create a copy of the prod database and choose the fields to be anonymized e.</description>
     </item>
     
     <item>
       <title>Data Anonymization, need for every site in production</title>
-      <link>https://www.sunitparekh.in/posts/14-data-anonymization/</link>
+      <link>//www.sunitparekh.in/posts/14-data-anonymization/</link>
       <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://www.sunitparekh.in/posts/14-data-anonymization/</guid>
+      <guid>//www.sunitparekh.in/posts/14-data-anonymization/</guid>
       <description>On one of my previous projects, we wrote a jMeter performance test suite, which runs periodically on performance environment. Once the application was in production, we enhanced our performance test suite based on actual user behaviours from Apache access logs and Omniture analytics. That provided us a great level of confidence in development for scaling. Now the next step was to get the production dataset so our performance testing becomes almost like production peak load.</description>
     </item>
     
