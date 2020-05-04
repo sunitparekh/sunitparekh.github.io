@@ -2,166 +2,166 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on sUnit Blog</title>
-    <link>http://sunitparekh.in/tags/</link>
+    <link>https://www.sunitparekh.in/tags/</link>
     <description>Recent content in Tags on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Sun, 21 Aug 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sunitparekh.in/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.sunitparekh.in/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>agile</title>
-      <link>http://sunitparekh.in/tags/agile/</link>
+      <link>https://www.sunitparekh.in/tags/agile/</link>
       <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/agile/</guid>
+      <guid>https://www.sunitparekh.in/tags/agile/</guid>
       <description></description>
     </item>
     
     <item>
       <title>branching</title>
-      <link>http://sunitparekh.in/tags/branching/</link>
+      <link>https://www.sunitparekh.in/tags/branching/</link>
       <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/branching/</guid>
+      <guid>https://www.sunitparekh.in/tags/branching/</guid>
       <description></description>
     </item>
     
     <item>
       <title>git</title>
-      <link>http://sunitparekh.in/tags/git/</link>
+      <link>https://www.sunitparekh.in/tags/git/</link>
       <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/git/</guid>
+      <guid>https://www.sunitparekh.in/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sprint</title>
-      <link>http://sunitparekh.in/tags/sprint/</link>
+      <link>https://www.sunitparekh.in/tags/sprint/</link>
       <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/sprint/</guid>
+      <guid>https://www.sunitparekh.in/tags/sprint/</guid>
       <description></description>
     </item>
     
     <item>
       <title>distributed-teams</title>
-      <link>http://sunitparekh.in/tags/distributed-teams/</link>
+      <link>https://www.sunitparekh.in/tags/distributed-teams/</link>
       <pubDate>Wed, 13 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/distributed-teams/</guid>
+      <guid>https://www.sunitparekh.in/tags/distributed-teams/</guid>
       <description></description>
     </item>
     
     <item>
       <title>software-development</title>
-      <link>http://sunitparekh.in/tags/software-development/</link>
+      <link>https://www.sunitparekh.in/tags/software-development/</link>
       <pubDate>Wed, 13 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/software-development/</guid>
+      <guid>https://www.sunitparekh.in/tags/software-development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>testing</title>
-      <link>http://sunitparekh.in/tags/testing/</link>
+      <link>https://www.sunitparekh.in/tags/testing/</link>
       <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/testing/</guid>
+      <guid>https://www.sunitparekh.in/tags/testing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>envisioning</title>
-      <link>http://sunitparekh.in/tags/envisioning/</link>
+      <link>https://www.sunitparekh.in/tags/envisioning/</link>
       <pubDate>Tue, 13 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/envisioning/</guid>
+      <guid>https://www.sunitparekh.in/tags/envisioning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>continuous-delivery</title>
-      <link>http://sunitparekh.in/tags/continuous-delivery/</link>
+      <link>https://www.sunitparekh.in/tags/continuous-delivery/</link>
       <pubDate>Fri, 31 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/continuous-delivery/</guid>
+      <guid>https://www.sunitparekh.in/tags/continuous-delivery/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cms</title>
-      <link>http://sunitparekh.in/tags/cms/</link>
+      <link>https://www.sunitparekh.in/tags/cms/</link>
       <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/cms/</guid>
+      <guid>https://www.sunitparekh.in/tags/cms/</guid>
       <description></description>
     </item>
     
     <item>
       <title>software-design</title>
-      <link>http://sunitparekh.in/tags/software-design/</link>
+      <link>https://www.sunitparekh.in/tags/software-design/</link>
       <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/software-design/</guid>
+      <guid>https://www.sunitparekh.in/tags/software-design/</guid>
       <description></description>
     </item>
     
     <item>
       <title>logging</title>
-      <link>http://sunitparekh.in/tags/logging/</link>
+      <link>https://www.sunitparekh.in/tags/logging/</link>
       <pubDate>Sat, 06 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/logging/</guid>
+      <guid>https://www.sunitparekh.in/tags/logging/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tdd</title>
-      <link>http://sunitparekh.in/tags/tdd/</link>
+      <link>https://www.sunitparekh.in/tags/tdd/</link>
       <pubDate>Fri, 06 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/tdd/</guid>
+      <guid>https://www.sunitparekh.in/tags/tdd/</guid>
       <description></description>
     </item>
     
     <item>
       <title>devops</title>
-      <link>http://sunitparekh.in/tags/devops/</link>
+      <link>https://www.sunitparekh.in/tags/devops/</link>
       <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/devops/</guid>
+      <guid>https://www.sunitparekh.in/tags/devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>data-anonymization</title>
-      <link>http://sunitparekh.in/tags/data-anonymization/</link>
+      <link>https://www.sunitparekh.in/tags/data-anonymization/</link>
       <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/data-anonymization/</guid>
+      <guid>https://www.sunitparekh.in/tags/data-anonymization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>aws</title>
-      <link>http://sunitparekh.in/tags/aws/</link>
+      <link>https://www.sunitparekh.in/tags/aws/</link>
       <pubDate>Sat, 25 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/aws/</guid>
+      <guid>https://www.sunitparekh.in/tags/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NoSQL</title>
-      <link>http://sunitparekh.in/tags/nosql/</link>
+      <link>https://www.sunitparekh.in/tags/nosql/</link>
       <pubDate>Tue, 14 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/tags/nosql/</guid>
+      <guid>https://www.sunitparekh.in/tags/nosql/</guid>
       <description></description>
     </item>
     

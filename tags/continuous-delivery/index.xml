@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>continuous-delivery on sUnit Blog</title>
-    <link>http://sunitparekh.in/tags/continuous-delivery/</link>
+    <link>https://www.sunitparekh.in/tags/continuous-delivery/</link>
     <description>Recent content in continuous-delivery on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Fri, 31 Oct 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sunitparekh.in/tags/continuous-delivery/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.sunitparekh.in/tags/continuous-delivery/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to begin with Agile and Continuous Delivery on Legacy Projects?</title>
-      <link>http://sunitparekh.in/posts/24-legacy-projects/</link>
+      <link>https://www.sunitparekh.in/posts/24-legacy-projects/</link>
       <pubDate>Fri, 31 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/posts/24-legacy-projects/</guid>
+      <guid>https://www.sunitparekh.in/posts/24-legacy-projects/</guid>
       <description>In my interactions with people, I hear &amp;ldquo;Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don&amp;rsquo;t know where to start or we can&amp;rsquo;t do agile and continuous delivery on our project&amp;rdquo;.
 Most of the time legacy projects are facing typical issues like fragile codebase, too much technical debt, old libraries &amp;amp; frameworks. Which resulting into long development and testing cycles. To solve these problems, team decides to follow Agile practices.</description>
     </item>

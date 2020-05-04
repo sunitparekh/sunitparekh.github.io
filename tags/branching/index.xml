@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>branching on sUnit Blog</title>
-    <link>http://sunitparekh.in/tags/branching/</link>
+    <link>https://www.sunitparekh.in/tags/branching/</link>
     <description>Recent content in branching on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Sun, 21 Aug 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sunitparekh.in/tags/branching/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.sunitparekh.in/tags/branching/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Release based 3 branch model for agile software development</title>
-      <link>http://sunitparekh.in/posts/30-three-branching-model/</link>
+      <link>https://www.sunitparekh.in/posts/30-three-branching-model/</link>
       <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/posts/30-three-branching-model/</guid>
+      <guid>https://www.sunitparekh.in/posts/30-three-branching-model/</guid>
       <description>On large teams it is very important that everyone understands and follow the same branching model/workflow. One of very popular branching workflow is GitFlow, however with distributed and novice team following GitFlow is difficult. So over a period of time I have been following simple 3 branch model for development which works fine for agile and continuous delivery software development method.
 3 Branch workflow model    Challenges with following GitFlow on large distributed teams  Team to be at advance level of using Git version control with good hold on branching, merging techniques.</description>
     </item>

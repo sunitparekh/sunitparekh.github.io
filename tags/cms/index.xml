@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cms on sUnit Blog</title>
-    <link>http://sunitparekh.in/tags/cms/</link>
+    <link>https://www.sunitparekh.in/tags/cms/</link>
     <description>Recent content in cms on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
     <lastBuildDate>Mon, 06 Oct 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sunitparekh.in/tags/cms/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.sunitparekh.in/tags/cms/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Building a Two-Stack CMS for a global product catalog</title>
-      <link>http://sunitparekh.in/posts/23-two-stack-cms/</link>
+      <link>https://www.sunitparekh.in/posts/23-two-stack-cms/</link>
       <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sunitparekh.in/posts/23-two-stack-cms/</guid>
+      <guid>https://www.sunitparekh.in/posts/23-two-stack-cms/</guid>
       <description>Article is published on MartinFowler.com as InfoDeck here.. http://martinfowler.com/articles/two-stack-cms/</description>
     </item>
     
