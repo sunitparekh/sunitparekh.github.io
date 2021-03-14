@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
-    <lastBuildDate>Wed, 23 Oct 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="//www.sunitparekh.in/tags/devops/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 23 Oct 2013 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Zero downtime using blue-green deployment strategy</title>
       <link>//www.sunitparekh.in/posts/19-blue-green-deployment/</link>

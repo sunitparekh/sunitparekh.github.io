@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
-    <lastBuildDate>Sat, 06 Sep 2014 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="//www.sunitparekh.in/tags/logging/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 06 Sep 2014 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/tags/logging/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use structured logging for log search and analytics</title>
       <link>//www.sunitparekh.in/posts/22-structured-logging/</link>

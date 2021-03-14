@@ -1,0 +1,55 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sUnit Blog</title>
+    <link>//www.sunitparekh.in/</link>
+    <description>Recent content on sUnit Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2020 sunitparekh.in</copyright>
+    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="//www.sunitparekh.in/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Design for feature and code for story</title>
+        <link>//www.sunitparekh.in/posts/5-design-for-feature/</link>
+        <pubDate>Fri, 15 Apr 2011 00:00:00 +0000</pubDate>
+        
+        <guid>//www.sunitparekh.in/posts/5-design-for-feature/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/5-design-for-feature/ -&lt;p&gt;I have been practicing agile development engineering practices for almost more than 4 yrs now. One of practice about agile development is it talks about &amp;lsquo;code for story&amp;rsquo;, which means you just do simple enough implementation required for the story. Why? because you don&amp;rsquo;t know what&amp;rsquo;s required in future and will remain as it is or change.&lt;/p&gt;
+&lt;p&gt;Now considering &amp;lsquo;code for story&amp;rsquo; practice, this is what happens on the ground. Pair picks up a first story of a feature and &amp;lsquo;just did what was required for the story to implement&amp;rsquo;, after few days another pair picks up a story on same feature and says &amp;lsquo;Ohh&amp;hellip; I have to first refactor the code so that it can be extended to implement next story&amp;rsquo;, which means the work done by first story is partially or fully refactored. Fine, but similar approach continues as we keep picking up subsequent stories and Project Manager freaks out saying &amp;lsquo;Refactoring is good, but when it required for every story that we implement is not just right OR something wrong with my understanding of refactoring.&amp;rsquo;&lt;/p&gt;
+&lt;p&gt;Let me take a very trivial example to explain above scenario. For the first story, I just used simple member variable since that story deals with only one item,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Employee&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    String department&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;next story extends the feature by changing simple member variable to List of objects which means changing all signatures and yes changing all tests as part of refactoring.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Employee&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Department&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; departments&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now next story requires extending the feature again with changing List to Map and again same refactoring but more tedious.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Employee&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    Map&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;string&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Department&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; departments&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And we end up refactoring (throwing away) work done in previous stories. This scenario happens quite lot of time on projects.&lt;/p&gt;
+&lt;p&gt;We can avoid such scenarios on project by redefining a practice as &amp;lsquo;Design for Feature and Code for Story&amp;rsquo;. Which means when I am working on any story I keep in mind the all feature stories and design my application to cater for feature while making sure I just code what is required for the story in play.&lt;/p&gt;
+&lt;p&gt;To achieve this&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;developers and business analyst needs to make sure developers implementing the story has enough context about feature and understands the story scope within feature.&lt;/li&gt;
+&lt;li&gt;leads on the project to participate in discussion during first few stories of the feature development, call huddles initially to gather different ideas in designing for feature.&lt;/li&gt;
+&lt;li&gt;it might be that your first few stories takes little extra time that just doing simple way, however make sure to weight that extra time &amp;amp; effort vs. benefits in future story implementation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Doing high level design early in cycle helps in faster development due to reduced rework and less throw away on project.&lt;/p&gt;
+&lt;p&gt;Watch Out and avoid following when you &amp;lsquo;Design for Feature and Code for Story&amp;rsquo;,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Doing low-level design and putting lots of effort in just design. Going into mode of &amp;lsquo;upfront low level design for feature&amp;rsquo;.&lt;/li&gt;
+&lt;li&gt;Do not implement or start writing code for future stories. It&amp;rsquo;s okay if your future stories may take just few hours, don&amp;rsquo;t do it now.&lt;/li&gt;
+&lt;li&gt;Design for Feature doesn&amp;rsquo;t mean you freeze it once decided. Let design still evolve as you keep implementing stories of the feature.&lt;/li&gt;
+&lt;/ul&gt;
+- //www.sunitparekh.in/posts/5-design-for-feature/ - 2020 sunitparekh.in</description>
+        </item>
+    
+    
+  </channel>
+</rss> 

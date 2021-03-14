@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kubernetes on sUnit Blog</title>
+    <link>//www.sunitparekh.in/tags/kubernetes/</link>
+    <description>Recent content in kubernetes on sUnit Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2020 sunitparekh.in</copyright>
+    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The shift in mindset needed for Kubernetes adoption (Part 2)</title>
+      <link>//www.sunitparekh.in/posts/34-mindshift-for-k8s-adoption-part-2/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/34-mindshift-for-k8s-adoption-part-2/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/insights/blog/shift-mindset-needed-kubernetes-adoption-part-2</description>
+    </item>
+    
+    <item>
+      <title>The mindset shift needed for Kubernetes adoption (Part 1)</title>
+      <link>//www.sunitparekh.in/posts/33-mindshift-for-k8s-adoption-part-1/</link>
+      <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/33-mindshift-for-k8s-adoption-part-1/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/insights/blog/mindset-shift-needed-kubernetes-adoption-part-1</description>
+    </item>
+    
+  </channel>
+</rss>

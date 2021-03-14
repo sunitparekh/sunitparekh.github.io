@@ -6,9 +6,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
-    <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="//www.sunitparekh.in/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>The shift in mindset needed for Kubernetes adoption (Part 2)</title>
+        <link>//www.sunitparekh.in/posts/34-mindshift-for-k8s-adoption-part-2/</link>
+        <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+        
+        <guid>//www.sunitparekh.in/posts/34-mindshift-for-k8s-adoption-part-2/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/34-mindshift-for-k8s-adoption-part-2/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpswwwthoughtworkscominsightsblogshift-mindset-needed-kubernetes-adoption-part-2&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;https://www.thoughtworks.com/insights/blog/shift-mindset-needed-kubernetes-adoption-part-2&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.thoughtworks.com/insights/blog/shift-mindset-needed-kubernetes-adoption-part-2&#34;&gt;https://www.thoughtworks.com/insights/blog/shift-mindset-needed-kubernetes-adoption-part-2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/34/k8s-mindshift-devs.png&#34; alt=&#34;Org mindshift 4c framework&#34;&gt;&lt;/p&gt;
+- //www.sunitparekh.in/posts/34-mindshift-for-k8s-adoption-part-2/ - 2020 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>The mindset shift needed for Kubernetes adoption (Part 1)</title>
+        <link>//www.sunitparekh.in/posts/33-mindshift-for-k8s-adoption-part-1/</link>
+        <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
+        
+        <guid>//www.sunitparekh.in/posts/33-mindshift-for-k8s-adoption-part-1/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/33-mindshift-for-k8s-adoption-part-1/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpswwwthoughtworkscominsightsblogmindset-shift-needed-kubernetes-adoption-part-1&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;https://www.thoughtworks.com/insights/blog/mindset-shift-needed-kubernetes-adoption-part-1&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.thoughtworks.com/insights/blog/mindset-shift-needed-kubernetes-adoption-part-1&#34;&gt;https://www.thoughtworks.com/insights/blog/mindset-shift-needed-kubernetes-adoption-part-1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/33/k8s-mindshift-org.png&#34; alt=&#34;Org mindshift 4c framework&#34;&gt;&lt;/p&gt;
+- //www.sunitparekh.in/posts/33-mindshift-for-k8s-adoption-part-1/ - 2020 sunitparekh.in</description>
+        </item>
     
     
     
@@ -19,9 +47,9 @@
         
         <guid>//www.sunitparekh.in/about/</guid>
         <description>sUnit Blog //www.sunitparekh.in/about/ -&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/sunit.jpeg&#34; alt=&#34;Sunit Parekh&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;application-developer-working-at-thoughtworks-pune&#34;&gt;Application Developer working at ThoughtWorks, Pune&lt;/h2&gt;
-&lt;p&gt;I am a polygot Application Developer, currently working at ThoughtWorks, Pune. My experience includes using Java, Ruby and Scala to develop complex enterprise applications and large-scale websites. Apart from architecting solutions, I have done coaching on agile practices like TDD, Refactoring, Continuous Integration and Continuous Delivery.&lt;/p&gt;
-&lt;p&gt;I am passionate about learning new technologies and using them to solve complex business problems. I have build &lt;strong&gt;&lt;a href=&#34;http://sunitparekh.github.io/data-anonymization/&#34;&gt;Data Anonyization&lt;/a&gt;&lt;/strong&gt; a tool that helps with anonymizing production data to use for performance testing, security testing, debugging production issues and development purposes.&lt;/p&gt;
+&lt;h2 id=&#34;technical-principal-working-at-thoughtworks-pune&#34;&gt;Technical Principal working at ThoughtWorks, Pune&lt;/h2&gt;
+&lt;p&gt;I am a Technical Principal working out of ThoughtWorks, Pune, India office, specialized in custom software development. My experience includes developing complex enterprise solutions at large-scale with specialisation in building applications using microservices architecture. I am also passionate about building modern infrastructure leveraging cloud-ecosystem using the infra-as-code paradigm. Apart from architecting solutions, I also help with coaching on agile practices like TDD, Refactoring, Continuous Integration and Continuous Delivery.&lt;/p&gt;
+&lt;p&gt;I also contributed to opensource by building &lt;strong&gt;&lt;a href=&#34;http://sunitparekh.github.io/data-anonymization/&#34;&gt;Data Anonyization&lt;/a&gt;&lt;/strong&gt; tool, that helps with &lt;a href=&#34;https://en.wikipedia.org/wiki/Data_anonymization&#34;&gt;anonymizing&lt;/a&gt; production data to use for performance testing, security testing, debugging production issues and development purposes.&lt;/p&gt;
 - //www.sunitparekh.in/about/ - 2020 sunitparekh.in</description>
         </item>
     
@@ -246,24 +274,30 @@ This is the heavily debatable and many times inconclusive topic for whole team t
     
     
         <item>
-        <title>Release based 3 branch model for agile software development</title>
+        <title>Release based 3 branch model with trunk based development</title>
         <link>//www.sunitparekh.in/posts/30-three-branching-model/</link>
         <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
         
         <guid>//www.sunitparekh.in/posts/30-three-branching-model/</guid>
-        <description>sUnit Blog //www.sunitparekh.in/posts/30-three-branching-model/ -&lt;p&gt;On large teams it is very important that everyone understands and follow the same branching model/workflow. One of very popular branching workflow is &lt;a href=&#34;http://nvie.com/posts/a-successful-git-branching-model/&#34;&gt;GitFlow&lt;/a&gt;, however with distributed and novice team following GitFlow is difficult. So over a period of time I have been following simple 3 branch model for development which works fine for agile and continuous delivery software development method.&lt;/p&gt;
-&lt;h2 id=&#34;3-branch-workflow-model&#34;&gt;3 Branch workflow model&lt;/h2&gt;
+        <description>sUnit Blog //www.sunitparekh.in/posts/30-three-branching-model/ -&lt;p&gt;On large teams it is very important that everyone understands and follow the same branching model/workflow.&lt;/p&gt;
+&lt;p&gt;Different branching stratergies are,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://nvie.com/posts/a-successful-git-branching-model/&#34;&gt;Feature branch based development&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://trunkbaseddevelopment.com/&#34;&gt;Trunk Based Development&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Each one has its pros and cons. So over a period of time I have been following simple release based 3 branch model with trunk based development which worked fine for me.&lt;/p&gt;
+&lt;h2 id=&#34;trunk-based-development-with-3-branch-workflow-model&#34;&gt;Trunk based development with 3 branch workflow model&lt;/h2&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/xXc3YvzJPD4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
 &lt;hr&gt;
-&lt;h2 id=&#34;challenges-with-following-gitflow-on-large-distributed-teams&#34;&gt;Challenges with following GitFlow on large distributed teams&lt;/h2&gt;
+&lt;h2 id=&#34;challenges-with-following-feature-branch-based-development-on-large-distributed-teams&#34;&gt;Challenges with following Feature branch based development on large distributed teams&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;Team to be at advance level of using Git version control with good hold on branching, merging techniques.&lt;/li&gt;
 &lt;li&gt;Limited number of downstream environments (DEV, QAT, UAT, &amp;hellip;) it is not possible to deploy all features changes for testing, showcase/demo purpose at a time.&lt;/li&gt;
-&lt;li&gt;Refactoring becomes difficult since it creates lot of merge issues across feature branches.&lt;/li&gt;
+&lt;li&gt;With long lived feature branches, refactoring &amp;amp; merge issues are real challange. Developers starts giving up with refactoring as they are not sure when branch is going to merge.&lt;/li&gt;
+&lt;li&gt;Team to be at advance level of using Git version control with good hold on branching, merging techniques.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;slides&#34;&gt;Slides&lt;/h2&gt;
@@ -418,111 +452,6 @@ This is the heavily debatable and many times inconclusive topic for whole team t
         <description>sUnit Blog //www.sunitparekh.in/posts/26-collaboration-techniques/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpswwwthoughtworkscominsightsblogcollaboration-techniques-large-distributed-agile-projects&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects&#34;&gt;https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects&lt;/a&gt;&lt;/p&gt;
 - //www.sunitparekh.in/posts/26-collaboration-techniques/ - 2020 sunitparekh.in</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Story Mapping, Visual Way of Building Product Backlog</title>
-        <link>//www.sunitparekh.in/posts/25-story-mapping/</link>
-        <pubDate>Tue, 13 Jan 2015 00:00:00 +0000</pubDate>
-        
-        <guid>//www.sunitparekh.in/posts/25-story-mapping/</guid>
-        <description>sUnit Blog //www.sunitparekh.in/posts/25-story-mapping/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpwwwthoughtworkscominsightsblogstory-mapping-visual-way-building-product-backlog&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog&#34;&gt;http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/25/featured.jpg&#34; alt=&#34;Story Map&#34;&gt;&lt;/p&gt;
-- //www.sunitparekh.in/posts/25-story-mapping/ - 2020 sunitparekh.in</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>How to begin with Agile and Continuous Delivery on Legacy Projects?</title>
-        <link>//www.sunitparekh.in/posts/24-legacy-projects/</link>
-        <pubDate>Fri, 31 Oct 2014 00:00:00 +0000</pubDate>
-        
-        <guid>//www.sunitparekh.in/posts/24-legacy-projects/</guid>
-        <description>sUnit Blog //www.sunitparekh.in/posts/24-legacy-projects/ -&lt;p&gt;In my interactions with people, I hear &amp;ldquo;Agile and Continuous Delivery works for new green field projects, but we have legacy project. We don&amp;rsquo;t know where to start or we can&amp;rsquo;t do agile and continuous delivery on our project&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;Most of the time legacy projects are facing typical issues like fragile codebase, too much technical debt, old libraries &amp;amp; frameworks. Which resulting into long development and testing cycles. To solve these problems, team decides to follow Agile practices. Following agile practices requires specialized skills like Continuous Integration, Test Driven Development, Refactoring and Evolutionary Design&amp;hellip; and difficulty is where to start, there are so many agile engineering practices. Should we start Big Bang, stop all development until we have CI, Automated Tests, &amp;hellip; everything in place? My answer is No Big Bang.&lt;/p&gt;
-&lt;p&gt;Here is step by step approach that worked for me to move towards CD with agile practices. Remember this is a journey and can take upto months or years to get results, based on size of the project, so have patience.&lt;/p&gt;
-&lt;h2 id=&#34;step-1-automated-build-and-deployment&#34;&gt;Step 1: Automated build and deployment&lt;/h2&gt;
-&lt;p&gt;On most of the legacy projects I have seen, taking build and performing deployment is quite long process. One of the main reason for long cycle is, build and deployment steps are manual, resulting into long downtime for systems (environments) during deployment. If we notice all the steps we do for building artifacts and performing deployment are repetitive and can be automated using scripts. In case of product we can have automated upgrades for client with proper distribution channel.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Tools and techniques for automated build&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Packaging application in native format using tools like &lt;a href=&#34;https://github.com/jordansissel/fpm&#34;&gt;FPM&lt;/a&gt; to build RPM, DEB packages to deploy application in native way. For products this approach is ideal and we can leverage system default package manager for automated upgrade. And this is quite common in applications distributions like Apache HTTP Server, JDK etc.&lt;/li&gt;
-&lt;li&gt;Use Continuous Integration servers like &lt;a href=&#34;http://www.go.cd/&#34;&gt;Go&lt;/a&gt; to build artifacts and trigger deployment.&lt;/li&gt;
-&lt;li&gt;Use &lt;a href=&#34;http://www.getchef.com/chef/&#34;&gt;Chef&lt;/a&gt; to provision servers and deploy applications triggered via downstream pipelines in CI server.&lt;/li&gt;
-&lt;li&gt;Use &lt;a href=&#34;http://flywaydb.org/&#34;&gt;Flyway&lt;/a&gt; or &lt;a href=&#34;http://www.liquibase.org/&#34;&gt;Liquibase&lt;/a&gt; for running database migrations in incremental way.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/24/simple-pipeline.svg&#34; alt=&#34;simple deployment pipeline&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Next question comes in mind is, what should be the branching strategy? I recommend following 3 active branch strategy.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Master development branch&lt;/strong&gt;, used continuously for active development&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Release Candidate branch&lt;/strong&gt;, is very short lived branch, created as release candidate for production and cut from master. Once deployed to production this becomes the &lt;em&gt;Production branch&lt;/em&gt; This is also known as &lt;strong&gt;beta&lt;/strong&gt; branch.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Production branch&lt;/strong&gt;, used for defect and emergency fixes (hotfix)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/24/3-branch-pipeline.svg&#34; alt=&#34;3 branch deployment pipeline&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Doing automated deployment enables us to deploy any build at will even for small bug fix. This enables QA to get latest code for testing anytime as soon as it is checked in by developers. At this step we are still doing manual testing.
-{: .clear}&lt;/p&gt;
-&lt;h2 id=&#34;step-2-automated-sanity-test-suite&#34;&gt;Step 2: Automated sanity test suite&lt;/h2&gt;
-&lt;p&gt;Building full automation suite to get good coverage for CD is long way to go. My suggestion here is to start small, identify blockers or critical end user scenarios and write automated tests just for those. Blocker means if something fails then end user is unable to use application and critical for business to continue. e.g. in retail website, credit card payment not working in purchase workflow. Lets call this test suite as sanity. Remember to keep this as small as possible, I would say this test suite should run in 10 min max.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/24/automated-sanity-test.svg&#34; alt=&#34;automated sanity test&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Once the &amp;lsquo;Sanity automated tests&amp;rsquo; are ready, lets put them to run on every check-in using CI setup done before. This provides safety net against critical paths for every check-in done by developer.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Tools and techniques for automated build&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Perform headless website testing using &lt;a href=&#34;http://phantomjs.org/headless-testing.html&#34;&gt;PhantomJS&lt;/a&gt; in combination with &lt;a href=&#34;http://jasmine.github.io/&#34;&gt;Jasmine&lt;/a&gt; and &lt;a href=&#34;https://github.com/airportyh/testem&#34;&gt;Testem&lt;/a&gt;. Other alternatives are &lt;a href=&#34;http://docs.seleniumhq.org/&#34;&gt;Selenium&lt;/a&gt; and &lt;a href=&#34;http://sahi.co.in/sahi-open-source/&#34;&gt;Sahi&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Same Sanity test suite can be run against all environments with different configurations and parameters. This helps in verifying and building confidence in our builds and deployments in each environment.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Evolve automated sanity test suite to achieve acceptance test suite with more End-2-End type of tests. However, please make sure you follow &lt;a href=&#34;http://martinfowler.com/bliki/TestPyramid.html&#34;&gt;Test Pyramid&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;step-3-development-with-automated-unit-tests-and-refactoring&#34;&gt;Step 3: Development with automated unit tests and refactoring&lt;/h2&gt;
-&lt;p&gt;Now the tough one. Big bang unit testing and refactoring is &lt;em&gt;big NO&lt;/em&gt;. You need to be most careful in this part of CD adoption. First step is to define single &lt;a href=&#34;&#34;&gt;Automated Tests Strategy&lt;/a&gt;. Make sure everyone understands &lt;a href=&#34;http://martinfowler.com/bliki/TestPyramid.html&#34;&gt;Test Pyramid&lt;/a&gt; and follows principle of write more unit tests and less acceptance tests. Avoid repeating same tests in different test suites. There is one and only one test stratergy across team, do not fall into trap of different strategy for development team and testing team, remember ONE team.&lt;/p&gt;
-&lt;p&gt;I recommend baby steps again here, do refactoring and write unit tests only for features which are under development and touched for enhancement. Do not try to cover non-touched code. In case of Registration feature not changing, do not write unit tests or refactor code related to registration feature.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/24/automated-unit-test.svg&#34; alt=&#34;automated unit test&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Do progressive refactoring and test coverage for code under heavy development, do just enough for others. In short invest more in changing codebase and less in dead code.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;em&gt;Steps for development,&lt;/em&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Write unit test for existing functionality, provide safety net before you make the enhancements. Sometime code is not in a shape of writing unit tests and without refactoring you won&amp;rsquo;t be able to write unit tests. In such cases just do enough refactoring which enables you to write unit tests&lt;/li&gt;
-&lt;li&gt;Once you have safety net of automated tests, do heavy refactoring if needed&lt;/li&gt;
-&lt;li&gt;Now make enhancements either by following test first or test last approach.&lt;/li&gt;
-&lt;li&gt;If needed, do refactoring of the code you just wrote before you call it done.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Watch Martin Flower&amp;rsquo;s &lt;a href=&#34;https://www.youtube.com/watch?v=vqEg37e4Mkw&#34;&gt;Workflow of Refactoring&lt;/a&gt; to learn more.&lt;/p&gt;
-&lt;h3 id=&#34;test-last-to-test-first-journey&#34;&gt;Test last to test first journey&lt;/h3&gt;
-&lt;p&gt;Lots of time I realise that team is not familiar with the xUnit frameworks and not written any unit tests in past. Have patience, give them space to learn how to write effective unit test, learn good practices and patterns in unit testing. Let them start with test last and slowly move them towards test first journey. Since we are looking at legacy project here we are doing test last anyways. Even if you are following test last, do one change to code and write test, do not wait for everything to finish and then write all tests.&lt;/p&gt;
-&lt;h3 id=&#34;three-levels-of-refactoring&#34;&gt;Three levels of refactoring&lt;/h3&gt;
-&lt;h4 id=&#34;code-level-refactoring&#34;&gt;Code level refactoring&lt;/h4&gt;
-&lt;p&gt;This is first level of refactoring that each and every team member should do ruthlessly. Such as better naming, smaller methods, &amp;hellip; etc&lt;/p&gt;
-&lt;h4 id=&#34;design-level-refactoring&#34;&gt;Design level refactoring&lt;/h4&gt;
-&lt;p&gt;Team should change design within codebase to apply design patterns wherever necessary to represent code in better way which allows to make future enhancements easily. like removing large if/else and switch/case chain to appropriate design pattern. Make sure we share such refactoring with all developers to have knowledge spread across and learning by examples.&lt;/p&gt;
-&lt;h4 id=&#34;architecture-level-refactoring&#34;&gt;Architecture level refactoring&lt;/h4&gt;
-&lt;p&gt;Most of the time team ask me, Code and Design level refactoring we are able to do but we find it difficult to go for architecture level refactoring. And this is the most important refactoring to break the ice of legacy code. Most of the time legacy codebase is monolithic in nature and would like to move towards service oriented architecture. How to do it? You can&amp;rsquo;t go back to business and say we are stopping all other development and no release for next 3 months since we are doing architecture refactoring. Here is my way for approaching such refactoring,&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Build services as method calls using design level refactoring&lt;/li&gt;
-&lt;li&gt;Move method calls to services, however, this services coded and deployed in same monolithic way, make localhost calls&lt;/li&gt;
-&lt;li&gt;Move services to separate codebase, but deploy in same monolithic way, make localhost calls&lt;/li&gt;
-&lt;li&gt;Move service as separate independent deployment, but deploy on same box, make localhost calls&lt;/li&gt;
-&lt;li&gt;Make service totally independent as you would liked it to be, make remote calls&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Above steps can take weeks or months based on the complexity and size. My guideline is to divide into steps that you could complete within one iteration, so that you keep it green and always running.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Above steps can be done simultaneously without any restrictions. This is just a guideline and feel free to try different approaches that works for you and your team.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;support-needed-during-cd-journey&#34;&gt;Support needed during CD journey&lt;/h2&gt;
-&lt;p&gt;During the agile adoption journey it is important that team gets required support in terms of,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Team needs necessary initial training and coaching on Agile practices like Continuous Integration, Test Driven Development, Refactoring and Evolutionary Design&amp;hellip;&lt;/li&gt;
-&lt;li&gt;Have a coach, internal or external, who mentors team on Agile adoption journey. It is important that someone constantly looking at how are team is progressing on CD journey? Is team getting benefits? Is team getting enough support to adopt new way of development?&lt;/li&gt;
-&lt;li&gt;All stakeholder needs to understand that during this journey initially when team is learning, refactoring &amp;amp; building automated test suites, it might take little longer to deliver. However after sometime trend should shift and start showing benefits with quicker &amp;amp; quality deliveries.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Run regular retrospective on Agile adoption and CD progress as health check.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Please share your experience with Agile adoption on legacy project and challenges faced using comments.&lt;/p&gt;
-- //www.sunitparekh.in/posts/24-legacy-projects/ - 2020 sunitparekh.in</description>
         </item>
     
     

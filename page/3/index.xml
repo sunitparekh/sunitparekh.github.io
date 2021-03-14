@@ -6,9 +6,60 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 sunitparekh.in</copyright>
-    <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="//www.sunitparekh.in/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Data Anonymization techniques, Blacklist and Whitelist?</title>
+        <link>//www.sunitparekh.in/posts/15-data-anonymization-techniques/</link>
+        <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+        
+        <guid>//www.sunitparekh.in/posts/15-data-anonymization-techniques/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/15-data-anonymization-techniques/ -&lt;p&gt;Continuation of my &lt;a href=&#34;ref:posts:data-anonymization&#34;&gt;previous post&lt;/a&gt; about the need for anonymized production data dump, here is more details on two anonymization approaches blacklist and whitelist. Lets take one simple example and understand both the approaches. Consider two tables of database: Customers and Config.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/15/sample-data.png&#34; alt=&#34;sample data set&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;blacklist&#34;&gt;Blacklist&lt;/h2&gt;
+&lt;p&gt;This approach essentially leaves all fields unchanged with the exception of those specified by the user, which are scrambled/anonymized (hence the name Blacklist!).
+For Blacklist, create a copy of the prod database and choose the fields to be anonymized e.g. username, password, email, name, geo location etc. Fields are anonymized based on user-defined rules. Most of the fields have different rules e.g. password should be set to same value for all users, email needs to be valid.&lt;/p&gt;
+&lt;p&gt;Considering above example. Lets anonymize data using blacklist approach. In above we want to anonymize Customers.Name and Customers.Email, so that we can not identify user. After anonymization the data will look like following.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/15/blacklist.png&#34; alt=&#34;data set after blacklist&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Look at the Age field and config table, they remained as is.  That is, apart from data specified in anonymization rules, all other data remains as is after anonymization. This could be a data security issue. Such as when new fields are added they will not be anonymized by default. Human error in missing any users personal data could be damaging.&lt;/p&gt;
+&lt;h2 id=&#34;whitelist&#34;&gt;Whitelist&lt;/h2&gt;
+&lt;p&gt;This approach, by default scrambles/anonymizes all fields except a list of fields which are allowed to copied as is. Hence the name whitelist! By default all data needs to be anonymized. So from production database data is sanitized record by record and inserted as anonymized data into destination database. Source database needs to be read-only. All fields would be anonymized using default anonymization strategy which is based on the datatype, unless an anonymization strategy is specified. For instance, special strategies could be used for emails, passwords, usernames etc. A whitelisted field implies that it&amp;rsquo;s okay to copy the data as is and anonymization isn&amp;rsquo;t required.&lt;/p&gt;
+&lt;p&gt;Using whitelist approach and applying similar rules to anonymize only Name and Email for above example will produce output like following.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/15/whitelist.png&#34; alt=&#34;data set after whitelist&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Age field value is anonymized. Which means if u haven&amp;rsquo;t specified any rule for anonymization the system should anonymize it using default anonymization rules for the data type. To get Age field as-is it is required to mention it as whitelist. Also, the config table didn&amp;rsquo;t show up at all, means if I don&amp;rsquo;t ask for the table explicitly it should not be copied at all.&lt;/p&gt;
+&lt;p&gt;This way any new field will be anonymized by default and if we need them as is add it to the whitelist explicitly. This prevents any human error and protects sensitive information.&lt;/p&gt;
+&lt;p&gt;Data Anonymization tool supports both blacklist and whitelist approach for anonymization. Read more here about the tool and how easy to use it is .&lt;/p&gt;
+&lt;p&gt;Data Anonymization tool &lt;a href=&#34;http://sunitparekh.github.com/data-anonymization&#34;&gt;home page&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/15/featured.png&#34; alt=&#34;Data Anonymization Techniques&#34;&gt;&lt;/p&gt;
+- //www.sunitparekh.in/posts/15-data-anonymization-techniques/ - 2020 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Data Anonymization, need for every site in production</title>
+        <link>//www.sunitparekh.in/posts/14-data-anonymization/</link>
+        <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+        
+        <guid>//www.sunitparekh.in/posts/14-data-anonymization/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/14-data-anonymization/ -&lt;p&gt;On one of my previous projects, we wrote a jMeter performance test suite, which runs periodically on performance environment. Once the application was in production, we enhanced our performance test suite based on actual user behaviours from Apache access logs and Omniture analytics. That provided us a great level of confidence in development for scaling. Now the next step was to get the production dataset so our performance testing becomes almost like production peak load.&lt;/p&gt;
+&lt;p&gt;Also we had few bugs manifesting themselves only in production and we were not able to reproduce the same on our local environment due to the dataset. In production the data has evolved over a period of time and might have some bad/inconsistent data leading to edge cases or defects not happening in other environments. To fix such issues it was required to have a production dataset to enable our team to debug and fix such issues with confidence rather than guess-work.&lt;/p&gt;
+&lt;p&gt;One other time, we had issues with our migration scripts, when the migration script failed during production release. The reason was again the kind of data that had evolved in the production system. It could have been avoided if we had a production dump to rehearse the production deployment.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/14/data-anonymization.png&#34; alt=&#34;Why data anonymization&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Considering all the above hurdles, we got together our Product Owner, and the Dev ops and Security team mates for a production dump. The initial reaction was a NO: the primary reason it being &amp;lsquo;Users&amp;rsquo; Personal Data&#39; and according to Data Protection Act &amp;ldquo;No one should have access to users personal data&amp;rdquo;. Now what? the answer was, we can get production dataset if we sanitize/mask/anonaymize users personal data, we can get the data from production. We quickly started googling around to findout is there a quick and easy tool available to achieve anonymization of the database. Hmm&amp;hellip;. no luck.&lt;/p&gt;
+&lt;p&gt;Considering distributed teams spanning out of country, concern of security with data is increased multiple fold.&lt;/p&gt;
+&lt;p&gt;We thought lets write some scripts and anonymize production data. However, it has some serious security and data protection issues. Such as there is possiblity of missing out on certain attributes at all and those data slips into non production environments. Also it has issues with new content gets passed into non production as is without anonymization by default. There are two techniques for anonymization blacklist and whitelist.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/14/data-anonymization-techniques.png&#34; alt=&#34;Data anonymization techniques&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As this is quite a common requirement across projects, I started working on this idea with a few colleagues at ThoughtWorks to build a simple tool in Ruby based on ActiverRecord to support multiple databases.&lt;/p&gt;
+&lt;p&gt;Data Anonymization tool supports both blacklist and whitelist approach for anonymization. Read more here about the tool and how easy to use it is .&lt;/p&gt;
+&lt;p&gt;Data Anonymization tool &lt;a href=&#34;http://sunitparekh.github.com/data-anonymization&#34;&gt;home page&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In my &lt;a href=&#34;//www.sunitparekh.in/posts/15-data-anonymization-techniques&#34;&gt;next post&lt;/a&gt; I describe blacklist and whitelist anonymization techniques in more detail. Write to me (Twitter: @sunitparekh) or comment on this blog for any questions, feedback and suggestions.&lt;/p&gt;
+- //www.sunitparekh.in/posts/14-data-anonymization/ - 2020 sunitparekh.in</description>
+        </item>
     
     
     
@@ -106,7 +157,7 @@ Taking &amp;ldquo;Story Lifecycle&amp;rdquo; and &amp;ldquo;Anatomy of Iteration
 &lt;p&gt;The process map was built on a large canvas/wall, so that it would constantly be visible to all the participant in the inception. We started building the process map by plotting a timeline on x axis and noting different steps in the process flow on the y axis. Also, the actors/roles involved in the process were indicated for each process. A legends for denoting the actors was also put up on the wall for the ease of identification. Building this full as-is process map of the as-is process was done over multiple sessions spanning a couple of days.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Stage 1&lt;/strong&gt;: After couple of session with business first cut of the as-is process timeline map looked something like this&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/11/process-timeline-map-as-is-stage1.jpg&#34; alt=&#34;process timeline map as is stage 1&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Stage 2&lt;/strong&gt;: After another iteration, the as-is process shaped up to something like this. It was also clearer in the client stakeholders&amp;rsquo; minds. It also had functional area clearly called out.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stage 2&lt;/strong&gt;: After another iteration, the as-is process shaped up to something like this. It was also clearer in the client stakeholders&#39; minds. It also had functional area clearly called out.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/11/process-timeline-map-as-is.jpg&#34; alt=&#34;process timeline map as is&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Advantage of having large visible canvas for the current as-is model is that it provided us a reference point at all times in inception. It became one of the living document for the team.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Stage 3&lt;/strong&gt;: We then took this forward and mapped the future to-be process on top of it by putting magic chart in-between.&lt;/p&gt;
@@ -308,46 +359,6 @@ Taking &amp;ldquo;Story Lifecycle&amp;rdquo; and &amp;ldquo;Anatomy of Iteration
 &lt;li&gt;Indexes are more costly in NoSQL than standard SQL database.&lt;/li&gt;
 &lt;/ol&gt;
 - //www.sunitparekh.in/posts/6-nosql-learnings/ - 2020 sunitparekh.in</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Design for feature and code for story</title>
-        <link>//www.sunitparekh.in/posts/5-design-for-feature/</link>
-        <pubDate>Fri, 15 Apr 2011 00:00:00 +0000</pubDate>
-        
-        <guid>//www.sunitparekh.in/posts/5-design-for-feature/</guid>
-        <description>sUnit Blog //www.sunitparekh.in/posts/5-design-for-feature/ -&lt;p&gt;I have been practicing agile development engineering practices for almost more than 4 yrs now. One of practice about agile development is it talks about &amp;lsquo;code for story&amp;rsquo;, which means you just do simple enough implementation required for the story. Why? because you don&amp;rsquo;t know what&amp;rsquo;s required in future and will remain as it is or change.&lt;/p&gt;
-&lt;p&gt;Now considering &amp;lsquo;code for story&amp;rsquo; practice, this is what happens on the ground. Pair picks up a first story of a feature and &amp;lsquo;just did what was required for the story to implement&amp;rsquo;, after few days another pair picks up a story on same feature and says &amp;lsquo;Ohh&amp;hellip; I have to first refactor the code so that it can be extended to implement next story&amp;rsquo;, which means the work done by first story is partially or fully refactored. Fine, but similar approach continues as we keep picking up subsequent stories and Project Manager freaks out saying &amp;lsquo;Refactoring is good, but when it required for every story that we implement is not just right OR something wrong with my understanding of refactoring.&amp;rsquo;&lt;/p&gt;
-&lt;p&gt;Let me take a very trivial example to explain above scenario. For the first story, I just used simple member variable since that story deals with only one item,&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Employee&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    String department&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;next story extends the feature by changing simple member variable to List of objects which means changing all signatures and yes changing all tests as part of refactoring.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Employee&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Department&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; departments&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now next story requires extending the feature again with changing List to Map and again same refactoring but more tedious.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Employee&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    Map&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;string&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Department&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; departments&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And we end up refactoring (throwing away) work done in previous stories. This scenario happens quite lot of time on projects.&lt;/p&gt;
-&lt;p&gt;We can avoid such scenarios on project by redefining a practice as &amp;lsquo;Design for Feature and Code for Story&amp;rsquo;. Which means when I am working on any story I keep in mind the all feature stories and design my application to cater for feature while making sure I just code what is required for the story in play.&lt;/p&gt;
-&lt;p&gt;To achieve this&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;developers and business analyst needs to make sure developers implementing the story has enough context about feature and understands the story scope within feature.&lt;/li&gt;
-&lt;li&gt;leads on the project to participate in discussion during first few stories of the feature development, call huddles initially to gather different ideas in designing for feature.&lt;/li&gt;
-&lt;li&gt;it might be that your first few stories takes little extra time that just doing simple way, however make sure to weight that extra time &amp;amp; effort vs. benefits in future story implementation.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Doing high level design early in cycle helps in faster development due to reduced rework and less throw away on project.&lt;/p&gt;
-&lt;p&gt;Watch Out and avoid following when you &amp;lsquo;Design for Feature and Code for Story&amp;rsquo;,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Doing low-level design and putting lots of effort in just design. Going into mode of &amp;lsquo;upfront low level design for feature&amp;rsquo;.&lt;/li&gt;
-&lt;li&gt;Do not implement or start writing code for future stories. It&amp;rsquo;s okay if your future stories may take just few hours, don&amp;rsquo;t do it now.&lt;/li&gt;
-&lt;li&gt;Design for Feature doesn&amp;rsquo;t mean you freeze it once decided. Let design still evolve as you keep implementing stories of the feature.&lt;/li&gt;
-&lt;/ul&gt;
-- //www.sunitparekh.in/posts/5-design-for-feature/ - 2020 sunitparekh.in</description>
         </item>
     
     
