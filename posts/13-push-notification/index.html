@@ -38,7 +38,6 @@ if (!doNotTrack) {
 </script>
 
 
-
 <script src="/vendor/js/jquery.min.js" ></script>
 <script src="/vendor/js/popper.min.js" ></script>
 <script src="/vendor/js/bootstrap.min.js" ></script>
@@ -159,7 +158,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2020 sunitparekh.in
+	2022 sunitparekh.in
 	
 
     </div>
@@ -473,7 +472,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                     <p>Now days it&rsquo;s kind of defacto that every website requires some sort of mechanism to update changes dynamically. On my last project we had a specific need to keep updating the count of messages like Facebook does for unread messages. The website is a dot com site with reasonable user base online. It was challenging to come up with a solution so that we can get this developed quickly and scale well with the load.</p>
 <p>We discussed multiple approach and chose one for development.</p>
 <h2 id="approach-1-poll-for-changes">Approach 1: Poll for changes</h2>
-<p>This is kind of classical pull approach where every &lsquo;n&rsquo; second poll for changes and update UI. The problem with polling every 30 sec were,</p>
+<p>This is kind of classical pull approach where every &rsquo;n&rsquo; second poll for changes and update UI. The problem with polling every 30 sec were,</p>
 <p><img src="/images/13/poll.png" alt="poll for changes"></p>
 <ol>
 <li>Unnecessary extra load on the server means fake http requests, 1 will have new message out of 100+ requests. Major hurdle in scaling app, suddenly the no of requests on server will increase multiple fold.</li>
@@ -548,7 +547,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2020 sunitparekh.in
+	2022 sunitparekh.in
 	
 </div>
             </div>

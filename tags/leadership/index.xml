@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>leadership on sUnit Blog</title>
+    <link>//www.sunitparekh.in/tags/leadership/</link>
+    <description>Recent content in leadership on sUnit Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2022 sunitparekh.in</copyright>
+    <lastBuildDate>Mon, 04 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/tags/leadership/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building capability for emerging technologies while on projects</title>
+      <link>//www.sunitparekh.in/posts/36-building-capability-for-emerging-technologies-copy/</link>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/36-building-capability-for-emerging-technologies-copy/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/en-in/insights/blog/it-organizational-design/capability-emerging-tech</description>
+    </item>
+    
+    <item>
+      <title>The three hats of a technology leader</title>
+      <link>//www.sunitparekh.in/posts/35-3-hats-of-a-technology-leader-copy/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/35-3-hats-of-a-technology-leader-copy/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/insights/blog/leadership/three-hats-technology-leader</description>
+    </item>
+    
+  </channel>
+</rss>

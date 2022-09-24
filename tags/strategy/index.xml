@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>strategy on sUnit Blog</title>
+    <link>//www.sunitparekh.in/tags/strategy/</link>
+    <description>Recent content in strategy on sUnit Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2022 sunitparekh.in</copyright>
+    <lastBuildDate>Wed, 02 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/tags/strategy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Business drivers and challenges when adopting a multicloud strategy</title>
+      <link>//www.sunitparekh.in/posts/38-multicloud-business-drivers/</link>
+      <pubDate>Wed, 02 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/38-multicloud-business-drivers/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/en-in/insights/blog/cloud/drivers-challenges-multicloud</description>
+    </item>
+    
+    <item>
+      <title>Defining multicloud deployment models for enterprises</title>
+      <link>//www.sunitparekh.in/posts/37-multicloud-deployment-models-copy/</link>
+      <pubDate>Wed, 02 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/37-multicloud-deployment-models-copy/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/en-in/insights/blog/cloud/multicloud-for-enterprises</description>
+    </item>
+    
+  </channel>
+</rss>

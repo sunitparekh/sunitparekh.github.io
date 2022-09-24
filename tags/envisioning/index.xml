@@ -6,7 +6,7 @@
     <description>Recent content in envisioning on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2020 sunitparekh.in</copyright>
+    <copyright>2022 sunitparekh.in</copyright>
     <lastBuildDate>Tue, 13 Jan 2015 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/tags/envisioning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Story Mapping, Visual Way of Building Product Backlog</title>
@@ -62,7 +62,8 @@ For understanding product and its family and how they differ from each other, we
       
       <guid>//www.sunitparekh.in/posts/8-programming-language/</guid>
       <description>I was looking into some statistics on my multiple web project and found one very interesting stats on simple Lines of Code (LOC).
-* numbers are pure production code and does not include test codeAfter looking at above metrics, I asked myself: during initial stage of the project, are we thinking enough about every part of the software and doing enough research around which language, technology &amp;amp; framework to use for project?</description>
+* numbers are pure production code and does not include test code
+After looking at above metrics, I asked myself: during initial stage of the project, are we thinking enough about every part of the software and doing enough research around which language, technology &amp;amp; framework to use for project?</description>
     </item>
     
   </channel>

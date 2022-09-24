@@ -38,7 +38,6 @@ if (!doNotTrack) {
 </script>
 
 
-
 <script src="/vendor/js/jquery.min.js" ></script>
 <script src="/vendor/js/popper.min.js" ></script>
 <script src="/vendor/js/bootstrap.min.js" ></script>
@@ -159,7 +158,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2020 sunitparekh.in
+	2022 sunitparekh.in
 	
 
     </div>
@@ -626,50 +625,50 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <li>always return 200 and response payload to have status and data fields.</li>
 </ol>
 <p>My take is <strong>use HTTP status code to convey the response status</strong>. And I prefer not to create envelope response but return requested object at top level JSON. And for errors return appropriate HTTP status code with more detailed error message and errors as JSON response.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">200</span>
-<span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
-
-{
-  <span style="color:#f92672">&#34;employeeId&#34;</span>:<span style="color:#ae81ff">123456</span>,
-  <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
-  <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
-  <span style="color:#f92672">&#34;gender&#34;</span>: <span style="color:#e6db74">&#34;Male&#34;</span>,
-  <span style="color:#f92672">&#34;hireDate&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01&#34;</span>,
-  <span style="color:#f92672">&#34;birthDate&#34;</span>: <span style="color:#e6db74">&#34;1990-01-01&#34;</span>,
-  <span style="color:#f92672">&#34;office&#34;</span>: <span style="color:#e6db74">&#34;Pune&#34;</span>
-}
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">404</span>
-<span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
-
-{
-  <span style="color:#f92672">&#34;code&#34;</span>: <span style="color:#e6db74">&#34;NOT_FOUND&#34;</span>,
-  <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Oops! Requested employee 123456 not found.&#34;</span>
-}
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">400</span>
-<span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
-
-{
-  <span style="color:#f92672">&#34;code&#34;</span>: <span style="color:#e6db74">&#34;INVALID_INPUT&#34;</span>,
-  <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Oops! Invalid data provided for employee.&#34;</span>
-  <span style="color:#e6db74">&#34;errors&#34;</span>: [
-    {
-      <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Last name is required field.&#34;</span>,
-      <span style="color:#f92672">&#34;field&#34;</span>: <span style="color:#e6db74">&#34;lastName&#34;</span>
-    },
-    {
-      <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Age of the employee should be greater than 18&#34;</span>,
-      <span style="color:#f92672">&#34;field&#34;</span>: <span style="color:#e6db74">&#34;dateOfBirth&#34;</span>
-    }
-  ]
-}
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">401</span>
-<span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
-
-{
-  <span style="color:#f92672">&#34;code&#34;</span>: <span style="color:#e6db74">&#34;UNAUTHORIZED_ACCESS&#34;</span>,
-  <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Unauthorized access for the requested content.&#34;</span>
-}
-</code></pre></div><p>Effective use of HTTP status code helps with leveraging HTTP caching and coding clients. Also it is important to discuss and decide which status code to use when. Read more <a href="http://www.restapitutorial.com/httpstatuscodes.html">here</a> about status codes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;employeeId&#34;</span>:<span style="color:#ae81ff">123456</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;gender&#34;</span>: <span style="color:#e6db74">&#34;Male&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;hireDate&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;birthDate&#34;</span>: <span style="color:#e6db74">&#34;1990-01-01&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;office&#34;</span>: <span style="color:#e6db74">&#34;Pune&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">404</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;code&#34;</span>: <span style="color:#e6db74">&#34;NOT_FOUND&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Oops! Requested employee 123456 not found.&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">400</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;code&#34;</span>: <span style="color:#e6db74">&#34;INVALID_INPUT&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Oops! Invalid data provided for employee.&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;errors&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Last name is required field.&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;field&#34;</span>: <span style="color:#e6db74">&#34;lastName&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Age of the employee should be greater than 18&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;field&#34;</span>: <span style="color:#e6db74">&#34;dateOfBirth&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">401</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;code&#34;</span>: <span style="color:#e6db74">&#34;UNAUTHORIZED_ACCESS&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Unauthorized access for the requested content.&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Effective use of HTTP status code helps with leveraging HTTP caching and coding clients. Also it is important to discuss and decide which status code to use when. Read more <a href="http://www.restapitutorial.com/httpstatuscodes.html">here</a> about status codes.</p>
 <h2 id="list-and-search-result-type-of-responses">List and search result type of responses</h2>
 <p>Next question comes up is, how to return list or search result like responses?
 This is the heavily debatable and many times inconclusive topic for whole team to agree. Okay, what are the options?</p>
@@ -679,38 +678,38 @@ This is the heavily debatable and many times inconclusive topic for whole team t
 <li>always return 200 and status in response body</li>
 </ol>
 <p>My take, here I am divided between option 1 and 2. Still preferred option is <strong>Option 2, return only data and convey summary fields using headers</strong>. Another alternative to sending count field in response header is have separate count API. This is also useful many times as you need count only once.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">200</span>
-<span style="color:#960050;background-color:#1e0010">Total-Count:</span> <span style="color:#ae81ff">100</span>
-<span style="color:#960050;background-color:#1e0010">Next-Page:</span> <span style="color:#66d9ef">true</span>
-<span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
-
-[
-  {
-    <span style="color:#f92672">&#34;employeeId&#34;</span>:<span style="color:#ae81ff">123456</span>,
-    <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
-    <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
-    <span style="color:#f92672">&#34;gender&#34;</span>: <span style="color:#e6db74">&#34;Male&#34;</span>,
-    <span style="color:#f92672">&#34;hireDate&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01&#34;</span>,
-    <span style="color:#f92672">&#34;birthDate&#34;</span>: <span style="color:#e6db74">&#34;1990-01-01&#34;</span>,
-    <span style="color:#f92672">&#34;office&#34;</span>: <span style="color:#e6db74">&#34;Pune&#34;</span>
-  },
-  {
-    <span style="color:#f92672">&#34;employeeId&#34;</span>:<span style="color:#ae81ff">123457</span>,
-    <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
-    <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
-    <span style="color:#f92672">&#34;gender&#34;</span>: <span style="color:#e6db74">&#34;Male&#34;</span>,
-    <span style="color:#f92672">&#34;hireDate&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01&#34;</span>,
-    <span style="color:#f92672">&#34;birthDate&#34;</span>: <span style="color:#e6db74">&#34;1990-01-01&#34;</span>,
-    <span style="color:#f92672">&#34;office&#34;</span>: <span style="color:#e6db74">&#34;Pune&#34;</span>
-  }
-]
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">200</span>
-<span style="color:#960050;background-color:#1e0010">Total-Count:</span> <span style="color:#ae81ff">0</span>
-<span style="color:#960050;background-color:#1e0010">Next-Page:</span> <span style="color:#66d9ef">false</span>
-<span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
-
-[]
-</code></pre></div><p>Use of response header is key in the above example. Next-Page response header tells client that I have more data (next page) available. And such headers can be really useful for loading next pages on scroll.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Total-Count:</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Next-Page:</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;employeeId&#34;</span>:<span style="color:#ae81ff">123456</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;gender&#34;</span>: <span style="color:#e6db74">&#34;Male&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;hireDate&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;birthDate&#34;</span>: <span style="color:#e6db74">&#34;1990-01-01&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;office&#34;</span>: <span style="color:#e6db74">&#34;Pune&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;employeeId&#34;</span>:<span style="color:#ae81ff">123457</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;gender&#34;</span>: <span style="color:#e6db74">&#34;Male&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;hireDate&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;birthDate&#34;</span>: <span style="color:#e6db74">&#34;1990-01-01&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;office&#34;</span>: <span style="color:#e6db74">&#34;Pune&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Total-Count:</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Next-Page:</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[]
+</span></span></code></pre></div><p>Use of response header is key in the above example. Next-Page response header tells client that I have more data (next page) available. And such headers can be really useful for loading next pages on scroll.</p>
 <p>However, when I look at API like <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-body.html">elasticsearch</a> I get convinced that Option 2 is also right. Choose one for the project and follow it.</p>
 <h2 id="json-key-propertyfield-name-naming-convention">JSON key (property/field name) naming convention</h2>
 <p>Now it’s time to get inside the JSON fields. What should be naming convention for fields? Options are</p>
@@ -720,19 +719,19 @@ This is the heavily debatable and many times inconclusive topic for whole team t
 <li><code>spinal-case</code></li>
 </ol>
 <p>My choice here is <strong><code>camelCase</code></strong> and that must be from my background as Java developer. I have seen equal use of <code>snake_case</code> as well, but very rare use of <code>spinal-case</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">200</span>
-<span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
-
-{
-  <span style="color:#f92672">&#34;employeeId&#34;</span>:<span style="color:#ae81ff">123456</span>,
-  <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
-  <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
-  <span style="color:#f92672">&#34;gender&#34;</span>: <span style="color:#e6db74">&#34;Male&#34;</span>,
-  <span style="color:#f92672">&#34;hireDate&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01&#34;</span>,
-  <span style="color:#f92672">&#34;birthDate&#34;</span>: <span style="color:#e6db74">&#34;1990-01-01&#34;</span>,
-  <span style="color:#f92672">&#34;office&#34;</span>: <span style="color:#e6db74">&#34;Pune&#34;</span>
-}
-</code></pre></div><p>Avoid using dot (.) in key names, as they conflict with the JSON path.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Status:</span> <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">Content-Type:</span> <span style="color:#960050;background-color:#1e0010">application/json</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;employeeId&#34;</span>:<span style="color:#ae81ff">123456</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;gender&#34;</span>: <span style="color:#e6db74">&#34;Male&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;hireDate&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;birthDate&#34;</span>: <span style="color:#e6db74">&#34;1990-01-01&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;office&#34;</span>: <span style="color:#e6db74">&#34;Pune&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Avoid using dot (.) in key names, as they conflict with the JSON path.</p>
 <h2 id="handling-null-values">Handling NULL values</h2>
 <p>It’s time to look at, how to return NULL values? This is again another area of debate starts. Options are,</p>
 <ol>
@@ -740,40 +739,40 @@ This is the heavily debatable and many times inconclusive topic for whole team t
 <li>Return as null value</li>
 </ol>
 <p>I prefer <strong>Option 1) Do not return NULL values.</strong> However, question becomes tricky when value is object or array and it is empty. In that case empty {} or [] is valid JSON response.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">Response</span> <span style="color:#960050;background-color:#1e0010">with</span> <span style="color:#66d9ef">null</span> <span style="color:#960050;background-color:#1e0010">and</span> <span style="color:#960050;background-color:#1e0010">empty</span> <span style="color:#960050;background-color:#1e0010">values</span> 
-<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">--</span> <span style="color:#960050;background-color:#1e0010">NOT</span> <span style="color:#960050;background-color:#1e0010">RECOMMENDED,</span> <span style="color:#960050;background-color:#1e0010">JUST</span> <span style="color:#960050;background-color:#1e0010">FOR</span> <span style="color:#960050;background-color:#1e0010">REPRESENTATION</span> <span style="color:#960050;background-color:#1e0010">PURPOSE</span> <span style="color:#960050;background-color:#1e0010">--</span>
-{
-  <span style="color:#f92672">&#34;employeeId&#34;</span>: <span style="color:#ae81ff">12345</span>,
-  <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
-  <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
-
-  <span style="color:#f92672">&#34;mobile&#34;</span>: <span style="color:#66d9ef">null</span>,
-  <span style="color:#f92672">&#34;addresses&#34;</span>: []
-}
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">Response</span> <span style="color:#960050;background-color:#1e0010">without</span> <span style="color:#960050;background-color:#1e0010">Null</span> <span style="color:#960050;background-color:#1e0010">Values,</span> <span style="color:#960050;background-color:#1e0010">Empty</span> <span style="color:#960050;background-color:#1e0010">object</span> <span style="color:#960050;background-color:#1e0010">or</span> <span style="color:#960050;background-color:#1e0010">array</span> <span style="color:#960050;background-color:#1e0010">is</span> <span style="color:#960050;background-color:#1e0010">still</span> <span style="color:#960050;background-color:#1e0010">present</span>
-{
-  <span style="color:#f92672">&#34;employeeId&#34;</span>: <span style="color:#ae81ff">12345</span>,
-  <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
-  <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
-  <span style="color:#f92672">&#34;addresses&#34;</span>: []
-}
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">Response</span> <span style="color:#960050;background-color:#1e0010">without</span> <span style="color:#960050;background-color:#1e0010">Null</span> <span style="color:#960050;background-color:#1e0010">and</span> <span style="color:#960050;background-color:#1e0010">Empty</span> <span style="color:#960050;background-color:#1e0010">Values</span>
-{
-  <span style="color:#f92672">&#34;employeeId&#34;</span>: <span style="color:#ae81ff">12345</span>,
-  <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
-  <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>
-}
-</code></pre></div><p>I do not prefer null values as it can have side effects while parsing on client side. E.g. In JavaScript null has special meaning. Just be careful not to choose returning empty string (“”) which does not express as value doesn’t exists.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#75715e">// Response with null and empty values 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// -- NOT RECOMMENDED, JUST FOR REPRESENTATION PURPOSE --
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;employeeId&#34;</span>: <span style="color:#ae81ff">12345</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;mobile&#34;</span>: <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;addresses&#34;</span>: []
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#75715e">// Response without Null Values, Empty object or array is still present
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;employeeId&#34;</span>: <span style="color:#ae81ff">12345</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;addresses&#34;</span>: []
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#75715e">// Response without Null and Empty Values
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;employeeId&#34;</span>: <span style="color:#ae81ff">12345</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;firstName&#34;</span>: <span style="color:#e6db74">&#34;Sunit&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;lastName&#34;</span>: <span style="color:#e6db74">&#34;Parekh&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>I do not prefer null values as it can have side effects while parsing on client side. E.g. In JavaScript null has special meaning. Just be careful not to choose returning empty string (“”) which does not express as value doesn’t exists.</p>
 <h2 id="date-and-datetime-responses">Date and DateTime responses</h2>
 <p>This one is most important, What should be format for date and datetime (timestamp) type of fields? <strong>Option here is <a href="https://www.w3.org/TR/NOTE-datetime">ISO 8601</a> format returned as string.</strong> However, many time not knowing it, make developer to follow “default toString” or “self-made formats”. Most of the languages have default support for serializing and deserializing, date and datetime in ISO 8601 format.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">audit</span> <span style="color:#960050;background-color:#1e0010">fields</span>
-{
-    <span style="color:#f92672">&#34;createdBy&#34;</span>: <span style="color:#e6db74">&#34;123456&#34;</span>,
-    <span style="color:#f92672">&#34;createdAt&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01T18:25:43.511Z&#34;</span>,
-    <span style="color:#f92672">&#34;createdBy&#34;</span>: <span style="color:#e6db74">&#34;123456&#34;</span>,
-    <span style="color:#f92672">&#34;createdAt&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01T18:25:43.511Z&#34;</span>,
-}
-</code></pre></div><p>Even if you choose to return datetime always in only one timezone such as UTC. I still recommend to choose ISO 8601 standard which includes timezone.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#75715e">// audit fields
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;createdBy&#34;</span>: <span style="color:#e6db74">&#34;123456&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;createdAt&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01T18:25:43.511Z&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;createdBy&#34;</span>: <span style="color:#e6db74">&#34;123456&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;createdAt&#34;</span>: <span style="color:#e6db74">&#34;2012-01-01T18:25:43.511Z&#34;</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Even if you choose to return datetime always in only one timezone such as UTC. I still recommend to choose ISO 8601 standard which includes timezone.</p>
 <h2 id="multiline-string-values">Multiline string values</h2>
 <p>Many times I need to send large multiline string as values e.g. Address. How do I pass multiline string value? Options are</p>
 <ol>
@@ -781,23 +780,23 @@ This is the heavily debatable and many times inconclusive topic for whole team t
 <li>base64 encoding</li>
 </ol>
 <p>Solution that worked for me is <strong>base64 encoding for values</strong>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">multiple</span> <span style="color:#960050;background-color:#1e0010">as</span> <span style="color:#960050;background-color:#1e0010">array</span>
-{
-    <span style="color:#f92672">&#34;singleLine&#34;</span>: <span style="color:#e6db74">&#34;Some singleline String&#34;</span>,
-    <span style="color:#f92672">&#34;multiline&#34;</span>: [<span style="color:#e6db74">&#34;Line one&#34;</span>, <span style="color:#e6db74">&#34;Line Two&#34;</span>, <span style="color:#e6db74">&#34;Line Three&#34;</span>]
-}
-<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">multiple</span> <span style="color:#960050;background-color:#1e0010">as</span> <span style="color:#960050;background-color:#1e0010">base</span><span style="color:#ae81ff">64</span> <span style="color:#960050;background-color:#1e0010">encoded</span> <span style="color:#960050;background-color:#1e0010">string</span>
-{
-    <span style="color:#f92672">&#34;singleLine&#34;</span>: <span style="color:#e6db74">&#34;Some singleline String&#34;</span>,
-    <span style="color:#f92672">&#34;multiline&#34;</span>: <span style="color:#e6db74">&#34;TGluZSBvbmUKTGluZSBUd28KTGluZSBUaHJlZQ==&#34;</span>
-}
-</code></pre></div><p>Another example is to use <code>base64url</code> encoded query param for GET request providing search criteria as JSON. :-)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{ <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;sunit&#34;</span>, <span style="color:#f92672">&#34;office&#34;</span>: <span style="color:#e6db74">&#34;pune&#34;</span>}
-
-<span style="color:#960050;background-color:#1e0010">/*</span> <span style="color:#960050;background-color:#1e0010">above</span> <span style="color:#960050;background-color:#1e0010">search</span> <span style="color:#960050;background-color:#1e0010">criteria</span> <span style="color:#960050;background-color:#1e0010">parameters</span> <span style="color:#960050;background-color:#1e0010">send</span> <span style="color:#960050;background-color:#1e0010">in</span> <span style="color:#960050;background-color:#1e0010">GET</span> <span style="color:#960050;background-color:#1e0010">request</span> <span style="color:#960050;background-color:#1e0010">param</span> <span style="color:#960050;background-color:#1e0010">as</span> <span style="color:#960050;background-color:#1e0010">base</span><span style="color:#ae81ff">64</span><span style="color:#960050;background-color:#1e0010">url</span> <span style="color:#960050;background-color:#1e0010">encoded</span> <span style="color:#960050;background-color:#1e0010">*/</span>
-
-<span style="color:#960050;background-color:#1e0010">/search?query=</span><span style="color:#e6db74">&#34;eyAibmFtZSI6ICJzdW5pdCIsICJvZmZpY2UiOiAicHVuZSJ9&#34;</span>
-</code></pre></div><h2 id="summary">Summary</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#75715e">// multiple as array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;singleLine&#34;</span>: <span style="color:#e6db74">&#34;Some singleline String&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;multiline&#34;</span>: [<span style="color:#e6db74">&#34;Line one&#34;</span>, <span style="color:#e6db74">&#34;Line Two&#34;</span>, <span style="color:#e6db74">&#34;Line Three&#34;</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// multiple as base64 encoded string
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;singleLine&#34;</span>: <span style="color:#e6db74">&#34;Some singleline String&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;multiline&#34;</span>: <span style="color:#e6db74">&#34;TGluZSBvbmUKTGluZSBUd28KTGluZSBUaHJlZQ==&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Another example is to use <code>base64url</code> encoded query param for GET request providing search criteria as JSON. :-)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{ <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;sunit&#34;</span>, <span style="color:#f92672">&#34;office&#34;</span>: <span style="color:#e6db74">&#34;pune&#34;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">/*</span> <span style="color:#960050;background-color:#1e0010">above</span> <span style="color:#960050;background-color:#1e0010">search</span> <span style="color:#960050;background-color:#1e0010">criteria</span> <span style="color:#960050;background-color:#1e0010">parameters</span> <span style="color:#960050;background-color:#1e0010">send</span> <span style="color:#960050;background-color:#1e0010">in</span> <span style="color:#960050;background-color:#1e0010">GET</span> <span style="color:#960050;background-color:#1e0010">request</span> <span style="color:#960050;background-color:#1e0010">param</span> <span style="color:#960050;background-color:#1e0010">as</span> <span style="color:#960050;background-color:#1e0010">base</span><span style="color:#ae81ff">64</span><span style="color:#960050;background-color:#1e0010">url</span> <span style="color:#960050;background-color:#1e0010">encoded</span> <span style="color:#960050;background-color:#1e0010">*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">/search?query=</span><span style="color:#e6db74">&#34;eyAibmFtZSI6ICJzdW5pdCIsICJvZmZpY2UiOiAicHVuZSJ9&#34;</span>
+</span></span></code></pre></div><h2 id="summary">Summary</h2>
 <p>And there are many more discussion and decisions to be made for JSON responses guidelines, such as,</p>
 <ol>
 <li>How to represent structural data? nested vs flatten</li>
@@ -855,7 +854,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2020 sunitparekh.in
+	2022 sunitparekh.in
 	
 </div>
             </div>

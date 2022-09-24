@@ -6,14 +6,50 @@
     <description>Recent content in Posts on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2020 sunitparekh.in</copyright>
-    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/posts/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>2022 sunitparekh.in</copyright>
+    <lastBuildDate>Mon, 04 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building capability for emerging technologies while on projects</title>
+      <link>//www.sunitparekh.in/posts/36-building-capability-for-emerging-technologies-copy/</link>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/36-building-capability-for-emerging-technologies-copy/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/en-in/insights/blog/it-organizational-design/capability-emerging-tech</description>
+    </item>
+    
+    <item>
+      <title>Business drivers and challenges when adopting a multicloud strategy</title>
+      <link>//www.sunitparekh.in/posts/38-multicloud-business-drivers/</link>
+      <pubDate>Wed, 02 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/38-multicloud-business-drivers/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/en-in/insights/blog/cloud/drivers-challenges-multicloud</description>
+    </item>
+    
+    <item>
+      <title>Defining multicloud deployment models for enterprises</title>
+      <link>//www.sunitparekh.in/posts/37-multicloud-deployment-models-copy/</link>
+      <pubDate>Wed, 02 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/37-multicloud-deployment-models-copy/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/en-in/insights/blog/cloud/multicloud-for-enterprises</description>
+    </item>
+    
+    <item>
+      <title>The three hats of a technology leader</title>
+      <link>//www.sunitparekh.in/posts/35-3-hats-of-a-technology-leader-copy/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/35-3-hats-of-a-technology-leader-copy/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/insights/blog/leadership/three-hats-technology-leader</description>
+    </item>
+    
     <item>
       <title>The shift in mindset needed for Kubernetes adoption (Part 2)</title>
-      <link>//www.sunitparekh.in/posts/34-mindshift-for-k8s-adoption-part-2/</link>
+      <link>//www.sunitparekh.in/posts/34-mindshift-for-k8s-adoption-part-2-copy/</link>
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>//www.sunitparekh.in/posts/34-mindshift-for-k8s-adoption-part-2/</guid>
+      <guid>//www.sunitparekh.in/posts/34-mindshift-for-k8s-adoption-part-2-copy/</guid>
       <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/insights/blog/shift-mindset-needed-kubernetes-adoption-part-2</description>
     </item>
     
@@ -53,8 +89,8 @@ Responding success and failure First question that comes in discussion is, How s
       <guid>//www.sunitparekh.in/posts/30-three-branching-model/</guid>
       <description>On large teams it is very important that everyone understands and follow the same branching model/workflow.
 Different branching stratergies are,
- Feature branch based development Trunk Based Development  Each one has its pros and cons. So over a period of time I have been following simple release based 3 branch model with trunk based development which worked fine for me.
-Trunk based development with 3 branch workflow model    Challenges with following Feature branch based development on large distributed teams  Limited number of downstream environments (DEV, QAT, UAT, &amp;hellip;) it is not possible to deploy all features changes for testing, showcase/demo purpose at a time.</description>
+Feature branch based development Trunk Based Development Each one has its pros and cons. So over a period of time I have been following simple release based 3 branch model with trunk based development which worked fine for me.
+Trunk based development with 3 branch workflow model Challenges with following Feature branch based development on large distributed teams Limited number of downstream environments (DEV, QAT, UAT, &amp;hellip;) it is not possible to deploy all features changes for testing, showcase/demo purpose at a time.</description>
     </item>
     
     <item>
@@ -158,7 +194,7 @@ Lets first look at what we need to follow while logging to achieve structured lo
       <guid>//www.sunitparekh.in/posts/19-blue-green-deployment/</guid>
       <description>Zero downtime during application deployment is one of the key requirements for continuos delivery. And no business would like their site to be down and showing maintenance page every few days/weeks during deployment.
 To achieve this we decide to go for blue-green deployment. However, we were challenged with how to do this in legacy style data center infrastructure where we are,
- Not able to spin new machines and throw away old machines automatically using scripts Don&amp;rsquo;t have ability to add/remove instances using scripts from load-balancer Network level configurations are done manually like firewall setting  Also keeping full in-active stack didn&amp;rsquo;t sound good idea.</description>
+Not able to spin new machines and throw away old machines automatically using scripts Don&amp;rsquo;t have ability to add/remove instances using scripts from load-balancer Network level configurations are done manually like firewall setting Also keeping full in-active stack didn&amp;rsquo;t sound good idea.</description>
     </item>
     
     <item>
@@ -263,7 +299,8 @@ For understanding product and its family and how they differ from each other, we
       
       <guid>//www.sunitparekh.in/posts/8-programming-language/</guid>
       <description>I was looking into some statistics on my multiple web project and found one very interesting stats on simple Lines of Code (LOC).
-* numbers are pure production code and does not include test codeAfter looking at above metrics, I asked myself: during initial stage of the project, are we thinking enough about every part of the software and doing enough research around which language, technology &amp;amp; framework to use for project?</description>
+* numbers are pure production code and does not include test code
+After looking at above metrics, I asked myself: during initial stage of the project, are we thinking enough about every part of the software and doing enough research around which language, technology &amp;amp; framework to use for project?</description>
     </item>
     
     <item>
@@ -274,7 +311,7 @@ For understanding product and its family and how they differ from each other, we
       <guid>//www.sunitparekh.in/posts/7-amazon-s3-https/</guid>
       <description>On our site we have lots of images thumbnail getting served on HTTPS by Amazon S3. We were seeing very high load time in browsers upto 2-3 sec for approx 40-50KB size.
 We tried following load test on S3 and the results helped us making decision.
-Conclusion:  Serving S3 content over HTTPS is slow S3 performance is not effected (does not degred by # of objects in bucket Using CloudFront to serve S3 content over HTTPS gives significant improvement in time  </description>
+Conclusion: Serving S3 content over HTTPS is slow S3 performance is not effected (does not degred by # of objects in bucket Using CloudFront to serve S3 content over HTTPS gives significant improvement in time </description>
     </item>
     
     <item>

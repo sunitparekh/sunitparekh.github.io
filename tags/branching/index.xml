@@ -6,7 +6,7 @@
     <description>Recent content in branching on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2020 sunitparekh.in</copyright>
+    <copyright>2022 sunitparekh.in</copyright>
     <lastBuildDate>Sun, 21 Aug 2016 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/tags/branching/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Release based 3 branch model with trunk based development</title>
@@ -16,8 +16,8 @@
       <guid>//www.sunitparekh.in/posts/30-three-branching-model/</guid>
       <description>On large teams it is very important that everyone understands and follow the same branching model/workflow.
 Different branching stratergies are,
- Feature branch based development Trunk Based Development  Each one has its pros and cons. So over a period of time I have been following simple release based 3 branch model with trunk based development which worked fine for me.
-Trunk based development with 3 branch workflow model    Challenges with following Feature branch based development on large distributed teams  Limited number of downstream environments (DEV, QAT, UAT, &amp;hellip;) it is not possible to deploy all features changes for testing, showcase/demo purpose at a time.</description>
+Feature branch based development Trunk Based Development Each one has its pros and cons. So over a period of time I have been following simple release based 3 branch model with trunk based development which worked fine for me.
+Trunk based development with 3 branch workflow model Challenges with following Feature branch based development on large distributed teams Limited number of downstream environments (DEV, QAT, UAT, &amp;hellip;) it is not possible to deploy all features changes for testing, showcase/demo purpose at a time.</description>
     </item>
     
   </channel>

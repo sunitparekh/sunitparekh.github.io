@@ -5,10 +5,122 @@
     <description>Recent content on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2020 sunitparekh.in</copyright>
-    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <copyright>2022 sunitparekh.in</copyright>
+    <lastBuildDate>Mon, 04 Apr 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="//www.sunitparekh.in/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Ownership model for distributed team</title>
+        <link>//www.sunitparekh.in/posts/28-ownership-model/</link>
+        <pubDate>Wed, 13 Apr 2016 00:00:00 +0000</pubDate>
+        
+        <guid>//www.sunitparekh.in/posts/28-ownership-model/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/28-ownership-model/ -&lt;p&gt;Setting up distributed team is very common in new world of software development. However, it is equally important that each team operates in complete autonomy and there is a need for teams to be independent, taking ownership and deliver. However, everyone has different views and understanding of ownership. I would like to take this opportunity to explain my view on different aspects of ownership which can help stakeholders and team in having common understanding of expectations and help deliver with ownership and accountability.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s start with first understanding different aspects of ownership. Software development ownership can be viewed as three types &lt;strong&gt;technical&lt;/strong&gt;, &lt;strong&gt;solution&lt;/strong&gt; and &lt;strong&gt;business&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;3-types-of-ownership&#34;&gt;3 Types of ownership&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/28/3-pillers.png&#34; alt=&#34;3 Types of Ownership for Distributed Teams&#34; title=&#34;3 Types of Ownership for Distributed Teams&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Technical ownership&lt;/strong&gt; means delivering quality product (code) by following engineering practices such as unit testing, refactoring, continuous integration, automated build and deployment etc. with full autonomy. Technical ownership also includes owning technical decisions at low level including following design patterns, cleaner API development for software development.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In &lt;em&gt;technical ownership&lt;/em&gt; delivering quality code could be the first step and reaching continuous delivery with automated build and deployment could be the higher level of maturity.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Solution ownership&lt;/strong&gt; is about providing solutions to solve business problems. e.g. a) for retail website building recommendation engine based on what a user is searching for, b) to achieve mobile first build UX/UI with responsive web design approach. Solution also involves how we can deliver the feature e.g. define MVP and roll out as first cut to end users and with each release keep enhancing the feature as needed.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For &lt;em&gt;solution ownership&lt;/em&gt; deciding appropriate technology to solve the problem (using ElasticSearch for free text search) is first and making tech stack, frameworks and architecture decisions and delivering it (Java vs .NET, microservice architecture, NoSQL datastore), is higher level of maturity&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Business ownership&lt;/strong&gt; involves working closely with business in defining business needs and helps in building digital solution to solve the problem. e.g. on retail website defining the reward scheme and to promote mobile applications give more reward. Plays partner role with business owners and gets involved in defining long term business strategies as well.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The most tricky one is &lt;em&gt;business ownership&lt;/em&gt; where it is very difficult to define what is expected. One way to detect this maybe how early do you get involved in the discussion. Do you get to define the requirement, and identify the problem or does get involved only after the requirement and likely solution have been decided.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;distributed-team-models-based-on-ownership&#34;&gt;Distributed team models based on ownership&lt;/h3&gt;
+&lt;p&gt;Lets take example of retail business and see two classical distributed team models,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Vertical (Feature) based full ownership team model&lt;/strong&gt;: setup teams with all roles to take up full ownership of feature. E.g. Product Catalog team, Order management team, Shipping management team. Each team has full autonomy to operate from business decision to technology choices made in respective area.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Horizontal (Competency) based ownership team model&lt;/strong&gt;: Front end web team, Mobile team, API team, Operations team&amp;hellip; each team has specific role to play and take ownership of each area specifically technical and solution ownership.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/28/featured.png&#34; alt=&#34;Horizontal/Competency based Distributed Team Model&#34; title=&#34;Horizontal/Competency based Distributed Team Model&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Feature based full ownership team is what I think better for ownership and accountability. However, I have see more horizontal/competency based ownership model in practice. In my view having clarify with all members about the team model is more important and choose whatever works for you.&lt;/p&gt;
+&lt;h3 id=&#34;type-of-ownership-and-roles&#34;&gt;Type of ownership and roles&lt;/h3&gt;
+&lt;p&gt;It is important to understand, what is expected from the team and capability &amp;amp; strength of each team? Above becomes less relevant when team is co-located since everyone is within walk and talk reach. And it becomes more relevant in distributed team, each team requires specific roles to achieve each type of ownership.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Developers, QAs and BAs can help achieve Technical ownership.&lt;/li&gt;
+&lt;li&gt;We need tech leadership to provide architecture solution along with supporting roles like project management for execution and planning.&lt;/li&gt;
+&lt;li&gt;Similarly we need Product Owners and Senior BAs to achieve Business ownership.&lt;/li&gt;
+&lt;/ol&gt;
+- //www.sunitparekh.in/posts/28-ownership-model/ - 2022 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Testing emails with Fake SMTP service</title>
+        <link>//www.sunitparekh.in/posts/27-testing-emails/</link>
+        <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
+        
+        <guid>//www.sunitparekh.in/posts/27-testing-emails/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/27-testing-emails/ -&lt;p&gt;Testing is key activity of every software development projects. However testing certain features is not easy and need special support functions. One of such functionality is email testing. In this article I introduce few tools that I used in my projects for achieving email testing easily without any side effects.&lt;/p&gt;
+&lt;p&gt;To test emails effectively we end up using real email addresses, which leads to cluttering mailbox with unwanted emails. For testing different scenarios we need multiple email address, and testing becomes more difficult when it requires checking mailbox of other users. Also we never want to send emails to real users, otherwise they gets confused with test emails and real emails. Also we do not want to make any code modification for testing emails, this leads to code maintenance issues.&lt;/p&gt;
+&lt;p&gt;To overcome above problems, what we need is, &lt;strong&gt;Fake SMTP server (Email Service) which acts as outgoing server, however, it never delivers email message to users and provides a user interface to check and verify all outgoing emails.&lt;/strong&gt; In short application sends email to users however it never goes out of SMTP server.&lt;/p&gt;
+&lt;p&gt;We need Fake SMTP server for following different scenarios,&lt;/p&gt;
+&lt;h2 id=&#34;1-unit-testing&#34;&gt;1. Unit Testing&lt;/h2&gt;
+&lt;p&gt;Embedded version with Assertion support for Unit Testing, so emails can be verified using asserts in unit tests. &lt;a href=&#34;http://quintanasoft.com/dumbster/&#34;&gt;Dumbster&lt;/a&gt; is handy library here. Some frameworks like &lt;a href=&#34;http://guides.rubyonrails.org/testing.html#testing-your-mailers&#34;&gt;Rails&lt;/a&gt; has inbuilt support for unit testing emails.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TestEmail&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;testSend&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        SimpleSmtpServer server &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; SimpleSmtpServer&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;start&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        sendMessage&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Subject&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Test Body&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;abc@example.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        server&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;stop&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        assertThat&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;server&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getReceivedEmailSize&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(),&lt;/span&gt;equalTo&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Iterator emails &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; server&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getReceivedEmail&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        SmtpMessage email &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;SmtpMessage&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;emails&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;next&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        assertThat&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;email&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getHeaderValue&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Subject&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;),&lt;/span&gt;equalTo&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Subject&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        assertThat&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;email&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getHeaderValue&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;To&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;),&lt;/span&gt;equalTo&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;abc@example.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        assertThat&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;email&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getBody&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(),&lt;/span&gt;equalTo&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Test Body&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-local-developer-box-testing&#34;&gt;2. Local Developer Box Testing&lt;/h2&gt;
+&lt;p&gt;Local SMTP service with standalone application for developer box testing. So after development developers/testers can verify emails functionality locally.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://nilhcem.github.io/FakeSMTP/&#34;&gt;&lt;strong&gt;FakeSMTP&lt;/strong&gt;&lt;/a&gt; No installation required. Just run a simple JAR file. Works on any platform.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jaben/papercut&#34;&gt;&lt;strong&gt;Papercut&lt;/strong&gt;&lt;/a&gt; Windows only solution. Better UI than FakeSMTP but requires installation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;3-hosted-service&#34;&gt;3. Hosted Service&lt;/h2&gt;
+&lt;p&gt;Hosted service with Web UI for Non-Production (QA, UAT, Staging) environments, which helps multiple tester to verify email functionality.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://mailcatcher.me/&#34;&gt;&lt;strong&gt;Mailcatcher&lt;/strong&gt;&lt;/a&gt; It has a web view which allows viewing messages from anywhere, ruby application that can runs independently.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mailtrap.io&#34;&gt;&lt;strong&gt;Mailtrap.io&lt;/strong&gt;&lt;/a&gt; Cloud based SaaS solution, very sophisticated but paid.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/27/featured.png&#34; alt=&#34;mailcatcher.me&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Using tools and techniques which are applicable for different stages of testing, we can effectively test all email scenarios without delivering emails to real users. Above solutions doesn&amp;rsquo;t require any change in production code for testing, just needs different configuration of SMTP server.&lt;/p&gt;
+&lt;p&gt;Happy Testing !!!&lt;/p&gt;
+- //www.sunitparekh.in/posts/27-testing-emails/ - 2022 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Collaboration Techniques for Large Distributed Agile Projects</title>
+        <link>//www.sunitparekh.in/posts/26-collaboration-techniques/</link>
+        <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
+        
+        <guid>//www.sunitparekh.in/posts/26-collaboration-techniques/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/26-collaboration-techniques/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpswwwthoughtworkscominsightsblogcollaboration-techniques-large-distributed-agile-projects&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects&#34;&gt;https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects&lt;/a&gt;&lt;/p&gt;
+- //www.sunitparekh.in/posts/26-collaboration-techniques/ - 2022 sunitparekh.in</description>
+        </item>
     
     
     
@@ -21,7 +133,7 @@
         <description>sUnit Blog //www.sunitparekh.in/posts/25-story-mapping/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpwwwthoughtworkscominsightsblogstory-mapping-visual-way-building-product-backlog&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog&#34;&gt;http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/25/featured.jpg&#34; alt=&#34;Story Map&#34;&gt;&lt;/p&gt;
-- //www.sunitparekh.in/posts/25-story-mapping/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/25-story-mapping/ - 2022 sunitparekh.in</description>
         </item>
     
     
@@ -112,7 +224,7 @@
 &lt;p&gt;Run regular retrospective on Agile adoption and CD progress as health check.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Please share your experience with Agile adoption on legacy project and challenges faced using comments.&lt;/p&gt;
-- //www.sunitparekh.in/posts/24-legacy-projects/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/24-legacy-projects/ - 2022 sunitparekh.in</description>
         </item>
     
     
@@ -126,7 +238,7 @@
         <description>sUnit Blog //www.sunitparekh.in/posts/23-two-stack-cms/ -&lt;h2 id=&#34;article-is-published-on-martinfowlercom-as-infodeck-herehttpmartinfowlercomarticlestwo-stack-cms&#34;&gt;Article is published on MartinFowler.com as InfoDeck &lt;a href=&#34;http://martinfowler.com/articles/two-stack-cms/&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://martinfowler.com/articles/two-stack-cms/&#34;&gt;http://martinfowler.com/articles/two-stack-cms/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/23/two-stack-cms.svg&#34; alt=&#34;Two Stack CMS&#34;&gt;&lt;/p&gt;
-- //www.sunitparekh.in/posts/23-two-stack-cms/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/23-two-stack-cms/ - 2022 sunitparekh.in</description>
         </item>
     
     
@@ -141,18 +253,18 @@
 &lt;p&gt;Lets first look at what we need to follow while logging to achieve structured logging.&lt;/p&gt;
 &lt;h2 id=&#34;what-is-structured-logging&#34;&gt;What is structured logging?&lt;/h2&gt;
 &lt;p&gt;Not only log level is important, but what we log &amp;amp; how we log also matters. Lets look at the default log message format,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;127.0.0.1 [2014-07-22T18:12:27.200+0530] &amp;quot;GET /api/modules/doc_id/navigation HTTP/1.1&amp;quot; 200 476
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;127.0.0.1 [2014-07-22T18:12:27.200+0530] &amp;#34;GET /api/modules/doc_id/navigation HTTP/1.1&amp;#34; 200 476
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Above message is interpreted well by humans since we know, &lt;code&gt;120.0.0.1&lt;/code&gt; is IP, &lt;code&gt;2014-07-22T18:12:27.200+0530&lt;/code&gt; is timestamp, &lt;code&gt;GET&lt;/code&gt; is request methods, &lt;code&gt;200&lt;/code&gt; is response status and &lt;code&gt;476&lt;/code&gt; is server response time. And such interpretation is required for each message logging.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s provide structure to the above log message,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;ip=&amp;quot;127.0.0.1&amp;quot; timestamp=&amp;quot;2014-07-22T18:12:27.200+0530&amp;quot; method=GET
-url=&amp;quot;/api/modules/doc_id/navigation&amp;quot; protocol=HTTP/1.1 status=200 responseTime=476
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;ip=&amp;#34;127.0.0.1&amp;#34; timestamp=&amp;#34;2014-07-22T18:12:27.200+0530&amp;#34; method=GET
+url=&amp;#34;/api/modules/doc_id/navigation&amp;#34; protocol=HTTP/1.1 status=200 responseTime=476
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Above structured message is self explanatory and easy to parse and index by system. This technique of &lt;code&gt;key=value&lt;/code&gt; style logging is also known as logging with context. Using above log message keys we can find all slow pages, by querying logs with &lt;code&gt;status = 200&lt;/code&gt; and &lt;code&gt;responseTime &amp;gt; 2000&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Now lets take some examples of structured logs to understand it usage better.&lt;/p&gt;
 &lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
 &lt;h4 id=&#34;background-job-logs&#34;&gt;Background job logs&lt;/h4&gt;
 &lt;p&gt;Most of the application now days have have background jobs running at regular interval. With following structured logging for each jobs,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;timestamp=&amp;quot;2014-07-22T18:12:27.200+0530&amp;quot; host=server20  tag=jobserver jobName=image_upload
-jobStartTime=&amp;quot;2014-07-22T18:10:00.100+0530&amp;quot; jobEndTime=&amp;quot;2014-07-22T18:12:27.100+0530&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;timestamp=&amp;#34;2014-07-22T18:12:27.200+0530&amp;#34; host=server20  tag=jobserver jobName=image_upload
+jobStartTime=&amp;#34;2014-07-22T18:10:00.100+0530&amp;#34; jobEndTime=&amp;#34;2014-07-22T18:12:27.100+0530&amp;#34;
 jobExecutionTime=9840 jobStatus=success noOfImageUploaded=125
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;following can be achieved,&lt;/p&gt;
 &lt;ul&gt;
@@ -165,36 +277,36 @@ jobExecutionTime=9840 jobStatus=success noOfImageUploaded=125
 &lt;h4 id=&#34;distributed-correlated-logs&#34;&gt;Distributed correlated logs&lt;/h4&gt;
 &lt;p&gt;With distributed and microservice architecture, it is quite natural to have logs spread across systems. With structure logs and using common transaction id shared across systems, we can correlate logs and turn logs into information used for debugging, auditing, reporting and monitoring.&lt;/p&gt;
 &lt;p&gt;Lets take the example of order request after successful payment.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;timestamp=&amp;quot;2014-07-22T18:12:27.100+0530&amp;quot; host=server01 tag=webServer
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;timestamp=&amp;#34;2014-07-22T18:12:27.100+0530&amp;#34; host=server01 tag=webServer
 transactionId=458748939 cientIP=83.84.85.86 sessionId=123456789
-message=&amp;quot;Order confirmation request received&amp;quot;
+message=&amp;#34;Order confirmation request received&amp;#34;
 
-timestamp=&amp;quot;2014-07-22T18:12:27.200+0530&amp;quot; host=server03 tag=orderService
-transactionId=458748939 message=&amp;quot;Order created&amp;quot;
+timestamp=&amp;#34;2014-07-22T18:12:27.200+0530&amp;#34; host=server03 tag=orderService
+transactionId=458748939 message=&amp;#34;Order created&amp;#34;
 orderAmount=550
 
-timestamp=&amp;quot;2014-07-22T18:12:27.250+0530&amp;quot; host=server03 tag=inventoryService
-transactionId=458748939 message=&amp;quot;Online inventory updated&amp;quot;
+timestamp=&amp;#34;2014-07-22T18:12:27.250+0530&amp;#34; host=server03 tag=inventoryService
+transactionId=458748939 message=&amp;#34;Online inventory updated&amp;#34;
 
-timestamp=&amp;quot;2014-07-22T18:12:27.300+0530&amp;quot; host=server07 tag=paymentService
-transactionId=458748939 message=&amp;quot;Payment details stored against order.&amp;quot;
+timestamp=&amp;#34;2014-07-22T18:12:27.300+0530&amp;#34; host=server07 tag=paymentService
+transactionId=458748939 message=&amp;#34;Payment details stored against order.&amp;#34;
 paymentMode=CreditCard
 
-timestamp=&amp;quot;2014-07-22T18:12:27.350+0530&amp;quot; host=server05  tag=couponService
-transactionId=458748939 message=&amp;quot;Redeem coupon ABCDE marked for user.&amp;quot;
+timestamp=&amp;#34;2014-07-22T18:12:27.350+0530&amp;#34; host=server05  tag=couponService
+transactionId=458748939 message=&amp;#34;Redeem coupon ABCDE marked for user.&amp;#34;
 couponType=REWARD couponCode=ABCDE
 
-timestamp=&amp;quot;2014-07-22T18:12:27.400+0530&amp;quot; host=server01 tag=webServer
-transactionId=458748939 message=&amp;quot;Request completed&amp;quot;
+timestamp=&amp;#34;2014-07-22T18:12:27.400+0530&amp;#34; host=server01 tag=webServer
+transactionId=458748939 message=&amp;#34;Request completed&amp;#34;
 
-timestamp=&amp;quot;2014-07-22T18:12:28.500+0530&amp;quot; host=server06  tag=emailService
-transactionId=458748939 message=&amp;quot;Order email sent&amp;quot;
+timestamp=&amp;#34;2014-07-22T18:12:28.500+0530&amp;#34; host=server06  tag=emailService
+transactionId=458748939 message=&amp;#34;Order email sent&amp;#34;
 
-timestamp=&amp;quot;2014-07-22T18:12:27.450+0530&amp;quot; host=server05  tag=rewardService
-transactionId=458748939 message=&amp;quot;Reward points updated.&amp;quot;
+timestamp=&amp;#34;2014-07-22T18:12:27.450+0530&amp;#34; host=server05  tag=rewardService
+transactionId=458748939 message=&amp;#34;Reward points updated.&amp;#34;
 
-timestamp=&amp;quot;2014-07-22T18:15:00.100+0530&amp;quot; host=server25  tag=shippingService
-transactionId=458748939 message=&amp;quot;Order received by shipment system.&amp;quot;
+timestamp=&amp;#34;2014-07-22T18:15:00.100+0530&amp;#34; host=server25  tag=shippingService
+transactionId=458748939 message=&amp;#34;Order received by shipment system.&amp;#34;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;with above messages we can,&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;We are better equipped with debugging issues across systems including async steps of the transaction. Using transactionId we can connect logs and findout client/user specific details and track incident.  e.g. track couponCode used by user with connecting logs from couponService to webServer&lt;/li&gt;
@@ -222,7 +334,7 @@ transactionId=458748939 message=&amp;quot;Order received by shipment system.&amp
 &lt;h2 id=&#34;how-to-aggregate-logs&#34;&gt;How to aggregate logs?&lt;/h2&gt;
 &lt;p&gt;There are multiple approaches available for log aggregation.&lt;/p&gt;
 &lt;h4 id=&#34;log-file-replication&#34;&gt;Log File Replication&lt;/h4&gt;
-&lt;p&gt;Simplest one is, continue logging to file system on application server and set up an independent process to monitor files and send logs to central log server every &amp;lsquo;n&amp;rsquo; milliseconds.&lt;/p&gt;
+&lt;p&gt;Simplest one is, continue logging to file system on application server and set up an independent process to monitor files and send logs to central log server every &amp;rsquo;n&amp;rsquo; milliseconds.&lt;/p&gt;
 &lt;h4 id=&#34;syslog&#34;&gt;Syslog&lt;/h4&gt;
 &lt;p&gt;To achieve real time monitoring and alerting we can use syslog approach, directly feeding logs to a central log server. Syslog is available by default on most of the linux machines. &lt;a href=&#34;http://www.rsyslog.com/&#34;&gt;rsyslog&lt;/a&gt; or &lt;a href=&#34;http://www.balabit.com/network-security/syslog-ng/opensource-logging-system/&#34;&gt;syslog-ng&lt;/a&gt; are two popular syslog implementations.&lt;/p&gt;
 &lt;h4 id=&#34;agents&#34;&gt;Agents&lt;/h4&gt;
@@ -256,7 +368,7 @@ transactionId=458748939 message=&amp;quot;Order received by shipment system.&amp
 &lt;li&gt;Logs collected over years is the biggest data available for analytics. We could also achieve real-time analytics such as most popular products.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;And these are just some examples of structured logging usage. However, once infrastructure in place, it is upto us to explore and find more opportunity to leverage it.&lt;/p&gt;
-- //www.sunitparekh.in/posts/22-structured-logging/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/22-structured-logging/ - 2022 sunitparekh.in</description>
         </item>
     
     
@@ -270,7 +382,7 @@ transactionId=458748939 message=&amp;quot;Order received by shipment system.&amp
         <description>sUnit Blog //www.sunitparekh.in/posts/21-automated-tests/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpwwwthoughtworkscominsightsblogguidelines-structuring-automated-tests&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests&#34;&gt;http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/21/featured.svg&#34; alt=&#34;Automated Tests&#34;&gt;&lt;/p&gt;
-- //www.sunitparekh.in/posts/21-automated-tests/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/21-automated-tests/ - 2022 sunitparekh.in</description>
         </item>
     
     
@@ -284,7 +396,7 @@ transactionId=458748939 message=&amp;quot;Order received by shipment system.&amp
         <description>sUnit Blog //www.sunitparekh.in/posts/20-tdd-influence-design/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpwwwthoughtworkscominsightsblogusing-tdd-influence-design&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;http://www.thoughtworks.com/insights/blog/using-tdd-influence-design&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.thoughtworks.com/insights/blog/using-tdd-influence-design&#34;&gt;http://www.thoughtworks.com/insights/blog/using-tdd-influence-design&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/20/tdd.png&#34; alt=&#34;TDD&#34;&gt;&lt;/p&gt;
-- //www.sunitparekh.in/posts/20-tdd-influence-design/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/20-tdd-influence-design/ - 2022 sunitparekh.in</description>
         </item>
     
     
@@ -313,8 +425,8 @@ transactionId=458748939 message=&amp;quot;Order received by shipment system.&amp
 &lt;p&gt;&lt;strong&gt;Step 2:&lt;/strong&gt; Deploy latest version of the application to green stack. Wait sometime to complete the inflight request on green stack before deployment.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/3-green-v2.svg&#34; alt=&#34;Deploy latest version to green stack&#34; title=&#34;Deploy latest version to green stack&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 3:&lt;/strong&gt; Sanity test green stack using standby load-balancer. Ideally automated, this will make sure deployment is good.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 4:&lt;/strong&gt; Revert heartbeat of the green stack to state &amp;lsquo;live&amp;rsquo;. This will put the green stack back to LIVE load-balancer pool.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/4-green-v2-live.svg&#34; alt=&#34;Revert heartbeat of the green stack to state &amp;lsquo;live&amp;rsquo;&#34; title=&#34;Revert heartbeat of the green stack to state &#39;live&#39;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 4:&lt;/strong&gt; Revert heartbeat of the green stack to state &amp;rsquo;live&amp;rsquo;. This will put the green stack back to LIVE load-balancer pool.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/4-green-v2-live.svg&#34; alt=&#34;Revert heartbeat of the green stack to state &amp;amp;rsquo;live&amp;amp;rsquo;&#34; title=&#34;Revert heartbeat of the green stack to state &#39;live&#39;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;If you notice the blue stack running on v1 and green stack running on v2. And both the stacks are connected to same database. Which means v2 codebase should work with old data models. And if there is any database migration should be carried only after all stack upgraded to latest version.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 5:&lt;/strong&gt; Repeat above steps for blue stack,&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/5-blue-standby.svg&#34; alt=&#34;Change heartbeat of the blue stack&#34; title=&#34;Change heartbeat of the blue stack&#34;&gt;&lt;/p&gt;
@@ -324,94 +436,7 @@ transactionId=458748939 message=&amp;quot;Order received by shipment system.&amp
 &lt;p&gt;&lt;strong&gt;Step 6:&lt;/strong&gt; Optional, run database migration (independent of the deployment)&lt;/p&gt;
 &lt;p&gt;What we achieved is, at any give point of time either blue or green stack is actively servicing the requests without downtime.&lt;/p&gt;
 &lt;p&gt;However, the one point to note here is that during deployment only half capacity available, which means deployment should be avoided at peak load time.&lt;/p&gt;
-- //www.sunitparekh.in/posts/19-blue-green-deployment/ - 2020 sunitparekh.in</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Building highly scalable and performance application using non-blocking architecture</title>
-        <link>//www.sunitparekh.in/posts/18-non-blocking/</link>
-        <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
-        
-        <guid>//www.sunitparekh.in/posts/18-non-blocking/</guid>
-        <description>sUnit Blog //www.sunitparekh.in/posts/18-non-blocking/ -&lt;p&gt;I have been working on web application development since last 12+ years and had privileged to work on more than 20+ different project. Now days the expectations from web apps are totally different than it was few years back. End users are provided with rich content on single page (Amazon, CNN, &amp;hellip;). On a single page, lots of data needs to be mashed up and data may come from different sources.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/1-website-screenshots.jpg&#34; alt=&#34;Websites with data mashup&#34;&gt;&lt;/p&gt;
-&lt;p&gt;We know how to put together the N-tier architecture.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/2-service-oriented-architecture.svg&#34; alt=&#34;Service oriented architecture&#34;&gt;&lt;/p&gt;
-&lt;p&gt;And the request workflow will be as following,&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/3-request-workflow.png&#34; alt=&#34;Request workflow&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Now if we notice the above workflow, it is sequential and most of the time thread on web server and app server spend is waiting for response form app server and database respectively rather than doing some meaningful work (processing). This is what is called BLOCKING. Lets take same example and try to draw web server thread timeline.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/4-sequencial-timeline.jpg&#34; alt=&#34;Sequential workflow timeline&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/5-legends.jpg&#34; alt=&#34;timeline legends&#34;&gt;&lt;/p&gt;
-&lt;p&gt;RED is time spend by thread waiting for response/result from app server. And GREEN is the time spend doing some meaningful processing by web server. In above example it was total 10 sec response time and 1 thread involved in processing. Lets assume that above 3 calls to app server can be parallelise to optimise response time to end user.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/6-standard-parallel-processing.jpg&#34; alt=&#34;Standard parallel processing&#34;&gt;&lt;/p&gt;
-&lt;p&gt;In parallel processing the response time was reduced to 7 sec. However, total 4 threads participated in processing and in total 13 sec of thread time it took. Again here also the processing was BLOCKING. Which means parallel processing provides better performance in terms of response time, but required more resources to process the request.&lt;/p&gt;
-&lt;p&gt;What we need is parallel processing with non-blocking threads. Means when the thread is waiting for the response from other systems, it should be made available to do some other meaningful work. Something like following,&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/7-non-blocking-execution.jpg&#34; alt=&#34;Non blocking execution timeline&#34;&gt;&lt;/p&gt;
-&lt;p&gt;If we can achieve non-blocking architecture than the response time goes down to as low as 5 sec. And also consumes less thread resources. Now the question is how I can achieve this? In today&amp;rsquo;s polygot programming world, we have plenty of alternatives available.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/8-tech-options.jpg&#34; alt=&#34;Non blocking technical options&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Non-blocking is not new, Nginx is event based and uses similar principle, Messsage based architecture is another classical example to solve similar problems, however that brings in asynchronous complexity.  MongoDB and similar polygot persistence works on same principles and provides eventual consistency.&lt;/p&gt;
-&lt;p&gt;I recommend trying out following technology/framework choices to achieve non-blocking architecture,&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://nodejs.org/&#34;&gt;NodeJS&lt;/a&gt;&lt;/strong&gt;, this is the most popular choice so far in today&amp;rsquo;s technology choices. And Passanger can provide NodeJS cluster running multiple process on one machine. However, programming in NodeJS is all about callbacks. And lots of OO programmers don&amp;rsquo;t like it. There are plenty of frameworks in NodeJS for web application, the popular ones are is &lt;a href=&#34;http://expressjs.com/&#34;&gt;express.js&lt;/a&gt;, &lt;a href=&#34;http://meteor.com/&#34;&gt;meteor&lt;/a&gt; &amp;hellip;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://www.playframework.com/&#34;&gt;Play Framework&lt;/a&gt;&lt;/strong&gt;, this is Scala based web application framework. Framework is very mature and easy to adpat for Java shop organisations. It uses internally Netty, Scala and Akka and provides very nice abstracts to avoids callbacks hell. Based on Scala means love for OO programmers as well. Akka can also be used independently.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; Consider non-blocking architecture when your application have blocking calls and wait times. If your application has more about computation/processing and less or negligible blocking/waiting time the above architecture pattern may not provide better or favorable results.&lt;/p&gt;
-- //www.sunitparekh.in/posts/18-non-blocking/ - 2020 sunitparekh.in</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Cross functional requirements</title>
-        <link>//www.sunitparekh.in/posts/17-xfr/</link>
-        <pubDate>Sat, 04 May 2013 00:00:00 +0000</pubDate>
-        
-        <guid>//www.sunitparekh.in/posts/17-xfr/</guid>
-        <description>sUnit Blog //www.sunitparekh.in/posts/17-xfr/ -&lt;p&gt;It&amp;rsquo;s always been difficult to identify and easy to miss-out on creating stories for cross functional requirement (XFR) a.k.a NonFunctional requirements (NFR) during inception. Inception is a short, time boxed, 2-3 weeks initial requirement gathering phase of the software development project lifecycle. I have been to multiple inception and figured out a nice and collaborating way of capturing and converting cross functional requirements into stories. We run it like a workshops, collaborating with client to identify and capture XFRs.&lt;/p&gt;
-&lt;p&gt;After understanding and going to functional requirement, plan for XFR session with all the members of the team including stakeholders. We have list of XFRs printed on the cards at ThoughtWorks similar to the one shown below.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/17/cross-functional-requirements.png&#34; alt=&#34;cross functional bilities&#34;&gt;&lt;/p&gt;
-&lt;p&gt;There are around 35+ such &amp;ldquo;bility&amp;rdquo; that need to be discussed. During the session we take one &amp;lsquo;bility&amp;rsquo; at a time and not down on stickies what are the requirements related to that &amp;lsquo;bility&amp;rsquo;. It is important to discuss each and every &amp;lsquo;bility&amp;rsquo; and there is a possibility few are not application to the project we are working on. Mark them as NA.&lt;/p&gt;
-&lt;p&gt;Once all the &amp;lsquo;bility&amp;rsquo; is discussed break out in small team, discuss each XFR requirements and convert them into stories.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/17/cards-wall.jpg&#34; alt=&#34;cross functional requirement wall&#34;&gt;&lt;/p&gt;
-&lt;p&gt;After creating the story list of XFRs, treat them as other stories. Combine the backlog of functional and XFR stories, estimate and prioritise stories together.&lt;/p&gt;
-&lt;p&gt;As documentation,  I like to use mind map since it fits that format nicely. Please have a look at the one displayed below for your reference.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/17/mind-map.png&#34; alt=&#34;cross functional requirement mindmap&#34;&gt;&lt;/p&gt;
-&lt;p&gt;I like calling NFRs as cross functional requirements (XFR) rather than non-functional, since most of the non-functional requirements are kind of indirect functional requirements. e.g. page load time for end user is performance requirement which indirectly related to better user experience.&lt;/p&gt;
-- //www.sunitparekh.in/posts/17-xfr/ - 2020 sunitparekh.in</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Why responsive web design?</title>
-        <link>//www.sunitparekh.in/posts/16-responsive-design/</link>
-        <pubDate>Tue, 12 Feb 2013 00:00:00 +0000</pubDate>
-        
-        <guid>//www.sunitparekh.in/posts/16-responsive-design/</guid>
-        <description>sUnit Blog //www.sunitparekh.in/posts/16-responsive-design/ -&lt;p&gt;Lots of time when I discuss Responsive Web Design (RWD), sometime I find out that we don&amp;rsquo;t know the problem, we are trying to solve with RWD. And the objective of this blog post is look into the history and learn what problem we try to solve with RWD.&lt;/p&gt;
-&lt;p&gt;The multiple screen resolution problem is not new, even in old days the monitors had  different screen resolution. The problem exist from old days. In first attempt we solved multiple screen resolution problem with Fixed Width web page design (Fixed Width Layout Approach).  960px based fixed width design were very common for websites. One of the most popular CSS framework with fixed width was blueprint. The problem with fixed-width layout is white (empty) space on side of the screens. Designer also used that space by having creative backgrounds for the page.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/cricinfo-white-space.png&#34; alt=&#34;Cricinfo fix-width web pages&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/apple-with-white-space.png&#34; alt=&#34;Apple fix-width web pages&#34;&gt;&lt;/p&gt;
-&lt;p&gt;The multiple screen resolution problem didn&amp;rsquo;t go away, after smartphones and tablets the problem became more prominent. In second attempt to solve the problem, used multiple templates for different devices on server side (Seperate Mobile Website Approach). The downside of using the server side device specific templating is that, HTTP caching can&amp;rsquo;t be done. Which is non-negociable for scalability, and to overcome caching issues, on first request the application server recognises the browser agent and redirects the site to device specific page like &lt;a href=&#34;http://www.cricinfo.com&#34;&gt;www.cricinfo.com&lt;/a&gt; or m.cricinfo.com By using different sites/urls for different devices  HTTP caching problem was solved.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/cricinfo-white-space.png&#34; alt=&#34;Cricinfo fix-width web pages&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/cricinfo-mobile-redirect.png&#34; alt=&#34;Cricinfo mobile redirect web page&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Try visiting page: &lt;a href=&#34;http://www.guardian.com&#34;&gt;guardian.com&lt;/a&gt; and &lt;a href=&#34;http://www.cricinfo.com&#34;&gt;cricinfo.com&lt;/a&gt; on mobile device and notice the redirect.&lt;/p&gt;
-&lt;p&gt;Now the problem started with maintaining multiple sites/applications. Use experience was not consistent across devices. It was very difficult to keep the feature parity across the device specific sites. Application development, maintenance &amp;amp; production cost &amp;amp; effort increased significantly.&lt;/p&gt;
-&lt;p&gt;During same time period people realised that we are wasting so much screen real estate by doing the fixed grid layout, and the &lt;a href=&#34;http://fluidgrids.com/&#34;&gt;fluid grid&lt;/a&gt; layout design started becoming popular for desktops.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/fluid-grid-layout.png&#34; alt=&#34;Fluid grid desktop web page&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/fluid-grid-layout-mobile.png&#34; alt=&#34;Fluid grid mobile web page&#34;&gt;&lt;/p&gt;
-&lt;p&gt;However, fluid grid system depends heavily on browser support and performance. Making it old browser compatible was a big task.&lt;/p&gt;
-&lt;p&gt;The latest attempt of providing best viewing experience on all devices &amp;amp; screen resolution at client side (browsers) is known as Responsive Web Design.  With frameworks like &lt;a href=&#34;http://twitter.github.com/bootstrap/&#34;&gt;Twitter Bootstrap&lt;/a&gt;,  it has become easy to get started learning and using Responsive Web Design concept.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/bootstrap-desktop.png&#34; alt=&#34;Bootstrap desktop web page&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/bootstrap-mobile.png&#34; alt=&#34;Bootstrap mobile web page&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Notice menu, text, links and buttons in above two screenshots. Same site visited in desktop browser and mobile browser.&lt;/p&gt;
-&lt;p&gt;To achieve HTTP caching it was very important that all this dynamic behaviour to be kept on client side, so server has to render the same page for all devices irrespective of the screen sizes and resolutions. With this approach HTTP caching CDN/Reverse proxy can be leveraged agin to achieve high scalability.&lt;/p&gt;
-&lt;p&gt;Be aware when using Responsive Web Design,
-Works best with latest browsers and high end smartphones, Since RWD relies heavily on client side optimisation and adoption, client needs be powerful.
-Slow internet connection speed will give bad user experience since it might take very long to load page. Since all content irrespective of the device is transferred to client. Sometime multiple variations are kept like Menu and the overall web page size increases. Specially for mobile the page size might be very large. Checkout the &lt;a href=&#34;https://github.com/twitter/bootstrap&#34;&gt;size of twitter bootstrap&lt;/a&gt;.&lt;/p&gt;
-- //www.sunitparekh.in/posts/16-responsive-design/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/19-blue-green-deployment/ - 2022 sunitparekh.in</description>
         </item>
     
     

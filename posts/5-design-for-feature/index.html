@@ -38,7 +38,6 @@ if (!doNotTrack) {
 </script>
 
 
-
 <script src="/vendor/js/jquery.min.js" ></script>
 <script src="/vendor/js/popper.min.js" ></script>
 <script src="/vendor/js/bootstrap.min.js" ></script>
@@ -159,7 +158,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2020 sunitparekh.in
+	2022 sunitparekh.in
 	
 
     </div>
@@ -334,18 +333,18 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                     <p>I have been practicing agile development engineering practices for almost more than 4 yrs now. One of practice about agile development is it talks about &lsquo;code for story&rsquo;, which means you just do simple enough implementation required for the story. Why? because you don&rsquo;t know what&rsquo;s required in future and will remain as it is or change.</p>
 <p>Now considering &lsquo;code for story&rsquo; practice, this is what happens on the ground. Pair picks up a first story of a feature and &lsquo;just did what was required for the story to implement&rsquo;, after few days another pair picks up a story on same feature and says &lsquo;Ohh&hellip; I have to first refactor the code so that it can be extended to implement next story&rsquo;, which means the work done by first story is partially or fully refactored. Fine, but similar approach continues as we keep picking up subsequent stories and Project Manager freaks out saying &lsquo;Refactoring is good, but when it required for every story that we implement is not just right OR something wrong with my understanding of refactoring.&rsquo;</p>
 <p>Let me take a very trivial example to explain above scenario. For the first story, I just used simple member variable since that story deals with only one item,</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Employee</span> <span style="color:#f92672">{</span>
-    String department<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>next story extends the feature by changing simple member variable to List of objects which means changing all signatures and yes changing all tests as part of refactoring.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Employee</span> <span style="color:#f92672">{</span>
-    List<span style="color:#f92672">&lt;</span>Department<span style="color:#f92672">&gt;</span> departments<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>Now next story requires extending the feature again with changing List to Map and again same refactoring but more tedious.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Employee</span> <span style="color:#f92672">{</span>
-    Map<span style="color:#f92672">&lt;</span>string<span style="color:#f92672">,</span> Department<span style="color:#f92672">&gt;</span> departments<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>And we end up refactoring (throwing away) work done in previous stories. This scenario happens quite lot of time on projects.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Employee</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    String department<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>next story extends the feature by changing simple member variable to List of objects which means changing all signatures and yes changing all tests as part of refactoring.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Employee</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    List<span style="color:#f92672">&lt;</span>Department<span style="color:#f92672">&gt;</span> departments<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>Now next story requires extending the feature again with changing List to Map and again same refactoring but more tedious.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Employee</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    Map<span style="color:#f92672">&lt;</span>string<span style="color:#f92672">,</span> Department<span style="color:#f92672">&gt;</span> departments<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>And we end up refactoring (throwing away) work done in previous stories. This scenario happens quite lot of time on projects.</p>
 <p>We can avoid such scenarios on project by redefining a practice as &lsquo;Design for Feature and Code for Story&rsquo;. Which means when I am working on any story I keep in mind the all feature stories and design my application to cater for feature while making sure I just code what is required for the story in play.</p>
 <p>To achieve this</p>
 <ul>
@@ -378,8 +377,8 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                 
                 
-                <a class="older-posts">
-			Previous<br>No older posts.
+                <a class="older-posts" href="//www.sunitparekh.in/about/">
+			Previous<br>About Me
                 </a>
                 
             </nav>
@@ -405,7 +404,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2020 sunitparekh.in
+	2022 sunitparekh.in
 	
 </div>
             </div>

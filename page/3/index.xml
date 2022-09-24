@@ -5,10 +5,97 @@
     <description>Recent content on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2020 sunitparekh.in</copyright>
-    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <copyright>2022 sunitparekh.in</copyright>
+    <lastBuildDate>Mon, 04 Apr 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="//www.sunitparekh.in/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Building highly scalable and performance application using non-blocking architecture</title>
+        <link>//www.sunitparekh.in/posts/18-non-blocking/</link>
+        <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
+        
+        <guid>//www.sunitparekh.in/posts/18-non-blocking/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/18-non-blocking/ -&lt;p&gt;I have been working on web application development since last 12+ years and had privileged to work on more than 20+ different project. Now days the expectations from web apps are totally different than it was few years back. End users are provided with rich content on single page (Amazon, CNN, &amp;hellip;). On a single page, lots of data needs to be mashed up and data may come from different sources.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/1-website-screenshots.jpg&#34; alt=&#34;Websites with data mashup&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We know how to put together the N-tier architecture.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/2-service-oriented-architecture.svg&#34; alt=&#34;Service oriented architecture&#34;&gt;&lt;/p&gt;
+&lt;p&gt;And the request workflow will be as following,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/3-request-workflow.png&#34; alt=&#34;Request workflow&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now if we notice the above workflow, it is sequential and most of the time thread on web server and app server spend is waiting for response form app server and database respectively rather than doing some meaningful work (processing). This is what is called BLOCKING. Lets take same example and try to draw web server thread timeline.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/4-sequencial-timeline.jpg&#34; alt=&#34;Sequential workflow timeline&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/5-legends.jpg&#34; alt=&#34;timeline legends&#34;&gt;&lt;/p&gt;
+&lt;p&gt;RED is time spend by thread waiting for response/result from app server. And GREEN is the time spend doing some meaningful processing by web server. In above example it was total 10 sec response time and 1 thread involved in processing. Lets assume that above 3 calls to app server can be parallelise to optimise response time to end user.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/6-standard-parallel-processing.jpg&#34; alt=&#34;Standard parallel processing&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In parallel processing the response time was reduced to 7 sec. However, total 4 threads participated in processing and in total 13 sec of thread time it took. Again here also the processing was BLOCKING. Which means parallel processing provides better performance in terms of response time, but required more resources to process the request.&lt;/p&gt;
+&lt;p&gt;What we need is parallel processing with non-blocking threads. Means when the thread is waiting for the response from other systems, it should be made available to do some other meaningful work. Something like following,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/7-non-blocking-execution.jpg&#34; alt=&#34;Non blocking execution timeline&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If we can achieve non-blocking architecture than the response time goes down to as low as 5 sec. And also consumes less thread resources. Now the question is how I can achieve this? In today&amp;rsquo;s polygot programming world, we have plenty of alternatives available.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/18/8-tech-options.jpg&#34; alt=&#34;Non blocking technical options&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Non-blocking is not new, Nginx is event based and uses similar principle, Messsage based architecture is another classical example to solve similar problems, however that brings in asynchronous complexity.  MongoDB and similar polygot persistence works on same principles and provides eventual consistency.&lt;/p&gt;
+&lt;p&gt;I recommend trying out following technology/framework choices to achieve non-blocking architecture,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://nodejs.org/&#34;&gt;NodeJS&lt;/a&gt;&lt;/strong&gt;, this is the most popular choice so far in today&amp;rsquo;s technology choices. And Passanger can provide NodeJS cluster running multiple process on one machine. However, programming in NodeJS is all about callbacks. And lots of OO programmers don&amp;rsquo;t like it. There are plenty of frameworks in NodeJS for web application, the popular ones are is &lt;a href=&#34;http://expressjs.com/&#34;&gt;express.js&lt;/a&gt;, &lt;a href=&#34;http://meteor.com/&#34;&gt;meteor&lt;/a&gt; &amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://www.playframework.com/&#34;&gt;Play Framework&lt;/a&gt;&lt;/strong&gt;, this is Scala based web application framework. Framework is very mature and easy to adpat for Java shop organisations. It uses internally Netty, Scala and Akka and provides very nice abstracts to avoids callbacks hell. Based on Scala means love for OO programmers as well. Akka can also be used independently.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; Consider non-blocking architecture when your application have blocking calls and wait times. If your application has more about computation/processing and less or negligible blocking/waiting time the above architecture pattern may not provide better or favorable results.&lt;/p&gt;
+- //www.sunitparekh.in/posts/18-non-blocking/ - 2022 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Cross functional requirements</title>
+        <link>//www.sunitparekh.in/posts/17-xfr/</link>
+        <pubDate>Sat, 04 May 2013 00:00:00 +0000</pubDate>
+        
+        <guid>//www.sunitparekh.in/posts/17-xfr/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/17-xfr/ -&lt;p&gt;It&amp;rsquo;s always been difficult to identify and easy to miss-out on creating stories for cross functional requirement (XFR) a.k.a NonFunctional requirements (NFR) during inception. Inception is a short, time boxed, 2-3 weeks initial requirement gathering phase of the software development project lifecycle. I have been to multiple inception and figured out a nice and collaborating way of capturing and converting cross functional requirements into stories. We run it like a workshops, collaborating with client to identify and capture XFRs.&lt;/p&gt;
+&lt;p&gt;After understanding and going to functional requirement, plan for XFR session with all the members of the team including stakeholders. We have list of XFRs printed on the cards at ThoughtWorks similar to the one shown below.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/17/cross-functional-requirements.png&#34; alt=&#34;cross functional bilities&#34;&gt;&lt;/p&gt;
+&lt;p&gt;There are around 35+ such &amp;ldquo;bility&amp;rdquo; that need to be discussed. During the session we take one &amp;lsquo;bility&amp;rsquo; at a time and not down on stickies what are the requirements related to that &amp;lsquo;bility&amp;rsquo;. It is important to discuss each and every &amp;lsquo;bility&amp;rsquo; and there is a possibility few are not application to the project we are working on. Mark them as NA.&lt;/p&gt;
+&lt;p&gt;Once all the &amp;lsquo;bility&amp;rsquo; is discussed break out in small team, discuss each XFR requirements and convert them into stories.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/17/cards-wall.jpg&#34; alt=&#34;cross functional requirement wall&#34;&gt;&lt;/p&gt;
+&lt;p&gt;After creating the story list of XFRs, treat them as other stories. Combine the backlog of functional and XFR stories, estimate and prioritise stories together.&lt;/p&gt;
+&lt;p&gt;As documentation,  I like to use mind map since it fits that format nicely. Please have a look at the one displayed below for your reference.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/17/mind-map.png&#34; alt=&#34;cross functional requirement mindmap&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I like calling NFRs as cross functional requirements (XFR) rather than non-functional, since most of the non-functional requirements are kind of indirect functional requirements. e.g. page load time for end user is performance requirement which indirectly related to better user experience.&lt;/p&gt;
+- //www.sunitparekh.in/posts/17-xfr/ - 2022 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Why responsive web design?</title>
+        <link>//www.sunitparekh.in/posts/16-responsive-design/</link>
+        <pubDate>Tue, 12 Feb 2013 00:00:00 +0000</pubDate>
+        
+        <guid>//www.sunitparekh.in/posts/16-responsive-design/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/16-responsive-design/ -&lt;p&gt;Lots of time when I discuss Responsive Web Design (RWD), sometime I find out that we don&amp;rsquo;t know the problem, we are trying to solve with RWD. And the objective of this blog post is look into the history and learn what problem we try to solve with RWD.&lt;/p&gt;
+&lt;p&gt;The multiple screen resolution problem is not new, even in old days the monitors had  different screen resolution. The problem exist from old days. In first attempt we solved multiple screen resolution problem with Fixed Width web page design (Fixed Width Layout Approach).  960px based fixed width design were very common for websites. One of the most popular CSS framework with fixed width was blueprint. The problem with fixed-width layout is white (empty) space on side of the screens. Designer also used that space by having creative backgrounds for the page.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/cricinfo-white-space.png&#34; alt=&#34;Cricinfo fix-width web pages&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/apple-with-white-space.png&#34; alt=&#34;Apple fix-width web pages&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The multiple screen resolution problem didn&amp;rsquo;t go away, after smartphones and tablets the problem became more prominent. In second attempt to solve the problem, used multiple templates for different devices on server side (Seperate Mobile Website Approach). The downside of using the server side device specific templating is that, HTTP caching can&amp;rsquo;t be done. Which is non-negociable for scalability, and to overcome caching issues, on first request the application server recognises the browser agent and redirects the site to device specific page like &lt;a href=&#34;https://www.cricinfo.com&#34;&gt;www.cricinfo.com&lt;/a&gt; or m.cricinfo.com By using different sites/urls for different devices  HTTP caching problem was solved.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/cricinfo-white-space.png&#34; alt=&#34;Cricinfo fix-width web pages&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/cricinfo-mobile-redirect.png&#34; alt=&#34;Cricinfo mobile redirect web page&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Try visiting page: &lt;a href=&#34;http://www.guardian.com&#34;&gt;guardian.com&lt;/a&gt; and &lt;a href=&#34;http://www.cricinfo.com&#34;&gt;cricinfo.com&lt;/a&gt; on mobile device and notice the redirect.&lt;/p&gt;
+&lt;p&gt;Now the problem started with maintaining multiple sites/applications. Use experience was not consistent across devices. It was very difficult to keep the feature parity across the device specific sites. Application development, maintenance &amp;amp; production cost &amp;amp; effort increased significantly.&lt;/p&gt;
+&lt;p&gt;During same time period people realised that we are wasting so much screen real estate by doing the fixed grid layout, and the &lt;a href=&#34;http://fluidgrids.com/&#34;&gt;fluid grid&lt;/a&gt; layout design started becoming popular for desktops.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/fluid-grid-layout.png&#34; alt=&#34;Fluid grid desktop web page&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/fluid-grid-layout-mobile.png&#34; alt=&#34;Fluid grid mobile web page&#34;&gt;&lt;/p&gt;
+&lt;p&gt;However, fluid grid system depends heavily on browser support and performance. Making it old browser compatible was a big task.&lt;/p&gt;
+&lt;p&gt;The latest attempt of providing best viewing experience on all devices &amp;amp; screen resolution at client side (browsers) is known as Responsive Web Design.  With frameworks like &lt;a href=&#34;http://twitter.github.com/bootstrap/&#34;&gt;Twitter Bootstrap&lt;/a&gt;,  it has become easy to get started learning and using Responsive Web Design concept.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/bootstrap-desktop.png&#34; alt=&#34;Bootstrap desktop web page&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/16/bootstrap-mobile.png&#34; alt=&#34;Bootstrap mobile web page&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Notice menu, text, links and buttons in above two screenshots. Same site visited in desktop browser and mobile browser.&lt;/p&gt;
+&lt;p&gt;To achieve HTTP caching it was very important that all this dynamic behaviour to be kept on client side, so server has to render the same page for all devices irrespective of the screen sizes and resolutions. With this approach HTTP caching CDN/Reverse proxy can be leveraged agin to achieve high scalability.&lt;/p&gt;
+&lt;p&gt;Be aware when using Responsive Web Design,
+Works best with latest browsers and high end smartphones, Since RWD relies heavily on client side optimisation and adoption, client needs be powerful.
+Slow internet connection speed will give bad user experience since it might take very long to load page. Since all content irrespective of the device is transferred to client. Sometime multiple variations are kept like Menu and the overall web page size increases. Specially for mobile the page size might be very large. Checkout the &lt;a href=&#34;https://github.com/twitter/bootstrap&#34;&gt;size of twitter bootstrap&lt;/a&gt;.&lt;/p&gt;
+- //www.sunitparekh.in/posts/16-responsive-design/ - 2022 sunitparekh.in</description>
+        </item>
     
     
     
@@ -35,7 +122,7 @@ For Blacklist, create a copy of the prod database and choose the fields to be an
 &lt;p&gt;Data Anonymization tool supports both blacklist and whitelist approach for anonymization. Read more here about the tool and how easy to use it is .&lt;/p&gt;
 &lt;p&gt;Data Anonymization tool &lt;a href=&#34;http://sunitparekh.github.com/data-anonymization&#34;&gt;home page&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/15/featured.png&#34; alt=&#34;Data Anonymization Techniques&#34;&gt;&lt;/p&gt;
-- //www.sunitparekh.in/posts/15-data-anonymization-techniques/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/15-data-anonymization-techniques/ - 2022 sunitparekh.in</description>
         </item>
     
     
@@ -50,7 +137,7 @@ For Blacklist, create a copy of the prod database and choose the fields to be an
 &lt;p&gt;Also we had few bugs manifesting themselves only in production and we were not able to reproduce the same on our local environment due to the dataset. In production the data has evolved over a period of time and might have some bad/inconsistent data leading to edge cases or defects not happening in other environments. To fix such issues it was required to have a production dataset to enable our team to debug and fix such issues with confidence rather than guess-work.&lt;/p&gt;
 &lt;p&gt;One other time, we had issues with our migration scripts, when the migration script failed during production release. The reason was again the kind of data that had evolved in the production system. It could have been avoided if we had a production dump to rehearse the production deployment.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/14/data-anonymization.png&#34; alt=&#34;Why data anonymization&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Considering all the above hurdles, we got together our Product Owner, and the Dev ops and Security team mates for a production dump. The initial reaction was a NO: the primary reason it being &amp;lsquo;Users&amp;rsquo; Personal Data&#39; and according to Data Protection Act &amp;ldquo;No one should have access to users personal data&amp;rdquo;. Now what? the answer was, we can get production dataset if we sanitize/mask/anonaymize users personal data, we can get the data from production. We quickly started googling around to findout is there a quick and easy tool available to achieve anonymization of the database. Hmm&amp;hellip;. no luck.&lt;/p&gt;
+&lt;p&gt;Considering all the above hurdles, we got together our Product Owner, and the Dev ops and Security team mates for a production dump. The initial reaction was a NO: the primary reason it being &amp;lsquo;Users&amp;rsquo; Personal Data&amp;rsquo; and according to Data Protection Act &amp;ldquo;No one should have access to users personal data&amp;rdquo;. Now what? the answer was, we can get production dataset if we sanitize/mask/anonaymize users personal data, we can get the data from production. We quickly started googling around to findout is there a quick and easy tool available to achieve anonymization of the database. Hmm&amp;hellip;. no luck.&lt;/p&gt;
 &lt;p&gt;Considering distributed teams spanning out of country, concern of security with data is increased multiple fold.&lt;/p&gt;
 &lt;p&gt;We thought lets write some scripts and anonymize production data. However, it has some serious security and data protection issues. Such as there is possiblity of missing out on certain attributes at all and those data slips into non production environments. Also it has issues with new content gets passed into non production as is without anonymization by default. There are two techniques for anonymization blacklist and whitelist.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/14/data-anonymization-techniques.png&#34; alt=&#34;Data anonymization techniques&#34;&gt;&lt;/p&gt;
@@ -58,7 +145,7 @@ For Blacklist, create a copy of the prod database and choose the fields to be an
 &lt;p&gt;Data Anonymization tool supports both blacklist and whitelist approach for anonymization. Read more here about the tool and how easy to use it is .&lt;/p&gt;
 &lt;p&gt;Data Anonymization tool &lt;a href=&#34;http://sunitparekh.github.com/data-anonymization&#34;&gt;home page&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In my &lt;a href=&#34;//www.sunitparekh.in/posts/15-data-anonymization-techniques&#34;&gt;next post&lt;/a&gt; I describe blacklist and whitelist anonymization techniques in more detail. Write to me (Twitter: @sunitparekh) or comment on this blog for any questions, feedback and suggestions.&lt;/p&gt;
-- //www.sunitparekh.in/posts/14-data-anonymization/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/14-data-anonymization/ - 2022 sunitparekh.in</description>
         </item>
     
     
@@ -72,7 +159,7 @@ For Blacklist, create a copy of the prod database and choose the fields to be an
         <description>sUnit Blog //www.sunitparekh.in/posts/13-push-notification/ -&lt;p&gt;Now days it&amp;rsquo;s kind of defacto that every website requires some sort of mechanism to update changes dynamically. On my last project we had a specific need to keep updating the count of messages like Facebook does for unread messages. The website is a dot com site with reasonable user base online. It was challenging to come up with a solution so that we can get this developed quickly and scale well with the load.&lt;/p&gt;
 &lt;p&gt;We discussed multiple approach and chose one for development.&lt;/p&gt;
 &lt;h2 id=&#34;approach-1-poll-for-changes&#34;&gt;Approach 1: Poll for changes&lt;/h2&gt;
-&lt;p&gt;This is kind of classical pull approach where every &amp;lsquo;n&amp;rsquo; second poll for changes and update UI. The problem with polling every 30 sec were,&lt;/p&gt;
+&lt;p&gt;This is kind of classical pull approach where every &amp;rsquo;n&amp;rsquo; second poll for changes and update UI. The problem with polling every 30 sec were,&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/13/poll.png&#34; alt=&#34;poll for changes&#34;&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Unnecessary extra load on the server means fake http requests, 1 will have new message out of 100+ requests. Major hurdle in scaling app, suddenly the no of requests on server will increase multiple fold.&lt;/li&gt;
@@ -102,7 +189,7 @@ For Blacklist, create a copy of the prod database and choose the fields to be an
 &lt;li&gt;High availability and scalability using PaaS&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;We are using &lt;a href=&#34;http://www.pubnub.com/&#34;&gt;PubNub&lt;/a&gt; as PaaS and experience so far is really good.&lt;/p&gt;
-- //www.sunitparekh.in/posts/13-push-notification/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/13-push-notification/ - 2022 sunitparekh.in</description>
         </item>
     
     
@@ -140,7 +227,7 @@ Taking &amp;ldquo;Story Lifecycle&amp;rdquo; and &amp;ldquo;Anatomy of Iteration
 &lt;/ol&gt;
 &lt;p&gt;Please share your comments, suggestions &amp;amp;experiences about this kind of sessions. What more we should cover, what we should watch out for&amp;hellip;&lt;/p&gt;
 &lt;p&gt;Special thanks to &lt;a href=&#34;http://pandafunda.blogspot.com/&#34;&gt;Sarbashrestha Panda&lt;/a&gt; for reviewing the post and recommending valuable amendments.&lt;/p&gt;
-- //www.sunitparekh.in/posts/12-distributed-team-communication/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/12-distributed-team-communication/ - 2022 sunitparekh.in</description>
         </item>
     
     
@@ -157,12 +244,12 @@ Taking &amp;ldquo;Story Lifecycle&amp;rdquo; and &amp;ldquo;Anatomy of Iteration
 &lt;p&gt;The process map was built on a large canvas/wall, so that it would constantly be visible to all the participant in the inception. We started building the process map by plotting a timeline on x axis and noting different steps in the process flow on the y axis. Also, the actors/roles involved in the process were indicated for each process. A legends for denoting the actors was also put up on the wall for the ease of identification. Building this full as-is process map of the as-is process was done over multiple sessions spanning a couple of days.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Stage 1&lt;/strong&gt;: After couple of session with business first cut of the as-is process timeline map looked something like this&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/11/process-timeline-map-as-is-stage1.jpg&#34; alt=&#34;process timeline map as is stage 1&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Stage 2&lt;/strong&gt;: After another iteration, the as-is process shaped up to something like this. It was also clearer in the client stakeholders&#39; minds. It also had functional area clearly called out.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stage 2&lt;/strong&gt;: After another iteration, the as-is process shaped up to something like this. It was also clearer in the client stakeholders&amp;rsquo; minds. It also had functional area clearly called out.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/11/process-timeline-map-as-is.jpg&#34; alt=&#34;process timeline map as is&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Advantage of having large visible canvas for the current as-is model is that it provided us a reference point at all times in inception. It became one of the living document for the team.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Stage 3&lt;/strong&gt;: We then took this forward and mapped the future to-be process on top of it by putting magic chart in-between.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/11/process-timeline-map-to-be.jpg&#34; alt=&#34;process timeline map to be&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Being able to superimpose the potential &amp;lsquo;to-be&amp;rsquo; process on top of the &amp;lsquo;as-is&amp;rsquo; process allowed everyone to be able to &amp;lsquo;see&amp;rsquo; how it was lighter weight in comparison. It also allowed us to ensure and double check that we were indeed covering the key activities / steps from the current process and losing / getting rid of only the non value adding ones.&lt;/p&gt;
+&lt;p&gt;Being able to superimpose the potential &amp;rsquo;to-be&amp;rsquo; process on top of the &amp;lsquo;as-is&amp;rsquo; process allowed everyone to be able to &amp;lsquo;see&amp;rsquo; how it was lighter weight in comparison. It also allowed us to ensure and double check that we were indeed covering the key activities / steps from the current process and losing / getting rid of only the non value adding ones.&lt;/p&gt;
 &lt;p&gt;At the end, we digitalized above process map.  This structure / format / way of creating a process map was very well received by the business teams as well. They, in fact, suggested that the maps should be left as is in the room for anyone new to the business to use as a starting point for understanding their business processed. That feedback was indeed awesome. :) To me, this is called innovation and collaborative effort was what made it possible.&lt;/p&gt;
 &lt;p&gt;Stationary used for building such map:&lt;/p&gt;
 &lt;ul&gt;
@@ -173,7 +260,7 @@ Taking &amp;ldquo;Story Lifecycle&amp;rdquo; and &amp;ldquo;Anatomy of Iteration
 &lt;li&gt;Sharpies&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Post written collaboratively with &lt;a href=&#34;https://twitter.com/#!/_birinder&#34;&gt;Birinder Singh&lt;/a&gt;&lt;/p&gt;
-- //www.sunitparekh.in/posts/11-process-timeline-map/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/11-process-timeline-map/ - 2022 sunitparekh.in</description>
         </item>
     
     
@@ -208,7 +295,7 @@ Taking &amp;ldquo;Story Lifecycle&amp;rdquo; and &amp;ldquo;Anatomy of Iteration
 &lt;li&gt;In our case we put products as rows grouped together with same product family (yellow stickies in picture)  and different processes steps followed for the product as columns (pink and blue stickies in picture - blue stickies are sub steps). .&lt;/li&gt;
 &lt;li&gt;We used different colors and size of stickies to show products (yellow), process steps (pink &amp;amp; blue small) and how they differ from each other (orange small).&lt;/li&gt;
 &lt;/ul&gt;
-- //www.sunitparekh.in/posts/10-product-map/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/10-product-map/ - 2022 sunitparekh.in</description>
         </item>
     
     
@@ -220,7 +307,7 @@ Taking &amp;ldquo;Story Lifecycle&amp;rdquo; and &amp;ldquo;Anatomy of Iteration
         
         <guid>//www.sunitparekh.in/posts/9-term-cloud/</guid>
         <description>sUnit Blog //www.sunitparekh.in/posts/9-term-cloud/ -&lt;p&gt;During inception one of the job of the inception team is to learn the terminology used by the business. Generally the board is put up with all the business buzzwords, terms that they use in their day to day job. We started doing that on one board called &amp;lsquo;Term Cloud&amp;rsquo;. Generally this board gets populated as side effect of all the games &amp;amp; exercise we do during inception also know as glossary, domain terms.&lt;/p&gt;
-&lt;p&gt;Our team came with an idea to play &amp;lsquo;term cloud&amp;rsquo; as one of the exercise during the inception in initial days.&lt;/p&gt;
+&lt;p&gt;Our team came with an idea to play &amp;rsquo;term cloud&amp;rsquo; as one of the exercise during the inception in initial days.&lt;/p&gt;
 &lt;h3 id=&#34;exercise-build-term-cloud&#34;&gt;Exercise: Build Term Cloud&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Objective&lt;/strong&gt;: Everyone speaks the same business terms including development team, SMEs and stakeholders. Helps with more collaborative communication during inception. Better domain understanding. Less confusions with buzzwords having same &amp;amp; different meanings.
 &lt;strong&gt;When to play&lt;/strong&gt;: After a few sessions (preferably on the second day after you get a critical mass of terms)
@@ -248,117 +335,7 @@ Taking &amp;ldquo;Story Lifecycle&amp;rdquo; and &amp;ldquo;Anatomy of Iteration
 &lt;ul&gt;
 &lt;li&gt;Following is the sample from the inception that we are going through. Yellow sticky is the term and Orange is used as note to explain the term.&lt;/li&gt;
 &lt;/ul&gt;
-- //www.sunitparekh.in/posts/9-term-cloud/ - 2020 sunitparekh.in</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Ruby vs Java vs .NET - How much does it matter on web projects?</title>
-        <link>//www.sunitparekh.in/posts/8-programming-language/</link>
-        <pubDate>Wed, 25 Apr 2012 00:00:00 +0000</pubDate>
-        
-        <guid>//www.sunitparekh.in/posts/8-programming-language/</guid>
-        <description>sUnit Blog //www.sunitparekh.in/posts/8-programming-language/ -&lt;p&gt;I was looking into some statistics on my multiple web project and found one very interesting stats on simple Lines of Code (LOC).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/8/programming-language.png&#34; alt=&#34;code distribution metrics&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;* numbers are pure production code and does not include test code&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;After looking at above metrics, I asked myself: during initial stage of the project, are we thinking enough about every part of the software and doing enough research around which language, technology &amp;amp; framework to use for project?&lt;/p&gt;
-&lt;p&gt;On most of the projects we just talk and talk about which language is the right choice (Java vs Ruby vs .NET vs &amp;hellip;) for your web application development. We are in so much rush to start that we don&amp;rsquo;t even have time to do enough study/spike on each technology decision and provide right technical solution to client.&lt;/p&gt;
-&lt;p&gt;So what should I be thinking about, apart from core language and framework while deciding on architecture in initial stage of the project?&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Understand project and its components/parts during inception, discuss &amp;amp; make initial decision about choosing framework &amp;amp; library of different technologies. Make sure all components fit well with each other.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Web 2.0:&lt;/strong&gt; JavaScript, HTML and CSS is big part of your web application code. Do not ignore that.
-&lt;ol&gt;
-&lt;li&gt;Is my application AJAX heavy? (page reload is kind of old fashioned now days). Choosing framework like angularjs, backbone.js, knockoutjs&lt;/li&gt;
-&lt;li&gt;Does my application has image cropping or chart need. Should I do it in browser using JavaScript such as raphaeljs.&lt;/li&gt;
-&lt;li&gt;Check out templating engine and its support e.g. mustache, haml and its port for specific language.&lt;/li&gt;
-&lt;li&gt;how about using less or saas for CSS. This can help reducing your css effort significantly and more beautiful, concise, clean code.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Data Store:&lt;/strong&gt; Which data store is the right choice for kind of data processed and maintained by application?
-&lt;ol&gt;
-&lt;li&gt;Choices are plenty now days, starting from traditional relational database, NoSQL databases (mongodb, riak, couchdb &amp;hellip;), graph database (neo4j), fast in-memory like databases (redis &amp;amp; memcached).&lt;/li&gt;
-&lt;li&gt;Can I leverage client side data store (browser datastore) for features like storing user preferences, session information etc.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Evaluate Product as a Service:&lt;/strong&gt; Can I leverage on PaaS for any feature in application?
-&lt;ol&gt;
-&lt;li&gt;Do I need push notification service to serve dynamic content on my pages? checkout pubnub&lt;/li&gt;
-&lt;li&gt;Is image processing such as resize and cropping is required for website? checkout services like lightspun and boxresizer&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Go Could:&lt;/strong&gt; Discuss and make initial thoughts on production environment setup and deployment. This helps on setting up local env which can be as close as production env and other non production setup.
-&lt;ol&gt;
-&lt;li&gt;Leverage could as much as possible.&lt;/li&gt;
-&lt;li&gt;Do I need to provision env using Chef or Puppet? Can I use same for local env setting and using tools like vagrant?&lt;/li&gt;
-&lt;li&gt;Can I use S3 with ColudFront to serve my static content?&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Automated testing:&lt;/strong&gt; how much and at which level? Decide on unit tests, integration tests and functional tests distribution. Make sure not to repeat same tests.  Follow software testing pyramid structure.
-&lt;ol&gt;
-&lt;li&gt;Unit can be at different levels
-&lt;ol&gt;
-&lt;li&gt;core programming level unit tests&lt;/li&gt;
-&lt;li&gt;javascript unit tests are important since most of the sites now days are javascript heavy.  Check out Jasmine for JavaScript unit testing.&lt;/li&gt;
-&lt;li&gt;template level unit tests&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;Service level integration tests using your choice of unit testing framework.&lt;/li&gt;
-&lt;li&gt;end2end functional tests, their are plenty of tools now days for browser functional testing. checkout phantomjs, tobi, cucumber, capybara and last but most popular selenium webdriver.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Rest all that should continue such as choosing right technology with framework for server side development such as RoR or Java/Spring or Python/django etc&amp;hellip;&lt;/p&gt;
-&lt;p&gt;Happy project envisioning.&lt;/p&gt;
-- //www.sunitparekh.in/posts/8-programming-language/ - 2020 sunitparekh.in</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Amazon S3 learning with HTTPS serving very slow</title>
-        <link>//www.sunitparekh.in/posts/7-amazon-s3-https/</link>
-        <pubDate>Sat, 25 Feb 2012 00:00:00 +0000</pubDate>
-        
-        <guid>//www.sunitparekh.in/posts/7-amazon-s3-https/</guid>
-        <description>sUnit Blog //www.sunitparekh.in/posts/7-amazon-s3-https/ -&lt;p&gt;On our site we have lots of images thumbnail getting served on HTTPS by Amazon S3. We were seeing very high load time in browsers upto 2-3 sec for approx 40-50KB size.&lt;/p&gt;
-&lt;p&gt;We tried following load test on S3 and the results helped us making decision.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/7/amazon-s3-slow-with-https.png&#34; alt=&#34;amazon s3 performance issue with serving images over HTTPS&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion:&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Serving S3 content over HTTPS is slow&lt;/li&gt;
-&lt;li&gt;S3 performance is not effected (does not degred by # of objects in bucket&lt;/li&gt;
-&lt;li&gt;Using CloudFront to serve S3 content over HTTPS gives significant improvement in time&lt;/li&gt;
-&lt;/ol&gt;
-- //www.sunitparekh.in/posts/7-amazon-s3-https/ - 2020 sunitparekh.in</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>NoSQL learning &amp; gotchas based on MongoDB experience</title>
-        <link>//www.sunitparekh.in/posts/6-nosql-learnings/</link>
-        <pubDate>Tue, 14 Feb 2012 00:00:00 +0000</pubDate>
-        
-        <guid>//www.sunitparekh.in/posts/6-nosql-learnings/</guid>
-        <description>sUnit Blog //www.sunitparekh.in/posts/6-nosql-learnings/ -&lt;p&gt;I have been working on NoSQL database had some interesting learning on when not to use NoSQL database. All following learning are based on my NoSQL experience with mongoDB. This is an ongoing document which I am planning to keep updating as I keep learning.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/6/mongodb-logo.png&#34; alt=&#34;mongodb&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;when-not-to-choose-nosql-database&#34;&gt;When NOT to choose NoSQL database&lt;/h3&gt;
-&lt;p&gt;One primary gotcha of new technology is, when to use it by knowing when not to use it. Here is list of reasons, when you have to be careful choosing NoSQL,&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;If your data is structured. Means your data follows predefined structure for all records like online web store, ticketing system etc.&lt;/li&gt;
-&lt;li&gt;Your data has lots of relationships, including bidirectional like many to many etc. You need to carry references around in the dataset like customer has orders and order belongs to customer.&lt;/li&gt;
-&lt;li&gt;Need lots of indexes on a document. You need search your document by multiple search criteria, means either your data is structured or multiple document stored as single document in database. Need to revisit your document design.&lt;/li&gt;
-&lt;li&gt;Transaction is important. need to update multiple dataset and it should either all succeed or fail like financial transaction of transfer from one account to another and required multiple data updates.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;nosql-gotchas&#34;&gt;NoSQL gotchas&lt;/h3&gt;
-&lt;p&gt;Once you choose NoSQL don&amp;rsquo;t fall into trap of designing and applying SQL best practices to NoSQL. Here is few example where SQL and NoSQL database differs.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Do not assume your query is successful if it returns successfully. MongoDB query returns immediately and queues up queries on server for execution.&lt;/li&gt;
-&lt;li&gt;It&amp;rsquo;s not good practice to let your document grow over time.  MongoDB stores document in sequential manner without much buffer, assuming the document doesn&amp;rsquo;t grow over a period of time. And if you add more content in your document it has to move your whole document in new place. Trick is to create document with full content and default values OR adding some temp content while creating and removing it immediately.&lt;/li&gt;
-&lt;li&gt;Indexes are more costly in NoSQL than standard SQL database.&lt;/li&gt;
-&lt;/ol&gt;
-- //www.sunitparekh.in/posts/6-nosql-learnings/ - 2020 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/9-term-cloud/ - 2022 sunitparekh.in</description>
         </item>
     
     

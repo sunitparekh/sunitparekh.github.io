@@ -38,7 +38,6 @@ if (!doNotTrack) {
 </script>
 
 
-
 <script src="/vendor/js/jquery.min.js" ></script>
 <script src="/vendor/js/popper.min.js" ></script>
 <script src="/vendor/js/bootstrap.min.js" ></script>
@@ -159,7 +158,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2020 sunitparekh.in
+	2022 sunitparekh.in
 	
 
     </div>
@@ -969,18 +968,18 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <p>Lets first look at what we need to follow while logging to achieve structured logging.</p>
 <h2 id="what-is-structured-logging">What is structured logging?</h2>
 <p>Not only log level is important, but what we log &amp; how we log also matters. Lets look at the default log message format,</p>
-<pre><code class="language-log" data-lang="log">127.0.0.1 [2014-07-22T18:12:27.200+0530] &quot;GET /api/modules/doc_id/navigation HTTP/1.1&quot; 200 476
+<pre tabindex="0"><code class="language-log" data-lang="log">127.0.0.1 [2014-07-22T18:12:27.200+0530] &#34;GET /api/modules/doc_id/navigation HTTP/1.1&#34; 200 476
 </code></pre><p>Above message is interpreted well by humans since we know, <code>120.0.0.1</code> is IP, <code>2014-07-22T18:12:27.200+0530</code> is timestamp, <code>GET</code> is request methods, <code>200</code> is response status and <code>476</code> is server response time. And such interpretation is required for each message logging.</p>
 <p>Let&rsquo;s provide structure to the above log message,</p>
-<pre><code class="language-log" data-lang="log">ip=&quot;127.0.0.1&quot; timestamp=&quot;2014-07-22T18:12:27.200+0530&quot; method=GET
-url=&quot;/api/modules/doc_id/navigation&quot; protocol=HTTP/1.1 status=200 responseTime=476
+<pre tabindex="0"><code class="language-log" data-lang="log">ip=&#34;127.0.0.1&#34; timestamp=&#34;2014-07-22T18:12:27.200+0530&#34; method=GET
+url=&#34;/api/modules/doc_id/navigation&#34; protocol=HTTP/1.1 status=200 responseTime=476
 </code></pre><p>Above structured message is self explanatory and easy to parse and index by system. This technique of <code>key=value</code> style logging is also known as logging with context. Using above log message keys we can find all slow pages, by querying logs with <code>status = 200</code> and <code>responseTime &gt; 2000</code>.</p>
 <p>Now lets take some examples of structured logs to understand it usage better.</p>
 <h2 id="examples">Examples</h2>
 <h4 id="background-job-logs">Background job logs</h4>
 <p>Most of the application now days have have background jobs running at regular interval. With following structured logging for each jobs,</p>
-<pre><code class="language-log" data-lang="log">timestamp=&quot;2014-07-22T18:12:27.200+0530&quot; host=server20  tag=jobserver jobName=image_upload
-jobStartTime=&quot;2014-07-22T18:10:00.100+0530&quot; jobEndTime=&quot;2014-07-22T18:12:27.100+0530&quot;
+<pre tabindex="0"><code class="language-log" data-lang="log">timestamp=&#34;2014-07-22T18:12:27.200+0530&#34; host=server20  tag=jobserver jobName=image_upload
+jobStartTime=&#34;2014-07-22T18:10:00.100+0530&#34; jobEndTime=&#34;2014-07-22T18:12:27.100+0530&#34;
 jobExecutionTime=9840 jobStatus=success noOfImageUploaded=125
 </code></pre><p>following can be achieved,</p>
 <ul>
@@ -993,36 +992,36 @@ jobExecutionTime=9840 jobStatus=success noOfImageUploaded=125
 <h4 id="distributed-correlated-logs">Distributed correlated logs</h4>
 <p>With distributed and microservice architecture, it is quite natural to have logs spread across systems. With structure logs and using common transaction id shared across systems, we can correlate logs and turn logs into information used for debugging, auditing, reporting and monitoring.</p>
 <p>Lets take the example of order request after successful payment.</p>
-<pre><code class="language-log" data-lang="log">timestamp=&quot;2014-07-22T18:12:27.100+0530&quot; host=server01 tag=webServer
+<pre tabindex="0"><code class="language-log" data-lang="log">timestamp=&#34;2014-07-22T18:12:27.100+0530&#34; host=server01 tag=webServer
 transactionId=458748939 cientIP=83.84.85.86 sessionId=123456789
-message=&quot;Order confirmation request received&quot;
+message=&#34;Order confirmation request received&#34;
 
-timestamp=&quot;2014-07-22T18:12:27.200+0530&quot; host=server03 tag=orderService
-transactionId=458748939 message=&quot;Order created&quot;
+timestamp=&#34;2014-07-22T18:12:27.200+0530&#34; host=server03 tag=orderService
+transactionId=458748939 message=&#34;Order created&#34;
 orderAmount=550
 
-timestamp=&quot;2014-07-22T18:12:27.250+0530&quot; host=server03 tag=inventoryService
-transactionId=458748939 message=&quot;Online inventory updated&quot;
+timestamp=&#34;2014-07-22T18:12:27.250+0530&#34; host=server03 tag=inventoryService
+transactionId=458748939 message=&#34;Online inventory updated&#34;
 
-timestamp=&quot;2014-07-22T18:12:27.300+0530&quot; host=server07 tag=paymentService
-transactionId=458748939 message=&quot;Payment details stored against order.&quot;
+timestamp=&#34;2014-07-22T18:12:27.300+0530&#34; host=server07 tag=paymentService
+transactionId=458748939 message=&#34;Payment details stored against order.&#34;
 paymentMode=CreditCard
 
-timestamp=&quot;2014-07-22T18:12:27.350+0530&quot; host=server05  tag=couponService
-transactionId=458748939 message=&quot;Redeem coupon ABCDE marked for user.&quot;
+timestamp=&#34;2014-07-22T18:12:27.350+0530&#34; host=server05  tag=couponService
+transactionId=458748939 message=&#34;Redeem coupon ABCDE marked for user.&#34;
 couponType=REWARD couponCode=ABCDE
 
-timestamp=&quot;2014-07-22T18:12:27.400+0530&quot; host=server01 tag=webServer
-transactionId=458748939 message=&quot;Request completed&quot;
+timestamp=&#34;2014-07-22T18:12:27.400+0530&#34; host=server01 tag=webServer
+transactionId=458748939 message=&#34;Request completed&#34;
 
-timestamp=&quot;2014-07-22T18:12:28.500+0530&quot; host=server06  tag=emailService
-transactionId=458748939 message=&quot;Order email sent&quot;
+timestamp=&#34;2014-07-22T18:12:28.500+0530&#34; host=server06  tag=emailService
+transactionId=458748939 message=&#34;Order email sent&#34;
 
-timestamp=&quot;2014-07-22T18:12:27.450+0530&quot; host=server05  tag=rewardService
-transactionId=458748939 message=&quot;Reward points updated.&quot;
+timestamp=&#34;2014-07-22T18:12:27.450+0530&#34; host=server05  tag=rewardService
+transactionId=458748939 message=&#34;Reward points updated.&#34;
 
-timestamp=&quot;2014-07-22T18:15:00.100+0530&quot; host=server25  tag=shippingService
-transactionId=458748939 message=&quot;Order received by shipment system.&quot;
+timestamp=&#34;2014-07-22T18:15:00.100+0530&#34; host=server25  tag=shippingService
+transactionId=458748939 message=&#34;Order received by shipment system.&#34;
 </code></pre><p>with above messages we can,</p>
 <ul>
 <li>We are better equipped with debugging issues across systems including async steps of the transaction. Using transactionId we can connect logs and findout client/user specific details and track incident.  e.g. track couponCode used by user with connecting logs from couponService to webServer</li>
@@ -1050,7 +1049,7 @@ transactionId=458748939 message=&quot;Order received by shipment system.&quot;
 <h2 id="how-to-aggregate-logs">How to aggregate logs?</h2>
 <p>There are multiple approaches available for log aggregation.</p>
 <h4 id="log-file-replication">Log File Replication</h4>
-<p>Simplest one is, continue logging to file system on application server and set up an independent process to monitor files and send logs to central log server every &lsquo;n&rsquo; milliseconds.</p>
+<p>Simplest one is, continue logging to file system on application server and set up an independent process to monitor files and send logs to central log server every &rsquo;n&rsquo; milliseconds.</p>
 <h4 id="syslog">Syslog</h4>
 <p>To achieve real time monitoring and alerting we can use syslog approach, directly feeding logs to a central log server. Syslog is available by default on most of the linux machines. <a href="http://www.rsyslog.com/">rsyslog</a> or <a href="http://www.balabit.com/network-security/syslog-ng/opensource-logging-system/">syslog-ng</a> are two popular syslog implementations.</p>
 <h4 id="agents">Agents</h4>
@@ -1129,7 +1128,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2020 sunitparekh.in
+	2022 sunitparekh.in
 	
 </div>
             </div>

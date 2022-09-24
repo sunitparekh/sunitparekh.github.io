@@ -38,7 +38,6 @@ if (!doNotTrack) {
 </script>
 
 
-
 <script src="/vendor/js/jquery.min.js" ></script>
 <script src="/vendor/js/popper.min.js" ></script>
 <script src="/vendor/js/bootstrap.min.js" ></script>
@@ -159,7 +158,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2020 sunitparekh.in
+	2022 sunitparekh.in
 	
 
     </div>
@@ -515,27 +514,27 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <p>We need Fake SMTP server for following different scenarios,</p>
 <h2 id="1-unit-testing">1. Unit Testing</h2>
 <p>Embedded version with Assertion support for Unit Testing, so emails can be verified using asserts in unit tests. <a href="http://quintanasoft.com/dumbster/">Dumbster</a> is handy library here. Some frameworks like <a href="http://guides.rubyonrails.org/testing.html#testing-your-mailers">Rails</a> has inbuilt support for unit testing emails.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestEmail</span> <span style="color:#f92672">{</span>
-
-    <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testSend</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        SimpleSmtpServer server <span style="color:#f92672">=</span> SimpleSmtpServer<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
-
-        sendMessage<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Subject&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Test Body&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;abc@example.com&#34;</span><span style="color:#f92672">);</span>
-
-        server<span style="color:#f92672">.</span><span style="color:#a6e22e">stop</span><span style="color:#f92672">();</span>
-
-        assertThat<span style="color:#f92672">(</span>server<span style="color:#f92672">.</span><span style="color:#a6e22e">getReceivedEmailSize</span><span style="color:#f92672">(),</span>equalTo<span style="color:#f92672">(</span>1<span style="color:#f92672">));</span>
-
-        Iterator emails <span style="color:#f92672">=</span> server<span style="color:#f92672">.</span><span style="color:#a6e22e">getReceivedEmail</span><span style="color:#f92672">();</span>
-        SmtpMessage email <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>SmtpMessage<span style="color:#f92672">)</span>emails<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
-
-        assertThat<span style="color:#f92672">(</span>email<span style="color:#f92672">.</span><span style="color:#a6e22e">getHeaderValue</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Subject&#34;</span><span style="color:#f92672">),</span>equalTo<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Subject&#34;</span><span style="color:#f92672">));</span>
-        assertThat<span style="color:#f92672">(</span>email<span style="color:#f92672">.</span><span style="color:#a6e22e">getHeaderValue</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;To&#34;</span><span style="color:#f92672">),</span>equalTo<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abc@example.com&#34;</span><span style="color:#f92672">));</span>
-        assertThat<span style="color:#f92672">(</span>email<span style="color:#f92672">.</span><span style="color:#a6e22e">getBody</span><span style="color:#f92672">(),</span>equalTo<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Test Body&#34;</span><span style="color:#f92672">));</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><h2 id="2-local-developer-box-testing">2. Local Developer Box Testing</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestEmail</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testSend</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        SimpleSmtpServer server <span style="color:#f92672">=</span> SimpleSmtpServer<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        sendMessage<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Subject&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Test Body&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;abc@example.com&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        server<span style="color:#f92672">.</span><span style="color:#a6e22e">stop</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        assertThat<span style="color:#f92672">(</span>server<span style="color:#f92672">.</span><span style="color:#a6e22e">getReceivedEmailSize</span><span style="color:#f92672">(),</span>equalTo<span style="color:#f92672">(</span>1<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Iterator emails <span style="color:#f92672">=</span> server<span style="color:#f92672">.</span><span style="color:#a6e22e">getReceivedEmail</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        SmtpMessage email <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>SmtpMessage<span style="color:#f92672">)</span>emails<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        assertThat<span style="color:#f92672">(</span>email<span style="color:#f92672">.</span><span style="color:#a6e22e">getHeaderValue</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Subject&#34;</span><span style="color:#f92672">),</span>equalTo<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Subject&#34;</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>        assertThat<span style="color:#f92672">(</span>email<span style="color:#f92672">.</span><span style="color:#a6e22e">getHeaderValue</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;To&#34;</span><span style="color:#f92672">),</span>equalTo<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abc@example.com&#34;</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>        assertThat<span style="color:#f92672">(</span>email<span style="color:#f92672">.</span><span style="color:#a6e22e">getBody</span><span style="color:#f92672">(),</span>equalTo<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Test Body&#34;</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="2-local-developer-box-testing">2. Local Developer Box Testing</h2>
 <p>Local SMTP service with standalone application for developer box testing. So after development developers/testers can verify emails functionality locally.</p>
 <ol>
 <li><a href="https://nilhcem.github.io/FakeSMTP/"><strong>FakeSMTP</strong></a> No installation required. Just run a simple JAR file. Works on any platform.</li>
@@ -596,7 +595,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2020 sunitparekh.in
+	2022 sunitparekh.in
 	
 </div>
             </div>
