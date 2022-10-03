@@ -13,6 +13,60 @@
     
     
         <item>
+        <title>Using TDD to Influence Design</title>
+        <link>//www.sunitparekh.in/posts/20-tdd-influence-design/</link>
+        <pubDate>Fri, 06 Jun 2014 00:00:00 +0000</pubDate>
+        
+        <guid>//www.sunitparekh.in/posts/20-tdd-influence-design/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/20-tdd-influence-design/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpwwwthoughtworkscominsightsblogusing-tdd-influence-design&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;http://www.thoughtworks.com/insights/blog/using-tdd-influence-design&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.thoughtworks.com/insights/blog/using-tdd-influence-design&#34;&gt;http://www.thoughtworks.com/insights/blog/using-tdd-influence-design&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/20/tdd.png&#34; alt=&#34;TDD&#34;&gt;&lt;/p&gt;
+- //www.sunitparekh.in/posts/20-tdd-influence-design/ - 2022 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Zero downtime using blue-green deployment strategy</title>
+        <link>//www.sunitparekh.in/posts/19-blue-green-deployment/</link>
+        <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
+        
+        <guid>//www.sunitparekh.in/posts/19-blue-green-deployment/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/19-blue-green-deployment/ -&lt;p&gt;Zero downtime during application deployment is one of the key requirements for continuos delivery. And no business would like their site to be down and showing maintenance page every few days/weeks during deployment.&lt;/p&gt;
+&lt;p&gt;To achieve this we decide to go for &lt;a href=&#34;http://martinfowler.com/bliki/BlueGreenDeployment.html&#34;&gt;blue-green deployment&lt;/a&gt;. However, we were challenged with how to do this in legacy style data center infrastructure where we are,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Not able to spin new machines and throw away old machines automatically using scripts&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t have ability to add/remove instances using scripts from load-balancer&lt;/li&gt;
+&lt;li&gt;Network level configurations are done manually like firewall setting&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Also keeping full in-active stack didn&amp;rsquo;t sound good idea. Now we had to made some modifications to achieve zero downtime using blue-green deployment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Decision 1:&lt;/strong&gt; We took out database from the application deployment stack. Since we were using NoSQL MongoDB database, it didn&amp;rsquo;t require any schema migration etc. However, we required to follow design principle, always write code which is backward compatible with the data models. And if there is any data migration required it should be run after deployment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Decision 2:&lt;/strong&gt; Use RPM to package apps and run like a service to start and stop. This enabled us to deploy application easily with the standard chef recipes. All application components are packaged as RPMs and published to repository from CI pipeline. Standardise deployment process across all components/application. We used FPM gem to build RPMs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Decision 3:&lt;/strong&gt; All application/component should provide 2 state heartbeat, live or standby, with ability to change the current state of the heartbeat at runtime using api call. Configure one load-balance to listen to live heartbeat and another to standby. Allows to add/remove instances from load-balancer by changing heartbeat state.&lt;/p&gt;
+&lt;p&gt;And with above changes the deployment steps are,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/1-state-before-deployment.svg&#34; alt=&#34;Pre deployment state&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 1:&lt;/strong&gt; Change heartbeat of the green stack to state &amp;lsquo;standby&amp;rsquo;. This will remove green stack from LIVE load-balancer pool and no new request send to green stack.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/2-green-standby.svg&#34; alt=&#34;Change heartbeat of the green stack&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 2:&lt;/strong&gt; Deploy latest version of the application to green stack. Wait sometime to complete the inflight request on green stack before deployment.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/3-green-v2.svg&#34; alt=&#34;Deploy latest version to green stack&#34; title=&#34;Deploy latest version to green stack&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 3:&lt;/strong&gt; Sanity test green stack using standby load-balancer. Ideally automated, this will make sure deployment is good.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 4:&lt;/strong&gt; Revert heartbeat of the green stack to state &amp;rsquo;live&amp;rsquo;. This will put the green stack back to LIVE load-balancer pool.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/4-green-v2-live.svg&#34; alt=&#34;Revert heartbeat of the green stack to state &amp;amp;rsquo;live&amp;amp;rsquo;&#34; title=&#34;Revert heartbeat of the green stack to state &#39;live&#39;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If you notice the blue stack running on v1 and green stack running on v2. And both the stacks are connected to same database. Which means v2 codebase should work with old data models. And if there is any database migration should be carried only after all stack upgraded to latest version.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 5:&lt;/strong&gt; Repeat above steps for blue stack,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/5-blue-standby.svg&#34; alt=&#34;Change heartbeat of the blue stack&#34; title=&#34;Change heartbeat of the blue stack&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/6-blue-v2.svg&#34; alt=&#34;Deploy latest version to blue stack&#34; title=&#34;Deploy latest version to blue stack&#34;&gt;&lt;/p&gt;
+&lt;p&gt;And finally v2 deployed fully,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/19/7-blue-v2-live.svg&#34; alt=&#34;latest version deployed on all stacks&#34; title=&#34;latest version deployed on all stacks&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 6:&lt;/strong&gt; Optional, run database migration (independent of the deployment)&lt;/p&gt;
+&lt;p&gt;What we achieved is, at any give point of time either blue or green stack is actively servicing the requests without downtime.&lt;/p&gt;
+&lt;p&gt;However, the one point to note here is that during deployment only half capacity available, which means deployment should be avoided at peak load time.&lt;/p&gt;
+- //www.sunitparekh.in/posts/19-blue-green-deployment/ - 2022 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
         <title>Building highly scalable and performance application using non-blocking architecture</title>
         <link>//www.sunitparekh.in/posts/18-non-blocking/</link>
         <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
@@ -261,81 +315,6 @@ Taking &amp;ldquo;Story Lifecycle&amp;rdquo; and &amp;ldquo;Anatomy of Iteration
 &lt;/ul&gt;
 &lt;p&gt;Post written collaboratively with &lt;a href=&#34;https://twitter.com/#!/_birinder&#34;&gt;Birinder Singh&lt;/a&gt;&lt;/p&gt;
 - //www.sunitparekh.in/posts/11-process-timeline-map/ - 2022 sunitparekh.in</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Project envisioning exercise - Product Map</title>
-        <link>//www.sunitparekh.in/posts/10-product-map/</link>
-        <pubDate>Sun, 29 Apr 2012 00:00:00 +0000</pubDate>
-        
-        <guid>//www.sunitparekh.in/posts/10-product-map/</guid>
-        <description>sUnit Blog //www.sunitparekh.in/posts/10-product-map/ -&lt;p&gt;One of the key factors for our project is that the client is almost 80+ yrs old in business. There are multiple products with different variations of it in the market. Now one of the task/session was to understand their product space, their groupings and how they differ from each other.&lt;/p&gt;
-&lt;p&gt;For understanding product and its family and how they differ from each other, we (Inception team - Sunit, Amit, Panda and Birinder) came up with a simple idea of creating a &amp;ldquo;Product Map&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Objective&lt;/strong&gt;: To understand the breadth and depth of the products and their variations.
-&lt;strong&gt;Duration&lt;/strong&gt;: 30 min to 1 hr (depends on the # of products and product families)
-&lt;strong&gt;Participants&lt;/strong&gt;: SMEs and Business Stakeholders
-&lt;strong&gt;Preparation&lt;/strong&gt;: Create large board with matrix/grid having products on rows and comparison factors as columns. Write down all the known products and comparison factors on stickies to save time.&lt;/p&gt;
-&lt;h3 id=&#34;how-to-execute&#34;&gt;How to execute&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;First steps to ask business to complete the product list, and then group them based similarities&lt;/li&gt;
-&lt;li&gt;Rearrange product list, keep the most popular product family and product on top&lt;/li&gt;
-&lt;li&gt;Discuss comparison factors, against which the products need to be compared or studied. Few options to consider are,
-3.1 User base for the product
-3.2 Process steps/work-flow the product goes through
-3.3 Numbers related to product, such as revenue, time factors etc.&lt;/li&gt;
-&lt;li&gt;Start with most popular product first and considering it as the base, discuss the variations in other products in the same family. Put notes on small stickies for each variation discovered.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/10/product-map.jpg&#34; alt=&#34;product map&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;variation&#34;&gt;Variation&lt;/h3&gt;
-&lt;p&gt;Can be used for technical debt matrix e.g. put different modules/areas of codebase as rows, technical parameter such as complexity, test coverage, clean code etc as columns and start populating matrix. Can be very useful for creating visuals for legacy codebase.&lt;/p&gt;
-&lt;h3 id=&#34;toolkit&#34;&gt;Toolkit&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;In our case we put products as rows grouped together with same product family (yellow stickies in picture)  and different processes steps followed for the product as columns (pink and blue stickies in picture - blue stickies are sub steps). .&lt;/li&gt;
-&lt;li&gt;We used different colors and size of stickies to show products (yellow), process steps (pink &amp;amp; blue small) and how they differ from each other (orange small).&lt;/li&gt;
-&lt;/ul&gt;
-- //www.sunitparekh.in/posts/10-product-map/ - 2022 sunitparekh.in</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Project envisioning exercise - Term cloud</title>
-        <link>//www.sunitparekh.in/posts/9-term-cloud/</link>
-        <pubDate>Sat, 28 Apr 2012 00:00:00 +0000</pubDate>
-        
-        <guid>//www.sunitparekh.in/posts/9-term-cloud/</guid>
-        <description>sUnit Blog //www.sunitparekh.in/posts/9-term-cloud/ -&lt;p&gt;During inception one of the job of the inception team is to learn the terminology used by the business. Generally the board is put up with all the business buzzwords, terms that they use in their day to day job. We started doing that on one board called &amp;lsquo;Term Cloud&amp;rsquo;. Generally this board gets populated as side effect of all the games &amp;amp; exercise we do during inception also know as glossary, domain terms.&lt;/p&gt;
-&lt;p&gt;Our team came with an idea to play &amp;rsquo;term cloud&amp;rsquo; as one of the exercise during the inception in initial days.&lt;/p&gt;
-&lt;h3 id=&#34;exercise-build-term-cloud&#34;&gt;Exercise: Build Term Cloud&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Objective&lt;/strong&gt;: Everyone speaks the same business terms including development team, SMEs and stakeholders. Helps with more collaborative communication during inception. Better domain understanding. Less confusions with buzzwords having same &amp;amp; different meanings.
-&lt;strong&gt;When to play&lt;/strong&gt;: After a few sessions (preferably on the second day after you get a critical mass of terms)
-&lt;strong&gt;Duration&lt;/strong&gt;: 15-20 min
-&lt;strong&gt;Participants&lt;/strong&gt;: Business SME&amp;rsquo;s &amp;amp; Stakeholders
-&lt;strong&gt;Preparation&lt;/strong&gt;: Prepare board having &amp;lsquo;Term Cloud&amp;rsquo; written on it with few samples.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/9/term-cloud.jpg&#34; alt=&#34;term cloud&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;how-to-execute&#34;&gt;How to execute&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Distributes stickets to write buzzwords, jargons, terms.&lt;/li&gt;
-&lt;li&gt;Remember one term one sticky.&lt;/li&gt;
-&lt;li&gt;Give 5 min to write all the terms.&lt;/li&gt;
-&lt;li&gt;Ask participant to go in round robin fashion, explain the term and put it up on the board.&lt;/li&gt;
-&lt;li&gt;Put small sticky if that term requires explanation.&lt;/li&gt;
-&lt;li&gt;If different terms has same meaning, club them together.&lt;/li&gt;
-&lt;li&gt;If same terms has multiple meaning, come up with new term for less used meaning.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/9/term-cloud-sample.jpg&#34; alt=&#34;term cloud sample&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;variations&#34;&gt;Variations&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Instead of everyone writing stickies, go in round robin and facilitator writes it on the board.&lt;/li&gt;
-&lt;li&gt;Create Term Cloud board and keep populating as and when new terms pops up. (old style)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;toolkit&#34;&gt;Toolkit&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Following is the sample from the inception that we are going through. Yellow sticky is the term and Orange is used as note to explain the term.&lt;/li&gt;
-&lt;/ul&gt;
-- //www.sunitparekh.in/posts/9-term-cloud/ - 2022 sunitparekh.in</description>
         </item>
     
     

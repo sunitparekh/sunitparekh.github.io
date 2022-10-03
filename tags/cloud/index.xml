@@ -26,5 +26,23 @@
       <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/en-in/insights/blog/cloud/multicloud-for-enterprises</description>
     </item>
     
+    <item>
+      <title>Building resiliency with chaos engineering</title>
+      <link>//www.sunitparekh.in/posts/39-chaos-engineering/</link>
+      <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/39-chaos-engineering/</guid>
+      <description>Article is published on ThoughtWorks Insights here.. https://www.thoughtworks.com/en-in/insights/blog/agile-engineering-practices/building-resiliency-chaos-engineering</description>
+    </item>
+    
+    <item>
+      <title>Step by step guide to chaos testing using Litmus Chaos toolkit</title>
+      <link>//www.sunitparekh.in/posts/40-chaos-engineering-litums-guide/</link>
+      <pubDate>Wed, 03 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/40-chaos-engineering-litums-guide/</guid>
+      <description>Article is published on Medium here.. https://medium.com/@sunitparekh/step-by-step-guide-to-chaos-testing-using-litmus-chaos-toolkit-c5480f0f6ad0</description>
+    </item>
+    
   </channel>
 </rss>
