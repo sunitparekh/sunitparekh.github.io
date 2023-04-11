@@ -6,8 +6,17 @@
     <description>Recent content in cloud on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2022 sunitparekh.in</copyright>
-    <lastBuildDate>Wed, 02 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>2023 sunitparekh.in</copyright>
+    <lastBuildDate>Tue, 31 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The five pillars of cloud security</title>
+      <link>//www.sunitparekh.in/posts/41-five-pillars-of-cloud-security/</link>
+      <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/41-five-pillars-of-cloud-security/</guid>
+      <description>Article is published on Thoughtworks Insights Blog here.. https://www.thoughtworks.com/en-in/insights/blog/cloud/5-pillars-cloud-security</description>
+    </item>
+    
     <item>
       <title>Business drivers and challenges when adopting a multicloud strategy</title>
       <link>//www.sunitparekh.in/posts/38-multicloud-business-drivers/</link>

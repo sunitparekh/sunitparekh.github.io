@@ -6,8 +6,71 @@
     <description>Recent content in Tags on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2022 sunitparekh.in</copyright>
-    <lastBuildDate>Mon, 04 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>2023 sunitparekh.in</copyright>
+    <lastBuildDate>Thu, 23 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>developer effectiveness</title>
+      <link>//www.sunitparekh.in/tags/developer-effectiveness/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/tags/developer-effectiveness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IDP</title>
+      <link>//www.sunitparekh.in/tags/idp/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/tags/idp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>internal developer platform</title>
+      <link>//www.sunitparekh.in/tags/internal-developer-platform/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/tags/internal-developer-platform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>platform-engineering</title>
+      <link>//www.sunitparekh.in/tags/platform-engineering/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/tags/platform-engineering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>platforms</title>
+      <link>//www.sunitparekh.in/tags/platforms/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/tags/platforms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloud</title>
+      <link>//www.sunitparekh.in/tags/cloud/</link>
+      <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>//www.sunitparekh.in/tags/security/</link>
+      <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/tags/security/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>agile</title>
       <link>//www.sunitparekh.in/tags/agile/</link>
@@ -23,15 +86,6 @@
       <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>//www.sunitparekh.in/tags/leadership/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cloud</title>
-      <link>//www.sunitparekh.in/tags/cloud/</link>
-      <pubDate>Wed, 02 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>//www.sunitparekh.in/tags/cloud/</guid>
       <description></description>
     </item>
     

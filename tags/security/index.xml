@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>security on sUnit Blog</title>
+    <link>//www.sunitparekh.in/tags/security/</link>
+    <description>Recent content in security on sUnit Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2023 sunitparekh.in</copyright>
+    <lastBuildDate>Tue, 31 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The five pillars of cloud security</title>
+      <link>//www.sunitparekh.in/posts/41-five-pillars-of-cloud-security/</link>
+      <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/41-five-pillars-of-cloud-security/</guid>
+      <description>Article is published on Thoughtworks Insights Blog here.. https://www.thoughtworks.com/en-in/insights/blog/cloud/5-pillars-cloud-security</description>
+    </item>
+    
+  </channel>
+</rss>

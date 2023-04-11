@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>platforms on sUnit Blog</title>
+    <link>//www.sunitparekh.in/tags/platforms/</link>
+    <description>Recent content in platforms on sUnit Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2023 sunitparekh.in</copyright>
+    <lastBuildDate>Thu, 23 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/tags/platforms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Engineering platform, key to maximizing software development effectiveness</title>
+      <link>//www.sunitparekh.in/posts/42-engineering-platform/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/42-engineering-platform/</guid>
+      <description>Article is published on Thoughtworks Insights Blog here.. https://www.thoughtworks.com/insights/blog/platforms/engineering-platform-key-to-maximizing-software-development-effectiveness</description>
+    </item>
+    
+  </channel>
+</rss>

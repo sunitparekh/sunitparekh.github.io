@@ -6,8 +6,26 @@
     <description>Recent content in Posts on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2022 sunitparekh.in</copyright>
-    <lastBuildDate>Mon, 04 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/posts/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>2023 sunitparekh.in</copyright>
+    <lastBuildDate>Thu, 23 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="//www.sunitparekh.in/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Engineering platform, key to maximizing software development effectiveness</title>
+      <link>//www.sunitparekh.in/posts/42-engineering-platform/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/42-engineering-platform/</guid>
+      <description>Article is published on Thoughtworks Insights Blog here.. https://www.thoughtworks.com/insights/blog/platforms/engineering-platform-key-to-maximizing-software-development-effectiveness</description>
+    </item>
+    
+    <item>
+      <title>The five pillars of cloud security</title>
+      <link>//www.sunitparekh.in/posts/41-five-pillars-of-cloud-security/</link>
+      <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>//www.sunitparekh.in/posts/41-five-pillars-of-cloud-security/</guid>
+      <description>Article is published on Thoughtworks Insights Blog here.. https://www.thoughtworks.com/en-in/insights/blog/cloud/5-pillars-cloud-security</description>
+    </item>
+    
     <item>
       <title>Building capability for emerging technologies while on projects</title>
       <link>//www.sunitparekh.in/posts/36-building-capability-for-emerging-technologies-copy/</link>

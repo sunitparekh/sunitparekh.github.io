@@ -5,10 +5,228 @@
     <description>Recent content on sUnit Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>2022 sunitparekh.in</copyright>
-    <lastBuildDate>Mon, 04 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <copyright>2023 sunitparekh.in</copyright>
+    <lastBuildDate>Thu, 23 Feb 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="//www.sunitparekh.in/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>The Remote Pairing Cheat Sheet</title>
+        <link>//www.sunitparekh.in/posts/32-remote-pairing/</link>
+        <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+        
+        <guid>//www.sunitparekh.in/posts/32-remote-pairing/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/32-remote-pairing/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpswwwthoughtworkscominsightsblogremote-pairing-cheat-sheet&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;https://www.thoughtworks.com/insights/blog/remote-pairing-cheat-sheet&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.thoughtworks.com/insights/blog/remote-pairing-cheat-sheet&#34;&gt;https://www.thoughtworks.com/insights/blog/remote-pairing-cheat-sheet&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/32/live-share.png&#34; alt=&#34;LIve Share&#34;&gt;&lt;/p&gt;
+- //www.sunitparekh.in/posts/32-remote-pairing/ - 2023 sunitparekh.in</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Guidelines on JSON responses for RESTful services</title>
+        <link>//www.sunitparekh.in/posts/31-json-responses/</link>
+        <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
+        
+        <guid>//www.sunitparekh.in/posts/31-json-responses/</guid>
+        <description>sUnit Blog //www.sunitparekh.in/posts/31-json-responses/ -&lt;p&gt;Now days RESTful API is followed heavily on most of the projects. Since it doesn’t prescribe every details, many times I have seen developers start following different ways of implement for similar patterns in API, leading to inconsistent API. So during initial stage of the project it is very important to discuss and define guidelines for RESTful APIs. In this article I am focusing on JSON response guidelines.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/31/api.png&#34; alt=&#34;API&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;responding-success-and-failure&#34;&gt;Responding success and failure&lt;/h2&gt;
+&lt;p&gt;First question that comes in discussion is, &lt;em&gt;How shall we craft response for success and failure?&lt;/em&gt; Different options are,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Use HTTP status codes conveying the status + json body in response payload&lt;/li&gt;
+&lt;li&gt;always return 200 and response payload to have status and data fields.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;My take is &lt;strong&gt;use HTTP status code to convey the response status&lt;/strong&gt;. And I prefer not to create envelope response but return requested object at top level JSON. And for errors return appropriate HTTP status code with more detailed error message and errors as JSON response.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Status:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Content-Type:&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;application/json&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;employeeId&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;123456&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;firstName&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sunit&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;lastName&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Parekh&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;gender&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Male&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;hireDate&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2012-01-01&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;birthDate&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1990-01-01&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;office&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Pune&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Status:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;404&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Content-Type:&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;application/json&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;NOT_FOUND&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Oops! Requested employee 123456 not found.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Status:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;400&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Content-Type:&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;application/json&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;INVALID_INPUT&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Oops! Invalid data provided for employee.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;errors&amp;#34;&lt;/span&gt;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Last name is required field.&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;field&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lastName&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Age of the employee should be greater than 18&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;field&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;dateOfBirth&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Status:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;401&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Content-Type:&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;application/json&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;UNAUTHORIZED_ACCESS&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Unauthorized access for the requested content.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Effective use of HTTP status code helps with leveraging HTTP caching and coding clients. Also it is important to discuss and decide which status code to use when. Read more &lt;a href=&#34;http://www.restapitutorial.com/httpstatuscodes.html&#34;&gt;here&lt;/a&gt; about status codes.&lt;/p&gt;
+&lt;h2 id=&#34;list-and-search-result-type-of-responses&#34;&gt;List and search result type of responses&lt;/h2&gt;
+&lt;p&gt;Next question comes up is, how to return list or search result like responses?
+This is the heavily debatable and many times inconclusive topic for whole team to agree. Okay, what are the options?&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;use envelope style response, result includes count plus data, however for error conditions such as bad input or un-authorized request use appropriate HTTP status code&lt;/li&gt;
+&lt;li&gt;return only data with HTTP status code and use response headers for count fields&lt;/li&gt;
+&lt;li&gt;always return 200 and status in response body&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;My take, here I am divided between option 1 and 2. Still preferred option is &lt;strong&gt;Option 2, return only data and convey summary fields using headers&lt;/strong&gt;. Another alternative to sending count field in response header is have separate count API. This is also useful many times as you need count only once.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Status:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Total-Count:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Next-Page:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Content-Type:&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;application/json&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;employeeId&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;123456&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;firstName&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sunit&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;lastName&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Parekh&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;gender&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Male&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;hireDate&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2012-01-01&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;birthDate&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1990-01-01&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;office&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Pune&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;employeeId&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;123457&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;firstName&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sunit&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;lastName&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Parekh&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;gender&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Male&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;hireDate&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2012-01-01&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;birthDate&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1990-01-01&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;office&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Pune&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Status:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Total-Count:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Next-Page:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Content-Type:&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;application/json&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Use of response header is key in the above example. Next-Page response header tells client that I have more data (next page) available. And such headers can be really useful for loading next pages on scroll.&lt;/p&gt;
+&lt;p&gt;However, when I look at API like &lt;a href=&#34;https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-body.html&#34;&gt;elasticsearch&lt;/a&gt; I get convinced that Option 2 is also right. Choose one for the project and follow it.&lt;/p&gt;
+&lt;h2 id=&#34;json-key-propertyfield-name-naming-convention&#34;&gt;JSON key (property/field name) naming convention&lt;/h2&gt;
+&lt;p&gt;Now it’s time to get inside the JSON fields. What should be naming convention for fields? Options are&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;camelCase&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;snake_case&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;spinal-case&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;My choice here is &lt;strong&gt;&lt;code&gt;camelCase&lt;/code&gt;&lt;/strong&gt; and that must be from my background as Java developer. I have seen equal use of &lt;code&gt;snake_case&lt;/code&gt; as well, but very rare use of &lt;code&gt;spinal-case&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Status:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Content-Type:&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;application/json&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;employeeId&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;123456&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;firstName&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sunit&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;lastName&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Parekh&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;gender&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Male&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;hireDate&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2012-01-01&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;birthDate&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1990-01-01&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;office&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Pune&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Avoid using dot (.) in key names, as they conflict with the JSON path.&lt;/p&gt;
+&lt;h2 id=&#34;handling-null-values&#34;&gt;Handling NULL values&lt;/h2&gt;
+&lt;p&gt;It’s time to look at, how to return NULL values? This is again another area of debate starts. Options are,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Do not return NULL values&lt;/li&gt;
+&lt;li&gt;Return as null value&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I prefer &lt;strong&gt;Option 1) Do not return NULL values.&lt;/strong&gt; However, question becomes tricky when value is object or array and it is empty. In that case empty {} or [] is valid JSON response.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Response with null and empty values 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// -- NOT RECOMMENDED, JUST FOR REPRESENTATION PURPOSE --
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;employeeId&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;12345&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;firstName&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sunit&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;lastName&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Parekh&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;mobile&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;addresses&amp;#34;&lt;/span&gt;: []
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Response without Null Values, Empty object or array is still present
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;employeeId&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;12345&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;firstName&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sunit&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;lastName&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Parekh&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;addresses&amp;#34;&lt;/span&gt;: []
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Response without Null and Empty Values
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;employeeId&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;12345&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;firstName&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sunit&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;lastName&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Parekh&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I do not prefer null values as it can have side effects while parsing on client side. E.g. In JavaScript null has special meaning. Just be careful not to choose returning empty string (“”) which does not express as value doesn’t exists.&lt;/p&gt;
+&lt;h2 id=&#34;date-and-datetime-responses&#34;&gt;Date and DateTime responses&lt;/h2&gt;
+&lt;p&gt;This one is most important, What should be format for date and datetime (timestamp) type of fields? &lt;strong&gt;Option here is &lt;a href=&#34;https://www.w3.org/TR/NOTE-datetime&#34;&gt;ISO 8601&lt;/a&gt; format returned as string.&lt;/strong&gt; However, many time not knowing it, make developer to follow “default toString” or “self-made formats”. Most of the languages have default support for serializing and deserializing, date and datetime in ISO 8601 format.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// audit fields
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;createdBy&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;123456&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;createdAt&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2012-01-01T18:25:43.511Z&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;createdBy&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;123456&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;createdAt&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2012-01-01T18:25:43.511Z&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Even if you choose to return datetime always in only one timezone such as UTC. I still recommend to choose ISO 8601 standard which includes timezone.&lt;/p&gt;
+&lt;h2 id=&#34;multiline-string-values&#34;&gt;Multiline string values&lt;/h2&gt;
+&lt;p&gt;Many times I need to send large multiline string as values e.g. Address. How do I pass multiline string value? Options are&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;as array of strings&lt;/li&gt;
+&lt;li&gt;base64 encoding&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Solution that worked for me is &lt;strong&gt;base64 encoding for values&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// multiple as array
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;singleLine&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Some singleline String&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;multiline&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Line one&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Line Two&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Line Three&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// multiple as base64 encoded string
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;singleLine&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Some singleline String&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;multiline&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TGluZSBvbmUKTGluZSBUd28KTGluZSBUaHJlZQ==&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Another example is to use &lt;code&gt;base64url&lt;/code&gt; encoded query param for GET request providing search criteria as JSON. :-)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{ &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sunit&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;office&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;pune&amp;#34;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;/*&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;above&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;search&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;criteria&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;parameters&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;send&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;GET&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;request&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;param&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;base&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;64&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;url&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;encoded&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;*/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;/search?query=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;eyAibmFtZSI6ICJzdW5pdCIsICJvZmZpY2UiOiAicHVuZSJ9&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;And there are many more discussion and decisions to be made for JSON responses guidelines, such as,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;How to represent structural data? nested vs flatten&lt;/li&gt;
+&lt;li&gt;Define standards for paginated results? (params and result both)&lt;/li&gt;
+&lt;li&gt;Singular vs Plural Property Names?&lt;/li&gt;
+&lt;li&gt;If needed, how would you version your API and how to return response with version info ?&lt;/li&gt;
+&lt;li&gt;Think about more data types? e.g. Latitude/Longitude values&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Point I would like to derive from this article is, at the beginning of the project collectively define guidelines for RESTful services for the project and write it down. Also keep it open for discussion and further amendments.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Another new trend to explore is &lt;a href=&#34;https://www.howtographql.com/&#34;&gt;GraphQL&lt;/a&gt; for building API that needs to be consumed by many discrete client needs.&lt;/p&gt;
+- //www.sunitparekh.in/posts/31-json-responses/ - 2023 sunitparekh.in</description>
+        </item>
     
     
     
@@ -43,7 +261,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;Slides are available &lt;a href=&#34;https://docs.google.com/presentation/d/117bnmIVoBOLtDqgHSPta2guzlCEBNNyaFA-Oz7dyGaI/edit?usp=sharing&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-- //www.sunitparekh.in/posts/30-three-branching-model/ - 2022 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/30-three-branching-model/ - 2023 sunitparekh.in</description>
         </item>
     
     
@@ -78,7 +296,7 @@
 &lt;p&gt;In my view, for co-located teams or distributed teams with healthy overlap time and at intermediate level of agile engineering practices I would suggest 2 week sprint duration. And for highly distributed team which is mostly new to Agile (and CD) practices, I recommend 4 weeks of initial Sprint duration.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Philosophy of &amp;ldquo;shorter sprints are better&amp;rdquo; is not always right. Sometimes with shorter sprints and significant non-development effort, team&amp;rsquo;s stress level increases while stakeholder sees less deliverable, watch-out for such cases.&lt;/p&gt;
-- //www.sunitparekh.in/posts/29-sprint-duration/ - 2022 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/29-sprint-duration/ - 2023 sunitparekh.in</description>
         </item>
     
     
@@ -124,7 +342,7 @@
 &lt;li&gt;We need tech leadership to provide architecture solution along with supporting roles like project management for execution and planning.&lt;/li&gt;
 &lt;li&gt;Similarly we need Product Owners and Senior BAs to achieve Business ownership.&lt;/li&gt;
 &lt;/ol&gt;
-- //www.sunitparekh.in/posts/28-ownership-model/ - 2022 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/28-ownership-model/ - 2023 sunitparekh.in</description>
         </item>
     
     
@@ -151,7 +369,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        server&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;stop&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        assertThat&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;server&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getReceivedEmailSize&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(),&lt;/span&gt;equalTo&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        assertThat&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;server&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getReceivedEmailSize&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(),&lt;/span&gt;equalTo&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;));&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Iterator emails &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; server&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getReceivedEmail&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        SmtpMessage email &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;SmtpMessage&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;emails&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;next&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
@@ -177,7 +395,7 @@
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Using tools and techniques which are applicable for different stages of testing, we can effectively test all email scenarios without delivering emails to real users. Above solutions doesn&amp;rsquo;t require any change in production code for testing, just needs different configuration of SMTP server.&lt;/p&gt;
 &lt;p&gt;Happy Testing !!!&lt;/p&gt;
-- //www.sunitparekh.in/posts/27-testing-emails/ - 2022 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/27-testing-emails/ - 2023 sunitparekh.in</description>
         </item>
     
     
@@ -190,7 +408,7 @@
         <guid>//www.sunitparekh.in/posts/26-collaboration-techniques/</guid>
         <description>sUnit Blog //www.sunitparekh.in/posts/26-collaboration-techniques/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpswwwthoughtworkscominsightsblogcollaboration-techniques-large-distributed-agile-projects&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects&#34;&gt;https://www.thoughtworks.com/insights/blog/collaboration-techniques-large-distributed-agile-projects&lt;/a&gt;&lt;/p&gt;
-- //www.sunitparekh.in/posts/26-collaboration-techniques/ - 2022 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/26-collaboration-techniques/ - 2023 sunitparekh.in</description>
         </item>
     
     
@@ -204,7 +422,7 @@
         <description>sUnit Blog //www.sunitparekh.in/posts/25-story-mapping/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpwwwthoughtworkscominsightsblogstory-mapping-visual-way-building-product-backlog&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog&#34;&gt;http://www.thoughtworks.com/insights/blog/story-mapping-visual-way-building-product-backlog&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/25/featured.jpg&#34; alt=&#34;Story Map&#34;&gt;&lt;/p&gt;
-- //www.sunitparekh.in/posts/25-story-mapping/ - 2022 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/25-story-mapping/ - 2023 sunitparekh.in</description>
         </item>
     
     
@@ -295,7 +513,7 @@
 &lt;p&gt;Run regular retrospective on Agile adoption and CD progress as health check.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Please share your experience with Agile adoption on legacy project and challenges faced using comments.&lt;/p&gt;
-- //www.sunitparekh.in/posts/24-legacy-projects/ - 2022 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/24-legacy-projects/ - 2023 sunitparekh.in</description>
         </item>
     
     
@@ -309,151 +527,7 @@
         <description>sUnit Blog //www.sunitparekh.in/posts/23-two-stack-cms/ -&lt;h2 id=&#34;article-is-published-on-martinfowlercom-as-infodeck-herehttpmartinfowlercomarticlestwo-stack-cms&#34;&gt;Article is published on MartinFowler.com as InfoDeck &lt;a href=&#34;http://martinfowler.com/articles/two-stack-cms/&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;http://martinfowler.com/articles/two-stack-cms/&#34;&gt;http://martinfowler.com/articles/two-stack-cms/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/23/two-stack-cms.svg&#34; alt=&#34;Two Stack CMS&#34;&gt;&lt;/p&gt;
-- //www.sunitparekh.in/posts/23-two-stack-cms/ - 2022 sunitparekh.in</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Use structured logging for log search and analytics</title>
-        <link>//www.sunitparekh.in/posts/22-structured-logging/</link>
-        <pubDate>Sat, 06 Sep 2014 00:00:00 +0000</pubDate>
-        
-        <guid>//www.sunitparekh.in/posts/22-structured-logging/</guid>
-        <description>sUnit Blog //www.sunitparekh.in/posts/22-structured-logging/ -&lt;p&gt;Logging is followed in almost every project. However, most of the time we end up using logs only for debugging and auditing purpose. Since past few projects we have been exploring more opportunities for leveraging logs for purposes like application metrics collection, reporting, monitoring and alerting. And during this, I learnt about structured logging and how it enables us to achieve lot more using logs.&lt;/p&gt;
-&lt;p&gt;Lets first look at what we need to follow while logging to achieve structured logging.&lt;/p&gt;
-&lt;h2 id=&#34;what-is-structured-logging&#34;&gt;What is structured logging?&lt;/h2&gt;
-&lt;p&gt;Not only log level is important, but what we log &amp;amp; how we log also matters. Lets look at the default log message format,&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;127.0.0.1 [2014-07-22T18:12:27.200+0530] &amp;#34;GET /api/modules/doc_id/navigation HTTP/1.1&amp;#34; 200 476
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Above message is interpreted well by humans since we know, &lt;code&gt;120.0.0.1&lt;/code&gt; is IP, &lt;code&gt;2014-07-22T18:12:27.200+0530&lt;/code&gt; is timestamp, &lt;code&gt;GET&lt;/code&gt; is request methods, &lt;code&gt;200&lt;/code&gt; is response status and &lt;code&gt;476&lt;/code&gt; is server response time. And such interpretation is required for each message logging.&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s provide structure to the above log message,&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;ip=&amp;#34;127.0.0.1&amp;#34; timestamp=&amp;#34;2014-07-22T18:12:27.200+0530&amp;#34; method=GET
-url=&amp;#34;/api/modules/doc_id/navigation&amp;#34; protocol=HTTP/1.1 status=200 responseTime=476
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Above structured message is self explanatory and easy to parse and index by system. This technique of &lt;code&gt;key=value&lt;/code&gt; style logging is also known as logging with context. Using above log message keys we can find all slow pages, by querying logs with &lt;code&gt;status = 200&lt;/code&gt; and &lt;code&gt;responseTime &amp;gt; 2000&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Now lets take some examples of structured logs to understand it usage better.&lt;/p&gt;
-&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
-&lt;h4 id=&#34;background-job-logs&#34;&gt;Background job logs&lt;/h4&gt;
-&lt;p&gt;Most of the application now days have have background jobs running at regular interval. With following structured logging for each jobs,&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;timestamp=&amp;#34;2014-07-22T18:12:27.200+0530&amp;#34; host=server20  tag=jobserver jobName=image_upload
-jobStartTime=&amp;#34;2014-07-22T18:10:00.100+0530&amp;#34; jobEndTime=&amp;#34;2014-07-22T18:12:27.100+0530&amp;#34;
-jobExecutionTime=9840 jobStatus=success noOfImageUploaded=125
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;following can be achieved,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Get alert message when jobStatus is failure, we do&lt;/li&gt;
-&lt;li&gt;Monitor average job execution time and we have setup for each job if it reaches more than average sends alert.&lt;/li&gt;
-&lt;li&gt;Monitoring average response time also helps in tuning the frequency of the job runs.&lt;/li&gt;
-&lt;li&gt;To analyze random failure or slowness in jobs, information in log is really useful to find if it is failing on specific hosts or at specific time or when run in parallel with any other jobs or no of items are too many to process etc.&lt;/li&gt;
-&lt;li&gt;Using more meta info like noOfImageUpload and jobExecutionTime we can calculate average time for each image upload.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;distributed-correlated-logs&#34;&gt;Distributed correlated logs&lt;/h4&gt;
-&lt;p&gt;With distributed and microservice architecture, it is quite natural to have logs spread across systems. With structure logs and using common transaction id shared across systems, we can correlate logs and turn logs into information used for debugging, auditing, reporting and monitoring.&lt;/p&gt;
-&lt;p&gt;Lets take the example of order request after successful payment.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;timestamp=&amp;#34;2014-07-22T18:12:27.100+0530&amp;#34; host=server01 tag=webServer
-transactionId=458748939 cientIP=83.84.85.86 sessionId=123456789
-message=&amp;#34;Order confirmation request received&amp;#34;
-
-timestamp=&amp;#34;2014-07-22T18:12:27.200+0530&amp;#34; host=server03 tag=orderService
-transactionId=458748939 message=&amp;#34;Order created&amp;#34;
-orderAmount=550
-
-timestamp=&amp;#34;2014-07-22T18:12:27.250+0530&amp;#34; host=server03 tag=inventoryService
-transactionId=458748939 message=&amp;#34;Online inventory updated&amp;#34;
-
-timestamp=&amp;#34;2014-07-22T18:12:27.300+0530&amp;#34; host=server07 tag=paymentService
-transactionId=458748939 message=&amp;#34;Payment details stored against order.&amp;#34;
-paymentMode=CreditCard
-
-timestamp=&amp;#34;2014-07-22T18:12:27.350+0530&amp;#34; host=server05  tag=couponService
-transactionId=458748939 message=&amp;#34;Redeem coupon ABCDE marked for user.&amp;#34;
-couponType=REWARD couponCode=ABCDE
-
-timestamp=&amp;#34;2014-07-22T18:12:27.400+0530&amp;#34; host=server01 tag=webServer
-transactionId=458748939 message=&amp;#34;Request completed&amp;#34;
-
-timestamp=&amp;#34;2014-07-22T18:12:28.500+0530&amp;#34; host=server06  tag=emailService
-transactionId=458748939 message=&amp;#34;Order email sent&amp;#34;
-
-timestamp=&amp;#34;2014-07-22T18:12:27.450+0530&amp;#34; host=server05  tag=rewardService
-transactionId=458748939 message=&amp;#34;Reward points updated.&amp;#34;
-
-timestamp=&amp;#34;2014-07-22T18:15:00.100+0530&amp;#34; host=server25  tag=shippingService
-transactionId=458748939 message=&amp;#34;Order received by shipment system.&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;with above messages we can,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;We are better equipped with debugging issues across systems including async steps of the transaction. Using transactionId we can connect logs and findout client/user specific details and track incident.  e.g. track couponCode used by user with connecting logs from couponService to webServer&lt;/li&gt;
-&lt;li&gt;Using paymentMode, we can learn more about what kind of payment modes are preferred by customers.&lt;/li&gt;
-&lt;li&gt;Calculate average response time in processing order request.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Leverage apache &lt;code&gt;mod_unique_id&lt;/code&gt; module to generate transaction id at web server and later share it with other services by passing it in request headers.&lt;/p&gt;
-&lt;h2 id=&#34;tools&#34;&gt;Tools&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.splunk.com/&#34;&gt;Splunk&lt;/a&gt;, is best in class, commercial product. We are using it in production for large system generating more than 100GB of logs per day. Splunk would be my personal recommendation as well. Lets take example and learn more about using Splunk.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lets find 404s on website using Splunk&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/22/splunk-query.png&#34; alt=&#34;splunk query for finding 404&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Query: &lt;code&gt;tag=production sourcetype=nginx-access GET 404 | rex &amp;quot;\&amp;quot;GET (?&amp;lt;url&amp;gt;\S*) &amp;quot; | stats count by url | sort -count | head 20&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Lets understand query in detail. Splunk support &lt;a href=&#34;http://martinfowler.com/articles/collection-pipeline/&#34;&gt;unix style pipes in query&lt;/a&gt;, so you could pass output of one command to another and build on. In above example we used 5 different commands,&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;tag=production&lt;/code&gt; and &lt;code&gt;sourcetype=nginx-access&lt;/code&gt; with &lt;code&gt;GET 404&lt;/code&gt; returns all 404 log statements from all productions servers and source file name nginx-access&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rex &amp;quot;\&amp;quot;GET (?&amp;lt;url&amp;gt;\S*) &amp;quot;&lt;/code&gt; extract URL from the log using reg-ex&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;stats count&lt;/code&gt; by url group and count by url&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sort -count&lt;/code&gt; sort in descending order on count&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;head 20&lt;/code&gt; take first 20 from the result set&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;a href=&#34;https://logentries.com/&#34;&gt;LogEntries&lt;/a&gt; is another feature rich SaaS solution on cloud. Other options are &lt;a href=&#34;https://www.loggly.com/&#34;&gt;Loogly&lt;/a&gt;, &lt;a href=&#34;https://papertrailapp.com/&#34;&gt;PaperTrail&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.elasticsearch.org/overview/logstash/&#34;&gt;LogStash&lt;/a&gt; + &lt;a href=&#34;http://www.elasticsearch.org/overview/elasticsearch/&#34;&gt;Elasticsearch&lt;/a&gt; + &lt;a href=&#34;http://www.elasticsearch.org/overview/kibana/&#34;&gt;Kibana&lt;/a&gt; combination is best open-source one in this space.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://graylog2.org/&#34;&gt;GrayLog2&lt;/a&gt;, open-source log analytics solutions. Used with syslog to aggregate logs.&lt;/p&gt;
-&lt;p&gt;Even though structured logging is quite useful on individual system. However until we have logs from all the system collected and indexed together, power of structured logging is under utilized. So lets look at what are different ways we can aggregate logs from multiple systems.&lt;/p&gt;
-&lt;h2 id=&#34;how-to-aggregate-logs&#34;&gt;How to aggregate logs?&lt;/h2&gt;
-&lt;p&gt;There are multiple approaches available for log aggregation.&lt;/p&gt;
-&lt;h4 id=&#34;log-file-replication&#34;&gt;Log File Replication&lt;/h4&gt;
-&lt;p&gt;Simplest one is, continue logging to file system on application server and set up an independent process to monitor files and send logs to central log server every &amp;rsquo;n&amp;rsquo; milliseconds.&lt;/p&gt;
-&lt;h4 id=&#34;syslog&#34;&gt;Syslog&lt;/h4&gt;
-&lt;p&gt;To achieve real time monitoring and alerting we can use syslog approach, directly feeding logs to a central log server. Syslog is available by default on most of the linux machines. &lt;a href=&#34;http://www.rsyslog.com/&#34;&gt;rsyslog&lt;/a&gt; or &lt;a href=&#34;http://www.balabit.com/network-security/syslog-ng/opensource-logging-system/&#34;&gt;syslog-ng&lt;/a&gt; are two popular syslog implementations.&lt;/p&gt;
-&lt;h4 id=&#34;agents&#34;&gt;Agents&lt;/h4&gt;
-&lt;p&gt;Most of the products in this space provide their own agents, which runs on client and sends logs real-time to central log server. e.g. &lt;a href=&#34;http://wiki.splunk.com/Community:Getting_data_into_Splunk&#34;&gt;Splunk&lt;/a&gt;, &lt;a href=&#34;https://logentries.com/doc/forwarders/&#34;&gt;LogEntries&lt;/a&gt; etc. There are specific tools available just for aggregation purposes like &lt;a href=&#34;http://flume.apache.org/&#34;&gt;Apache Flume&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/22/centralised-logging.svg&#34; alt=&#34;centralised aggregated logs&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In distributed systems it is important that we have realtime log aggregation setup. And it is equally important that time on all application servers is in sync. Since a millisecond differences can have unordered logs and leads to confusion and errors while debugging and reporting.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;more-usages&#34;&gt;More usages&lt;/h2&gt;
-&lt;h4 id=&#34;debugging&#34;&gt;Debugging&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;With database logs find all slow running database queries&lt;/li&gt;
-&lt;li&gt;Using Nginx access logs, find slow response pages&lt;/li&gt;
-&lt;li&gt;Nginx access logs to generate daily reports for 404s&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;reporting&#34;&gt;Reporting&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;With transaction logs, turn data into knowledge. Generating reports for sales, registrations, popular products added in cart etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;monitoring--alerting&#34;&gt;Monitoring &amp;amp; Alerting&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Email alert setup for jobs&lt;/li&gt;
-&lt;li&gt;With logging of server memory, cpu, disk and network utilisation provides server monitoring.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;performance-benchmarking&#34;&gt;Performance Benchmarking&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Daily report for server response time, and when 90 percentile of response time goes higher than 3 seconds send alerts.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;analytics&#34;&gt;Analytics&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Logs collected over years is the biggest data available for analytics. We could also achieve real-time analytics such as most popular products.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And these are just some examples of structured logging usage. However, once infrastructure in place, it is upto us to explore and find more opportunity to leverage it.&lt;/p&gt;
-- //www.sunitparekh.in/posts/22-structured-logging/ - 2022 sunitparekh.in</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Guidelines for Structuring Automated Tests</title>
-        <link>//www.sunitparekh.in/posts/21-automated-tests/</link>
-        <pubDate>Tue, 22 Jul 2014 00:00:00 +0000</pubDate>
-        
-        <guid>//www.sunitparekh.in/posts/21-automated-tests/</guid>
-        <description>sUnit Blog //www.sunitparekh.in/posts/21-automated-tests/ -&lt;h2 id=&#34;article-is-published-on-thoughtworks-insights-herehttpwwwthoughtworkscominsightsblogguidelines-structuring-automated-tests&#34;&gt;Article is published on ThoughtWorks Insights &lt;a href=&#34;http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests&#34;&gt;here&lt;/a&gt;..&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests&#34;&gt;http://www.thoughtworks.com/insights/blog/guidelines-structuring-automated-tests&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//www.sunitparekh.in/images/21/featured.svg&#34; alt=&#34;Automated Tests&#34;&gt;&lt;/p&gt;
-- //www.sunitparekh.in/posts/21-automated-tests/ - 2022 sunitparekh.in</description>
+- //www.sunitparekh.in/posts/23-two-stack-cms/ - 2023 sunitparekh.in</description>
         </item>
     
     
